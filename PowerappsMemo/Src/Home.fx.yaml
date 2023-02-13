@@ -1,0 +1,298 @@
+Home As screen:
+    BackgroundImage: =
+    Fill: =
+
+    Button7 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(153, 205, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =602
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        Size: =15
+        Text: =""
+        Width: =1322
+        X: =24
+        Y: =156
+        ZIndex: =1
+
+    Gallery3 As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Height: =492
+        Items: |-
+            =Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
+            
+            //Sort(Filter('Purchase Requisition',Status.Value=_requestTypeFilter),Date,Ascending)
+        Layout: =Layout.Vertical
+        OnSelect: =Navigate(ViewPDF)
+        ShowScrollbar: =false
+        TemplateSize: =422
+        Width: =1294
+        X: =34
+        Y: =266
+        ZIndex: =2
+
+        rfDate As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Date
+            Width: =500
+            X: =160
+            Y: =99
+            ZIndex: =1
+
+        rfNo As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Title
+            Width: =707
+            X: =160
+            Y: =55
+            ZIndex: =2
+
+        rfFrom As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.From
+            Width: =500
+            X: =157
+            Y: =135
+            ZIndex: =3
+
+        rfDpt As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Department
+            Width: =500
+            X: =157
+            Y: =184
+            ZIndex: =4
+
+        Label21 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Ref No"
+            Width: =133
+            X: =24
+            Y: =54
+            ZIndex: =5
+
+        Label27 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Date"
+            Width: =133
+            X: =24
+            Y: =99
+            ZIndex: =6
+
+        Label30 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="From"
+            Width: =133
+            X: =24
+            Y: =141
+            ZIndex: =7
+
+        Label31 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Department"
+            Width: =133
+            X: =24
+            Y: =182
+            ZIndex: =8
+
+        Label32 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Status"
+            Width: =136
+            X: =24
+            Y: =222
+            ZIndex: =9
+
+        Label33 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Status.Value
+            Width: =500
+            X: =160
+            Y: =224
+            ZIndex: =10
+
+        Image4_1 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =400
+            Image: |
+                =//Substitute(Gallery1.Selected.Thumbnail.Large,"/thumbnail","/jpg")
+            OnSelect: =Select(Parent)
+            Width: =590
+            X: =680
+            Y: =14
+            ZIndex: =11
+
+        Label2 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Organization
+            Width: =500
+            X: =160
+            Y: =14
+            ZIndex: =12
+
+        Label4 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Organization"
+            X: =10
+            Y: =14
+            ZIndex: =13
+
+    Gallery2 As gallery.galleryVertical:
+        BorderColor: =RGBA(235, 245, 255, 1)
+        BorderThickness: =1
+        Height: =79
+        Items: |-
+            =Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"})
+        Layout: =Layout.Vertical
+        TemplateSize: =67
+        Width: =1197
+        WrapCount: =4
+        X: =69
+        Y: =165
+        ZIndex: =3
+
+        Filter As button:
+            BorderColor: =RGBA(153, 189, 224, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(65, 145, 224, 0.86)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(56, 107, 194, 0.83)
+            OnSelect: =Set(_requestTypeFilter, ThisItem.fil)
+            PressedBorderColor: =
+            PressedColor: =Self.Color
+            PressedFill: =RGBA(25, 111, 224, 0.91)
+            Size: =15
+            Text: =ThisItem.fil
+            X: =50
+            Y: =13
+            ZIndex: =1
+
+    Button6 As button:
+        Align: =Align.Left
+        Color: =RGBA(0, 80, 160, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =118
+        HoverFill: =Self.Fill
+        PressedColor: =Self.Color
+        PressedFill: =
+        Size: =23
+        Text: ="Hey! " & Office365Users.MyProfile().GivenName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
+        Width: =524
+        X: =156
+        Y: =14
+        ZIndex: =4
+
+    Image2 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        X: =24
+        Y: =23
+        ZIndex: =5
+
+    Button2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(23, 150, 230, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Clear(PurchaseReq);
+            Navigate(Dashboard)
+        Size: =15
+        Text: ="Create New"
+        Width: =246
+        X: =1080
+        Y: =54
+        ZIndex: =6
+

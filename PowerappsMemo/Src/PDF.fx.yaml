@@ -1,0 +1,13 @@
+PDF As screen:
+    Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Center
+
+    PdfViewer3 As pdfViewer:
+        DisplayMode: =DisplayMode.View
+        Document: =myPdf
+        Fill: =RGBA(232, 232, 232, 1)
+        Height: =768
+        Width: =1366
+        ZIndex: =7
+        Zoom: =Zoom.FitBoth
+

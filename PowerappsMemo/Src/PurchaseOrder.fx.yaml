@@ -1,0 +1,29 @@
+PurchaseOrder As screen:
+    Fill: =RGBA(232, 232, 232, 1)
+
+    Label11_6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(39, 113, 194, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =118
+        Size: =45
+        Text: =companyName.SelectedText.Value
+        Width: =1142
+        X: =94
+        Y: =30
+        ZIndex: =1
+
+    Icon1_4 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =50
+        Y: =50
+        ZIndex: =2
+

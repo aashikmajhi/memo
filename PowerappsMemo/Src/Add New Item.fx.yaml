@@ -1,0 +1,169 @@
+"'Add New Item' As screen":
+    Fill: =RGBA(232, 232, 232, 1)
+
+    Button2_2 As button:
+        Color: =RGBA(0, 121, 187, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =If(!IsBlank((desctxt||qtytxt||purposetxt)),
+                Collect(PurchaseReq,
+                {
+                    Description: desctxt.Text,
+                    Quantity: qtytxt.Text,
+                    Purpose:purposetxt.Text
+                }
+            ),Notify("Empty fields can not be processed"));
+            
+            Reset(desctxt);
+            Reset(qtytxt);
+            Reset(purposetxt);
+            Navigate(PurchaseRequisition);
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =15
+        Text: |-
+            ="Submit
+            "
+        X: =592
+        Y: =630
+        ZIndex: =2
+
+    Label13_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =46
+        Size: =13
+        Text: ="Description"
+        Width: =135
+        X: =40
+        Y: =166
+        ZIndex: =10
+
+    Label13_6 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =46
+        Size: =13
+        Text: ="Quantity"
+        Width: =135
+        X: =526
+        Y: =166
+        ZIndex: =11
+
+    Label13_7 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =46
+        Size: =13
+        Text: ="Purpose"
+        Width: =135
+        X: =827
+        Y: =166
+        ZIndex: =12
+
+    desctxt As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =107
+        HintText: ="Enter product description"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Mode: =TextMode.MultiLine
+        Size: =13
+        Width: =400
+        X: =51
+        Y: =216
+        ZIndex: =13
+
+    qtytxt As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Format: =TextFormat.Number
+        Height: =50
+        HintText: ="qty"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =222
+        X: =526
+        Y: =216
+        ZIndex: =14
+
+    purposetxt As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HintText: ="purpose"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =400
+        X: =827
+        Y: =216
+        ZIndex: =15
+
+    Icon3 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =Reset(desctxt);
+            Reset(qtytxt);
+            Reset(purposetxt);
+            Back()
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+    Label11_3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(39, 113, 194, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =118
+        Size: =45
+        Text: =companyName.SelectedText.Value
+        Width: =1142
+        X: =119
+        Y: =24
+        ZIndex: =20
+

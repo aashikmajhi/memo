@@ -1,0 +1,71 @@
+Dashboard As screen:
+    BackgroundImage: ='Background Image'
+    Fill: =RGBA(232, 232, 232, 1)
+
+    btnPurchaseRequisition As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(44, 104, 163, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =112
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(PurchaseRequisition)
+        Size: =15
+        Text: ="Purchase Requisition"
+        Width: =262
+        X: =213
+        Y: =188
+        ZIndex: =1
+
+    btnQuotationUpload As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(44, 104, 163, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =112
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(UploadQuotation)
+        Size: =15
+        Text: |-
+            ="Upload Quotation
+            "
+        Width: =262
+        X: =213
+        Y: =352
+        ZIndex: =2
+
+    btnPurchaseOrder As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(44, 104, 163, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =112
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(PurchaseOrder)
+        Size: =15
+        Text: ="Purchase Order"
+        Width: =262
+        X: =213
+        Y: =512
+        ZIndex: =3
+
+    Icon5 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =50
+        Y: =50
+        ZIndex: =5
+

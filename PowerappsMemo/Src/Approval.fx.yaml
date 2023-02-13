@@ -1,0 +1,96 @@
+Approval As screen:
+    Fill: =RGBA(232, 232, 232, 1)
+
+    Button4 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(17, 125, 35, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =//Office365Outlook.SendEmailV2(Label9_5.Text,"Response to purchase requisition","The purchase requisition has been approved.");
+            //Office365Outlook.SendEmailV2(Label9_4.Text,"Response to purchase requisition","The purchase requisition has been approved.");
+        Size: =30
+        Text: ="Approve"
+        Width: =208
+        X: =309
+        Y: =466
+        ZIndex: =1
+
+    Button4_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =//Office365Outlook.SendEmailV2(Label9_4.Text,"Response to purchase requisition","The purchase requisition has been declined.")
+        Size: =30
+        Text: ="Decline"
+        Width: =208
+        X: =797
+        Y: =466
+        ZIndex: =2
+
+    TextInput11 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =212
+        HintText: ="Message (optional)"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Mode: =TextMode.MultiLine
+        Size: =13
+        Width: =696
+        X: =309
+        Y: =202
+        ZIndex: =3
+
+    Label29 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: ="Message"
+        X: =309
+        Y: =162
+        ZIndex: =4
+
+    Label11_7 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(39, 113, 194, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =118
+        Size: =45
+        Text: =companyName.SelectedText.Value
+        Width: =1142
+        X: =132
+        Y: =27
+        ZIndex: =5
+
+    Icon1_5 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =50
+        Y: =50
+        ZIndex: =6
+
