@@ -2,34 +2,44 @@ ViewPDF As screen:
     BackgroundImage: =
     Fill: =
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =If(
         Height: =731
         Items: =RequisitionPDF
         Layout: =Layout.Vertical
         OnSelect: =true
         ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
+        TemplatePadding: =4
+        TemplateSize: =Min(320, Self.Height - 60)
         Width: =660
+        WrapCount: =2
         X: =13
         Y: =18
-        ZIndex: =4
+        ZIndex: =1
 
-        Image1 As image:
+        Image4 As image:
             BorderColor: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =128
+            Height: =Parent.TemplateHeight
             Image: =ThisItem.Thumbnail.Large
+            ImagePosition: =ImagePosition.Fill
             OnSelect: =Select(Parent)
-            Width: =128
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            Width: =Parent.TemplateWidth
             ZIndex: =1
 
-        Title1 As label:
-            Color: =RGBA(0, 0, 0, 1)
+        Overlay1 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(0, 0, 0, 0.4)
+            Height: =108
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 108
+            ZIndex: =2
+
+        Title2 As label:
+            Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
@@ -41,15 +51,15 @@ ViewPDF As screen:
             Size: =20
             Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image1.Width - 104
-            X: =Image1.X + Image1.Width + 24
-            Y: =44
-            ZIndex: =2
+            Width: =Parent.TemplateWidth - 64
+            X: =32
+            Y: =Overlay1.Y + 16
+            ZIndex: =3
 
-        Subtitle1 As label:
-            Color: =RGBA(0, 0, 0, 1)
+        Subtitle2 As label:
+            Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =60
+            Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -58,10 +68,10 @@ ViewPDF As screen:
             Size: =18
             Text: =ThisItem.Identifier
             VerticalAlign: =VerticalAlign.Top
-            Width: =458
-            X: =Title1.X
-            Y: =Title1.Y + Title1.Height + 4
-            ZIndex: =3
+            Width: =Title2.Width
+            X: =Title2.X
+            Y: =Title2.Y + Title2.Height + 8
+            ZIndex: =4
 
     Image3 As image:
         BorderColor: =RGBA(0, 89, 178, 1)
