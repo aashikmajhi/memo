@@ -558,7 +558,7 @@ PurchaseRequisition As screen:
         Text: ="Approver 4"
         Visible: =If(IsEmpty(approver3.SelectedText.Value),false,true)
         Width: =144
-        X: =1092
+        X: =1101
         Y: =625
         ZIndex: =34
 
