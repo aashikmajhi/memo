@@ -8,7 +8,7 @@ Home As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(153, 205, 255, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =602
+        Height: =552
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =Self.Fill
         PressedFill: =Self.Fill
@@ -21,9 +21,10 @@ Home As screen:
 
     Gallery3 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =492
-        Items: |
-            =Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
+        Height: =427
+        Items: |-
+            =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
+            Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(ViewPDF)
         ShowScrollbar: =false
