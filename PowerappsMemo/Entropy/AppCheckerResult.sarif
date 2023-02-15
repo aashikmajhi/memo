@@ -3094,36 +3094,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "RespondingScreen.TextInput2.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "RespondingScreen.TextInput2.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "RespondingScreen",
-                "type": "RespondingScreen.TextInput2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "RespondingScreen.TextInput4.Default"
                 }
               ],

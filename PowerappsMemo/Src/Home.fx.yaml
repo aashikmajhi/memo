@@ -24,8 +24,8 @@ Home As screen:
         Height: =427
         Items: |-
             =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
-            //Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
-            Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
+            Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
+            //Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(ViewPDF)
         ShowScrollbar: =false
@@ -230,10 +230,12 @@ Home As screen:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
             Height: =78
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Subject
+            Size: =20
+            Text: =//ThisItem.Subject
+            VerticalAlign: =VerticalAlign.Top
             Width: =534
             X: =160
             Y: =262

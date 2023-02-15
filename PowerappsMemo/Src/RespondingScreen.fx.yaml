@@ -274,7 +274,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_1.Selected.Subject
+        Default: =//Gallery3_1.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -292,7 +292,9 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_1.Selected.'First Approver'.Email
+        Default: |-
+            =//Gallery3_1.Selected.'First Approver'.Email
+            Gallery3_1.Selected.'First Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -311,7 +313,9 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_1.Selected.'Second Approver'.Email
+        Default: |-
+            =//Gallery3_1.Selected.'Second Approver'.Email
+            Gallery3_1.Selected.'Second Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -330,7 +334,9 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_1.Selected.'Third Approver'.Email
+        Default: |-
+            =//Gallery3_1.Selected.'Third Approver'.Email
+            Gallery3_1.Selected.'Third Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -349,7 +355,9 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_1.Selected.'Fourth Approver'.Email
+        Default: |-
+            =//Gallery3_1.Selected.'Fourth Approver'.Email
+            Gallery3_1.Selected.'Fourth Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
