@@ -319,11 +319,12 @@ PDFView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =118
+        Height: =88
         Size: =45
         Text: =companyName.SelectedText.Value
         Width: =1142
-        X: =134
+        X: =125
+        Y: =12
         ZIndex: =36
 
     cate As label:

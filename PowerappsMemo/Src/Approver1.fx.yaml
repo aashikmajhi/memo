@@ -24,7 +24,6 @@ Approver1 As screen:
         Height: =427
         Items: |
             =Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
-            //Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || "Pending Second Approval" || "Pending Third Approval",Date,Ascending),Date,Ascending)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(ViewPDF)
         ShowScrollbar: =false
