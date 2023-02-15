@@ -453,8 +453,12 @@ PDFView As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
             =//SavetoSP.Run("PurchaseReq for the Ref No " & refNo_1.Text &".pdf",Substitute(JSON(myPdf,IncludeBinaryData),"""",""));
-            Patch(RequisitionDemo,Defaults(RequisitionDemo),{Title:refNo_1.Text,From:from_1.Text,Department:department_1.Text,Date:date_1.Text,Organization:org.Text,'First Approver':app1.Text,'Second Approver':app2.Text,'Third Approver':app3.Text,'Fourth Approver':app4.Text});
+            
+            //Patch(RequisitionDemo,Defaults(RequisitionDemo),{Title:refNo_1.Text,From:from_1.Text,Department:department_1.Text,Date:date_1.Text,Organization:org.Text,'First Approver':app1.Text,'Second Approver':app2.Text,'Third Approver':app3.Text,'Fourth Approver':app4.Text});
             //Office365Outlook.SendEmailV2(app1.Text,"Testing mail.","We are just testing the pdf generating feature and sending it as an email.",{Attachments:Table({Name:"PurchaseReq for the Ref No " & refNo_1.Text &".pdf",ContentBytes:myPdf})});
+            
+            Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_1.Text,From:from_1.Text,Department:department_1.Text,Date:date_1.Text,Organization:org.Text,Subject:cate.Text});
+            
             Clear(PurchaseReq);
             Reset(approver1);
             Reset(approver2);

@@ -1,0 +1,396 @@
+RespondingScreen As screen:
+    BackgroundImage: =
+    Fill: =
+
+    Button7_2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(153, 205, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =636
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: =""
+        Width: =1366
+        Y: =132
+        ZIndex: =1
+
+    greetingUser As button:
+        Align: =Align.Left
+        Color: =RGBA(0, 80, 160, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =118
+        HoverFill: =Self.Fill
+        PressedColor: =Self.Color
+        PressedFill: =
+        Size: =23
+        Text: ="Hey! " & Office365Users.MyProfile().GivenName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
+        Width: =524
+        X: =156
+        Y: =14
+        ZIndex: =2
+
+    Label19_4 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Date"
+        Width: =60
+        X: =129
+        Y: =202
+        ZIndex: =3
+
+    fromlabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        Size: =13
+        Text: ="From"
+        Width: =60
+        X: =129
+        Y: =253
+        ZIndex: =4
+
+    from_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.From
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =253
+        ZIndex: =5
+
+    dptlabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Department"
+        Width: =123
+        X: =67
+        Y: =304
+        ZIndex: =6
+
+    department_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.Department
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =304
+        ZIndex: =7
+
+    reflabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Ref No"
+        Width: =93
+        X: =96
+        Y: =355
+        ZIndex: =8
+
+    refNo_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.Title
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =355
+        ZIndex: =9
+
+    app1label As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Approver 1"
+        Width: =126
+        X: =61
+        Y: =457
+        ZIndex: =14
+
+    app2label As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Approver 2"
+        Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
+        Width: =144
+        X: =43
+        Y: =509
+        ZIndex: =15
+
+    app3label As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Approver 3"
+        Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
+        Width: =144
+        X: =45
+        Y: =562
+        ZIndex: =16
+
+    app4label As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Approver 4"
+        Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
+        Width: =144
+        X: =43
+        Y: =614
+        ZIndex: =17
+
+    date_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.Date
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =202
+        ZIndex: =21
+
+    orglabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: |-
+            ="Organization Name
+            "
+        Width: =190
+        Y: =152
+        ZIndex: =22
+
+    sublabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Subject"
+        Width: =81
+        X: =106
+        Y: =406
+        ZIndex: =23
+
+    TextInput1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.Organization
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =152
+        ZIndex: =25
+
+    TextInput2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.Subject
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =406
+        ZIndex: =26
+
+    TextInput3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.'First Approver'.Email
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        PaddingLeft: =5
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =457
+        ZIndex: =27
+
+    TextInput4 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.'Second Approver'.Email
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        PaddingLeft: =5
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =509
+        ZIndex: =28
+
+    TextInput5 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.'Third Approver'.Email
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        PaddingLeft: =5
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =562
+        ZIndex: =29
+
+    TextInput6 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.'Fourth Approver'.Email
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        PaddingLeft: =5
+        Size: =13
+        Width: =360
+        X: =202
+        Y: =614
+        ZIndex: =30
+
+    approve As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 89, 178, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =54
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(Approval)
+        Size: =15
+        Text: ="Respond"
+        Width: =252
+        X: =543
+        Y: =693
+        ZIndex: =31
+
+    Icon6 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =50
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =50
+        X: =40
+        Y: =40
+        ZIndex: =33
+

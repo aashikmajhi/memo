@@ -78,6 +78,9 @@
           "RequisitionDemo": {
             "tableName": "4642c334-2366-4957-8eda-a94901e7dbac"
           },
+          "RequisitionDemoApprovalList": {
+            "tableName": "8a4558d2-e323-4ada-a3bb-4b1889c95b88"
+          },
           "RequisitionPDF": {
             "tableName": "c9ef34cf-91bc-4972-8788-591bbf73fa76"
           }
@@ -86,7 +89,8 @@
     },
     "dataSources": [
       "RequisitionPDF",
-      "RequisitionDemo"
+      "RequisitionDemo",
+      "RequisitionDemoApprovalList"
     ],
     "dependencies": {},
     "dependents": [
