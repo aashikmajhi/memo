@@ -423,7 +423,9 @@ PurchaseRequisition As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: |-
+            =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+            //Office365Users.SearchUser({top:""})
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -446,7 +448,7 @@ PurchaseRequisition As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -454,7 +456,7 @@ PurchaseRequisition As screen:
         Size: =13
         Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
         Width: =333
-        X: =348
+        X: =339
         Y: =665
         ZIndex: =29
 
@@ -471,20 +473,19 @@ PurchaseRequisition As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(0, 89, 178, 1)
-        Fill: =RGBA(250, 250, 250, 1)
         FontWeight: =FontWeight.Bold
         Height: =70
         HoverBorderColor: =Transparent
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 134, 208, 1)
         Items: =["F1 Soft", "e-Sewa"]
         PressedColor: =RGBA(0, 89, 178, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         SelectionColor: =RGBA(0, 51, 102, 1)
         SelectionFill: =RGBA(194, 225, 255, 1)
         Size: =50
-        Width: =1212
-        X: =126
+        Width: =900
+        X: =226
         Y: =14
         ZIndex: =30
 
@@ -519,7 +520,7 @@ PurchaseRequisition As screen:
         Text: ="Approver 3"
         Visible: =If(IsEmpty(approver2.SelectedText.Value),false,true)
         Width: =144
-        X: =781
+        X: =772
         Y: =625
         ZIndex: =32
 
@@ -536,7 +537,7 @@ PurchaseRequisition As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -544,7 +545,7 @@ PurchaseRequisition As screen:
         Size: =13
         Visible: =If(IsEmpty(approver2.SelectedText.Value),false,true)
         Width: =333
-        X: =691
+        X: =682
         Y: =665
         ZIndex: =33
 
@@ -574,7 +575,7 @@ PurchaseRequisition As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
