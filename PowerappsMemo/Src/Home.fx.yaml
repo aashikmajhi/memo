@@ -212,7 +212,7 @@ Home As screen:
             Y: =14
             ZIndex: =13
 
-        Label32_3 As label:
+        subjectlbl As label:
             Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -240,6 +240,34 @@ Home As screen:
             X: =160
             Y: =262
             ZIndex: =15
+
+        cmtlbl As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Comment"
+            Width: =136
+            X: =24
+            Y: =340
+            ZIndex: =16
+
+        commentlbl As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =82
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.'Approval Comments'
+            Width: =500
+            X: =170
+            Y: =340
+            ZIndex: =17
 
     Gallery2 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)
@@ -288,7 +316,7 @@ Home As screen:
         PressedColor: =Self.Color
         PressedFill: =
         Size: =23
-        Text: ="Hey! " & Office365Users.MyProfile().GivenName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
+        Text: ="Hey! " & Office365Users.MyProfile().GivenName & " Welcome Back"
         Width: =524
         X: =156
         Y: =14

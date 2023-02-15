@@ -29,11 +29,12 @@ Approver As screen:
         Layout: =Layout.Vertical
         OnSelect: =Navigate(RespondingScreen)
         ShowScrollbar: =false
-        TemplateSize: =420
-        Width: =1294
+        TemplateSize: =422
+        Width: =1233
+        WrapCount: =2
         X: =34
         Y: =266
-        ZIndex: =2
+        ZIndex: =1
 
         rfDate_1 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -44,8 +45,8 @@ Approver As screen:
             Size: =20
             Text: =ThisItem.Date
             Width: =500
-            X: =160
-            Y: =99
+            X: =172
+            Y: =85
             ZIndex: =1
 
         rfNo_1 As label:
@@ -58,8 +59,8 @@ Approver As screen:
             Size: =20
             Text: =ThisItem.Title
             Width: =707
-            X: =160
-            Y: =55
+            X: =172
+            Y: =41
             ZIndex: =2
 
         rfFrom_1 As label:
@@ -72,8 +73,8 @@ Approver As screen:
             Size: =20
             Text: =ThisItem.From
             Width: =500
-            X: =157
-            Y: =135
+            X: =169
+            Y: =121
             ZIndex: =3
 
         rfDpt_1 As label:
@@ -85,8 +86,8 @@ Approver As screen:
             Size: =20
             Text: =ThisItem.Department
             Width: =500
-            X: =157
-            Y: =184
+            X: =169
+            Y: =170
             ZIndex: =4
 
         Label21_1 As label:
@@ -99,8 +100,8 @@ Approver As screen:
             Size: =15
             Text: ="Ref No"
             Width: =133
-            X: =24
-            Y: =54
+            X: =36
+            Y: =40
             ZIndex: =5
 
         Label27_1 As label:
@@ -113,8 +114,8 @@ Approver As screen:
             Size: =15
             Text: ="Date"
             Width: =133
-            X: =24
-            Y: =99
+            X: =36
+            Y: =85
             ZIndex: =6
 
         Label30_1 As label:
@@ -127,8 +128,8 @@ Approver As screen:
             Size: =15
             Text: ="From"
             Width: =133
-            X: =24
-            Y: =141
+            X: =36
+            Y: =127
             ZIndex: =7
 
         Label31_1 As label:
@@ -141,8 +142,8 @@ Approver As screen:
             Size: =15
             Text: ="Department"
             Width: =133
-            X: =24
-            Y: =182
+            X: =36
+            Y: =168
             ZIndex: =8
 
         Label32_1 As label:
@@ -155,8 +156,8 @@ Approver As screen:
             Size: =15
             Text: ="Status"
             Width: =136
-            X: =24
-            Y: =222
+            X: =36
+            Y: =208
             ZIndex: =9
 
         Label33_1 As label:
@@ -169,22 +170,9 @@ Approver As screen:
             Size: =20
             Text: =ThisItem.Status.Value
             Width: =500
-            X: =160
-            Y: =224
+            X: =172
+            Y: =210
             ZIndex: =10
-
-        Image4_2 As image:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =400
-            Image: |
-                =//Substitute(Gallery1.Selected.Thumbnail.Large,"/thumbnail","/jpg")
-            OnSelect: =Select(Parent)
-            Width: =590
-            X: =680
-            Y: =14
-            ZIndex: =11
 
         Label2_1 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -195,7 +183,7 @@ Approver As screen:
             Size: =20
             Text: =ThisItem.Organization
             Width: =500
-            X: =160
+            X: =172
             Y: =14
             ZIndex: =12
 
@@ -208,11 +196,11 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =15
             Text: ="Organization"
-            X: =10
+            X: =22
             Y: =14
             ZIndex: =13
 
-        Label32_2 As label:
+        subjectlbl_1 As label:
             Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -222,22 +210,52 @@ Approver As screen:
             Size: =15
             Text: ="Subject"
             Width: =136
-            X: =24
-            Y: =258
+            X: =36
+            Y: =260
             ZIndex: =14
 
-        Label9 As label:
+        Label9_2 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
             Height: =78
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =20
             Text: =//ThisItem.Subject
+            VerticalAlign: =VerticalAlign.Top
             Width: =534
-            X: =160
-            Y: =258
+            X: =172
+            Y: =252
             ZIndex: =15
+
+        cmtlbl_1 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Comment"
+            Width: =136
+            X: =36
+            Y: =320
+            ZIndex: =16
+
+        commentlbl_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =82
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.'Approval Comments'
+            Width: =500
+            X: =172
+            Y: =318
+            ZIndex: =17
 
     Gallery2_1 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)
