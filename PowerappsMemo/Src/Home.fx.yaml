@@ -1,6 +1,16 @@
 Home As screen:
     BackgroundImage: =
     Fill: =
+    OnVisible: |-
+        =//Switch(
+        //    ThisItem.Status.Value,
+        //    "Pending First Approval",Set(varStatusNum,1),
+        //    "Pending Second Approval",Set(varStatusNum,2),
+        //    "Pending Third Approval",Set(varStatusNum,3),
+        //    "Pending Third Approval",Set(varStatusNum,4),
+        //    "Approved",Set(varStatusNum,5),
+        //    "Declined",Set(varStatusNum,6)
+        //);
 
     Button7 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
