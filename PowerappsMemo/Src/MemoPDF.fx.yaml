@@ -1,6 +1,7 @@
 MemoPDF As screen:
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =
+    OnVisible: |-
+        =Set(myMemoPdf,PDF(MemoPDF ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
 
     "SNGallery_3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -9,7 +10,7 @@ MemoPDF As screen:
         Items: =Sequence(CountRows(ProdGallery_3.AllItems))
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =33
+        TemplateSize: =32
         Width: =42
         X: =10
         Y: =316
@@ -23,7 +24,7 @@ MemoPDF As screen:
             OnSelect: =Select(Parent)
             TabIndex: =0
             Width: =Parent.TemplateWidth
-            Y: =32
+            Y: =31
             ZIndex: =3
 
         Label15_2 As label:
@@ -32,12 +33,11 @@ MemoPDF As screen:
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: |
-                =32
+            Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.Value
-            Width: =40
+            Width: =42
             ZIndex: =4
 
     ProdGallery_3 As gallery.galleryVertical:
@@ -48,7 +48,7 @@ MemoPDF As screen:
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Edit Item')
         TemplatePadding: =0
-        TemplateSize: =33
+        TemplateSize: =32
         Width: =1308
         X: =52
         Y: =316
@@ -61,7 +61,7 @@ MemoPDF As screen:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =ProdGallery_3.TemplateWidth
-            Y: =32
+            Y: =31
             ZIndex: =4
 
         Label24_8 As label:
@@ -71,7 +71,7 @@ MemoPDF As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.Source
             ZIndex: =5
 
@@ -82,7 +82,7 @@ MemoPDF As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.'Type No'
             Width: =50
             X: =261
@@ -95,7 +95,7 @@ MemoPDF As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.Type
             Width: =111
             X: =150
@@ -125,21 +125,23 @@ MemoPDF As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.'Type Name'
             Width: =265
             X: =311
             ZIndex: =10
 
         Label24_12 As label:
+            Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.Amount
+            Width: =100
             X: =577
             ZIndex: =11
 
@@ -150,11 +152,10 @@ MemoPDF As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.Attachment
-            Width: =214
-            X: =1063
-            Y: =1
+            Width: =239
+            X: =1038
             ZIndex: =12
 
         Label24_9 As label:
@@ -162,13 +163,12 @@ MemoPDF As screen:
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =31
+            Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Amount
-            Width: =216
-            X: =847
-            Y: =1
+            Size: =10
+            Text: =ThisItem.Narration
+            Width: =241
+            X: =797
             ZIndex: =13
 
         Label24_13 As label:
@@ -178,10 +178,10 @@ MemoPDF As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10
             Text: =ThisItem.'Bill No.'
             Width: =120
-            X: =727
+            X: =677
             ZIndex: =14
 
     Label8_7 As label:
@@ -298,7 +298,7 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -334,7 +334,7 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =1015
@@ -385,7 +385,7 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =232
         X: =1108
@@ -464,7 +464,7 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         X: =581
         Y: =198
@@ -528,7 +528,7 @@ MemoPDF As screen:
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =250
         X: =10
@@ -557,9 +557,9 @@ MemoPDF As screen:
         Height: =32
         Size: =10
         Text: ="Amount"
-        Width: =100
-        X: =652
-        Y: =284
+        Width: =80
+        X: =637
+        Y: =282
         ZIndex: =46
 
     Label13_41 As label:
@@ -572,7 +572,7 @@ MemoPDF As screen:
         Size: =10
         Text: ="Bill No."
         Width: =70
-        X: =801
+        X: =751
         Y: =284
         ZIndex: =47
 
@@ -617,7 +617,7 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -637,7 +637,7 @@ MemoPDF As screen:
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =250
         X: =1099
@@ -657,7 +657,7 @@ MemoPDF As screen:
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =250
         X: =824
@@ -677,7 +677,7 @@ MemoPDF As screen:
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =250
         X: =550
@@ -697,7 +697,7 @@ MemoPDF As screen:
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =250
         X: =281
@@ -723,7 +723,7 @@ MemoPDF As screen:
             Reset(approver1_5);
             Reset(approver1_4);
             Reset(approver1_3);
-            Navigate(Memo)
+            Navigate(Home)
         Visible: =false
         X: =589
         Y: =705
@@ -743,7 +743,7 @@ MemoPDF As screen:
         FontWeight: =FontWeight.Bold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =25
         X: =515
         Y: =16
@@ -763,7 +763,7 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -784,10 +784,48 @@ MemoPDF As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
         Y: =174
         ZIndex: =58
+
+    TextInput9_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="Dear Sir/Madame"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =170
+        X: =10
+        Y: =228
+        ZIndex: =59
+
+    TextInput9_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="This is to request for approval for payment of below parties for below references from below sources."
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =846
+        X: =10
+        Y: =254
+        ZIndex: =60
 
