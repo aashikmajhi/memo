@@ -212,35 +212,6 @@ Home As screen:
             Y: =14
             ZIndex: =13
 
-        subjectlbl As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
-            Size: =15
-            Text: ="Subject"
-            Width: =136
-            X: =24
-            Y: =262
-            ZIndex: =14
-
-        Label9_1 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =78
-            OnSelect: =Select(Parent)
-            Size: =20
-            Text: =//ThisItem.Subject
-            VerticalAlign: =VerticalAlign.Top
-            Width: =534
-            X: =160
-            Y: =262
-            ZIndex: =15
-
         cmtlbl As label:
             Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -252,7 +223,7 @@ Home As screen:
             Text: ="Comment"
             Width: =136
             X: =24
-            Y: =340
+            Y: =270
             ZIndex: =16
 
         commentlbl As label:
@@ -266,8 +237,56 @@ Home As screen:
             Text: =ThisItem.'Approval Comments'
             Width: =500
             X: =170
-            Y: =340
+            Y: =270
             ZIndex: =17
+
+        Icon1 As icon.Check:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =If(Icon.Check,Green,Red)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =Transparent
+            Icon: =If(ThisItem.Status.Value="Pending First Approval",Cancel,Check)
+            OnSelect: =Select(Parent)
+            X: =42
+            Y: =352
+            ZIndex: =18
+
+        Icon1_1 As icon.Check:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =If(Icon.Check,Green,Red)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =Transparent
+            Icon: =If(ThisItem.Status.Value="Approved",Check,Cancel)
+            OnSelect: =Select(Parent)
+            X: =642
+            Y: =352
+            ZIndex: =19
+
+        Icon1_7 As icon.Check:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =If(Icon.Check,Green,Red)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =Transparent
+            Icon: =If(ThisItem.Status.Value="Pending Third Approval",Cancel,Check)
+            OnSelect: =Select(Parent)
+            X: =436
+            Y: =352
+            ZIndex: =20
+
+        Icon1_8 As icon.Check:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =If(Icon.Check,Green,Red)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =Transparent
+            Icon: =If(ThisItem.Status.Value="Pending Second Approval",Cancel,Check)
+            OnSelect: =Select(Parent)
+            X: =232
+            Y: =352
+            ZIndex: =21
 
     Gallery2 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)
