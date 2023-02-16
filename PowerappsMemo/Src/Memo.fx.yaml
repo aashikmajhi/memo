@@ -113,8 +113,8 @@ Memo As screen:
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
-            Width: =53
-            X: =1255
+            Width: =31
+            X: =1277
             Y: =1
             ZIndex: =9
 
@@ -152,7 +152,7 @@ Memo As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Description
-            Width: =191
+            Width: =214
             X: =1063
             Y: =1
             ZIndex: =12

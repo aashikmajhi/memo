@@ -1,115 +1,6 @@
 "'Edit Item' As screen":
     Fill: =RGBA(232, 232, 232, 1)
 
-    Label28 As label:
-        Align: =Align.Right
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =41
-        Size: =13
-        Text: ="Description"
-        Width: =118
-        X: =391
-        Y: =186
-        ZIndex: =1
-
-    Label28_1 As label:
-        Align: =Align.Right
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =41
-        Size: =13
-        Text: ="Quantity"
-        Width: =118
-        X: =391
-        Y: =343
-        ZIndex: =2
-
-    Label28_2 As label:
-        Align: =Align.Right
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =41
-        Size: =13
-        Text: ="Purpose"
-        Width: =118
-        X: =391
-        Y: =437
-        ZIndex: =3
-
-    TextInput10 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery.Selected.Description
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =107
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Mode: =TextMode.MultiLine
-        Size: =13
-        Width: =400
-        X: =579
-        Y: =188
-        ZIndex: =4
-
-    TextInput10_1 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery.Selected.Quantity
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Format: =TextFormat.Number
-        Height: =50
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Size: =13
-        Width: =222
-        X: =580
-        Y: =343
-        ZIndex: =5
-
-    TextInput10_2 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery.Selected.Purpose
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Size: =13
-        Width: =400
-        X: =580
-        Y: =437
-        ZIndex: =6
-
-    Icon1 As icon.BackArrow:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.BackArrow
-        OnSelect: =Back()
-        X: =50
-        Y: =50
-        ZIndex: =7
-
     Button3 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -120,16 +11,321 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =ClearCollect(PurchaseReq,{Description:TextInput10.Text,Quantity:TextInput10_1.Text,Purpose:TextInput10_2.Text});
-            Reset(TextInput10_2);
-            Reset(TextInput10);
-            Reset(TextInput10_1);
+            =//ClearCollect(PurchaseReq,{Description:TextInput10.Text,Quantity:TextInput10_1.Text,Purpose:TextInput10_2.Text});
+            //Reset(TextInput10_2);
+            //Reset(TextInput10);
+            //Reset(TextInput10_1);
             Navigate(PurchaseRequisition);
         Size: =15
         Text: ="Update"
-        X: =662
-        Y: =568
+        X: =622
+        Y: =665
         ZIndex: =8
+
+    desctxt_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =192
+        HintText: ="Narration Here"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Mode: =TextMode.MultiLine
+        Size: =13
+        Width: =451
+        X: =862
+        Y: =184
+        ZIndex: =12
+
+    qtytxt_1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =50
+        HintText: |-
+            ="Bill No:"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =553
+        ZIndex: =13
+
+    purposetxt_1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HintText: ="Amount"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =478
+        ZIndex: =14
+
+    Label13_28 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Source"
+        Width: =134
+        X: =15
+        Y: =184
+        ZIndex: =15
+
+    Label13_29 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Type"
+        Width: =100
+        X: =49
+        Y: =253
+        ZIndex: =16
+
+    Label13_30 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="No"
+        Width: =67
+        X: =82
+        Y: =330
+        ZIndex: =17
+
+    Label13_31 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Name"
+        Width: =134
+        X: =15
+        Y: =409
+        ZIndex: =18
+
+    Label13_32 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Amount"
+        Width: =134
+        X: =15
+        Y: =483
+        ZIndex: =19
+
+    Label13_33 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Bill No."
+        Width: =109
+        X: =40
+        Y: =556
+        ZIndex: =20
+
+    Label13_34 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        Size: =15
+        Text: ="Narration"
+        Width: =217
+        X: =633
+        Y: =182
+        ZIndex: =21
+
+    Label13_35 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: ="Attachment"
+        Width: =201
+        X: =649
+        Y: =423
+        ZIndex: =22
+
+    desctxt_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =181
+        HintText: ="Add remarfks or links here"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Mode: =TextMode.MultiLine
+        Size: =13
+        Width: =451
+        X: =862
+        Y: =419
+        ZIndex: =23
+
+    ComboBox2_4 As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Source"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,ComboBox2_4.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =182
+        ZIndex: =24
+
+    ComboBox2_5 As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Type"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,ComboBox2_5.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =255
+        ZIndex: =25
+
+    ComboBox2_6 As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Type No "
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,ComboBox2_6.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =326
+        ZIndex: =26
+
+    ComboBox2_7 As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Name"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,ComboBox2_7.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =396
+        ZIndex: =27
+
+    Icon3_1 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =Reset(desctxt);
+            Reset(qtytxt);
+            Reset(purposetxt);
+            Back()
+        X: =40
+        Y: =40
+        ZIndex: =28
 
     Label11_4 As label:
         Align: =Align.Center
@@ -138,11 +334,11 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =118
-        Size: =45
+        Height: =55
+        Size: =35
         Text: =companyName.SelectedText.Value
-        Width: =1142
-        X: =119
+        Width: =777
+        X: =283
         Y: =24
-        ZIndex: =11
+        ZIndex: =29
 
