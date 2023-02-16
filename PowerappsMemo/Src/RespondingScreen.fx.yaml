@@ -159,7 +159,8 @@ RespondingScreen As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =13
-        Text: ="Approver 1"
+        Text: |-
+            ="Verified By:"
         Width: =126
         X: =61
         Y: =457
@@ -172,10 +173,11 @@ RespondingScreen As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =13
-        Text: ="Approver 2"
+        Text: |-
+            ="Recommended By:"
         Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
-        Width: =144
-        X: =43
+        Width: =172
+        X: =15
         Y: =509
         ZIndex: =15
 
@@ -186,7 +188,7 @@ RespondingScreen As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =13
-        Text: ="Approver 3"
+        Text: ="Approver 1"
         Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
         Width: =144
         X: =45
@@ -200,7 +202,7 @@ RespondingScreen As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =13
-        Text: ="Approver 4"
+        Text: ="Approver 2"
         Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
         Width: =144
         X: =43
