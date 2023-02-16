@@ -31,11 +31,11 @@ PurchaseRequisition As screen:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =SNGallery.TemplateHeight
+            Height: =47
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Value
-            Width: =80
+            Width: =70
             ZIndex: =4
 
     ProdGallery As gallery.galleryVertical:
@@ -89,7 +89,7 @@ PurchaseRequisition As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Description
+            Text: =ThisItem.'Type Name'
             Width: =576
             ZIndex: =5
 
@@ -100,7 +100,7 @@ PurchaseRequisition As screen:
             Height: =47
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Purpose
+            Text: =ThisItem.Narration
             Width: =338
             X: =840
             ZIndex: =6
@@ -112,7 +112,7 @@ PurchaseRequisition As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Quantity
+            Text: =ThisItem.Amount
             Width: =256
             X: =584
             ZIndex: =7

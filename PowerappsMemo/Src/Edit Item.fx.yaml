@@ -319,9 +319,9 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Reset(desctxt);
-            Reset(qtytxt);
-            Reset(purposetxt);
+            =Reset(narrationtxt);
+            Reset(billtxt);
+            Reset(amttxt);
             Back()
         X: =40
         Y: =40

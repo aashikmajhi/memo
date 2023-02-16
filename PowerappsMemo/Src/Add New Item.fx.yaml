@@ -13,19 +13,29 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =If(!IsBlank((desctxt||qtytxt||purposetxt)),
+            =If(!IsBlank((narrationtxt||billtxt||amttxt||attachementtxt||sourcecombo.Selected.Value1||typecombo.Selected.Value1||typenocombo.Selected.Value1||typenamecombo.Selected.Value1)),
                 Collect(PurchaseReq,
                 {
-                    Description: desctxt.Text,
-                    Quantity: qtytxt.Text,
-                    Purpose:purposetxt.Text
+                    Source:sourcecombo.Selected.Value1,
+                    Type:typecombo.Selected.Value1,
+                    'Type No':typenocombo.Selected.Value1,
+                    'Type Name':typenamecombo.Selected.Value1,
+                    'Bill No.': billtxt.Text,
+                    Amount:amttxt.Text,
+                    Narration: narrationtxt.Text,
+                    Attachment:attachementtxt.Text
                 }
             ),Notify("Empty fields can not be processed"));
             
-            Reset(desctxt);
-            Reset(qtytxt);
-            Reset(purposetxt);
-            Navigate(PurchaseRequisition);
+            Reset(narrationtxt);
+            Reset(billtxt);
+            Reset(amttxt);
+            Reset(typecombo);
+            Reset(typenocombo);
+            Reset(typenamecombo);
+            Reset(attachementtxt);
+            Reset(sourcecombo);
+            Navigate(Memo);
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
         RadiusTopLeft: =20
@@ -38,7 +48,7 @@
         Y: =630
         ZIndex: =2
 
-    desctxt As text:
+    narrationtxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -59,7 +69,7 @@
         Y: =184
         ZIndex: =13
 
-    qtytxt As text:
+    billtxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -69,7 +79,6 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Format: =TextFormat.Number
         Height: =50
         HintText: |-
             ="Bill No:"
@@ -82,7 +91,7 @@
         Y: =553
         ZIndex: =14
 
-    purposetxt As text:
+    amttxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -109,9 +118,9 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Reset(desctxt);
-            Reset(qtytxt);
-            Reset(purposetxt);
+            =Reset(narrationtxt);
+            Reset(billtxt);
+            Reset(amttxt);
             Back()
         X: =40
         Y: =40
@@ -237,7 +246,7 @@
         Y: =423
         ZIndex: =28
 
-    desctxt_1 As text:
+    attachementtxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -258,7 +267,7 @@
         Y: =419
         ZIndex: =29
 
-    ComboBox2 As combobox:
+    sourcecombo As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
         ChevronBackground: =RGBA(0, 51, 102, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -274,15 +283,16 @@
         Items: =ComboBoxSample
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2.SearchText,"Value1")
+        SearchItems: =Search(ComboBoxSample,sourcecombo.SearchText,"Value1")
         SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
         Size: =13
         Width: =375
         X: =168
         Y: =182
         ZIndex: =30
 
-    ComboBox2_1 As combobox:
+    typecombo As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
         ChevronBackground: =RGBA(0, 51, 102, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -298,15 +308,16 @@
         Items: =ComboBoxSample
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_1.SearchText,"Value1")
+        SearchItems: =Search(ComboBoxSample,typecombo.SearchText,"Value1")
         SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
         Size: =13
         Width: =375
         X: =168
         Y: =255
         ZIndex: =31
 
-    ComboBox2_2 As combobox:
+    typenocombo As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
         ChevronBackground: =RGBA(0, 51, 102, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -322,15 +333,16 @@
         Items: =ComboBoxSample
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_2.SearchText,"Value1")
+        SearchItems: =Search(ComboBoxSample,typenocombo.SearchText,"Value1")
         SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
         Size: =13
         Width: =375
         X: =168
         Y: =326
         ZIndex: =32
 
-    ComboBox2_3 As combobox:
+    typenamecombo As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
         ChevronBackground: =RGBA(0, 51, 102, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -346,8 +358,9 @@
         Items: =ComboBoxSample
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_3.SearchText,"Value1")
+        SearchItems: =Search(ComboBoxSample,typenamecombo.SearchText,"Value1")
         SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
         Size: =13
         Width: =375
         X: =168

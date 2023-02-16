@@ -90,7 +90,7 @@ PDFView As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Description
+            Text: =ThisItem.Source
             Width: =576
             ZIndex: =5
 
@@ -101,7 +101,7 @@ PDFView As screen:
             Height: =47
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Purpose
+            Text: =ThisItem.Narration
             Width: =338
             X: =840
             ZIndex: =6
@@ -113,7 +113,7 @@ PDFView As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Quantity
+            Text: =ThisItem.Amount
             Width: =256
             X: =584
             ZIndex: =7
