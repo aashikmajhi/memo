@@ -82,7 +82,7 @@ Home As screen:
             Size: =20
             Text: =ThisItem.From
             Width: =500
-            X: =157
+            X: =160
             Y: =135
             ZIndex: =3
 
@@ -95,7 +95,7 @@ Home As screen:
             Size: =20
             Text: =ThisItem.Department
             Width: =500
-            X: =157
+            X: =160
             Y: =184
             ZIndex: =4
 
@@ -230,10 +230,11 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =82
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.'Approval Comments'
+            VerticalAlign: =VerticalAlign.Top
             Width: =500
-            X: =170
+            X: =160
             Y: =270
             ZIndex: =17
 
@@ -256,9 +257,9 @@ Home As screen:
             =Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"})
         Layout: =Layout.Vertical
         TemplateSize: =67
-        Width: =1197
+        Width: =1278
         WrapCount: =4
-        X: =69
+        X: =43
         Y: =165
         ZIndex: =3
 

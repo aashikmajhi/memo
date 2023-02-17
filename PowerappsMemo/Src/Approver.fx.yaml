@@ -27,9 +27,9 @@ Approver As screen:
             =Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"})
         Layout: =Layout.Vertical
         TemplateSize: =67
-        Width: =1197
+        Width: =1280
         WrapCount: =4
-        X: =69
+        X: =38
         Y: =165
         ZIndex: =2
 
@@ -105,7 +105,7 @@ Approver As screen:
 
     Gallery3_1 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =427
+        Height: =437
         Items: |-
             =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
             Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
@@ -114,10 +114,10 @@ Approver As screen:
         OnSelect: =Navigate(RespondingScreen)
         ShowScrollbar: =false
         TemplateSize: =422
-        Width: =1233
+        Width: =1292
         WrapCount: =2
         X: =34
-        Y: =266
+        Y: =256
         ZIndex: =6
 
         rfDate_1 As label:
@@ -128,8 +128,8 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Date
-            Width: =500
-            X: =172
+            Width: =456
+            X: =161
             Y: =85
             ZIndex: =1
 
@@ -142,9 +142,9 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Title
-            Width: =707
-            X: =172
-            Y: =41
+            Width: =456
+            X: =161
+            Y: =50
             ZIndex: =2
 
         rfFrom_1 As label:
@@ -156,8 +156,8 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.From
-            Width: =500
-            X: =169
+            Width: =456
+            X: =161
             Y: =121
             ZIndex: =3
 
@@ -169,8 +169,8 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Department
-            Width: =500
-            X: =169
+            Width: =456
+            X: =161
             Y: =170
             ZIndex: =4
 
@@ -184,8 +184,8 @@ Approver As screen:
             Size: =15
             Text: ="Ref No"
             Width: =133
-            X: =36
-            Y: =40
+            X: =16
+            Y: =50
             ZIndex: =5
 
         Label27_1 As label:
@@ -198,7 +198,7 @@ Approver As screen:
             Size: =15
             Text: ="Date"
             Width: =133
-            X: =36
+            X: =26
             Y: =85
             ZIndex: =6
 
@@ -212,7 +212,7 @@ Approver As screen:
             Size: =15
             Text: ="From"
             Width: =133
-            X: =36
+            X: =26
             Y: =127
             ZIndex: =7
 
@@ -226,7 +226,7 @@ Approver As screen:
             Size: =15
             Text: ="Department"
             Width: =133
-            X: =36
+            X: =26
             Y: =168
             ZIndex: =8
 
@@ -240,7 +240,7 @@ Approver As screen:
             Size: =15
             Text: ="Status"
             Width: =136
-            X: =36
+            X: =26
             Y: =208
             ZIndex: =9
 
@@ -253,8 +253,8 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Status.Value
-            Width: =500
-            X: =172
+            Width: =456
+            X: =161
             Y: =210
             ZIndex: =10
 
@@ -266,8 +266,8 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Organization
-            Width: =500
-            X: =172
+            Width: =456
+            X: =161
             Y: =14
             ZIndex: =12
 
@@ -280,7 +280,7 @@ Approver As screen:
             OnSelect: =Select(Parent)
             Size: =15
             Text: ="Organization"
-            X: =22
+            X: =2
             Y: =14
             ZIndex: =13
 
@@ -294,7 +294,7 @@ Approver As screen:
             Size: =15
             Text: ="Subject"
             Width: =136
-            X: =36
+            X: =26
             Y: =260
             ZIndex: =14
 
@@ -303,14 +303,14 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =78
+            Height: =60
             OnSelect: =Select(Parent)
             Size: =20
             Text: =//ThisItem.Subject
             VerticalAlign: =VerticalAlign.Top
-            Width: =534
-            X: =172
-            Y: =252
+            Width: =456
+            X: =159
+            Y: =260
             ZIndex: =15
 
         cmtlbl_1 As label:
@@ -323,7 +323,7 @@ Approver As screen:
             Size: =15
             Text: ="Comment"
             Width: =136
-            X: =36
+            X: =26
             Y: =320
             ZIndex: =16
 
@@ -332,12 +332,47 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =82
+            Height: =98
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.'Approval Comments'
-            Width: =500
-            X: =172
-            Y: =318
+            VerticalAlign: =VerticalAlign.Top
+            Width: =456
+            X: =161
+            Y: =320
             ZIndex: =17
+
+        Rectangle1 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(232, 232, 232, 1)
+            Height: =422
+            OnSelect: =Select(Parent)
+            Width: =1
+            ZIndex: =18
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(232, 232, 232, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =638
+            ZIndex: =19
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(232, 232, 232, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =638
+            Y: =421
+            ZIndex: =20
+
+        Rectangle4 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(232, 232, 232, 1)
+            Height: =422
+            OnSelect: =Select(Parent)
+            Width: =1
+            X: =637.5
+            ZIndex: =21
 
