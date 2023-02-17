@@ -2486,7 +2486,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "Image4_1": {
+    "Image3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -2499,22 +2499,8 @@
         },
         "ImagePosition",
         "ImageRotation",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "X",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "X",
+        "Y",
         "Width",
         "Height",
         "Fill",
@@ -2550,8 +2536,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Image4_1",
-      "ParentIndex": 3,
+      "Name": "Image3",
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2790,7 +2776,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4855,7 +4841,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

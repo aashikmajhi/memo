@@ -183,19 +183,6 @@ Home As screen:
             Y: =224
             ZIndex: =10
 
-        Image4_1 As image:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =400
-            Image: |
-                =//Substitute(Gallery1.Selected.Thumbnail.Large,"/thumbnail","/jpg")
-            OnSelect: =Select(Parent)
-            Width: =590
-            X: =680
-            Y: =14
-            ZIndex: =11
-
         Label2 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -249,6 +236,17 @@ Home As screen:
             X: =170
             Y: =270
             ZIndex: =17
+
+        Image3 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =422
+            Image: =LookUp(RequisitionPDF,Name="PurchaseReq for the Ref No "& ThisItem.Title & ".pdf",dataUri)
+            OnSelect: =Select(Parent)
+            Width: =416
+            X: =867
+            ZIndex: =18
 
     Gallery2 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)

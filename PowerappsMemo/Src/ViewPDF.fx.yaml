@@ -73,10 +73,14 @@ ViewPDF As screen:
             Y: =Title2.Y + Title2.Height + 8
             ZIndex: =4
 
-    PdfViewer1 As pdfViewer:
-        Document: =Substitute(Gallery1.Selected.Thumbnail.Large,"/thumbnail","/pdf")
-        Height: =768
+    Image1 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =731
+        Image: =Gallery1.Selected.Thumbnail.Large
         Width: =693
         X: =673
+        Y: =18
         ZIndex: =2
 
