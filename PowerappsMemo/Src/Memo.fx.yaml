@@ -323,7 +323,7 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="Date:"
+            ="Date : "
         Width: =65
         X: =14
         Y: =73
@@ -358,7 +358,7 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="From:"
+            ="From : "
         Width: =65
         X: =14
         Y: =104
@@ -394,8 +394,8 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="Department:"
-        Width: =123
+            ="Department : "
+        Width: =126
         X: =890
         Y: =126
         ZIndex: =18
@@ -430,9 +430,9 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="Subject:"
-        Width: =80
-        X: =501
+            ="Subject : "
+        Width: =85
+        X: =495
         Y: =198
         ZIndex: =20
 
@@ -445,7 +445,7 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="Ref No:"
+            ="Ref No : "
         Width: =93
         X: =1015
         Y: =90
@@ -568,6 +568,7 @@ Memo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(0, 89, 178, 1)
+        Font: =Font.Georgia
         FontWeight: =FontWeight.Bold
         Height: =36
         HoverBorderColor: =Transparent
@@ -675,6 +676,7 @@ Memo As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
@@ -711,7 +713,7 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="To:"
+            ="To : "
         Width: =65
         X: =14
         Y: =139
@@ -726,7 +728,7 @@ Memo As screen:
         Height: =28
         Size: =13
         Text: |-
-            ="Cc:"
+            ="Cc : "
         Width: =65
         X: =14
         Y: =174
