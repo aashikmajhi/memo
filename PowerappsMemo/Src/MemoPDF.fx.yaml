@@ -753,7 +753,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
-            =//SavetoSP.Run("PurchaseReq for the Ref No " & refNo_1.Text &".pdf",Substitute(JSON(myPdf,IncludeBinaryData),"""",""));
+            =StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myPdf,IncludeBinaryData),"""",""));
             
             Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:TextInput7_2.Text,'Verified By':approver1_6.Text,'Recommended By':approver1_5.Text,'First Approver':approver1_4.Text,'Second Approver':approver1_3.Text});
             
