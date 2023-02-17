@@ -1,5 +1,5 @@
 MemoPDF As screen:
-    Fill: =RGBA(232, 232, 232, 1)
+    Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |-
         =Set(myMemoPdf,PDF(MemoPDF ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
 
@@ -770,27 +770,6 @@ MemoPDF As screen:
         Y: =705
         ZIndex: =55
 
-    TextInput7_2 As text:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =companyName_1.Selected.Value
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =25
-        X: =515
-        Y: =16
-        ZIndex: =56
-
     from_6 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
@@ -870,4 +849,17 @@ MemoPDF As screen:
         X: =10
         Y: =254
         ZIndex: =60
+
+    Label3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =30
+        Text: =companyName_1.SelectedText.Value
+        Width: =320
+        X: =515
+        Y: =16
+        ZIndex: =61
 

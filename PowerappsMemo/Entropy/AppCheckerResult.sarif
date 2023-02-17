@@ -1274,36 +1274,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MemoPDF.TextInput7_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MemoPDF.TextInput7_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MemoPDF",
-                "type": "MemoPDF.TextInput7_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "MemoPDF.from_5.AccessibleLabel"
                 }
               ],
@@ -4244,19 +4214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MemoPDF.TextInput7_2.Default"
+                  "fullyQualifiedName": "MemoPDF.Label3.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MemoPDF.TextInput7_2.Default",
+                  "fullyQualifiedName": "MemoPDF.Label3.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Default",
+                "member": "Text",
                 "module": "MemoPDF",
-                "type": "MemoPDF.TextInput7_2"
+                "type": "MemoPDF.Label3"
               }
             }
           ],
