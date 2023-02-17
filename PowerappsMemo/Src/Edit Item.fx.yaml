@@ -1,15 +1,15 @@
 "'Edit Item' As screen":
-    Fill: =RGBA(232, 232, 232, 1)
+    Fill: =RGBA(153, 205, 255, 1)
 
     Button3 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
+        Fill: =RGBA(39, 113, 194, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
             =//ClearCollect(PurchaseReq,{Description:TextInput10.Text,Quantity:TextInput10_1.Text,Purpose:TextInput10_2.Text});
             //Reset(TextInput10_2);
@@ -18,8 +18,8 @@
             Navigate(PurchaseRequisition);
         Size: =15
         Text: ="Update"
-        X: =622
-        Y: =665
+        X: =591
+        Y: =669
         ZIndex: =8
 
     desctxt_2 As text:
@@ -31,16 +31,16 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =192
+        Height: =152
         HintText: ="Narration Here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
-        Width: =451
-        X: =862
-        Y: =184
+        Width: =603
+        X: =710
+        Y: =224
         ZIndex: =12
 
     qtytxt_1 As text:
@@ -165,30 +165,29 @@
         ZIndex: =20
 
     Label13_34 As label:
-        Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
-        Height: =36
+        Height: =42
         Size: =15
         Text: ="Narration"
-        Width: =217
-        X: =633
+        Width: =125
+        X: =710
         Y: =182
         ZIndex: =21
 
     Label13_35 As label:
-        Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
+        Height: =42
         Size: =15
         Text: ="Attachment"
-        Width: =201
-        X: =649
-        Y: =423
+        Width: =135
+        X: =710
+        Y: =409
         ZIndex: =22
 
     desctxt_3 As text:
@@ -200,16 +199,16 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =181
+        Height: =152
         HintText: ="Add remarfks or links here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
-        Width: =451
-        X: =862
-        Y: =419
+        Width: =603
+        X: =710
+        Y: =451
         ZIndex: =23
 
     ComboBox2_4 As combobox:

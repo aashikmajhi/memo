@@ -1,17 +1,16 @@
 "'Add New Item' As screen":
-    Fill: =RGBA(232, 232, 232, 1)
+    Fill: =RGBA(153, 205, 255, 1)
 
     Button2_2 As button:
-        Color: =RGBA(0, 121, 187, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(241, 244, 249, 1)
+        Fill: =RGBA(39, 113, 194, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         Height: =42
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
             =If(!IsBlank((narrationtxt||billtxt||amttxt||attachementtxt||sourcecombo.Selected.Value1||typecombo.Selected.Value1||typenocombo.Selected.Value1||typenamecombo.Selected.Value1)),
                 Collect(PurchaseReq,
@@ -40,8 +39,8 @@
         Text: |-
             ="Submit
             "
-        X: =592
-        Y: =630
+        X: =591
+        Y: =674
         ZIndex: =2
 
     narrationtxt As text:
@@ -53,16 +52,16 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =192
+        Height: =152
         HintText: ="Narration Here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
-        Width: =451
-        X: =862
-        Y: =184
+        Width: =603
+        X: =710
+        Y: =224
         ZIndex: =13
 
     billtxt As text:
@@ -216,7 +215,6 @@
         ZIndex: =26
 
     Label13_26 As label:
-        Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -225,12 +223,11 @@
         Size: =15
         Text: ="Narration"
         Width: =217
-        X: =633
+        X: =710
         Y: =182
         ZIndex: =27
 
     Label13_27 As label:
-        Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -238,8 +235,8 @@
         Size: =15
         Text: ="Attachment"
         Width: =201
-        X: =649
-        Y: =423
+        X: =710
+        Y: =409
         ZIndex: =28
 
     attachementtxt As text:
@@ -251,16 +248,16 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =181
+        Height: =152
         HintText: ="Add remarfks or links here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
-        Width: =451
-        X: =862
-        Y: =419
+        Width: =603
+        X: =710
+        Y: =452
         ZIndex: =29
 
     sourcecombo As combobox:
@@ -354,7 +351,7 @@
         Height: =50
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Type No Name"
+        InputTextPlaceholder: ="Select Name"
         Items: =ComboBoxSample
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)

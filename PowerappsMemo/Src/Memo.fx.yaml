@@ -489,13 +489,13 @@ Memo As screen:
             //Office365Outlook.SendEmailV2(Label9_4.Text,"This is a test message","New request for purchase requisition has been made.");
             //ClearCollect(PurchaseReq,AllowedValues);
             //Collect(PurchaseReq,AllowedValues);
-            Navigate(PDFView)
+            Navigate(MemoPDF)
         Size: =15
         Text: |-
             ="Submit
             "
-        X: =594
-        Y: =717
+        X: =626
+        Y: =715
         ZIndex: =23
 
     Icon1_6 As icon.BackArrow:

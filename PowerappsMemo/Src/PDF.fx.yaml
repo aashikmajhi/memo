@@ -7,6 +7,7 @@ PDF As screen:
         Document: =myMemoPdf
         Fill: =RGBA(232, 232, 232, 1)
         Height: =768
+        ShowControls: =true
         Width: =1366
         ZIndex: =7
         Zoom: =Zoom.FitBoth
