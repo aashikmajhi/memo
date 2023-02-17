@@ -19,6 +19,90 @@ Approver As screen:
         Y: =156
         ZIndex: =1
 
+    Gallery2_1 As gallery.galleryVertical:
+        BorderColor: =RGBA(235, 245, 255, 1)
+        BorderThickness: =1
+        Height: =79
+        Items: |-
+            =Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"})
+        Layout: =Layout.Vertical
+        TemplateSize: =67
+        Width: =1197
+        WrapCount: =4
+        X: =69
+        Y: =165
+        ZIndex: =2
+
+        Filter_1 As button:
+            BorderColor: =RGBA(153, 189, 224, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(65, 145, 224, 0.86)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(56, 107, 194, 0.83)
+            OnSelect: =Set(_requestTypeFilter, ThisItem.fil)
+            PressedBorderColor: =
+            PressedColor: =Self.Color
+            PressedFill: =RGBA(25, 111, 224, 0.91)
+            Size: =15
+            Text: =ThisItem.fil
+            X: =50
+            Y: =13
+            ZIndex: =1
+
+    Button6_1 As button:
+        Align: =Align.Left
+        Color: =RGBA(0, 80, 160, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =118
+        HoverFill: =Self.Fill
+        PressedColor: =Self.Color
+        PressedFill: =
+        Size: =23
+        Text: ="Hey! " & Office365Users.MyProfile().GivenName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
+        Width: =524
+        X: =156
+        Y: =14
+        ZIndex: =3
+
+    Image2_1 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        X: =24
+        Y: =23
+        ZIndex: =4
+
+    Button2_3 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(23, 150, 230, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Clear(PurchaseReq);
+            Navigate(Dashboard)
+        Size: =15
+        Text: ="Create New"
+        Width: =246
+        X: =1080
+        Y: =54
+        ZIndex: =5
+
     Gallery3_1 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =427
@@ -34,7 +118,7 @@ Approver As screen:
         WrapCount: =2
         X: =34
         Y: =266
-        ZIndex: =1
+        ZIndex: =6
 
         rfDate_1 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -256,88 +340,4 @@ Approver As screen:
             X: =172
             Y: =318
             ZIndex: =17
-
-    Gallery2_1 As gallery.galleryVertical:
-        BorderColor: =RGBA(235, 245, 255, 1)
-        BorderThickness: =1
-        Height: =79
-        Items: |-
-            =Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"})
-        Layout: =Layout.Vertical
-        TemplateSize: =67
-        Width: =1197
-        WrapCount: =4
-        X: =69
-        Y: =165
-        ZIndex: =3
-
-        Filter_1 As button:
-            BorderColor: =RGBA(153, 189, 224, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(65, 145, 224, 0.86)
-            FontWeight: =FontWeight.Semibold
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(56, 107, 194, 0.83)
-            OnSelect: =Set(_requestTypeFilter, ThisItem.fil)
-            PressedBorderColor: =
-            PressedColor: =Self.Color
-            PressedFill: =RGBA(25, 111, 224, 0.91)
-            Size: =15
-            Text: =ThisItem.fil
-            X: =50
-            Y: =13
-            ZIndex: =1
-
-    Button6_1 As button:
-        Align: =Align.Left
-        Color: =RGBA(0, 80, 160, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.Georgia
-        FontWeight: =FontWeight.Semibold
-        Height: =118
-        HoverFill: =Self.Fill
-        PressedColor: =Self.Color
-        PressedFill: =
-        Size: =23
-        Text: ="Hey! " & Office365Users.MyProfile().GivenName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
-        Width: =524
-        X: =156
-        Y: =14
-        ZIndex: =4
-
-    Image2_1 As image:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        X: =24
-        Y: =23
-        ZIndex: =5
-
-    Button2_3 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(23, 150, 230, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =48
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
-            =Clear(PurchaseReq);
-            Navigate(Dashboard)
-        Size: =15
-        Text: ="Create New"
-        Width: =246
-        X: =1080
-        Y: =54
-        ZIndex: =6
 

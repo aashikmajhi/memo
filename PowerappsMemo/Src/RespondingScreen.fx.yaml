@@ -71,17 +71,19 @@ RespondingScreen As screen:
 
     from_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: =Gallery3_1.Selected.From
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =5
         Size: =13
         Width: =360
         X: =202
@@ -103,17 +105,19 @@ RespondingScreen As screen:
 
     department_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: =Gallery3_1.Selected.Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =5
         Size: =13
         Width: =360
         X: =202
@@ -135,17 +139,19 @@ RespondingScreen As screen:
 
     refNo_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: =Gallery3_1.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =5
         Size: =13
         Width: =360
         X: =202
@@ -211,16 +217,19 @@ RespondingScreen As screen:
 
     date_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: =Gallery3_1.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =5
         Size: =13
         Width: =360
         X: =202
@@ -256,16 +265,19 @@ RespondingScreen As screen:
 
     TextInput1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: =Gallery3_1.Selected.Organization
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =5
         Size: =13
         Width: =360
         X: =202
@@ -274,16 +286,19 @@ RespondingScreen As screen:
 
     TextInput2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: =//Gallery3_1.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =5
         Size: =13
         Width: =360
         X: =202
@@ -292,7 +307,7 @@ RespondingScreen As screen:
 
     TextInput3 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'First Approver'.Email
@@ -300,10 +315,12 @@ RespondingScreen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         PaddingLeft: =5
         Size: =13
         Width: =360
@@ -313,7 +330,7 @@ RespondingScreen As screen:
 
     TextInput4 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Second Approver'.Email
@@ -321,10 +338,12 @@ RespondingScreen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         PaddingLeft: =5
         Size: =13
         Width: =360
@@ -334,7 +353,7 @@ RespondingScreen As screen:
 
     TextInput5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Third Approver'.Email
@@ -342,10 +361,12 @@ RespondingScreen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         PaddingLeft: =5
         Size: =13
         Width: =360
@@ -355,7 +376,7 @@ RespondingScreen As screen:
 
     TextInput6 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
+        BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Fourth Approver'.Email
@@ -363,10 +384,12 @@ RespondingScreen As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         PaddingLeft: =5
         Size: =13
         Width: =360
