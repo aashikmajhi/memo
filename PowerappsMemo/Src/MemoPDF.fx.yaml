@@ -552,6 +552,7 @@ MemoPDF As screen:
         ZIndex: =42
 
     approver1_2 As text:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -661,6 +662,7 @@ MemoPDF As screen:
         ZIndex: =50
 
     approver1_3 As text:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -681,6 +683,7 @@ MemoPDF As screen:
         ZIndex: =51
 
     approver1_4 As text:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -701,6 +704,7 @@ MemoPDF As screen:
         ZIndex: =52
 
     approver1_5 As text:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -721,6 +725,7 @@ MemoPDF As screen:
         ZIndex: =53
 
     approver1_6 As text:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
