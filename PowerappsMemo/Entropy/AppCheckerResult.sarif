@@ -4714,19 +4714,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Memo_2.Gallery7_1.AccessibleLabel"
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Memo_2.Gallery7_1.AccessibleLabel",
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Memo_2",
-                "type": "Memo_2.Gallery7_1"
+                "type": "Memo_2.ProdGallery_5.Gallery9"
               }
             }
           ],
@@ -4744,19 +4744,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Memo_2.Gallery7_1.TabIndex"
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Memo_2.Gallery7_1.TabIndex",
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Memo_2",
-                "type": "Memo_2.Gallery7_1"
+                "type": "Memo_2.ProdGallery_5.Gallery9"
               }
             }
           ],
@@ -4834,49 +4834,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery5_1.AccessibleLabel"
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery8.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery5_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Memo_2",
-                "type": "Memo_2.ProdGallery_5.Gallery5_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery5_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery5_1.TabIndex",
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery8.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Memo_2",
-                "type": "Memo_2.ProdGallery_5.Gallery5_1"
+                "type": "Memo_2.ProdGallery_5.Gallery8"
               }
             }
           ],
@@ -4888,6 +4858,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Memo_2.ProdGallery_5.Gallery8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Memo_2",
+                "type": "Memo_2.ProdGallery_5.Gallery8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [

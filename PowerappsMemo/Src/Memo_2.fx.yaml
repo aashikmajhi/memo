@@ -10,130 +10,17 @@ Memo_2 As screen:
     ProdGallery_5 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        Height: =263
+        Height: =270
         Items: =PurchaseReq
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Edit Item')
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =741
-        Width: =1304
-        X: =55
+        TemplateSize: =263
+        Width: =1346
+        X: =10
         Y: =316
         ZIndex: =1
-
-        Gallery5_1 As gallery.galleryVertical:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Height: =263
-            Items: =PurchaseReq
-            Layout: =Layout.Vertical
-            ShowScrollbar: =false
-            TemplatePadding: =0
-            TemplateSize: =869
-            Width: =832
-            ZIndex: =1
-
-            Label24_22 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =32
-                OnSelect: =Select(Parent)
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Size: =10
-                Text: =ThisItem.Source
-                ZIndex: =1
-
-            Label25_4 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =32
-                OnSelect: =Select(Parent)
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Size: =10
-                Text: =ThisItem.'Type No'
-                Width: =86
-                X: =260
-                ZIndex: =2
-
-            Label26_4 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =32
-                OnSelect: =Select(Parent)
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Size: =10
-                Text: =ThisItem.Type
-                Width: =111
-                X: =149
-                ZIndex: =3
-
-            Label24_21 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =32
-                OnSelect: =Select(Parent)
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Size: =10
-                Text: =ThisItem.'Type Name'
-                Width: =255
-                X: =346
-                ZIndex: =4
-
-            Label24_20 As label:
-                Align: =Align.Right
-                BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =32
-                OnSelect: =Select(Parent)
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Size: =10
-                Text: =ThisItem.Amount
-                Width: =111
-                X: =601
-                ZIndex: =5
-
-            Label24_23 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =1
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =32
-                OnSelect: =Select(Parent)
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Size: =10
-                Text: =ThisItem.'Bill No.'
-                Width: =120
-                X: =712
-                ZIndex: =6
 
         Icon2_5 As icon.CancelBadge:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -148,48 +35,217 @@ Memo_2 As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =31
-            X: =1273
+            X: =1320
             ZIndex: =9
 
-        Label24_19 As label:
-            AutoHeight: =true
+        "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Height: =263
+            Items: =Sequence(CountRows(Gallery9.AllItems))
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =303
+            Width: =67
+            WrapCount: =0
+            ZIndex: =12
+
+            Title6 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =169
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.Value
+                VerticalAlign: =VerticalAlign.Top
+                Width: =65
+                X: =
+                Y: =91
+                ZIndex: =2
+
+            Separator5 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(0, 89, 178, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+        Label24_21 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =263
+            Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Attachment
-            Tooltip: =ThisItem.Attachment
-            VerticalAlign: =VerticalAlign.Top
-            Width: =208
-            X: =1065
+            Text: =ThisItem.Source
+            Width: =236
+            X: =67
+            ZIndex: =13
+
+        Label25_4 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.'Type No'
+            Width: =92
+            X: =474
+            ZIndex: =14
+
+        Label26_4 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Type
+            Width: =171
+            X: =303
+            ZIndex: =15
+
+        Label24_22 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.'Type Name'
+            Width: =414
+            X: =567
+            ZIndex: =16
+
+        Label24_23 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Amount
+            Width: =167
+            X: =981
             ZIndex: =17
 
         Label24_24 As label:
-            AutoHeight: =true
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =263
+            Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Narration
-            Tooltip: =ThisItem.Narration
-            VerticalAlign: =VerticalAlign.Top
-            Width: =232
-            X: =833
+            Text: =ThisItem.'Bill No.'
+            Width: =165
+            X: =1149
             ZIndex: =18
+
+        "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Height: =206
+            Items: =PurchaseReq
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =187
+            Width: =1284
+            X: =67
+            Y: =57
+            ZIndex: =19
+
+            Label9 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =187
+                LineHeight: =0.91
+                OnSelect: =Select(Parent)
+                Size: =9
+                Text: =ThisItem.Narration
+                Width: =640
+                ZIndex: =1
+
+            Label10 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =187
+                LineHeight: =0.91
+                OnSelect: =Select(Parent)
+                Size: =9
+                Text: =ThisItem.Attachment
+                Width: =615
+                X: =640
+                ZIndex: =2
+
+        Label13_62 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            Size: =10
+            Text: ="Narration"
+            X: =248
+            Y: =32
+            ZIndex: =20
+
+        Label13_63 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            Size: =10
+            Text: ="Attachment"
+            X: =959
+            Y: =33
+            ZIndex: =21
 
     Button2_6 As button:
         BorderThickness: =1
@@ -788,32 +844,6 @@ Memo_2 As screen:
         Y: =657
         ZIndex: =44
 
-    Label13_62 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =32
-        Size: =10
-        Text: ="Narration"
-        X: =886
-        Y: =284
-        ZIndex: =48
-
-    Label13_63 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =32
-        Size: =10
-        Text: ="Attachment"
-        X: =1127
-        Y: =284
-        ZIndex: =49
-
     TextInput9_6 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
@@ -861,7 +891,7 @@ Memo_2 As screen:
         Height: =30
         Size: =10
         Text: ="Source"
-        X: =57
+        X: =120
         Y: =284
         ZIndex: =52
 
@@ -875,7 +905,7 @@ Memo_2 As screen:
         Size: =10
         Text: ="Type"
         Width: =75
-        X: =223
+        X: =358
         Y: =284
         ZIndex: =53
 
@@ -889,7 +919,7 @@ Memo_2 As screen:
         Size: =10
         Text: ="No"
         Width: =50
-        X: =334
+        X: =496
         Y: =284
         ZIndex: =54
 
@@ -902,7 +932,7 @@ Memo_2 As screen:
         Height: =30
         Size: =10
         Text: ="Name"
-        X: =421
+        X: =700
         Y: =284
         ZIndex: =55
 
@@ -916,7 +946,7 @@ Memo_2 As screen:
         Size: =10
         Text: ="Amount"
         Width: =88
-        X: =663
+        X: =1023
         Y: =284
         ZIndex: =56
 
@@ -930,40 +960,7 @@ Memo_2 As screen:
         Size: =10
         Text: ="Bill No."
         Width: =70
-        X: =789
+        X: =1221
         Y: =284
         ZIndex: =57
-
-    "Gallery7_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =1
-        Height: =265
-        Items: =Sequence(CountRows(ProdGallery_5.AllItems))
-        Layout: =Layout.Vertical
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =869
-        Width: =45
-        X: =10
-        Y: =314
-        ZIndex: =58
-
-        Title5_1 As label:
-            Align: =Align.Center
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =768
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20
-            Text: =ThisItem.Value
-            Width: =45
-            X: |
-                =0
-            ZIndex: =2
 
