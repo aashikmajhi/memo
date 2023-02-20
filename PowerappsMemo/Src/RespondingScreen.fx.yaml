@@ -219,7 +219,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_1.Selected.Date
+        Default: =Text(DateValue(Gallery3_1.Selected.Date),DateTimeFormat.LongDate)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

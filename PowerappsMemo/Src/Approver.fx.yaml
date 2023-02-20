@@ -127,7 +127,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             OnSelect: =Select(Parent)
             Size: =20
-            Text: =ThisItem.Date
+            Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.LongDate)
             Width: =456
             X: =161
             Y: =85
