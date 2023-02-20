@@ -431,8 +431,10 @@ RespondingScreen As screen:
         DisplayMode: =DisplayMode.View
         Document: =Gallery1.Selected.dataUri
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =654
-        Width: =749
-        X: =617
+        Height: =522
+        Width: =613
+        X: =752
+        Y: =132
         ZIndex: =34
+        Zoom: =Zoom.FitHeight
 
