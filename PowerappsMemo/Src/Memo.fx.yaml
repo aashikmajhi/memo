@@ -532,6 +532,7 @@ Memo As screen:
         ZIndex: =26
 
     approver2_1 As dropdown:
+        AllowEmptySelection: =true
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         ChevronBackground: =RGBA(0, 51, 102, 1)
@@ -546,7 +547,7 @@ Memo As screen:
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -605,6 +606,7 @@ Memo As screen:
         ZIndex: =32
 
     approver3_1 As dropdown:
+        AllowEmptySelection: =true
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         ChevronBackground: =RGBA(0, 51, 102, 1)
@@ -619,13 +621,15 @@ Memo As screen:
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(IsEmpty(approver2_1.SelectedText.Value),false,true)
+        Visible: |-
+            =//If(IsEmpty(approver2_1.SelectedText.Value),false,true)
+            If(IsEmpty(approver2_1.Selected.Value),false,true)
         Width: =250
         X: =556
         Y: =658
@@ -648,6 +652,7 @@ Memo As screen:
         ZIndex: =34
 
     approver4_1 As dropdown:
+        AllowEmptySelection: =true
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         ChevronBackground: =RGBA(0, 51, 102, 1)
@@ -662,7 +667,7 @@ Memo As screen:
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -806,6 +811,7 @@ Memo As screen:
         ZIndex: =42
 
     approver4_2 As dropdown:
+        AllowEmptySelection: =true
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         ChevronBackground: =RGBA(0, 51, 102, 1)
@@ -820,7 +826,7 @@ Memo As screen:
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
