@@ -34,6 +34,9 @@
     "datasets": {
       "https://astralnepal.sharepoint.com/sites/NatRuleNITC": {
         "dataSources": {
+          "MemoTableData": {
+            "tableName": "04205eb7-7186-4a6a-9f7a-f333b44bb429"
+          },
           "RequisitionDemo": {
             "tableName": "4642c334-2366-4957-8eda-a94901e7dbac"
           },
@@ -49,7 +52,8 @@
     "dataSources": [
       "RequisitionPDF",
       "RequisitionDemo",
-      "RequisitionDemoApprovalList"
+      "RequisitionDemoApprovalList",
+      "MemoTableData"
     ],
     "dependencies": {},
     "dependents": [

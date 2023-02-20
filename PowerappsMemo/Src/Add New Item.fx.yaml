@@ -26,6 +26,9 @@
                 }
             ),Notify("Empty fields can not be processed"));
             
+            Patch(MemoTableData,Defaults(MemoTableData),{Title:TextInput8.Text,Source:sourcecombo.Selected.Value1,Types:typecombo.Selected.Value1,TypeNo:typenocombo.Selected.Value1,TypeNoName:typenamecombo.Selected.Value1,Amount:amttxt.Text,BillNo:billtxt,Narration:narrationtxt,Attachment:attachementtxt});
+            
+            Reset(TextInput8);
             Reset(narrationtxt);
             Reset(billtxt);
             Reset(amttxt);
@@ -362,4 +365,35 @@
         X: =162
         Y: =394
         ZIndex: =33
+
+    Label7 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Ref No"
+        Width: =96
+        X: =1040
+        Y: =104
+        ZIndex: =34
+
+    TextInput8 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =refNo_3.Text
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =192
+        X: =1148
+        Y: =104
+        ZIndex: =35
 
