@@ -1,7 +1,7 @@
-"'Edit Item' As screen":
+"'View Item' As screen":
     Fill: =RGBA(153, 205, 255, 1)
 
-    Button3 As button:
+    Button3_1 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -15,14 +15,14 @@
             //Reset(TextInput10_2);
             //Reset(TextInput10);
             //Reset(TextInput10_1);
-            Navigate(PurchaseRequisition);
+            Navigate('Edit Item');
         Size: =15
-        Text: ="Update"
+        Text: ="Edit"
         X: =591
         Y: =690
         ZIndex: =8
 
-    desctxt_2 As text:
+    desctxt_4 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -37,13 +37,13 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        Size: =13
+        Size: =10
         Width: =777
         X: =557
         Y: =144
         ZIndex: =12
 
-    qtytxt_1 As text:
+    qtytxt_6 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -62,11 +62,11 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =160
-        Y: =616
+        X: =157
+        Y: =617
         ZIndex: =13
 
-    purposetxt_1 As text:
+    purposetxt_6 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -82,11 +82,11 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =160
-        Y: =517
+        X: =157
+        Y: =506
         ZIndex: =14
 
-    Label13_28 As label:
+    Label13_45 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -95,11 +95,11 @@
         Size: =15
         Text: ="Source"
         Width: =134
-        X: =7
-        Y: =115
+        X: =4
+        Y: =113
         ZIndex: =15
 
-    Label13_29 As label:
+    Label13_46 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -108,11 +108,11 @@
         Size: =15
         Text: ="Type"
         Width: =100
-        X: =41
-        Y: =211
+        X: =38
+        Y: =200
         ZIndex: =16
 
-    Label13_30 As label:
+    Label13_47 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -121,11 +121,11 @@
         Size: =15
         Text: ="No"
         Width: =67
-        X: =74
-        Y: =315
+        X: =71
+        Y: =304
         ZIndex: =17
 
-    Label13_31 As label:
+    Label13_48 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -134,11 +134,11 @@
         Size: =15
         Text: ="Name"
         Width: =134
-        X: =7
-        Y: =421
+        X: =4
+        Y: =410
         ZIndex: =18
 
-    Label13_32 As label:
+    Label13_50 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -147,11 +147,11 @@
         Size: =15
         Text: ="Amount"
         Width: =134
-        X: =7
-        Y: =522
+        X: =4
+        Y: =511
         ZIndex: =19
 
-    Label13_33 As label:
+    Label13_51 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -160,11 +160,11 @@
         Size: =15
         Text: ="Bill No."
         Width: =109
-        X: =32
-        Y: =619
+        X: =29
+        Y: =620
         ZIndex: =20
 
-    Label13_34 As label:
+    Label13_44 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -173,22 +173,22 @@
         Text: ="Narration"
         Width: =125
         X: =557
-        Y: =104
+        Y: =102
         ZIndex: =21
 
-    Label13_35 As label:
+    Label13_49 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =15
         Text: ="Attachment"
-        Width: =135
+        Width: =167
         X: =557
         Y: =383
         ZIndex: =22
 
-    desctxt_3 As text:
+    desctxt_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -203,13 +203,13 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        Size: =13
+        Size: =10
         Width: =777
         X: =557
         Y: =425
         ZIndex: =23
 
-    Icon3_1 As icon.BackArrow:
+    Icon3_2 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -220,11 +220,11 @@
             Reset(billtxt);
             Reset(amttxt);
             Back()
-        X: =26
+        X: =23
         Y: =24
         ZIndex: =28
 
-    Label11_4 As label:
+    Label11_8 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(39, 113, 194, 1)
@@ -239,7 +239,7 @@
         Y: =24
         ZIndex: =29
 
-    qtytxt_2 As text:
+    qtytxt_4 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -255,11 +255,11 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =160
-        Y: =409
+        X: =157
+        Y: =398
         ZIndex: =30
 
-    purposetxt_2 As text:
+    purposetxt_4 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -275,11 +275,11 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =160
-        Y: =307
+        X: =157
+        Y: =296
         ZIndex: =31
 
-    qtytxt_3 As text:
+    qtytxt_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -295,11 +295,11 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =160
-        Y: =208
+        X: =157
+        Y: =197
         ZIndex: =32
 
-    purposetxt_3 As text:
+    purposetxt_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -315,7 +315,7 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =160
-        Y: =106
+        X: =157
+        Y: =104
         ZIndex: =33
 

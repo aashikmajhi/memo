@@ -52,16 +52,16 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =152
+        Height: =224
         HintText: ="Narration Here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
-        Width: =603
-        X: =710
-        Y: =224
+        Width: =749
+        X: =591
+        Y: =170
         ZIndex: =13
 
     billtxt As text:
@@ -82,8 +82,8 @@
         HoverFill: =RGBA(153, 205, 255, 1)
         Size: =13
         Width: =375
-        X: =168
-        Y: =553
+        X: =162
+        Y: =587
         ZIndex: =14
 
     amttxt As text:
@@ -102,8 +102,8 @@
         HoverFill: =RGBA(153, 205, 255, 1)
         Size: =13
         Width: =375
-        X: =168
-        Y: =478
+        X: =162
+        Y: =494
         ZIndex: =15
 
     Icon3 As icon.BackArrow:
@@ -117,8 +117,8 @@
             Reset(billtxt);
             Reset(amttxt);
             Back()
-        X: =40
-        Y: =40
+        X: =12
+        Y: =15
         ZIndex: =19
 
     Label11_3 As label:
@@ -145,8 +145,8 @@
         Size: =15
         Text: ="Source"
         Width: =134
-        X: =15
-        Y: =184
+        X: =9
+        Y: =128
         ZIndex: =21
 
     Label13_21 As label:
@@ -158,8 +158,8 @@
         Size: =15
         Text: ="Type"
         Width: =100
-        X: =49
-        Y: =253
+        X: =43
+        Y: =215
         ZIndex: =22
 
     Label13_22 As label:
@@ -171,8 +171,8 @@
         Size: =15
         Text: ="No"
         Width: =67
-        X: =82
-        Y: =330
+        X: =76
+        Y: =310
         ZIndex: =23
 
     Label13_23 As label:
@@ -184,8 +184,8 @@
         Size: =15
         Text: ="Name"
         Width: =134
-        X: =15
-        Y: =409
+        X: =9
+        Y: =407
         ZIndex: =24
 
     Label13_24 As label:
@@ -197,8 +197,8 @@
         Size: =15
         Text: ="Amount"
         Width: =134
-        X: =15
-        Y: =483
+        X: =9
+        Y: =499
         ZIndex: =25
 
     Label13_25 As label:
@@ -210,8 +210,8 @@
         Size: =15
         Text: ="Bill No."
         Width: =109
-        X: =40
-        Y: =556
+        X: =34
+        Y: =590
         ZIndex: =26
 
     Label13_26 As label:
@@ -219,12 +219,11 @@
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
-        Height: =42
         Size: =15
         Text: ="Narration"
         Width: =217
-        X: =710
-        Y: =182
+        X: =591
+        Y: =126
         ZIndex: =27
 
     Label13_27 As label:
@@ -232,12 +231,11 @@
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
-        Height: =42
         Size: =15
         Text: ="Attachment"
         Width: =201
-        X: =710
-        Y: =409
+        X: =591
+        Y: =391
         ZIndex: =28
 
     attachementtxt As text:
@@ -249,16 +247,16 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =152
+        Height: =205
         HintText: ="Add remarfks or links here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
-        Width: =603
-        X: =710
-        Y: =451
+        Width: =749
+        X: =591
+        Y: =433
         ZIndex: =29
 
     sourcecombo As combobox:
@@ -283,8 +281,8 @@
         SelectMultiple: =false
         Size: =13
         Width: =375
-        X: =168
-        Y: =182
+        X: =162
+        Y: =126
         ZIndex: =30
 
     typecombo As combobox:
@@ -309,8 +307,8 @@
         SelectMultiple: =false
         Size: =13
         Width: =375
-        X: =168
-        Y: =255
+        X: =162
+        Y: =217
         ZIndex: =31
 
     typenocombo As combobox:
@@ -335,8 +333,8 @@
         SelectMultiple: =false
         Size: =13
         Width: =375
-        X: =168
-        Y: =326
+        X: =162
+        Y: =306
         ZIndex: =32
 
     typenamecombo As combobox:
@@ -361,7 +359,7 @@
         SelectMultiple: =false
         Size: =13
         Width: =375
-        X: =168
-        Y: =396
+        X: =162
+        Y: =394
         ZIndex: =33
 
