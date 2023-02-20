@@ -154,7 +154,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =13
             Text: =ThisItem.From
             Width: =456
             X: =161
