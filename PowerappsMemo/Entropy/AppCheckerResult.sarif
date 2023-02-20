@@ -3194,19 +3194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_4.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_4.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Item",
-                "type": "'Edit Item'.ComboBox2_4"
+                "type": "'Edit Item'.qtytxt_2"
               }
             }
           ],
@@ -3254,19 +3254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_5.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_5.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Item",
-                "type": "'Edit Item'.ComboBox2_5"
+                "type": "'Edit Item'.purposetxt_2"
               }
             }
           ],
@@ -3284,19 +3284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_6.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_6.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Item",
-                "type": "'Edit Item'.ComboBox2_6"
+                "type": "'Edit Item'.qtytxt_3"
               }
             }
           ],
@@ -3314,19 +3314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_7.AccessibleLabel"
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Edit Item'.ComboBox2_7.AccessibleLabel",
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Edit Item",
-                "type": "'Edit Item'.ComboBox2_7"
+                "type": "'Edit Item'.purposetxt_3"
               }
             }
           ],
@@ -5007,6 +5007,246 @@
                 "member": "Text",
                 "module": "Edit Item",
                 "type": "'Edit Item'.Label11_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_2.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_2.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.qtytxt_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.desctxt_2.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.desctxt_2.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.desctxt_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_2.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_2.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.purposetxt_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_3.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.qtytxt_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_3.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.purposetxt_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.desctxt_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.desctxt_3.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.desctxt_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.purposetxt_1.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.purposetxt_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Edit Item'.qtytxt_1.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Edit Item",
+                "type": "'Edit Item'.qtytxt_1"
               }
             }
           ],

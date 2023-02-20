@@ -9,6 +9,7 @@ MemoPDF As screen:
         Height: =263
         Items: =Sequence(CountRows(ProdGallery_3.AllItems))
         Layout: =Layout.Vertical
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =32
         Width: =42
@@ -51,6 +52,7 @@ MemoPDF As screen:
         Items: =PurchaseReq
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Edit Item')
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =32
         Width: =1308
@@ -170,6 +172,7 @@ MemoPDF As screen:
             ZIndex: =11
 
         Label24_10 As label:
+            AutoHeight: =true
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -187,6 +190,7 @@ MemoPDF As screen:
             ZIndex: =12
 
         Label24_9 As label:
+            AutoHeight: =true
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -335,6 +339,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =83
@@ -371,6 +376,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =1015
@@ -422,6 +428,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         Width: =232
         X: =1108
@@ -502,6 +509,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         X: =581
         Y: =198
@@ -656,6 +664,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =83
@@ -786,6 +795,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =83
@@ -807,6 +817,7 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =83

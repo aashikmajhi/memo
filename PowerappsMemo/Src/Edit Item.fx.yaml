@@ -26,7 +26,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =ProdGallery_2.Selected.Narration
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -35,7 +35,7 @@
         HintText: ="Narration Here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
         Width: =603
@@ -47,7 +47,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =ProdGallery_2.Selected.'Bill No.'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -59,7 +59,7 @@
             ="Bill No:"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
         X: =168
@@ -70,7 +70,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =ProdGallery_2.Selected.Amount
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -79,7 +79,7 @@
         HintText: ="Amount"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
         X: =168
@@ -194,7 +194,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =ProdGallery_2.Selected.Attachment
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -203,113 +203,13 @@
         HintText: ="Add remarfks or links here"
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
         Size: =13
         Width: =603
         X: =710
         Y: =451
         ZIndex: =23
-
-    ComboBox2_4 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =50
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Source"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_4.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =375
-        X: =168
-        Y: =182
-        ZIndex: =24
-
-    ComboBox2_5 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =50
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Type"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_5.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =375
-        X: =168
-        Y: =255
-        ZIndex: =25
-
-    ComboBox2_6 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =50
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Type No "
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_6.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =375
-        X: =168
-        Y: =326
-        ZIndex: =26
-
-    ComboBox2_7 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =50
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Name"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox2_7.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =375
-        X: =168
-        Y: =396
-        ZIndex: =27
 
     Icon3_1 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -340,4 +240,90 @@
         X: =283
         Y: =24
         ZIndex: =29
+
+    qtytxt_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =ProdGallery_2.Selected.'Type Name'
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =50
+        HintText: |-
+            ="Bill No:"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =397
+        ZIndex: =30
+
+    purposetxt_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =ProdGallery_2.Selected.'Type No'
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HintText: ="Amount"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =322
+        ZIndex: =31
+
+    qtytxt_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =ProdGallery_2.Selected.Type
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =50
+        HintText: |-
+            ="Bill No:"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =250
+        ZIndex: =32
+
+    purposetxt_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =ProdGallery_2.Selected.Source
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HintText: ="Amount"
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =375
+        X: =168
+        Y: =175
+        ZIndex: =33
 

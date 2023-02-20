@@ -8,6 +8,7 @@
         Fill: =RGBA(39, 113, 194, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
