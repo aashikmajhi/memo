@@ -357,7 +357,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Third Approver'.Email
-            Gallery3_1.Selected.'Third Approver'
+            Gallery3_1.Selected.'First Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -380,7 +380,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Fourth Approver'.Email
-            Gallery3_1.Selected.'Fourth Approver'
+            Gallery3_1.Selected.'Second Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -426,4 +426,12 @@ RespondingScreen As screen:
         X: =40
         Y: =40
         ZIndex: =33
+
+    PdfViewer1 As pdfViewer:
+        Document: =Gallery3_1.Selected.dataUri
+        Height: =503
+        Width: =733
+        X: =617
+        Y: =151
+        ZIndex: =34
 

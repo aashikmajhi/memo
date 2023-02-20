@@ -107,9 +107,8 @@ Approver As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =437
         Items: |-
-            =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending)
-            Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
-            //Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
+            =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
+            Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(RespondingScreen)
         ShowScrollbar: =false
@@ -125,6 +124,7 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =20
             Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.LongDate)
@@ -138,7 +138,7 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =39
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Title
@@ -152,7 +152,7 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =45
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.From
@@ -166,6 +166,7 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Department
@@ -184,8 +185,8 @@ Approver As screen:
             Size: =15
             Text: ="Ref No"
             Width: =133
-            X: =16
-            Y: =50
+            X: =17
+            Y: =54
             ZIndex: =5
 
         Label27_1 As label:
@@ -198,7 +199,7 @@ Approver As screen:
             Size: =15
             Text: ="Date"
             Width: =133
-            X: =26
+            X: =17
             Y: =85
             ZIndex: =6
 
@@ -212,7 +213,7 @@ Approver As screen:
             Size: =15
             Text: ="From"
             Width: =133
-            X: =26
+            X: =17
             Y: =127
             ZIndex: =7
 
@@ -226,7 +227,7 @@ Approver As screen:
             Size: =15
             Text: ="Department"
             Width: =133
-            X: =26
+            X: =17
             Y: =168
             ZIndex: =8
 
@@ -240,7 +241,7 @@ Approver As screen:
             Size: =15
             Text: ="Status"
             Width: =136
-            X: =26
+            X: =17
             Y: =208
             ZIndex: =9
 
@@ -249,7 +250,7 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =38
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Status.Value
@@ -263,6 +264,7 @@ Approver As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.Organization
@@ -294,7 +296,7 @@ Approver As screen:
             Size: =15
             Text: ="Subject"
             Width: =136
-            X: =26
+            X: =17
             Y: =260
             ZIndex: =14
 
@@ -306,7 +308,7 @@ Approver As screen:
             Height: =60
             OnSelect: =Select(Parent)
             Size: =20
-            Text: =//ThisItem.Subject
+            Text: =ThisItem.Subject
             VerticalAlign: =VerticalAlign.Top
             Width: =456
             X: =159
@@ -323,7 +325,7 @@ Approver As screen:
             Size: =15
             Text: ="Comment"
             Width: =136
-            X: =26
+            X: =17
             Y: =320
             ZIndex: =16
 
