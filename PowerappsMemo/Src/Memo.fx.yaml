@@ -238,6 +238,10 @@ Memo As screen:
             Height: =28
             Icon: =Icon.View
             OnSelect: =Navigate('Edit Item')
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
             Width: =28
             X: =1247
             Y: =2.5
