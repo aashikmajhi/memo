@@ -11,7 +11,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
-            =Collect(PurchaseReq,
+            =ClearCollect(PurchaseReq,
                 {
                     Source:sourceEdit.Text,
                     Type:typeEdit.Text,
