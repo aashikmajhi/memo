@@ -7,47 +7,6 @@ Memo_1 As screen:
         Reset(approver4_3);
         Reset(approver4_4);
 
-    "SNGallery_4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Height: =263
-        Items: =Sequence(CountRows(ProdGallery_4.AllItems))
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =263
-        Width: =42
-        X: =10
-        Y: =316
-        ZIndex: =1
-
-        Separator2_3 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            TabIndex: =0
-            Width: =Parent.TemplateWidth
-            Y: =262
-            ZIndex: =3
-
-        Label15_3 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =263
-            OnSelect: =Select(Parent)
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =ThisItem.Value
-            Width: =42
-            ZIndex: =4
-
     ProdGallery_4 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
@@ -57,21 +16,22 @@ Memo_1 As screen:
         OnSelect: =Navigate('Edit Item')
         TemplatePadding: =0
         TemplateSize: =263
-        Width: =1308
-        X: =52
+        Width: =1346
+        X: =13
         Y: =316
         ZIndex: =1
 
         Gallery5 As gallery.galleryVertical:
             BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
             Height: =263
             Items: =PurchaseReq
             Layout: =Layout.Vertical
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =263
-            Width: =481
-            X: =797
+            Width: =482
+            X: =833
             ZIndex: =1
 
             Label24_18 As label:
@@ -89,7 +49,7 @@ Memo_1 As screen:
                 Text: =ThisItem.Attachment
                 Tooltip: =ThisItem.Attachment
                 VerticalAlign: =VerticalAlign.Top
-                Width: =212
+                Width: =214
                 X: =268
                 ZIndex: =1
 
@@ -125,8 +85,7 @@ Memo_1 As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =31
-            X: =1277
-            Y: =1
+            X: =1315
             ZIndex: =9
 
         Label24_3 As label:
@@ -142,6 +101,7 @@ Memo_1 As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Source
+            X: =36
             Y: =1
             ZIndex: =10
 
@@ -159,7 +119,7 @@ Memo_1 As screen:
             Size: =10
             Text: =ThisItem.'Type No'
             Width: =50
-            X: =261
+            X: =297
             Y: =1
             ZIndex: =11
 
@@ -177,7 +137,7 @@ Memo_1 As screen:
             Size: =10
             Text: =ThisItem.Type
             Width: =111
-            X: =150
+            X: =186
             Y: =1
             ZIndex: =12
 
@@ -195,7 +155,7 @@ Memo_1 As screen:
             Size: =10
             Text: =ThisItem.'Type Name'
             Width: =265
-            X: =311
+            X: =347
             Y: =1
             ZIndex: =13
 
@@ -214,7 +174,7 @@ Memo_1 As screen:
             Size: =10
             Text: =ThisItem.Amount
             Width: =100
-            X: =577
+            X: =613
             Y: =1
             ZIndex: =14
 
@@ -232,9 +192,46 @@ Memo_1 As screen:
             Size: =10
             Text: =ThisItem.'Bill No.'
             Width: =120
-            X: =677
+            X: =713
             Y: =1
             ZIndex: =15
+
+        "SNGallery_4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =2
+            Height: =263
+            Items: =Sequence(CountRows(Gallery5.AllItems))
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =263
+            Width: =34
+            ZIndex: =16
+
+            Separator2_3 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =0.31
+                Fill: =RGBA(0, 89, 178, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                TabIndex: =0
+                Width: =Parent.TemplateWidth
+                Y: =262
+                ZIndex: =3
+
+            Label7 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =68
+                OnSelect: =Select(Parent)
+                Size: =13
+                Text: =ThisItem.Value
+                Width: =34
+                X: =34
+                Y: =105
+                ZIndex: =4
 
     Button2_5 As button:
         BorderThickness: =1
