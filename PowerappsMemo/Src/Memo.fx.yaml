@@ -182,6 +182,7 @@ Memo As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Attachment
+            VerticalAlign: =VerticalAlign.Top
             Width: =239
             X: =1038
             ZIndex: =12
@@ -199,6 +200,7 @@ Memo As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Narration
+            VerticalAlign: =VerticalAlign.Top
             Width: =241
             X: =797
             ZIndex: =13
@@ -542,7 +544,7 @@ Memo As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
@@ -615,7 +617,7 @@ Memo As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
@@ -658,7 +660,7 @@ Memo As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
@@ -814,7 +816,7 @@ Memo As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =32
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["","naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)

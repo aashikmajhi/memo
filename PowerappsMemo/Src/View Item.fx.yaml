@@ -37,7 +37,8 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        Size: =10
+        PaddingLeft: =5
+        Size: =12
         Width: =777
         X: =557
         Y: =144
@@ -62,8 +63,8 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =157
-        Y: =617
+        X: =160
+        Y: =616
         ZIndex: =13
 
     purposetxt_6 As text:
@@ -82,8 +83,8 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =157
-        Y: =506
+        X: =160
+        Y: =517
         ZIndex: =14
 
     Label13_45 As label:
@@ -95,8 +96,8 @@
         Size: =15
         Text: ="Source"
         Width: =134
-        X: =4
-        Y: =113
+        X: =7
+        Y: =115
         ZIndex: =15
 
     Label13_46 As label:
@@ -108,8 +109,8 @@
         Size: =15
         Text: ="Type"
         Width: =100
-        X: =38
-        Y: =200
+        X: =41
+        Y: =211
         ZIndex: =16
 
     Label13_47 As label:
@@ -121,8 +122,8 @@
         Size: =15
         Text: ="No"
         Width: =67
-        X: =71
-        Y: =304
+        X: =74
+        Y: =315
         ZIndex: =17
 
     Label13_48 As label:
@@ -134,8 +135,8 @@
         Size: =15
         Text: ="Name"
         Width: =134
-        X: =4
-        Y: =410
+        X: =7
+        Y: =421
         ZIndex: =18
 
     Label13_50 As label:
@@ -147,8 +148,8 @@
         Size: =15
         Text: ="Amount"
         Width: =134
-        X: =4
-        Y: =511
+        X: =7
+        Y: =522
         ZIndex: =19
 
     Label13_51 As label:
@@ -160,8 +161,8 @@
         Size: =15
         Text: ="Bill No."
         Width: =109
-        X: =29
-        Y: =620
+        X: =32
+        Y: =617
         ZIndex: =20
 
     Label13_44 As label:
@@ -173,7 +174,7 @@
         Text: ="Narration"
         Width: =125
         X: =557
-        Y: =102
+        Y: =104
         ZIndex: =21
 
     Label13_49 As label:
@@ -203,7 +204,8 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        Size: =10
+        PaddingLeft: =5
+        Size: =12
         Width: =777
         X: =557
         Y: =425
@@ -255,8 +257,8 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =157
-        Y: =398
+        X: =160
+        Y: =409
         ZIndex: =30
 
     purposetxt_4 As text:
@@ -275,8 +277,8 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =157
-        Y: =296
+        X: =160
+        Y: =307
         ZIndex: =31
 
     qtytxt_5 As text:
@@ -295,8 +297,8 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =157
-        Y: =197
+        X: =160
+        Y: =208
         ZIndex: =32
 
     purposetxt_5 As text:
@@ -315,7 +317,7 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =375
-        X: =157
+        X: =160
         Y: =104
         ZIndex: =33
 

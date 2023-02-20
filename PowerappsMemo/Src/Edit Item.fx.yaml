@@ -37,7 +37,8 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        Size: =13
+        PaddingLeft: =5
+        Size: =12
         Width: =777
         X: =557
         Y: =144
@@ -161,7 +162,7 @@
         Text: ="Bill No."
         Width: =109
         X: =32
-        Y: =619
+        Y: =617
         ZIndex: =20
 
     Label13_34 As label:
@@ -203,7 +204,8 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        Size: =13
+        PaddingLeft: =5
+        Size: =12
         Width: =777
         X: =557
         Y: =425
@@ -220,7 +222,7 @@
             Reset(billtxt);
             Reset(amttxt);
             Back()
-        X: =26
+        X: =23
         Y: =24
         ZIndex: =28
 
@@ -316,6 +318,6 @@
         Size: =13
         Width: =375
         X: =160
-        Y: =106
+        Y: =104
         ZIndex: =33
 

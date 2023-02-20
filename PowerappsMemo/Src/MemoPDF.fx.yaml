@@ -172,7 +172,6 @@ MemoPDF As screen:
             ZIndex: =11
 
         Label24_10 As label:
-            AutoHeight: =true
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -185,12 +184,12 @@ MemoPDF As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Attachment
+            VerticalAlign: =VerticalAlign.Top
             Width: =239
             X: =1038
             ZIndex: =12
 
         Label24_9 As label:
-            AutoHeight: =true
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -203,6 +202,7 @@ MemoPDF As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Narration
+            VerticalAlign: =VerticalAlign.Top
             Width: =241
             X: =797
             ZIndex: =13
