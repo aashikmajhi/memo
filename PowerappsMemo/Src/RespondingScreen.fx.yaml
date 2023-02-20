@@ -181,7 +181,7 @@ RespondingScreen As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
+        Visible: =If(IsEmpty(approver2_1.SelectedText),false,true)
         Width: =172
         X: =15
         Y: =509
@@ -195,7 +195,7 @@ RespondingScreen As screen:
         FontWeight: =FontWeight.Bold
         Size: =13
         Text: ="Approver 1"
-        Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
+        Visible: =If(IsEmpty(approver2_1.SelectedText),false,true)
         Width: =144
         X: =45
         Y: =562
@@ -209,7 +209,7 @@ RespondingScreen As screen:
         FontWeight: =FontWeight.Bold
         Size: =13
         Text: ="Approver 2"
-        Visible: =If(IsEmpty(approver1.SelectedText.Value),false,true)
+        Visible: =If(IsEmpty(approver3_1.SelectedText.Value),false,true)
         Width: =144
         X: =43
         Y: =614

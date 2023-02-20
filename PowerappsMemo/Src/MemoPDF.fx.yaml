@@ -51,7 +51,7 @@ MemoPDF As screen:
         Height: =263
         Items: =PurchaseReq
         Layout: =Layout.Vertical
-        OnSelect: =Navigate('Edit Item')
+        OnSelect: =Navigate('View Item')
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =32

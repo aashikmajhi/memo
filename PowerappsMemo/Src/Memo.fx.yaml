@@ -640,7 +640,7 @@ Memo As screen:
             ="Approved By:"
         Visible: =If(IsEmpty(approver3_1.SelectedText.Value),false,true)
         Width: =144
-        X: =894
+        X: =867
         Y: =625
         ZIndex: =34
 
@@ -796,7 +796,7 @@ Memo As screen:
             ="Approved By:"
         Visible: =If(IsEmpty(approver3_1.SelectedText.Value),false,true)
         Width: =144
-        X: =1169
+        X: =1133
         Y: =625
         ZIndex: =42
 
