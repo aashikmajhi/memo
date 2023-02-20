@@ -11,10 +11,25 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
-            =//ClearCollect(PurchaseReq,{Description:TextInput10.Text,Quantity:TextInput10_1.Text,Purpose:TextInput10_2.Text});
-            //Reset(TextInput10_2);
-            //Reset(TextInput10);
-            //Reset(TextInput10_1);
+            =Collect(PurchaseReq,
+                {
+                    Source:sourceEdit.Text,
+                    Type:typeEdit.Text,
+                    'Type No':typenoEdit.Text,
+                    'Type Name':nameEdit.Text,
+                    'Bill No.': billEdit.Text,
+                    Amount:amtEdit.Text,
+                    Narration: naratEdit.Text,
+                    Attachment:attaEdit.Text
+                });
+            Reset(sourceEdit);
+            Reset(typeEdit);
+            Reset(typenoEdit);
+            Reset(nameEdit);
+            Reset(amtEdit);
+            Reset(billEdit);
+            Reset(naratEdit);
+            Reset(attaEdit);
             Navigate(Memo);
         Size: =15
         Text: ="Update"
@@ -22,7 +37,7 @@
         Y: =690
         ZIndex: =8
 
-    desctxt_2 As text:
+    naratEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -44,7 +59,7 @@
         Y: =144
         ZIndex: =12
 
-    qtytxt_1 As text:
+    billEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -54,7 +69,6 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Format: =TextFormat.Number
         Height: =50
         HintText: |-
             ="Bill No:"
@@ -67,7 +81,7 @@
         Y: =616
         ZIndex: =13
 
-    purposetxt_1 As text:
+    amtEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -189,7 +203,7 @@
         Y: =383
         ZIndex: =22
 
-    desctxt_3 As text:
+    attaEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -241,7 +255,7 @@
         Y: =24
         ZIndex: =29
 
-    qtytxt_2 As text:
+    nameEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -261,7 +275,7 @@
         Y: =409
         ZIndex: =30
 
-    purposetxt_2 As text:
+    typenoEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -281,7 +295,7 @@
         Y: =307
         ZIndex: =31
 
-    qtytxt_3 As text:
+    typeEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -301,7 +315,7 @@
         Y: =208
         ZIndex: =32
 
-    purposetxt_3 As text:
+    sourceEdit As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)

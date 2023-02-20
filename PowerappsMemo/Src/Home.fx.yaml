@@ -79,11 +79,11 @@ Home As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =35
+            Height: =38
             OnSelect: =Select(Parent)
             Size: =20
             Text: =ThisItem.From
-            Width: =500
+            Width: =658
             X: =160
             Y: =144
             ZIndex: =3
