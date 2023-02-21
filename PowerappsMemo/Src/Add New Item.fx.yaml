@@ -41,15 +41,15 @@
             //Patch(MemoTableData,Defaults(MemoTableData),{Title:TextInput8.Text,Source:sourcecombo.Selected.Value1,Types:typecombo.Selected.Value1,TypeNo:typenocombo.Selected.Value1,TypeNoName:typenamecombo.Selected.Value1,Amount:amttxt.Text,BillNo:billtxt,Narration:narrationtxt,Attachment:attachementtxt});
             
             
-            Reset(TextInput8);
-            Reset(narrationtxt);
-            Reset(billtxt);
-            Reset(amttxt);
-            Reset(typecombo);
-            Reset(typenocombo);
-            Reset(typenamecombo);
-            Reset(attachementtxt);
-            Reset(sourcecombo);
+            //Reset(TextInput8);
+            //Reset(narrationtxt);
+            //Reset(billtxt);
+            //Reset(amttxt);
+            //Reset(typecombo);
+            //Reset(typenocombo);
+            //Reset(typenamecombo);
+            //Reset(attachementtxt);
+            //Reset(sourcecombo);
             //Navigate(Memo);
             Navigate('Add New Item_1');
         Size: =15
