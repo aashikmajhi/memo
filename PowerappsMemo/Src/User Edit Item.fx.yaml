@@ -28,7 +28,7 @@
                 MemoTableData,
                 BillNo = ProdGallery_2.Selected.'Bill No.',
                 {
-                    'Meme No': refNo_7.Text,
+                    'Meme No': refNo_3.Text,
                     Source: sourceEdit_1.Text,
                     Types: typeEdit_1.Text,
                     TypeNo: typenoEdit_1.Text,
