@@ -29,28 +29,28 @@
                 ),
                 Notify("Empty fields can not be processed")
             );
-            //IfError(
-            //    Patch(
-                    //MemoTableData,
-                  //  Defaults(MemoTableData),
-                //    {
-              //          'Meme No': TextInput8.Text,
-            //            Source: sourcecombo.Selected.Value1,
-                      //  Types: typecombo.Selected.Value1,
-                    //    TypeNo: typenocombo.Selected.Value1,
-                  //      TypeNoName: typenamecombo.Selected.Value1,
-                //        Amount: amttxt.Text,
-              //          BillNo: billtxt,
-            //            Narration: narrationtxt,
-            //            Attachment: attachementtxt
-            //        }
-            //    ),
-               // Notify(
-                    //FirstError.Message,
-                  //  NotificationType.Error,
-                //    2000
-              //  )
-            //);
+            IfError(
+                Patch(
+                    MemoTableData,
+                    Defaults(MemoTableData),
+                    {
+                        'Meme No': TextInput8.Text,
+                        Source: sourcecombo.Selected.Value1,
+                        Types: typecombo.Selected.Value1,
+                        TypeNo: typenocombo.Selected.Value1,
+                        TypeNoName: typenamecombo.Selected.Value1,
+                        Amount: amttxt.Text,
+                        BillNo: billtxt,
+                        Narration: narrationtxt,
+                        Attachment: attachementtxt
+                    }
+                ),
+                Notify(
+                    FirstError.Message,
+                    NotificationType.Error,
+                    2000
+                )
+            );
             //Reset(TextInput8);
             //Reset(narrationtxt);
             //Reset(billtxt);
@@ -60,8 +60,8 @@
             //Reset(typenamecombo);
             //Reset(attachementtxt);
             //Reset(sourcecombo);
-            //Navigate(Memo);
-            Navigate('Add New Item_1');
+            Navigate(Memo);
+            //Navigate('Add New Item_1');
         Size: =15
         Text: |-
             ="Submit
