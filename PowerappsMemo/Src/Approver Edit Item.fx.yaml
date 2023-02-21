@@ -34,7 +34,7 @@
             Reset(billEdit);
             Reset(naratEdit);
             Reset(attaEdit);
-            Navigate(Approver);
+            Navigate(ApproverView);
         Size: =15
         Text: ="Update"
         X: =591
