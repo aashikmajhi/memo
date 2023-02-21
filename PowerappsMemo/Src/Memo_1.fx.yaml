@@ -1,8 +1,7 @@
 Memo_1 As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |-
-        =//Set(myMemoPdf,PDF(Memo ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
-        Reset(approver2_2);
+        =Reset(approver2_2);
         Reset(approver3_2);
         Reset(approver4_3);
         Reset(approver4_4);

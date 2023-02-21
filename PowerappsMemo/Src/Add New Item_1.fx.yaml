@@ -25,7 +25,7 @@
                     //Attachment:attachementtxt_1.Text
                 //});
             
-            Patch(MemoTableData,Defaults(MemoTableData),{Title:TextInput8_1.Text,Source:TextInput10.Text,Types:TextInput11.Text,TypeNo:TextInput12.Text,TypeNoName:TextInput13.Text,Amount:amttxt_1.Text,BillNo:billtxt_1,Narration:narrationtxt_1,Attachment:attachementtxt_1});
+            Patch(MemoTableData,Defaults(MemoTableData),{'Meme No':TextInput8_1.Text,Source:TextInput10.Text,Types:TextInput11.Text,TypeNo:TextInput12.Text,TypeNoName:TextInput13.Text,Amount:amttxt_1.Text,BillNo:billtxt_1,Narration:narrationtxt_1,Attachment:attachementtxt_1});
             
             
             Reset(TextInput8_1);
