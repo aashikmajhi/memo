@@ -61,9 +61,7 @@ Home As screen:
                 Ascending
             )
         Layout: =Layout.Vertical
-        OnSelect: |-
-            =//Navigate(ViewPDF)
-            false
+        OnSelect: =Navigate('User Edit Item')
         ShowScrollbar: =false
         TemplateSize: =422
         Width: =1294
