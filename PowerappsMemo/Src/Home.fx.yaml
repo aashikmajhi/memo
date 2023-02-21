@@ -78,7 +78,7 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.LongDate)
             Width: =500
             X: =160
@@ -92,7 +92,7 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Title
             Width: =707
             X: =160
@@ -106,7 +106,7 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =38
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.From
             Width: =658
             X: =160
@@ -120,7 +120,7 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Department
             Width: =500
             X: =160
@@ -204,7 +204,7 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Status.Value
             Width: =500
             X: =160
@@ -218,7 +218,7 @@ Home As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Organization
             Width: =500
             X: =160
@@ -297,7 +297,7 @@ Home As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =15
             Text: =ThisItem.Subject
             Width: =500
             X: =160

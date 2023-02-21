@@ -11,15 +11,22 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =ClearCollect(
-                PurchaseReq,
+            =Update(
+                MemoTableData,
+                First(
+                    Filter(
+                        MemoTableData,
+                        BillNo = ProdGallery_6.Selected.BillNo
+                    )
+                ),
                 {
+                    'Meme No': refNo_7.Text,
                     Source: sourceEdit.Text,
-                    Type: typeEdit.Text,
-                    'Type No': typenoEdit.Text,
-                    'Type Name': nameEdit.Text,
-                    'Bill No.': billEdit.Text,
+                    Types: typeEdit.Text,
+                    TypeNo: typenoEdit,
+                    TypeNoName: nameEdit,
                     Amount: amtEdit.Text,
+                    BillNo: billEdit.Text,
                     Narration: naratEdit.Text,
                     Attachment: attaEdit.Text
                 }

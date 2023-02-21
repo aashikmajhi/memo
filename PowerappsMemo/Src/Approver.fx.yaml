@@ -163,7 +163,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.LongDate)
             Width: =456
             X: =161
@@ -177,7 +177,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Title
             Width: =456
             X: =161
@@ -191,7 +191,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =15
             Text: =ThisItem.From
             Width: =456
             X: =161
@@ -205,7 +205,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Department
             Width: =456
             X: =161
@@ -289,7 +289,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Status.Value
             Width: =456
             X: =161
@@ -303,7 +303,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Organization
             Width: =456
             X: =161
@@ -344,7 +344,7 @@ Approver As screen:
             FontWeight: =FontWeight.Bold
             Height: =60
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =15
             Text: =ThisItem.Subject
             VerticalAlign: =VerticalAlign.Top
             Width: =456
