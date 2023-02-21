@@ -11,14 +11,9 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =Update(
+            =UpdateIf(
                 MemoTableData,
-                First(
-                    Filter(
-                        MemoTableData,
-                        BillNo = ProdGallery_6.Selected.BillNo
-                    )
-                ),
+                BillNo = ProdGallery_6.Selected.BillNo,
                 {
                     'Meme No': refNo_7.Text,
                     Source: sourceEdit.Text,
