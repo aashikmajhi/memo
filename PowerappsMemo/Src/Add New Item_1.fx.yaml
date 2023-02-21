@@ -29,9 +29,10 @@
 
     Form2 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
-        DataSource: =myMemo
+        DataSource: =MemoTableData
         DefaultMode: =FormMode.New
         Height: =598
+        Item: =LookUp( myMemo, Title=refNo_3.Text) 
         NumberOfColumns: =2
         Width: =1366
         Y: =110
@@ -71,7 +72,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ThisItem.Title
+                Default: =refNo_3
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -159,7 +160,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ThisItem.Source
+                Default: =//ThisItem.Source
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -687,7 +688,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ThisItem.BillNo
+                Default: =ThisItem.Narration
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
