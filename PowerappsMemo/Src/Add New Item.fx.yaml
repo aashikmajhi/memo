@@ -11,20 +11,24 @@
         HoverBorderColor: =
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: |-
-            =If(!IsBlank((narrationtxt||billtxt||amttxt||attachementtxt||sourcecombo.Selected.Value1||typecombo.Selected.Value1||typenocombo.Selected.Value1||typenamecombo.Selected.Value1)),
-                Collect(PurchaseReq,
-                {
-                    Source:sourcecombo.Selected.Value1,
-                    Type:typecombo.Selected.Value1,
-                    'Type No':typenocombo.Selected.Value1,
-                    'Type Name':typenamecombo.Selected.Value1,
-                    'Bill No.': billtxt.Text,
-                    Amount:amttxt.Text,
-                    Narration: narrationtxt.Text,
-                    Attachment:attachementtxt.Text
-                }
-            ),Notify("Empty fields can not be processed"));
+        OnSelect: |
+            =If(
+                !IsBlank((narrationtxt || billtxt || amttxt || attachementtxt || sourcecombo.Selected.Value1 || typecombo.Selected.Value1 || typenocombo.Selected.Value1 || typenamecombo.Selected.Value1)),
+                Collect(
+                    PurchaseReq,
+                    {
+                        Source: sourcecombo.Selected.Value1,
+                        Type: typecombo.Selected.Value1,
+                        'Type No': typenocombo.Selected.Value1,
+                        'Type Name': typenamecombo.Selected.Value1,
+                        'Bill No.': billtxt.Text,
+                        Amount: amttxt.Text,
+                        Narration: narrationtxt.Text,
+                        Attachment: attachementtxt.Text
+                    }
+                ),
+                Notify("Empty fields can not be processed")
+            );
             //Collect(myMemo,
             //    {
             //        Title:TextInput8.Text,
@@ -37,10 +41,7 @@
             //        Narration: narrationtxt.Text,
             //        Attachment:attachementtxt.Text
             //    });
-            
             //Patch(MemoTableData,Defaults(MemoTableData),{Title:TextInput8.Text,Source:sourcecombo.Selected.Value1,Types:typecombo.Selected.Value1,TypeNo:typenocombo.Selected.Value1,TypeNoName:typenamecombo.Selected.Value1,Amount:amttxt.Text,BillNo:billtxt,Narration:narrationtxt,Attachment:attachementtxt});
-            
-            
             //Reset(TextInput8);
             //Reset(narrationtxt);
             //Reset(billtxt);

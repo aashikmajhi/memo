@@ -23,9 +23,9 @@
                         TypeNo: notxt.Text,
                         TypeNoName: nametxt.Text,
                         Amount: amttxt_1.Text,
-                        BillNo: billtxt_1,
-                        Narration: nartxt,
-                        Attachment: atttxt
+                        BillNo: billtxt_1.Text,
+                        Narration: nartxt.Text,
+                        Attachment: atttxt.Text
                     }
                 ),
                 Notify(

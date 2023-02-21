@@ -108,7 +108,41 @@ Approver As screen:
         Height: =437
         Items: |-
             =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
-            Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
+            Sort(
+                If(
+                    _requestTypeFilter = "All",
+                    Sort(
+                        RequisitionDemoApprovalList,
+                        Date,
+                        Ascending
+                    ),
+                    (Sort(
+                        If(
+                            _requestTypeFilter = "Pending",
+                            Sort(
+                                Filter(
+                                    RequisitionDemoApprovalList,
+                                    Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Third Approval" || Status.Value = "Pending Fourth Approval"
+                                ),
+                                Date,
+                                Ascending
+                            ),
+                            Sort(
+                                Filter(
+                                    RequisitionDemoApprovalList,
+                                    Status.Value = _requestTypeFilter
+                                ),
+                                Date,
+                                Ascending
+                            )
+                        ),
+                        Date,
+                        Ascending
+                    ))
+                ),
+                Date,
+                Ascending
+            )
         Layout: =Layout.Vertical
         OnSelect: =Navigate(RespondingScreen)
         ShowScrollbar: =false
@@ -158,7 +192,7 @@ Approver As screen:
             Text: =ThisItem.From
             Width: =456
             X: =161
-            Y: =121
+            Y: =131
             ZIndex: =3
 
         rfDpt_1 As label:

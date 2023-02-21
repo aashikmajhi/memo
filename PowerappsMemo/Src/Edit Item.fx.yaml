@@ -10,18 +10,20 @@
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: |-
-            =ClearCollect(PurchaseReq,
+        OnSelect: |
+            =ClearCollect(
+                PurchaseReq,
                 {
-                    Source:sourceEdit.Text,
-                    Type:typeEdit.Text,
-                    'Type No':typenoEdit.Text,
-                    'Type Name':nameEdit.Text,
+                    Source: sourceEdit.Text,
+                    Type: typeEdit.Text,
+                    'Type No': typenoEdit.Text,
+                    'Type Name': nameEdit.Text,
                     'Bill No.': billEdit.Text,
-                    Amount:amtEdit.Text,
+                    Amount: amtEdit.Text,
                     Narration: naratEdit.Text,
-                    Attachment:attaEdit.Text
-                });
+                    Attachment: attaEdit.Text
+                }
+            );
             Reset(sourceEdit);
             Reset(typeEdit);
             Reset(typenoEdit);
