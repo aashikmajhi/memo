@@ -146,7 +146,6 @@ Approver As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Collect(updateData,MemoTableData);
             Navigate(ApproverView)
         ShowScrollbar: =false
         TemplateSize: =422
