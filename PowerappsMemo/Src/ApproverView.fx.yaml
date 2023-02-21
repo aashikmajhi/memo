@@ -528,36 +528,6 @@ ApproverView As screen:
         Y: =625
         ZIndex: =26
 
-    companyName_4 As dropdown:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 89, 178, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =RGBA(0, 89, 178, 1)
-        ChevronHoverFill: =RGBA(153, 205, 255, 1)
-        Color: =RGBA(0, 51, 102, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(0, 89, 178, 1)
-        Font: =Font.Georgia
-        FontWeight: =FontWeight.Bold
-        Height: =36
-        HoverBorderColor: =Transparent
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(0, 134, 208, 1)
-        Items: =["F1 Soft", "e-Sewa"]
-        PressedColor: =RGBA(0, 89, 178, 1)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        SelectionColor: =RGBA(0, 51, 102, 1)
-        SelectionFill: =RGBA(194, 225, 255, 1)
-        Size: =25
-        Width: =450
-        X: =479
-        Y: =12
-        ZIndex: =30
-
     Label8_30 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -959,4 +929,17 @@ ApproverView As screen:
         X: =278
         Y: =657
         ZIndex: =55
+
+    companyName_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =25
+        Text: =Gallery3_1.Selected.Organization
+        Width: =320
+        X: =521
+        Y: =12
+        ZIndex: =56
 
