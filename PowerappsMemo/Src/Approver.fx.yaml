@@ -144,7 +144,9 @@ Approver As screen:
                 Ascending
             )
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(RespondingScreen)
+        OnSelect: |-
+            =//Navigate(RespondingScreen)
+            Navigate(ApproverView)
         ShowScrollbar: =false
         TemplateSize: =422
         Width: =1292

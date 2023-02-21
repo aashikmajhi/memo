@@ -51,7 +51,7 @@ ApproverView As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Height: =263
-        Items: =PurchaseReq
+        Items: =MemoTableData
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Edit Item')
         TemplatePadding: =0
@@ -98,7 +98,7 @@ ApproverView As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.'Type No'
+            Text: =ThisItem.TypeNo
             Width: =50
             X: =261
             ZIndex: =6
@@ -115,7 +115,7 @@ ApproverView As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Type
+            Text: =ThisItem.Types
             Width: =111
             X: =150
             ZIndex: =7
@@ -128,7 +128,7 @@ ApproverView As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.CancelBadge
-            OnSelect: =Remove(PurchaseReq,ThisItem)
+            OnSelect: =Remove(MemoTableData,ThisItem)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -150,7 +150,7 @@ ApproverView As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.'Type Name'
+            Text: =ThisItem.TypeNoName
             Width: =234
             X: =311
             ZIndex: =10
@@ -223,7 +223,7 @@ ApproverView As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.'Bill No.'
+            Text: =ThisItem.BillNo
             Width: =120
             X: =645
             ZIndex: =14
@@ -355,26 +355,6 @@ ApproverView As screen:
         Y: =73
         ZIndex: =13
 
-    date_6 As datepicker:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        CalendarHeaderFill: =RGBA(0, 51, 102, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FontWeight: =FontWeight.Semibold
-        Format: =DateTimeFormat.LongDate
-        Height: =28
-        HoverDateFill: =RGBA(153, 205, 255, 1)
-        IconBackground: =RGBA(0, 51, 102, 1)
-        SelectedDateFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =71
-        ZIndex: =14
-
     Label20_18 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -395,7 +375,7 @@ ApproverView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Office365Users.MyProfile().Department
+        Default: =Gallery3_1.Selected.From
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -482,11 +462,7 @@ ApproverView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: |-
-            =//CountRows(RequisitionDemo)+1
-            //If(companyName.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemoApprovalList)+1,If(companyName.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemoApprovalList)+1))
-            //If(companyName_1.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemo)+1,If(companyName_1.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemo)+1))
-            If(companyName_4.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemoApprovalList)+1,If(companyName_4.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemoApprovalList)+1))
+        Default: =Gallery3_1.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -511,13 +487,7 @@ ApproverView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
-            =//PDF(PurchaseRequisition_1);
-            //Set(myPdf,PDF(PurchaseRequisition_1));
-            //Office365Outlook.SendEmailV2(Label9_4.Text,"This is a test message","New request for purchase requisition has been made.");
-            //ClearCollect(PurchaseReq,AllowedValues);
-            //Collect(PurchaseReq,AllowedValues);
-            Navigate(MemoPDF)
+        OnSelect: =Navigate(MemoPDF)
         Size: =15
         Text: |-
             ="Submit
@@ -554,34 +524,6 @@ ApproverView As screen:
         X: =334
         Y: =625
         ZIndex: =26
-
-    approver2_4 As dropdown:
-        AllowEmptySelection: =true
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =32
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        Reset: =true
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =10
-        Visible: =If(IsBlank(approver1_9),false,true)
-        Width: =250
-        X: =284
-        Y: =658
-        ZIndex: =29
 
     companyName_4 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -623,7 +565,7 @@ ApproverView As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(IsBlank(approver2_4.SelectedText.Value),false,true)
+        Visible: =If(IsBlank(approver2_4.Text),false,true)
         Width: =175
         X: =583
         Y: =625
@@ -654,7 +596,7 @@ ApproverView As screen:
         Visible: |-
             =//If(IsEmpty(approver2_1.SelectedText.Value),false,true)
             //If(IsEmpty(approver2_1.Selected.Value),false,true)
-            If(IsBlank(approver2_4.SelectedText.Value),false,true)
+            If(IsBlank(approver2_4.Text),false,true)
         Width: =250
         X: =556
         Y: =658
@@ -723,7 +665,7 @@ ApproverView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =""
+        Default: =Gallery3_1.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -766,58 +708,6 @@ ApproverView As screen:
         X: =14
         Y: =174
         ZIndex: =39
-
-    ComboBox1_6 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =28
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: =""
-        Items: =ComboBoxSample
-        OnChange: =Set(toValue,Self.SelectedItems)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox1_6.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =139
-        ZIndex: =40
-
-    ComboBox1_7 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =28
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: =""
-        Items: =ComboBoxSample
-        OnChange: =Set(ccValue,Self.SelectedItems)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox1_7.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =174
-        ZIndex: =41
 
     Label8_32 As label:
         Align: =Align.Center
@@ -869,7 +759,7 @@ ApproverView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Office365Users.MyProfile().DisplayName
+        Default: =Gallery3_1.Selected.'Prepared By'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -988,4 +878,82 @@ ApproverView As screen:
         X: =10
         Y: =254
         ZIndex: =51
+
+    date_6 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.Date
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =70
+        ZIndex: =52
+
+    ComboBox1_6 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =//Gallery3_1.Selected.To
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =139
+        ZIndex: =53
+
+    ComboBox1_7 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =//Gallery3_1.Selected.Cc
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =179
+        ZIndex: =54
+
+    approver2_4 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Gallery3_1.Selected.'Verified By'
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =10
+        Width: =250
+        X: =278
+        Y: =657
+        ZIndex: =55
 
