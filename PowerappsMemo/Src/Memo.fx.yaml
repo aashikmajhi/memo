@@ -781,11 +781,12 @@ Memo As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         InputTextPlaceholder: =""
+        IsSearchable: =false
         Items: =ComboBoxSample
         OnChange: =Set(toValue,Self.SelectedItems)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox1.SearchText,"Value1")
+        SearchItems: =[]
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =13
         Width: =325

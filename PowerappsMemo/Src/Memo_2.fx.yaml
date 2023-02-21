@@ -15,7 +15,7 @@ Memo_2 As screen:
         OnSelect: =Navigate('Edit Item')
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =263
+        TemplateSize: =270
         Width: =1346
         X: =10
         Y: =316
@@ -34,13 +34,13 @@ Memo_2 As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =31
-            X: =1320
+            X: =1314
             ZIndex: =9
 
         "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
-            Height: =263
+            Height: =270
             Items: =Sequence(CountRows(Gallery9.AllItems))
             Layout: =Layout.Vertical
             ShowScrollbar: =false
@@ -54,7 +54,7 @@ Memo_2 As screen:
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Semibold
-                Height: =264
+                Height: =274
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -66,15 +66,6 @@ Memo_2 As screen:
                 Width: =51
                 X: =
                 ZIndex: =2
-
-            Separator5 As rectangle:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Fill: =RGBA(0, 89, 178, 1)
-                Height: =1
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - 1
-                ZIndex: =5
 
         Label24_21 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -181,13 +172,13 @@ Memo_2 As screen:
         "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
-            Height: =232
+            Height: =239
             Items: =PurchaseReq
             Layout: =Layout.Vertical
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =232
-            Width: =1262
+            Width: =1263
             X: =51
             Y: =31
             ZIndex: =19
@@ -196,29 +187,29 @@ Memo_2 As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =Parent.Height*2
+                Height: =202
                 LineHeight: =0.91
                 OnSelect: =Select(Parent)
                 Size: =9
                 Text: =ThisItem.Narration
                 VerticalAlign: =VerticalAlign.Top
-                Width: =640
-                Y: =39
+                Width: =607
+                Y: =38
                 ZIndex: =1
 
             Label10 As label:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =Parent.Height*2
+                Height: =202
                 LineHeight: =0.91
                 OnSelect: =Select(Parent)
                 Size: =9
                 Text: =ThisItem.Attachment
                 VerticalAlign: =VerticalAlign.Top
-                Width: =615
-                X: =640
-                Y: =39
+                Width: =651
+                X: =607
+                Y: =38
                 ZIndex: =2
 
             Label13_62 As label:

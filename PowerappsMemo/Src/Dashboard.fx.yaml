@@ -16,7 +16,7 @@ Dashboard As screen:
             =//Navigate(PurchaseRequisition)
             Navigate(Memo)
         Size: =15
-        Text: ="Purchase Requisition"
+        Text: ="Memo"
         Width: =262
         X: =213
         Y: =188
@@ -35,30 +35,12 @@ Dashboard As screen:
         OnSelect: =Navigate(UploadQuotation)
         Size: =15
         Text: |-
-            ="Upload Quotation
+            ="Upload Document
             "
         Width: =262
         X: =213
         Y: =352
         ZIndex: =2
-
-    btnPurchaseOrder As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 121, 187, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Semibold
-        Height: =112
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(PurchaseOrder)
-        Size: =15
-        Text: ="Purchase Order"
-        Width: =262
-        X: =213
-        Y: =512
-        ZIndex: =3
 
     Icon5 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
