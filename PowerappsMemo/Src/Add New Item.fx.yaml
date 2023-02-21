@@ -25,8 +25,21 @@
                     Attachment:attachementtxt.Text
                 }
             ),Notify("Empty fields can not be processed"));
+            Collect(myMemo,
+                {
+                    Title:TextInput8.Text,
+                    Source:sourcecombo.Selected.Value1,
+                    Types:typecombo.Selected.Value1,
+                    'TypeNo':typenocombo.Selected.Value1,
+                    'TypeNoName':typenamecombo.Selected.Value1,
+                    'BillNo': billtxt.Text,
+                    Amount:amttxt.Text,
+                    Narration: narrationtxt.Text,
+                    Attachment:attachementtxt.Text
+                });
             
-            Patch(MemoTableData,Defaults(MemoTableData),{Title:TextInput8.Text,Source:sourcecombo.Selected.Value1,Types:typecombo.Selected.Value1,TypeNo:typenocombo.Selected.Value1,TypeNoName:typenamecombo.Selected.Value1,Amount:amttxt.Text,BillNo:billtxt,Narration:narrationtxt,Attachment:attachementtxt});
+            //Patch(MemoTableData,Defaults(MemoTableData),{Title:TextInput8.Text,Source:sourcecombo.Selected.Value1,Types:typecombo.Selected.Value1,TypeNo:typenocombo.Selected.Value1,TypeNoName:typenamecombo.Selected.Value1,Amount:amttxt.Text,BillNo:billtxt,Narration:narrationtxt,Attachment:attachementtxt});
+            
             
             Reset(TextInput8);
             Reset(narrationtxt);
@@ -37,7 +50,8 @@
             Reset(typenamecombo);
             Reset(attachementtxt);
             Reset(sourcecombo);
-            Navigate(Memo);
+            //Navigate(Memo);
+            Navigate('Add New Item_1');
         Size: =15
         Text: |-
             ="Submit
