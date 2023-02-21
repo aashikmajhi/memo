@@ -56,7 +56,7 @@ UserView As screen:
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
             Filter(MemoTableData,'Meme No'= refNo_8.Text)
         Layout: =Layout.Vertical
-        OnSelect: =Navigate('Modify Item')
+        OnSelect: =Navigate('User Edit Item')
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
@@ -490,7 +490,7 @@ UserView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(MemoPDF)
+        OnSelect: =Navigate(Memo)
         Size: =15
         Text: |-
             ="Submit

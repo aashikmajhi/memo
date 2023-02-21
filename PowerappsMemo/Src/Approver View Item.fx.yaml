@@ -43,7 +43,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.'BillNo'
+        Default: =ProdGallery_6.Selected.BillNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -258,7 +258,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.'TypeNo'
+        Default: =ProdGallery_6.Selected.TypeNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

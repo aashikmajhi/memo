@@ -17,7 +17,7 @@ LoginScreen As screen:
             Height: =768
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(102, 182, 227, 1)
-            OnSelect: =Navigate(Home)
+            OnSelect: =Navigate(UserDashboard)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -56,7 +56,7 @@ LoginScreen As screen:
             Height: =768
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(102, 182, 227, 1)
-            OnSelect: =Navigate(Approver)
+            OnSelect: =Navigate(ApproverDashboard)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

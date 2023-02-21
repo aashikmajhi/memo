@@ -15,7 +15,7 @@ Approval As screen:
             //Office365Outlook.SendEmailV2(Label9_4.Text,"Response to purchase requisition","The purchase requisition has been approved.");
             //Patch(RequisitionDemo,LookUp(RequisitionDemo,Status.Value=""),{Status:{Value:"Approved"}})
             //Patch(RequisitionDemo,LookUp(RequisitionDemo,Status.Value=""),{Status:{Value:"Approved"},'Approval Comments':msgtxt.Text});
-            Navigate(Approver)
+            Navigate(ApproverDashboard)
         Size: =30
         Text: ="Approve"
         Width: =208
@@ -35,7 +35,7 @@ Approval As screen:
         OnSelect: |-
             =//Office365Outlook.SendEmailV2(Label9_4.Text,"Response to purchase requisition","The purchase requisition has been declined.")
             //Patch(RequisitionDemo,LookUp(RequisitionDemo,Status.Value=""),{Status:{Value:"Declined"},'Approval Comments':msgtxt.Text});
-            Navigate(Approver)
+            Navigate(ApproverDashboard)
         Size: =30
         Text: ="Decline"
         Width: =208
