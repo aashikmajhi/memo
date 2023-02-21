@@ -288,7 +288,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =//Gallery3_1.Selected.Subject
+        Default: =Gallery3_1.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -311,7 +311,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'First Approver'.Email
-            Gallery3_1.Selected.'First Approver'
+            Gallery3_1.Selected.'Verified By'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -334,7 +334,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Second Approver'.Email
-            Gallery3_1.Selected.'Second Approver'
+            Gallery3_1.Selected.'Recommended By'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -433,7 +433,7 @@ RespondingScreen As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =522
         Width: =613
-        X: =752
+        X: =692
         Y: =132
         ZIndex: =34
         Zoom: =Zoom.FitHeight

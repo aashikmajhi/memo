@@ -12,7 +12,7 @@ Memo_2 As screen:
         Height: =270
         Items: =PurchaseReq
         Layout: =Layout.Vertical
-        OnSelect: =Navigate('Edit Item')
+        OnSelect: =Navigate('Approver Edit Item')
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =270

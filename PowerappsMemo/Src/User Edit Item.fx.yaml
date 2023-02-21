@@ -1,7 +1,7 @@
-"'Edit Item' As screen":
+"'User Edit Item' As screen":
     Fill: =RGBA(153, 205, 255, 1)
 
-    Button3 As button:
+    Button3_2 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -14,24 +14,24 @@
             =ClearCollect(
                 PurchaseReq,
                 {
-                    Source: sourceEdit.Text,
-                    Type: typeEdit.Text,
-                    'Type No': typenoEdit.Text,
-                    'Type Name': nameEdit.Text,
-                    'Bill No.': billEdit.Text,
-                    Amount: amtEdit.Text,
-                    Narration: naratEdit.Text,
-                    Attachment: attaEdit.Text
+                    Source: sourceEdit_1.Text,
+                    Type: typeEdit_1.Text,
+                    'Type No': typenoEdit_1.Text,
+                    'Type Name': nameEdit_1.Text,
+                    'Bill No.': billEdit_1.Text,
+                    Amount: amtEdit_1.Text,
+                    Narration: naratEdit_1.Text,
+                    Attachment: attaEdit_1.Text
                 }
             );
-            Reset(sourceEdit);
-            Reset(typeEdit);
-            Reset(typenoEdit);
-            Reset(nameEdit);
-            Reset(amtEdit);
-            Reset(billEdit);
-            Reset(naratEdit);
-            Reset(attaEdit);
+            Reset(sourceEdit_1);
+            Reset(typeEdit_1);
+            Reset(typenoEdit_1);
+            Reset(nameEdit_1);
+            Reset(amtEdit_1);
+            Reset(billEdit_1);
+            Reset(naratEdit_1);
+            Reset(attaEdit_1);
             Navigate(Memo);
         Size: =15
         Text: ="Update"
@@ -39,7 +39,7 @@
         Y: =690
         ZIndex: =8
 
-    naratEdit As text:
+    naratEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -61,7 +61,7 @@
         Y: =144
         ZIndex: =12
 
-    billEdit As text:
+    billEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -82,7 +82,7 @@
         Y: =616
         ZIndex: =13
 
-    amtEdit As text:
+    amtEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -102,7 +102,7 @@
         Y: =517
         ZIndex: =14
 
-    Label13_28 As label:
+    Label13_82 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -115,7 +115,7 @@
         Y: =115
         ZIndex: =15
 
-    Label13_29 As label:
+    Label13_83 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -128,7 +128,7 @@
         Y: =211
         ZIndex: =16
 
-    Label13_30 As label:
+    Label13_84 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -141,7 +141,7 @@
         Y: =315
         ZIndex: =17
 
-    Label13_31 As label:
+    Label13_86 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -154,7 +154,7 @@
         Y: =421
         ZIndex: =18
 
-    Label13_32 As label:
+    Label13_87 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -167,7 +167,7 @@
         Y: =522
         ZIndex: =19
 
-    Label13_33 As label:
+    Label13_88 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -180,7 +180,7 @@
         Y: =617
         ZIndex: =20
 
-    Label13_34 As label:
+    Label13_81 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -192,7 +192,7 @@
         Y: =104
         ZIndex: =21
 
-    Label13_35 As label:
+    Label13_85 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -204,7 +204,7 @@
         Y: =383
         ZIndex: =22
 
-    attaEdit As text:
+    attaEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -226,7 +226,7 @@
         Y: =425
         ZIndex: =23
 
-    Icon3_1 As icon.BackArrow:
+    Icon3_4 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -241,7 +241,7 @@
         Y: =24
         ZIndex: =28
 
-    Label11_4 As label:
+    Label11_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(39, 113, 194, 1)
@@ -256,7 +256,7 @@
         Y: =24
         ZIndex: =29
 
-    nameEdit As text:
+    nameEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -276,7 +276,7 @@
         Y: =409
         ZIndex: =30
 
-    typenoEdit As text:
+    typenoEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -296,7 +296,7 @@
         Y: =307
         ZIndex: =31
 
-    typeEdit As text:
+    typeEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -316,7 +316,7 @@
         Y: =208
         ZIndex: =32
 
-    sourceEdit As text:
+    sourceEdit_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)

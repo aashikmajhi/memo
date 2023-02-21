@@ -1,7 +1,7 @@
-"'View Item' As screen":
+"'User View Item' As screen":
     Fill: =RGBA(153, 205, 255, 1)
 
-    Button3_1 As button:
+    Button3_3 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -10,14 +10,14 @@
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: =Navigate('Edit Item');
+        OnSelect: =Navigate('Approver Edit Item');
         Size: =15
         Text: ="Edit"
         X: =591
         Y: =690
         ZIndex: =8
 
-    desctxt_4 As text:
+    desctxt_6 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -39,7 +39,7 @@
         Y: =144
         ZIndex: =12
 
-    qtytxt_6 As text:
+    qtytxt_9 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -60,7 +60,7 @@
         Y: =616
         ZIndex: =13
 
-    purposetxt_6 As text:
+    purposetxt_9 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -80,7 +80,7 @@
         Y: =517
         ZIndex: =14
 
-    Label13_45 As label:
+    Label13_90 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -93,7 +93,7 @@
         Y: =115
         ZIndex: =15
 
-    Label13_46 As label:
+    Label13_91 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -106,7 +106,7 @@
         Y: =211
         ZIndex: =16
 
-    Label13_47 As label:
+    Label13_92 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -119,7 +119,7 @@
         Y: =315
         ZIndex: =17
 
-    Label13_48 As label:
+    Label13_94 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -132,7 +132,7 @@
         Y: =421
         ZIndex: =18
 
-    Label13_50 As label:
+    Label13_95 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -145,7 +145,7 @@
         Y: =522
         ZIndex: =19
 
-    Label13_51 As label:
+    Label13_96 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -158,7 +158,7 @@
         Y: =617
         ZIndex: =20
 
-    Label13_44 As label:
+    Label13_89 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -170,7 +170,7 @@
         Y: =104
         ZIndex: =21
 
-    Label13_49 As label:
+    Label13_93 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -182,7 +182,7 @@
         Y: =383
         ZIndex: =22
 
-    desctxt_5 As text:
+    desctxt_7 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -204,7 +204,7 @@
         Y: =425
         ZIndex: =23
 
-    Icon3_2 As icon.BackArrow:
+    Icon3_5 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -219,7 +219,7 @@
         Y: =24
         ZIndex: =28
 
-    Label11_8 As label:
+    Label11_10 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(39, 113, 194, 1)
@@ -234,7 +234,7 @@
         Y: =24
         ZIndex: =29
 
-    qtytxt_4 As text:
+    qtytxt_8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -254,7 +254,7 @@
         Y: =409
         ZIndex: =30
 
-    purposetxt_4 As text:
+    purposetxt_8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -274,7 +274,7 @@
         Y: =307
         ZIndex: =31
 
-    qtytxt_5 As text:
+    qtytxt_7 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
@@ -294,7 +294,7 @@
         Y: =208
         ZIndex: =32
 
-    purposetxt_5 As text:
+    purposetxt_7 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
