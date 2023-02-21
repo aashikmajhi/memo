@@ -12,9 +12,37 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
-            =Patch(MemoTableData,Defaults(MemoTableData),{'Meme No':retxt.Text,Source:srctxt.Text,Types:typtxt.Text,TypeNo:notxt.Text,TypeNoName:nametxt.Text,Amount:amttxt_1.Text,BillNo:billtxt_1,Narration:nartxt,Attachment:atttxt});
-            
-            
+            =IfError(
+                Patch(
+                    MemoTableData,
+                    Defaults(MemoTableData),
+                    {
+                        'Meme No': retxt.Text,
+                        Source: srctxt.Text,
+                        Types: typtxt.Text,
+                        TypeNo: notxt.Text,
+                        TypeNoName: nametxt.Text,
+                        Amount: amttxt_1.Text,
+                        BillNo: billtxt_1,
+                        Narration: nartxt,
+                        Attachment: atttxt
+                    }
+                ),
+                Notify(
+                    FirstError.Message,
+                    NotificationType.Error,
+                    2000
+                )
+            );
+            Reset(TextInput8);
+            Reset(narrationtxt);
+            Reset(billtxt);
+            Reset(amttxt);
+            Reset(typecombo);
+            Reset(typenocombo);
+            Reset(typenamecombo);
+            Reset(attachementtxt);
+            Reset(sourcecombo);
             Reset(retxt);
             Reset(nartxt);
             Reset(billtxt_1);
@@ -44,7 +72,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =224
-        HintText: ="Narration Here"
+        HintText: =""
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
@@ -238,7 +266,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =205
-        HintText: ="Add remarfks or links here"
+        HintText: =""
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
