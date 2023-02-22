@@ -925,6 +925,7 @@ UserView As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =10
+        Visible: =If(approver1_10.Text="",false,true)
         Width: =250
         X: =278
         Y: =657
