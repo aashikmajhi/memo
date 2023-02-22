@@ -1,7 +1,7 @@
 MemoPDF As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |-
-        =Set(myMemoPdf,PDF(MemoPDF ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
+        =//Set(myMemoPdf,PDF(MemoPDF ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
 
     "SNGallery_3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -770,9 +770,9 @@ MemoPDF As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
-            =StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myMemoPdf,IncludeBinaryData),"""",""));
+            =//StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myMemoPdf,IncludeBinaryData),"""",""));
             
-            Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,'Recommended By':approver1_5.Text,'First Approver':approver1_4.Text,'Second Approver':approver1_3.Text});
+            //Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,'Recommended By':approver1_5.Text,'First Approver':approver1_4.Text,'Second Approver':approver1_3.Text});
             
             //Office365Outlook.SendEmailV2(app1.Text,"Testing mail.","We are just testing the pdf generating feature and sending it as an email.",{Attachments:Table({Name:"PurchaseReq for the Ref No " & refNo_1.Text &".pdf",ContentBytes:myPdf})});
             
@@ -784,7 +784,7 @@ MemoPDF As screen:
             Reset(ComboBox1);
             Reset(ComboBox1_1);
             Reset(TextInput7);
-            Navigate(UserDashboard)
+            //Navigate(UserDashboard)
         Visible: =false
         X: =589
         Y: =705
