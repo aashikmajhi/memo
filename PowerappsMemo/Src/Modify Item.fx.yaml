@@ -1,7 +1,7 @@
 "'Modify Item' As screen":
     Fill: =RGBA(153, 205, 255, 1)
 
-    Button3_4 As button:
+    attaEdit_2 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -11,21 +11,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =//ClearCollect(
-            //    PurchaseReq,
-            //    {
-            //        Source: sourceEdit_1.Text,
-            //        Type: typeEdit_1.Text,
-            //        'Type No': typenoEdit_1.Text,
-            //        'Type Name': nameEdit_1.Text,
-            //        'Bill No.': billEdit_1.Text,
-            //        Amount: amtEdit_1.Text,
-            //        Narration: naratEdit_1.Text,
-            //        Attachment: attaEdit_1.Text
-            //    }
-            //);
-            
-            UpdateIf(
+            =UpdateIf(
                 MemoTableData,
                 BillNo = ProdGallery_2.Selected.'Bill No.',
                 {
@@ -37,7 +23,7 @@
                     Amount: amtEdit_2.Text,
                     BillNo: billEdit_2.Text,
                     Narration: naratEdit_2.Text,
-                    Attachment: attaEdit_2.Text
+                    Attachment: Last(attControl.Attachments).Value
                 }
             );
             
@@ -48,7 +34,6 @@
             Reset(amtEdit_2);
             Reset(billEdit_2);
             Reset(naratEdit_2);
-            Reset(attaEdit_2);
             Navigate(Memo);
         Size: =15
         Text: ="Update"
@@ -221,28 +206,6 @@
         Y: =383
         ZIndex: =22
 
-    attaEdit_2 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.Attachment
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =241
-        HintText: =""
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Mode: =TextMode.MultiLine
-        PaddingLeft: =5
-        Size: =12
-        Width: =777
-        X: =557
-        Y: =425
-        ZIndex: =23
-
     Icon3_6 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
@@ -352,4 +315,43 @@
         X: =160
         Y: =104
         ZIndex: =33
+
+    attControl As attachments:
+        AddAttachmentColor: =PaleTurquoise
+        AddAttachmentText: ="Add Quotation"
+        AddedItemColor: =Blue
+        AddedItemFill: =Red
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =205
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        IsInDataCard: =true
+        ItemColor: =PaleTurquoise
+        ItemFill: =PaleTurquoise
+        ItemHoverColor: =RGBA(0, 0, 0, 1)
+        ItemHoverFill: =RGBA(153, 205, 255, 1)
+        Items: =ProdGallery_2.Selected.Attachment
+        ItemSpacing: =3
+        MaxAttachments: =3
+        NoAttachmentsText: =""
+        OnAddFile: |-
+            =//Set(quotation,AzureBlobStorage.CreateFile("savefileshare/webinar", GUID() & AddMediaButton3.FileName,AddMediaButton3.Media));
+            //Collect(collectReceipts,{FN: AddMediaButton3:FileName, FL: "https://azure.blob.core.windows.net" & varAzureFile.Path, FID: varAzureFile.Id});
+            Set(quotation,attControl.Attachments);
+            Collect(myQuotation,{Name:attControl.Attachments,Value:quotation});
+            //ClearCollect(myQuotation, AttachmentControl.Attachments);
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        Width: =777
+        X: =557
+        Y: =461
+        ZIndex: =34
 

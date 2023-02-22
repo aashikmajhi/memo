@@ -183,7 +183,7 @@ MemoPDF As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Attachment
+            Text: =Last(ThisItem.Attachment).Value
             VerticalAlign: =VerticalAlign.Top
             Width: =239
             X: =1038

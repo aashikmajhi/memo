@@ -1,7 +1,7 @@
-ApproverView_1 As screen:
+demoforPDF As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |-
-        =Set(myMemoPdf,PDF(ApproverView_1 ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
+        =Set(myMemoPdf,PDF(demoforPDF ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
 
     "SNGallery_7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)

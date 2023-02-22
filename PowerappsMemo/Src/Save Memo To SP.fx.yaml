@@ -25,7 +25,7 @@
                         Amount: amttxt_1.Text,
                         BillNo: billtxt_1.Text,
                         Narration: nartxt.Text,
-                        Attachment: atttxt.Text
+                        Attachment:atttxt
                     }
                 ),
                 Notify(
@@ -256,27 +256,6 @@
         Y: =391
         ZIndex: =28
 
-    atttxt As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =attachementtxt.Text
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =205
-        HintText: =""
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Mode: =TextMode.MultiLine
-        Size: =13
-        Width: =749
-        X: =591
-        Y: =433
-        ZIndex: =29
-
     Label7_1 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -383,4 +362,44 @@
         X: =162
         Y: =408
         ZIndex: =39
+
+    atttxt As attachments:
+        AddAttachmentColor: =PaleTurquoise
+        AddAttachmentText: ="Add Quotation"
+        AddedItemColor: =Blue
+        AddedItemFill: =Red
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =205
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        IsInDataCard: =true
+        ItemColor: =PaleTurquoise
+        ItemFill: =PaleTurquoise
+        ItemHoverColor: =RGBA(0, 0, 0, 1)
+        ItemHoverFill: =RGBA(153, 205, 255, 1)
+        Items: =attachementtxt.Attachments
+        ItemSpacing: =3
+        MaxAttachments: =3
+        NoAttachmentsText: =""
+        OnAddFile: |-
+            =//Set(quotation,AzureBlobStorage.CreateFile("savefileshare/webinar", GUID() & AddMediaButton3.FileName,AddMediaButton3.Media));
+            //Collect(collectReceipts,{FN: AddMediaButton3:FileName, FL: "https://azure.blob.core.windows.net" & varAzureFile.Path, FID: varAzureFile.Id});
+            Set(quotation,atttxt.Attachments);
+            Collect(myQuotation,{Name:atttxt.Attachments,Value:quotation});
+            //ClearCollect(myQuotation, AttachmentControl.Attachments);
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        Width: =749
+        X: =591
+        Y: =432
+        ZIndex: =40
 
