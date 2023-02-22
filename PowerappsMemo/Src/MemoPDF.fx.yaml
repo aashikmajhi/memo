@@ -461,7 +461,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(IsBlank(approver1_6.Text),false,true)
+        Visible: =false
         Width: =175
         X: =583
         Y: =625
@@ -477,7 +477,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(IsBlank(approver1_5.Text),false,true)
+        Visible: =false
         Width: =144
         X: =876
         Y: =625
@@ -557,7 +557,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(IsBlank(approver1_5.Text),false,true)
+        Visible: =false
         Width: =144
         X: =1142
         Y: =625
@@ -690,7 +690,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =If(IsBlank(approver1_4.Text),false,true)
+        Visible: =false
         Width: =250
         X: =1099
         Y: =657
@@ -712,7 +712,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =If(IsBlank(approver1_5.Text),false,true)
+        Visible: =false
         Width: =250
         X: =824
         Y: =657
@@ -734,7 +734,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =If(IsBlank(approver1_6.Text),false,true)
+        Visible: =false
         Width: =250
         X: =550
         Y: =657
@@ -770,7 +770,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
-            =//StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myMemoPdf,IncludeBinaryData),"""",""));
+            =StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myMemoPdf,IncludeBinaryData),"""",""));
             
             Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,'Recommended By':approver1_5.Text,'First Approver':approver1_4.Text,'Second Approver':approver1_3.Text});
             
