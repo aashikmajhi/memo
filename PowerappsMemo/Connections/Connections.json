@@ -37,9 +37,6 @@
           "MemoTableData": {
             "tableName": "04205eb7-7186-4a6a-9f7a-f333b44bb429"
           },
-          "RequisitionDemo": {
-            "tableName": "4642c334-2366-4957-8eda-a94901e7dbac"
-          },
           "RequisitionDemoApprovalList": {
             "tableName": "8a4558d2-e323-4ada-a3bb-4b1889c95b88"
           },
@@ -51,7 +48,6 @@
     },
     "dataSources": [
       "RequisitionPDF",
-      "RequisitionDemo",
       "RequisitionDemoApprovalList",
       "MemoTableData"
     ],

@@ -732,7 +732,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "02/22/2023 10:56:01",
+  "HeaderLastSavedDateTimeUTC": "02/22/2023 11:15:41",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "138f5c90-9c33-4ab8-8e34-c21b5da334c2": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/235b20766fd44c0e9efcc34357395801\"",
@@ -767,17 +767,16 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "ComboBoxSample": 10,
+    "ComboBoxSample": 9,
     "CustomGallerySample": 5,
     "DropDownSample": 7,
     "GetPDFURI": 4,
-    "MemoTableData": 11,
-    "myQuotation": 13,
+    "MemoTableData": 10,
+    "myQuotation": 12,
     "Office365Outlook": 1,
     "Office365Users": 0,
-    "PurchaseReq": 12,
-    "RequisitionDemo": 8,
-    "RequisitionDemoApprovalList": 9,
+    "PurchaseReq": 11,
+    "RequisitionDemoApprovalList": 8,
     "RequisitionPDF": 6,
     "StoreInSP": 3,
     "StorePDF": 2
@@ -2295,7 +2294,7 @@
       "timer": 3
     },
     "DeserializationLoadTime": 4.2599474,
-    "ErrorCount": 8
+    "ErrorCount": 6
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
