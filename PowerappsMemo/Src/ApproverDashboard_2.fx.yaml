@@ -373,37 +373,12 @@ ApproverDashboard_2 As screen:
             Y: =40
             ZIndex: =17
 
-        Rectangle1_4 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(232, 232, 232, 1)
-            Height: =Gallery3_4.TemplateHeight
-            OnSelect: =Select(Parent)
-            Width: =1
-            ZIndex: =18
-
-        Rectangle2_2 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(232, 232, 232, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Gallery3_4.TemplateWidth
-            ZIndex: =19
-
         Rectangle3_2 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(232, 232, 232, 1)
-            Height: =0
+            BorderColor: =RGBA(0, 80, 160, 1)
+            Fill: =RGBA(0, 89, 178, 1)
+            Height: =2
             OnSelect: =Select(Parent)
             Width: =Gallery3_4.TemplateWidth
             Y: =121
             ZIndex: =20
-
-        Rectangle1_5 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(232, 232, 232, 1)
-            Height: =Gallery3_4.TemplateHeight
-            OnSelect: =Select(Parent)
-            Width: =1
-            X: =1281
-            ZIndex: =21
 
