@@ -14159,6 +14159,14 @@
           "InvariantPropertyName": "BorderThickness",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ShowScrollbar",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "GalleryTemplateChildName": "galleryTemplate5_8",
@@ -14298,6 +14306,11 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ShowScrollbar",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -14933,6 +14946,14 @@
           "InvariantPropertyName": "BorderThickness",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ShowScrollbar",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "GalleryTemplateChildName": "galleryTemplate1_6",
@@ -15072,6 +15093,11 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ShowScrollbar",
           "RuleProviderType": "Unknown"
         }
       ],

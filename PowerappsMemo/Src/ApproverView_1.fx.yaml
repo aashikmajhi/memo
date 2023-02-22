@@ -6,9 +6,10 @@ ApproverView_1 As screen:
     "SNGallery_7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        Height: =377
+        Height: =286
         Items: =Sequence(CountRows(ProdGallery_9.AllItems))
         Layout: =Layout.Vertical
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =33
         Width: =42
@@ -47,13 +48,14 @@ ApproverView_1 As screen:
     ProdGallery_9 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        Height: =377
+        Height: =286
         Items: |
             =//MemoTableData
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
             Filter(MemoTableData,'Meme No'= refNo_10.Text)
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Approver Edit Item')
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
@@ -276,13 +278,12 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =13
         Text: |-
             ="Prepared By:"
         Width: =126
-        X: =58
+        X: =78
         Y: =695
         ZIndex: =5
 
@@ -291,7 +292,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="S.N."
@@ -305,7 +305,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Source"
@@ -318,7 +317,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Type"
@@ -332,7 +330,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="No"
@@ -346,7 +343,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -361,7 +357,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -381,7 +376,6 @@ ApproverView_1 As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Semibold
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
@@ -397,7 +391,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -417,7 +410,6 @@ ApproverView_1 As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Semibold
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
@@ -433,7 +425,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Semibold
         Height: =28
         Size: =13
         Text: |-
@@ -448,7 +439,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -468,7 +458,6 @@ ApproverView_1 As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Semibold
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
@@ -484,7 +473,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =13
         Text: |-
@@ -589,7 +577,6 @@ ApproverView_1 As screen:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
         Text: ="Internal Memo"
@@ -621,7 +608,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -636,7 +622,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -716,7 +701,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Name"
@@ -729,7 +713,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Amount"
@@ -743,7 +726,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Bill No."
@@ -757,7 +739,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Narration"
@@ -770,7 +751,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Attachment"
@@ -900,7 +880,6 @@ ApproverView_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
         Size: =25
         Text: =Gallery3_1.Selected.Organization
         Width: =320
