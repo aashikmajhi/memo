@@ -10,7 +10,7 @@
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: =Navigate('Approver Edit Item');
+        OnSelect: =Navigate('User Edit Item');
         Size: =15
         Text: ="Edit"
         X: =591
@@ -21,7 +21,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.Narration
+        Default: =ProdGallery_7.Selected.Narration
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -43,7 +43,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.'Bill No.'
+        Default: =ProdGallery_7.Selected.BillNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -64,7 +64,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.Amount
+        Default: =ProdGallery_7.Selected.Amount
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -186,7 +186,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.Attachment
+        Default: =ProdGallery_7.Selected.Attachment
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -238,7 +238,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.'Type Name'
+        Default: =ProdGallery_7.Selected.TypeNoName
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -258,7 +258,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.'Type No'
+        Default: =ProdGallery_7.Selected.TypeNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -278,7 +278,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.Type
+        Default: =ProdGallery_7.Selected.Types
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -298,7 +298,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_2.Selected.Source
+        Default: =ProdGallery_7.Selected.Source
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
