@@ -491,8 +491,8 @@ ApproverView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =//Navigate(ApproverDashboard)
-            Navigate(MemoPDF)
+            =Navigate(ApproverDashboard)
+            //Navigate(MemoPDF)
         Size: =15
         Text: |-
             ="Submit
