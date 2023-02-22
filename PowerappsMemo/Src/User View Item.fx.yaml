@@ -301,7 +301,6 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         Height: =241
         HoverColor: =RGBA(0, 0, 0, 1)
@@ -311,7 +310,7 @@
         ItemFill: =PaleTurquoise
         ItemHoverColor: =RGBA(0, 0, 0, 1)
         ItemHoverFill: =RGBA(153, 205, 255, 1)
-        Items: =
+        Items: =ProdGallery_7.Selected.Attachment
         ItemSpacing: =3
         MaxAttachments: =3
         NoAttachmentsText: =""

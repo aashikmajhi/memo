@@ -490,7 +490,14 @@ Memo As screen:
             =//CountRows(RequisitionDemo)+1
             //If(companyName.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemoApprovalList)+1,If(companyName.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemoApprovalList)+1))
             //If(companyName_1.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemo)+1,If(companyName_1.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemo)+1))
-            If(companyName_1.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemoApprovalList)+1,If(companyName_1.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemoApprovalList)+1))
+            If(
+                companyName_1.SelectedText.Value = "F1 Soft",
+                "FS-" & CountRows(RequisitionDemoApprovalList) + 1,
+                If(
+                    companyName_1.SelectedText.Value = "e-Sewa",
+                    "ES-" & CountRows(RequisitionDemoApprovalList) + 1
+                )
+            )
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
