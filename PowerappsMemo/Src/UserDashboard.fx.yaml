@@ -270,24 +270,6 @@ UserDashboard As screen:
             Y: =93
             ZIndex: =20
 
-        Icon2_11 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Icon: =Icon.CancelBadge
-            OnSelect: =
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Width: =28
-            X: =1244
-            Y: =47
-            ZIndex: =21
-
         Icon1_14 As icon.View:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
@@ -303,7 +285,7 @@ UserDashboard As screen:
             PaddingTop: =5
             Width: =28
             X: =1244
-            Y: =17
+            Y: =30
             ZIndex: =22
 
     Label21_6 As label:
