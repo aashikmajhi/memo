@@ -11,9 +11,9 @@
         HoverBorderColor: =
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: |-
+        OnSelect: |
             =If(
-                !IsBlank((narrationtxt || billtxt || amttxt ||  TextInput10.Text|| TextInput10_1.Text || TextInput10_2.Text || TextInput10_3.Text || Last(DataCardValue28.Attachments).Name)),
+                !IsBlank((narrationtxt || billtxt || amttxt || TextInput10.Text || TextInput10_1.Text || TextInput10_2.Text || TextInput10_3.Text || Last(DataCardValue28.Attachments).Name)),
                 Collect(
                     PurchaseReq,
                     {
@@ -29,19 +29,30 @@
                 ),
                 Notify("Empty fields can not be processed")
             );
-            IfError(Patch(MemoTableData,Defaults(MemoTableData),{'Meme No': TextInput8.Text,Source: TextInput10.Text,Types: TextInput10_1.Text,TypeNo: TextInput10_2.Text,TypeNoName: TextInput10_3.Text,Amount: amttxt.Text,BillNo: billtxt,Narration: narrationtxt } ),Notify(FirstError.Message,NotificationType.Error,2000));
-            //Reset(TextInput8);
-            //Reset(narrationtxt);
-            //Reset(billtxt);
-            //Reset(amttxt);
-            //Reset(typecombo);
-            //Reset(typenocombo);
-            //Reset(typenamecombo);
-            //Reset(attachementtxt);
-            //Reset(sourcecombo);
-            //Navigate(Memo);
             SubmitForm(Form3);
-            //Navigate('Save Memo To SP');
+            IfError(
+                Patch(
+                    MemoTableData,
+                    Defaults(MemoTableData),
+                    {
+                        'Meme No': TextInput8.Text,
+                        Source: TextInput10.Text,
+                        Types: TextInput10_1.Text,
+                        TypeNo: TextInput10_2.Text,
+                        TypeNoName: TextInput10_3.Text,
+                        Amount: amttxt.Text,
+                        BillNo: billtxt.Text,
+                        Narration: narrationtxt.Text
+                    }
+                ),
+                Notify(
+                    FirstError.Message,
+                    NotificationType.Error,
+                    2000
+                )
+            );
+            
+            
             Navigate(Memo);
         Size: =15
         Text: |-
@@ -246,86 +257,6 @@
         Y: =401
         ZIndex: =14
 
-    TextInput10 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =sourcecombo.Selected.Value1
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Size: =13
-        Visible: =If(IsEmpty(IsBlank(sourcecombo.SelectedItems)),false,true)
-        Width: =375
-        X: =162
-        Y: =126
-        ZIndex: =15
-
-    TextInput10_1 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =typecombo.Selected.Value1
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Size: =13
-        Visible: =If(IsEmpty(IsBlank(typecombo.SelectedItems)),false,true)
-        Width: =375
-        X: =162
-        Y: =217
-        ZIndex: =16
-
-    TextInput10_2 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =typenocombo.Selected.Value1
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Size: =13
-        Visible: =If(IsEmpty(IsBlank(typenocombo.SelectedItems)),false,true)
-        Width: =375
-        X: =162
-        Y: =306
-        ZIndex: =17
-
-    TextInput10_3 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =typenamecombo.Selected.Value1
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Size: =13
-        Visible: =If(IsEmpty(IsBlank(typenamecombo.SelectedItems)),false,true)
-        Width: =375
-        X: =162
-        Y: =394
-        ZIndex: =18
-
     Label7 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -337,7 +268,7 @@
         Width: =96
         X: =1040
         Y: =104
-        ZIndex: =19
+        ZIndex: =15
 
     TextInput8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -355,7 +286,7 @@
         Width: =192
         X: =1148
         Y: =104
-        ZIndex: =20
+        ZIndex: =16
 
     Form3 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -365,7 +296,7 @@
         Width: =763
         X: =591
         Y: =445
-        ZIndex: =21
+        ZIndex: =17
 
         Attachments_DataCard3 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -410,6 +341,86 @@
                 Width: =745
                 X: =6
                 ZIndex: =2
+
+    TextInput10 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =sourcecombo.Selected.Value1
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Visible: =If(IsEmpty(IsBlank(sourcecombo.SelectedItems)),false,true)
+        Width: =375
+        X: =162
+        Y: =126
+        ZIndex: =18
+
+    TextInput10_1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =typecombo.Selected.Value1
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Visible: =If(IsEmpty(IsBlank(typecombo.SelectedItems)),false,true)
+        Width: =375
+        X: =162
+        Y: =217
+        ZIndex: =19
+
+    TextInput10_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =typenocombo.Selected.Value1
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Visible: =If(IsEmpty(IsBlank(typenocombo.SelectedItems)),false,true)
+        Width: =375
+        X: =162
+        Y: =306
+        ZIndex: =20
+
+    TextInput10_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =typenamecombo.Selected.Value1
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Visible: =If(IsEmpty(IsBlank(typenamecombo.SelectedItems)),false,true)
+        Width: =375
+        X: =162
+        Y: =394
+        ZIndex: =21
 
     sourcecombo As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
