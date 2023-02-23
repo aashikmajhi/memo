@@ -56,7 +56,7 @@ UserView As screen:
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
             Filter(MemoTableData,'Meme No'= refNo_8.Text)
         Layout: =Layout.Vertical
-        OnSelect: =Navigate('User Edit Item')
+        OnSelect: =Navigate('User Edit Item_1')
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
@@ -177,25 +177,6 @@ UserView As screen:
             X: =545
             ZIndex: =11
 
-        Label24_34 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =33
-            OnSelect: =Select(Parent)
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =Last(ThisItem.Attachments).Value
-            Tooltip: =Last(ThisItem.Attachments).DisplayName
-            VerticalAlign: =VerticalAlign.Top
-            Width: =239
-            X: =1006
-            ZIndex: =12
-
         Label24_33 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
@@ -211,7 +192,7 @@ UserView As screen:
             Text: =ThisItem.Narration
             Tooltip: =ThisItem.Narration
             VerticalAlign: =VerticalAlign.Top
-            Width: =241
+            Width: =543
             X: =765
             ZIndex: =13
 
@@ -776,19 +757,6 @@ UserView As screen:
         X: =854
         Y: =284
         ZIndex: =48
-
-    Label13_105 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =32
-        Size: =10
-        Text: ="Attachment"
-        X: =1095
-        Y: =284
-        ZIndex: =49
 
     TextInput9_10 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
