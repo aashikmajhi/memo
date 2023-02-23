@@ -906,18 +906,18 @@ Screen1 As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =If(
-                !IsBlank((narrationtxt || billtxt || amttxt || TextInput10.Text || TextInput10_1.Text || TextInput10_2.Text || TextInput10_3.Text || Last(DataCardValue28.Attachments).Name)),
+                !IsBlank((DataCardValue30.Text || DataCardValue36.Text || DataCardValue31.Text || DataCardValue32.Text || DataCardValue33.Text || DataCardValue34.Text || DataCardValue35.Text || Last(DataCardValue37.Attachments).Name)),
                 Collect(
                     PurchaseReq,
                     {
-                        Source: TextInput10.Text,
-                        Type: TextInput10_1.Text,
-                        'Type No': TextInput10_2.Text,
-                        'Type Name': TextInput10_3.Text,
-                        'Bill No.': billtxt.Text,
-                        Amount: amttxt.Text,
-                        Narration: narrationtxt.Text,
-                        Attachments: DataCardValue28.Attachments
+                        Source: DataCardValue30.Text,
+                        Type: DataCardValue36.Text,
+                        'Type No': DataCardValue31.Text,
+                        'Type Name': DataCardValue32.Text,
+                        'Bill No.': DataCardValue34.Text,
+                        Amount:DataCardValue33.Text,
+                        Narration: DataCardValue35.Text,
+                        Attachments: DataCardValue37.Attachments
                     }
                 ),
                 Notify("Empty fields can not be processed")
