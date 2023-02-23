@@ -29,8 +29,8 @@
                 ),
                 Notify("Empty fields can not be processed")
             );
-            SubmitForm(Form1);
             SubmitForm(Form2);
+            SubmitForm(Form1);
             Navigate(Memo);
         Size: =15
         Text: |-
