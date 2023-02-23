@@ -522,19 +522,13 @@ Memo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
-            =//PDF(PurchaseRequisition_1);
-            //Set(myPdf,PDF(PurchaseRequisition_1));
-            //Office365Outlook.SendEmailV2(Label9_4.Text,"This is a test message","New request for purchase requisition has been made.");
-            //ClearCollect(PurchaseReq,AllowedValues);
-            //Collect(PurchaseReq,AllowedValues);
-            Navigate(MemoPDF)
+        OnSelect: =Navigate(MemoPDF)
         Size: =15
         Text: |-
             ="Submit
             "
-        X: =626
-        Y: =715
+        X: =623
+        Y: =701
         ZIndex: =23
 
     Icon1_6 As icon.BackArrow:
