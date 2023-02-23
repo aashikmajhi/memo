@@ -1,6 +1,7 @@
 ApproverDashboard As screen:
     BackgroundImage: =
     Fill: =
+    OnVisible: =Set(_requestTypeFilter,"All")
 
     Button7_6 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -107,14 +108,13 @@ ApproverDashboard As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =403
         Items: |-
-            =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemo,Date,Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemo,Status.Value="Pending First Approval" || Status.Value="Pending Second Approval" || Status.Value="Pending Third Approval" || Status.Value="Pending Fourth Approval"),Date,Ascending),Sort(Filter(RequisitionDemo,Status.Value=_requestTypeFilter),Date,Ascending)),Date,Ascending))),Date,Ascending)
-            Sort(
+            =Sort(
                 If(
                     _requestTypeFilter = "All",
                     Sort(
                         RequisitionDemoApprovalList,
                         Date,
-                        Ascending
+                        Descending
                     ),
                     (Sort(
                         If(
@@ -125,7 +125,7 @@ ApproverDashboard As screen:
                                     Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Third Approval" || Status.Value = "Pending Fourth Approval"
                                 ),
                                 Date,
-                                Ascending
+                                Descending
                             ),
                             Sort(
                                 Filter(
@@ -133,15 +133,15 @@ ApproverDashboard As screen:
                                     Status.Value = _requestTypeFilter
                                 ),
                                 Date,
-                                Ascending
+                                Descending
                             )
                         ),
                         Date,
-                        Ascending
+                        Descending
                     ))
                 ),
                 Date,
-                Ascending
+                Descending
             )
         Layout: =Layout.Vertical
         OnSelect: |-
