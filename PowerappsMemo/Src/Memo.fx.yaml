@@ -264,16 +264,8 @@ Memo As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Reset(TextInput8);
-            Reset(narrationtxt);
-            Reset(billtxt);
-            Reset(amttxt);
-            Reset(typecombo);
-            Reset(typenocombo);
-            Reset(typenamecombo);
-            ResetForm(Form4);
-            Reset(sourcecombo);
-            Navigate(Screen1)
+            =ResetForm(Form4);
+            Navigate('Add New Item')
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -498,10 +490,7 @@ Memo As screen:
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
-            =//CountRows(RequisitionDemo)+1
-            //If(companyName.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemoApprovalList)+1,If(companyName.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemoApprovalList)+1))
-            //If(companyName_1.SelectedText.Value="F1 Soft", "FS-"& CountRows(RequisitionDemo)+1,If(companyName_1.SelectedText.Value="e-Sewa","ES-"& CountRows(RequisitionDemo)+1))
-            If(
+            =If(
                 companyName_1.SelectedText.Value = "F1 Soft",
                 "FS-" & CountRows(RequisitionDemoApprovalList) + 1,
                 If(

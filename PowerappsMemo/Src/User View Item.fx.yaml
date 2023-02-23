@@ -188,11 +188,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: |-
-            =Reset(narrationtxt);
-            Reset(billtxt);
-            Reset(amttxt);
-            Back()
+        OnSelect: =Back()
         X: =23
         Y: =24
         ZIndex: =28
@@ -306,8 +302,8 @@
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         IsInDataCard: =true
-        ItemColor: =PaleTurquoise
-        ItemFill: =PaleTurquoise
+        ItemColor: =Black
+        ItemFill: =White
         ItemHoverColor: =RGBA(0, 0, 0, 1)
         ItemHoverFill: =RGBA(153, 205, 255, 1)
         Items: =ProdGallery_7.Selected.Attachments
