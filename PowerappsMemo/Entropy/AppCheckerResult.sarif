@@ -1244,19 +1244,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Save Memo To SP'.atttxt.AccessibleLabel"
+                  "fullyQualifiedName": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Save Memo To SP'.atttxt.AccessibleLabel",
+                  "fullyQualifiedName": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Save Memo To SP",
-                "type": "'Save Memo To SP'.atttxt"
+                "type": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29"
               }
             }
           ],
@@ -10184,6 +10184,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add New Item",
+                "type": "'Add New Item'.TextInput10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Add New Item_1'.Form1.Attachments_DataCard1.DataCardValue10.AccessibleLabel"
                 }
               ],
@@ -10197,6 +10227,96 @@
                 "member": "AccessibleLabel",
                 "module": "Add New Item_1",
                 "type": "'Add New Item_1'.Form1.Attachments_DataCard1.DataCardValue10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add New Item",
+                "type": "'Add New Item'.TextInput10_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add New Item",
+                "type": "'Add New Item'.TextInput10_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add New Item'.TextInput10_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add New Item",
+                "type": "'Add New Item'.TextInput10_3"
               }
             }
           ],
@@ -10557,36 +10677,6 @@
                 "member": "Default",
                 "module": "Save Memo To SP",
                 "type": "'Save Memo To SP'.nametxt"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Save Memo To SP'.atttxt.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Save Memo To SP'.atttxt.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Save Memo To SP",
-                "type": "'Save Memo To SP'.atttxt"
               }
             }
           ],
@@ -14187,6 +14277,66 @@
                 "member": "Default",
                 "module": "Add New Item_1",
                 "type": "'Add New Item_1'.Form2.'Meme No_DataCard1'.DataCardValue1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Save Memo To SP",
+                "type": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Save Memo To SP",
+                "type": "'Save Memo To SP'.Form4.Attachments_DataCard3_1.DataCardValue29"
               }
             }
           ],

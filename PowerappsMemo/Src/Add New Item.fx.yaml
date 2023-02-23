@@ -11,16 +11,16 @@
         HoverBorderColor: =
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: |
+        OnSelect: |-
             =If(
-                !IsBlank((narrationtxt || billtxt || amttxt ||  sourcecombo.Selected.Value1 || typecombo.Selected.Value1 || typenocombo.Selected.Value1 || typenamecombo.Selected.Value1)),
+                !IsBlank((narrationtxt || billtxt || amttxt ||  TextInput10.Text|| TextInput10_1.Text || TextInput10_2.Text || TextInput10_3.Text || Last(DataCardValue28.Attachments).Name)),
                 Collect(
                     PurchaseReq,
                     {
-                        Source: sourcecombo.Selected.Value1,
-                        Type: typecombo.Selected.Value1,
-                        'Type No': typenocombo.Selected.Value1,
-                        'Type Name': typenamecombo.Selected.Value1,
+                        Source: TextInput10.Text,
+                        Type: TextInput10_1.Text,
+                        'Type No': TextInput10_2.Text,
+                        'Type Name': TextInput10_3.Text,
                         'Bill No.': billtxt.Text,
                         Amount: amttxt.Text,
                         Narration: narrationtxt.Text,
@@ -29,28 +29,7 @@
                 ),
                 Notify("Empty fields can not be processed")
             );
-            //IfError(
-            //    Patch(
-            //        MemoTableData,
-            //        Defaults(MemoTableData),
-            //        {
-            //            'Meme No': TextInput8.Text,
-            //            Source: sourcecombo.Selected.Value1,
-            //            Types: typecombo.Selected.Value1,
-            //            TypeNo: typenocombo.Selected.Value1,
-            //            TypeNoName: typenamecombo.Selected.Value1,
-            //            Amount: amttxt.Text,
-            //            BillNo: billtxt,
-            //            Narration: narrationtxt,
-            //            Attachment: attachementtxt
-            //        }
-            //    ),
-            //    Notify(
-            //        FirstError.Message,
-            //        NotificationType.Error,
-            //        2000
-            //    )
-            //);
+            IfError(Patch(MemoTableData,Defaults(MemoTableData),{'Meme No': TextInput8.Text,Source: TextInput10.Text,Types: TextInput10_1.Text,TypeNo: TextInput10_2.Text,TypeNoName: TextInput10_3.Text,Amount: amttxt.Text,BillNo: billtxt,Narration: narrationtxt } ),Notify(FirstError.Message,NotificationType.Error,2000));
             //Reset(TextInput8);
             //Reset(narrationtxt);
             //Reset(billtxt);
@@ -62,14 +41,15 @@
             //Reset(sourcecombo);
             //Navigate(Memo);
             SubmitForm(Form3);
-            Navigate('Save Memo To SP');
+            //Navigate('Save Memo To SP');
+            Navigate(Memo);
         Size: =15
         Text: |-
             ="Submit
             "
         X: =591
         Y: =690
-        ZIndex: =2
+        ZIndex: =1
 
     narrationtxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -90,7 +70,7 @@
         Width: =749
         X: =591
         Y: =170
-        ZIndex: =13
+        ZIndex: =2
 
     billtxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -112,7 +92,7 @@
         Width: =375
         X: =162
         Y: =587
-        ZIndex: =14
+        ZIndex: =3
 
     amttxt As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -132,7 +112,7 @@
         Width: =375
         X: =162
         Y: =494
-        ZIndex: =15
+        ZIndex: =4
 
     Icon3 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -147,7 +127,7 @@
             Back()
         X: =12
         Y: =15
-        ZIndex: =19
+        ZIndex: =5
 
     Label11_3 As label:
         Align: =Align.Center
@@ -162,7 +142,7 @@
         Width: =777
         X: =283
         Y: =24
-        ZIndex: =20
+        ZIndex: =6
 
     Label13_20 As label:
         Align: =Align.Right
@@ -175,7 +155,7 @@
         Width: =134
         X: =9
         Y: =128
-        ZIndex: =21
+        ZIndex: =7
 
     Label13_21 As label:
         Align: =Align.Right
@@ -188,7 +168,7 @@
         Width: =100
         X: =43
         Y: =215
-        ZIndex: =22
+        ZIndex: =8
 
     Label13_22 As label:
         Align: =Align.Right
@@ -201,7 +181,7 @@
         Width: =67
         X: =76
         Y: =310
-        ZIndex: =23
+        ZIndex: =9
 
     Label13_23 As label:
         Align: =Align.Right
@@ -214,7 +194,7 @@
         Width: =134
         X: =9
         Y: =407
-        ZIndex: =24
+        ZIndex: =10
 
     Label13_24 As label:
         Align: =Align.Right
@@ -227,7 +207,7 @@
         Width: =134
         X: =9
         Y: =499
-        ZIndex: =25
+        ZIndex: =11
 
     Label13_25 As label:
         Align: =Align.Right
@@ -240,7 +220,7 @@
         Width: =109
         X: =34
         Y: =590
-        ZIndex: =26
+        ZIndex: =12
 
     Label13_26 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -252,7 +232,7 @@
         Width: =217
         X: =591
         Y: =126
-        ZIndex: =27
+        ZIndex: =13
 
     Label13_27 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -264,111 +244,87 @@
         Width: =201
         X: =591
         Y: =401
-        ZIndex: =28
+        ZIndex: =14
 
-    sourcecombo As combobox:
+    TextInput10 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =sourcecombo.Selected.Value1
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Source"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,sourcecombo.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        SelectMultiple: =false
         Size: =13
+        Visible: =If(IsEmpty(IsBlank(sourcecombo.SelectedItems)),false,true)
         Width: =375
         X: =162
         Y: =126
-        ZIndex: =30
+        ZIndex: =15
 
-    typecombo As combobox:
+    TextInput10_1 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =typecombo.Selected.Value1
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Type"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,typecombo.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        SelectMultiple: =false
         Size: =13
+        Visible: =If(IsEmpty(IsBlank(typecombo.SelectedItems)),false,true)
         Width: =375
         X: =162
         Y: =217
-        ZIndex: =31
+        ZIndex: =16
 
-    typenocombo As combobox:
+    TextInput10_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =typenocombo.Selected.Value1
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Type No"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,typenocombo.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        SelectMultiple: =false
         Size: =13
+        Visible: =If(IsEmpty(IsBlank(typenocombo.SelectedItems)),false,true)
         Width: =375
         X: =162
         Y: =306
-        ZIndex: =32
+        ZIndex: =17
 
-    typenamecombo As combobox:
+    TextInput10_3 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =typenamecombo.Selected.Value1
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Height: =50
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: ="Select Name"
-        Items: =ComboBoxSample
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,typenamecombo.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        SelectMultiple: =false
         Size: =13
+        Visible: =If(IsEmpty(IsBlank(typenamecombo.SelectedItems)),false,true)
         Width: =375
         X: =162
         Y: =394
-        ZIndex: =33
+        ZIndex: =18
 
     Label7 As label:
         Align: =Align.Right
@@ -381,7 +337,7 @@
         Width: =96
         X: =1040
         Y: =104
-        ZIndex: =34
+        ZIndex: =19
 
     TextInput8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -399,16 +355,17 @@
         Width: =192
         X: =1148
         Y: =104
-        ZIndex: =35
+        ZIndex: =20
 
     Form3 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
+        DefaultMode: =FormMode.New
         Height: =224
         Width: =763
         X: =591
         Y: =445
-        ZIndex: =36
+        ZIndex: =21
 
         Attachments_DataCard3 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -453,4 +410,108 @@
                 Width: =745
                 X: =6
                 ZIndex: =2
+
+    sourcecombo As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Source"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,sourcecombo.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =375
+        X: =162
+        Y: =126
+        ZIndex: =22
+
+    typecombo As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Type"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,typecombo.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =375
+        X: =162
+        Y: =217
+        ZIndex: =23
+
+    typenocombo As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Type No"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,typenocombo.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =375
+        X: =162
+        Y: =306
+        ZIndex: =24
+
+    typenamecombo As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: ="Select Name"
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,typenamecombo.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =375
+        X: =162
+        Y: =394
+        ZIndex: =25
 

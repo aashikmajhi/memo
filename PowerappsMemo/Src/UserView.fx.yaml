@@ -136,6 +136,7 @@ UserView As screen:
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
+            Visible: =false
             Width: =28
             X: =1277.5
             Y: =2.5
@@ -244,34 +245,11 @@ UserView As screen:
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
+            Visible: =false
             Width: =28
             X: =1247
             Y: =2.5
             ZIndex: =15
-
-    Button2_9 As button:
-        BorderThickness: =1
-        Color: =RGBA(0, 121, 187, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(241, 244, 249, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Semibold
-        Height: =32
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate('Add New Item')
-        RadiusBottomLeft: =15
-        RadiusBottomRight: =15
-        RadiusTopLeft: =15
-        RadiusTopRight: =15
-        Size: =12
-        Text: ="Add Item"
-        Width: =123
-        X: =642
-        Y: =586
-        ZIndex: =2
 
     Label8_11 As label:
         Align: =Align.Center
@@ -495,6 +473,7 @@ UserView As screen:
         Text: |-
             ="Submit
             "
+        Visible: =false
         X: =626
         Y: =715
         ZIndex: =23

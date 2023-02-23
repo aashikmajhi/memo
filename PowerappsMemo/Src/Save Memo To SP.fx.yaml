@@ -24,8 +24,7 @@
                         TypeNoName: nametxt.Text,
                         Amount: amttxt_1.Text,
                         BillNo: billtxt_1.Text,
-                        Narration: nartxt.Text,
-                        Attachments:atttxt
+                        Narration: nartxt.Text
                     }
                 ),
                 Notify(
@@ -34,6 +33,7 @@
                     2000
                 )
             );
+            SubmitForm(Form4);
             Reset(TextInput8);
             Reset(narrationtxt);
             Reset(billtxt);
@@ -50,7 +50,7 @@
             Reset(typtxt);
             Reset(notxt);
             Reset(nametxt);
-            Reset(atttxt);
+            ResetForm(Form4);
             Reset(srctxt);
             Navigate(Memo);
             //Navigate('Add New Item_1');
@@ -363,42 +363,58 @@
         Y: =408
         ZIndex: =39
 
-    atttxt As attachments:
-        AddAttachmentColor: =PaleTurquoise
-        AddAttachmentText: ="Add Quotation"
-        AddedItemColor: =Blue
-        AddedItemFill: =Red
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =205
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        IsInDataCard: =true
-        ItemColor: =PaleTurquoise
-        ItemFill: =PaleTurquoise
-        ItemHoverColor: =RGBA(0, 0, 0, 1)
-        ItemHoverFill: =RGBA(153, 205, 255, 1)
-        Items: =DataCardValue28.Attachments
-        ItemSpacing: =3
-        MaxAttachments: =3
-        NoAttachmentsText: =""
-        OnAddFile: |-
-            =//Set(quotation,AzureBlobStorage.CreateFile("savefileshare/webinar", GUID() & AddMediaButton3.FileName,AddMediaButton3.Media));
-            //Collect(collectReceipts,{FN: AddMediaButton3:FileName, FL: "https://azure.blob.core.windows.net" & varAzureFile.Path, FID: varAzureFile.Id});
-            Set(quotation,atttxt.Attachments);
-            Collect(myQuotation,{Name:atttxt.Attachments,Value:quotation});
-            //ClearCollect(myQuotation, AttachmentControl.Attachments);
-        PaddingBottom: =5
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        Width: =749
-        X: =591
-        Y: =432
+    Form4 As form:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DataSource: =MemoTableData
+        DefaultMode: =FormMode.New
+        Height: =224
+        Width: =763
+        X: =585
+        Y: =420
         ZIndex: =40
+
+        Attachments_DataCard3_1 As typedDataCard.attachmentsEditCard:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =216
+            Required: =false
+            Update: =DataCardValue29.Attachments
+            Width: =762
+            X: =0
+            Y: =0
+            ZIndex: =37
+
+            DataCardValue29 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Default: =First(DataCardValue28.Attachments)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Height: =190
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(0, 51, 102, 1)
+                ItemHoverColor: =RGBA(0, 0, 0, 1)
+                ItemHoverFill: =RGBA(153, 205, 255, 1)
+                Items: =DataCardValue28.Attachments
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =745
+                X: =6
+                ZIndex: =2
 
