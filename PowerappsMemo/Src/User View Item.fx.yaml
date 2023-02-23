@@ -10,7 +10,9 @@
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: =Navigate('User Edit Item');
+        OnSelect: |-
+            =//Navigate('User Edit Item');
+            Navigate('User Edit Item_1');
         Size: =15
         Text: ="Edit"
         X: =591
