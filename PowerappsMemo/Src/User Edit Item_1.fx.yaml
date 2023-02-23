@@ -12,7 +12,8 @@
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
             =SubmitForm(Form1);
-            //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text//Attachments:DataCardValue9.Attachments});
+            //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
+            //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
             Navigate(UserView);
         Size: =15
         Text: ="Update"
@@ -156,7 +157,7 @@
             Height: =45
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Source")
             Required: =false
-            Update: =
+            Update: =Dropdown4.Selected.Value1
             Width: =678
             X: =-1
             Y: =1
@@ -240,7 +241,7 @@
             Height: =53
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Types")
             Required: =false
-            Update: =
+            Update: =Dropdown2.Selected.Value1
             Width: =678
             X: =0
             Y: =1
@@ -322,7 +323,7 @@
             Height: =42
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNo")
             Required: =false
-            Update: =
+            Update: =Dropdown3.Selected.Value1
             Width: =678
             X: =0
             Y: =3
@@ -405,7 +406,7 @@
             Height: =47
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =false
-            Update: =
+            Update: =Dropdown1.Selected.Value1
             Width: =678
             X: =1
             Y: =3
@@ -486,7 +487,7 @@
             Height: =35
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "BillNo")
             Required: =false
-            Update: =
+            Update: =TextInput10.Text
             Width: =678
             X: =2
             Y: =3
@@ -565,7 +566,7 @@
             Height: =49
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Amount")
             Required: =false
-            Update: =
+            Update: =TextInput8.Text
             Width: =678
             X: =3
             Y: =3
@@ -729,7 +730,7 @@
             Height: =135
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Narration")
             Required: =false
-            Update: =
+            Update: =TextInput11.Text
             Width: =681
             X: =1
             Y: =4
