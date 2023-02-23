@@ -22,8 +22,7 @@
                     TypeNoName: nameEdit_1.Text,
                     Amount: amtEdit_1.Text,
                     BillNo: billEdit_1.Text,
-                    Narration: naratEdit_1.Text,
-                    Attachment: Last(attaEdit_1.Attachments).Value
+                    Narration: naratEdit_1.Text
                 }
             );
             Reset(sourceEdit_1);

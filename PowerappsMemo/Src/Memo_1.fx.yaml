@@ -162,8 +162,8 @@ Memo_1 As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =Last(ThisItem.Attachment).Value
-            Tooltip: =Last(ThisItem.Attachment).Value
+            Text: =false
+            Tooltip: =false
             VerticalAlign: =VerticalAlign.Top
             Width: =208
             X: =1065

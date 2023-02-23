@@ -7274,19 +7274,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Add New Item'.attachementtxt.AccessibleLabel"
+                  "fullyQualifiedName": "'Add New Item'.Form3.Attachments_DataCard3.DataCardValue28.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Add New Item'.attachementtxt.AccessibleLabel",
+                  "fullyQualifiedName": "'Add New Item'.Form3.Attachments_DataCard3.DataCardValue28.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Add New Item",
-                "type": "'Add New Item'.attachementtxt"
+                "type": "'Add New Item'.Form3.Attachments_DataCard3.DataCardValue28"
               }
             }
           ],
@@ -10844,6 +10844,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Approver Edit Item'.attaEdit.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Approver Edit Item'.attaEdit.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Approver Edit Item",
+                "type": "'Approver Edit Item'.attaEdit"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Approver Edit Item'.amtEdit.Default"
                 }
               ],
@@ -10988,6 +11018,36 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ApproverView.refNo_7.DelayOutput"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ApproverView.refNo_7.DelayOutput",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DelayOutput",
+                "module": "ApproverView",
+                "type": "ApproverView.refNo_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-TextInputIsNotDelayOutput",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -14264,6 +14324,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
+              }
+            },
+            {
+              "id": "app-TextInputIsNotDelayOutput",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient text input"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Enable the DelayOutput property of the text input control."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "When a text input control has many controls that depend on its value, typing into that input can slow down the app. Setting DelayOutput to true prevents this problem by only updating dependant controls when typing stops."
               }
             }
           ],

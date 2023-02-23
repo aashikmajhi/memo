@@ -205,7 +205,7 @@ Memo_2 As screen:
                 LineHeight: =0.91
                 OnSelect: =Select(Parent)
                 Size: =9
-                Text: =Last(ThisItem.Attachment).Value
+                Text: =Last(ThisItem.Attachments).Name
                 VerticalAlign: =VerticalAlign.Top
                 Width: =651
                 X: =607

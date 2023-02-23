@@ -22,8 +22,7 @@
                     TypeNoName: nameEdit_2.Text,
                     Amount: amtEdit_2.Text,
                     BillNo: billEdit_2.Text,
-                    Narration: naratEdit_2.Text,
-                    Attachment: Last(attControl.Attachments).Value
+                    Narration: naratEdit_2.Text
                 }
             );
             

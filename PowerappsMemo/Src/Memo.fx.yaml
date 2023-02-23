@@ -191,7 +191,7 @@ Memo As screen:
                 Last(ThisItem.Attachments).Value
             Tooltip: |-
                 =//ThisItem.Attachment
-                Last(ThisItem.Attachment).Value
+                Last(ThisItem.Attachments).Name
             VerticalAlign: =VerticalAlign.Top
             Width: =239
             X: =1006

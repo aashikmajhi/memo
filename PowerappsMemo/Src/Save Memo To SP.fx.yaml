@@ -25,7 +25,7 @@
                         Amount: amttxt_1.Text,
                         BillNo: billtxt_1.Text,
                         Narration: nartxt.Text,
-                        Attachment:atttxt
+                        Attachments:atttxt
                     }
                 ),
                 Notify(
@@ -41,7 +41,7 @@
             Reset(typecombo);
             Reset(typenocombo);
             Reset(typenamecombo);
-            Reset(attachementtxt);
+            Reset(DataCardValue28);
             Reset(sourcecombo);
             Reset(retxt);
             Reset(nartxt);
@@ -381,7 +381,7 @@
         ItemFill: =PaleTurquoise
         ItemHoverColor: =RGBA(0, 0, 0, 1)
         ItemHoverFill: =RGBA(153, 205, 255, 1)
-        Items: =attachementtxt.Attachments
+        Items: =DataCardValue28.Attachments
         ItemSpacing: =3
         MaxAttachments: =3
         NoAttachmentsText: =""

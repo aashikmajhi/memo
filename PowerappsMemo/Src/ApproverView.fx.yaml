@@ -188,8 +188,8 @@ ApproverView As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Attachment
-            Tooltip: =ThisItem.Attachment
+            Text: =Last(ThisItem.Attachments).Value
+            Tooltip: =Last(ThisItem.Attachments).DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =239
             X: =1006
@@ -491,7 +491,8 @@ ApproverView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Navigate(ApproverDashboard)
+            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {'Recommended By':approver3_4.SelectedText.Value});
+            Navigate(ApproverDashboard);
             //Navigate(MemoPDF)
         Size: =15
         Text: |-
@@ -945,4 +946,19 @@ ApproverView As screen:
         X: =521
         Y: =12
         ZIndex: =56
+
+    Button1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate('Approver Edit Item')
+        Size: =15
+        Text: ="Update"
+        X: =1108
+        Y: =715
+        ZIndex: =57
 
