@@ -187,7 +187,8 @@ Memo As screen:
             Size: =10
             Text: |-
                 =//ThisItem.Attachment
-                Last(ThisItem.Attachment).Value
+                //Last(ThisItem.Attachment).Value
+                Last(ThisItem.Attachments).Value
             Tooltip: |-
                 =//ThisItem.Attachment
                 Last(ThisItem.Attachment).Value
@@ -240,7 +241,7 @@ Memo As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate('User Edit Item')
+            OnSelect: =Navigate('Modify Item')
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5

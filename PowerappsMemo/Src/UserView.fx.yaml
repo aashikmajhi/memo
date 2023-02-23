@@ -188,7 +188,7 @@ UserView As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Attachment
+            Text: =Last(ThisItem.Attachments).Value
             Tooltip: =ThisItem.Attachment
             VerticalAlign: =VerticalAlign.Top
             Width: =239
