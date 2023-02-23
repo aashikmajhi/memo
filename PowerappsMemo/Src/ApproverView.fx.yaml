@@ -176,25 +176,6 @@ ApproverView As screen:
             X: =545
             ZIndex: =11
 
-        Label24_28 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =33
-            OnSelect: =Select(Parent)
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =Last(ThisItem.Attachments).Value
-            Tooltip: =Last(ThisItem.Attachments).DisplayName
-            VerticalAlign: =VerticalAlign.Top
-            Width: =239
-            X: =1006
-            ZIndex: =12
-
         Label24_27 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
@@ -210,7 +191,7 @@ ApproverView As screen:
             Text: =ThisItem.Narration
             Tooltip: =ThisItem.Narration
             VerticalAlign: =VerticalAlign.Top
-            Width: =241
+            Width: =482
             X: =765
             ZIndex: =13
 
@@ -804,19 +785,6 @@ ApproverView As screen:
         Y: =284
         ZIndex: =48
 
-    Label13_80 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =32
-        Size: =10
-        Text: ="Attachment"
-        X: =1095
-        Y: =284
-        ZIndex: =49
-
     TextInput9_8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
@@ -958,7 +926,7 @@ ApproverView As screen:
         OnSelect: =Navigate('Approver Edit Item')
         Size: =15
         Text: ="Update"
-        X: =1108
+        X: =1117
         Y: =715
         ZIndex: =57
 

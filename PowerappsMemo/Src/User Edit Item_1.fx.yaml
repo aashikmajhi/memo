@@ -11,30 +11,13 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =//SubmitForm(Form1);
-            Patch(
-                MemoTableData,
-                LookUp(
-                    MemoTableData,
-                    BillNo = ProdGallery_7.Selected.BillNo,
-                    {
-                        'Meme No':DataCardValue1.Text,
-                        Source: Dropdown4.SelectedText.Value,
-                        Types:Dropdown2.SelectedText.Value,
-                        TypeNo: Dropdown3.SelectedText.Value,
-                        TypeNoName: Dropdown1.SelectedText.Value,
-                        Amount:TextInput8.Text,
-                        BillNo: TextInput10.Text,
-                        Narration: TextInput11.Text,
-                        Attachments:DataCardValue9
-                    }
-                )
-            );
+            =SubmitForm(Form1);
+            //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text//Attachments:DataCardValue9.Attachments});
             Navigate(UserView);
         Size: =15
         Text: ="Update"
         X: =603
-        Y: =728
+        Y: =703
         ZIndex: =8
 
     Icon3_7 As icon.BackArrow:
@@ -66,7 +49,6 @@
     Form1 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
-        DefaultMode: =FormMode.New
         Fill: =RGBA(153, 205, 255, 1)
         Height: =508
         NumberOfColumns: =2
