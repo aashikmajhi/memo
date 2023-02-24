@@ -134,7 +134,7 @@ Memo_1 As screen:
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =//Remove(PurchaseReq,ThisItem);
-                Remove(MemoTableData,LookUp(MemoTableData,BillNo=Label24_16.Text));
+                Remove(MemoTableData,LookUp(MemoTableData,ThisItem.BillNo=Label24_16.Text));
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5

@@ -11,7 +11,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =SubmitForm(Form1);
+            =SubmitForm(EditForm);
             //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
             //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
             Navigate(UserView);
@@ -28,7 +28,7 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =ResetForm(Form1);
+            =ResetForm(EditForm);
             Navigate(UserView);
         X: =23
         Y: =24
@@ -49,11 +49,12 @@
         Y: =24
         ZIndex: =29
 
-    Form1 As form:
+    EditForm As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
         Fill: =RGBA(153, 205, 255, 1)
         Height: =508
+        Item: =ProdGallery_7.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366

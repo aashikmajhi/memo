@@ -14,12 +14,12 @@
             =SubmitForm(Form1_2);
             //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
             //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
-            Navigate(UserView);
+            Navigate(Memo);
         Size: =15
         Text: ="Update"
         X: =603
         Y: =703
-        ZIndex: =8
+        ZIndex: =1
 
     Icon3_9 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -30,7 +30,7 @@
         OnSelect: =Navigate(Memo)
         X: =23
         Y: =24
-        ZIndex: =28
+        ZIndex: =2
 
     Label11_15 As label:
         Align: =Align.Center
@@ -45,19 +45,19 @@
         Width: =777
         X: =283
         Y: =24
-        ZIndex: =29
+        ZIndex: =3
 
     Form1_2 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
-        DefaultMode: =FormMode.New
         Fill: =RGBA(153, 205, 255, 1)
         Height: =508
+        Item: =ProdGallery_2.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
         Y: =130
-        ZIndex: =35
+        ZIndex: =4
 
         "'Meme No_DataCard1_2' As typedDataCard.textualEditCard":
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -297,7 +297,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.Type
+                Default: =ProdGallery_2.Selected.Types
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -381,7 +381,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.'Type No'
+                Default: =ProdGallery_2.Selected.TypeNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -462,7 +462,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.'Type Name'
+                Default: =ProdGallery_2.Selected.TypeNoName
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -543,7 +543,7 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_2.Selected.'Bill No.'
+                Default: =ProdGallery_2.Selected.BillNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)

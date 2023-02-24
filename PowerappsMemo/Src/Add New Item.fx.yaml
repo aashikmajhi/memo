@@ -911,10 +911,10 @@
                     PurchaseReq,
                     {
                         Source: DataCardValue30.Text,
-                        Type: DataCardValue36.Text,
-                        'Type No': DataCardValue31.Text,
-                        'Type Name': DataCardValue32.Text,
-                        'Bill No.': DataCardValue34.Text,
+                        Types: DataCardValue36.Text,
+                        TypeNo: DataCardValue31.Text,
+                        TypeNoName: DataCardValue32.Text,
+                        BillNo: DataCardValue34.Text,
                         Amount:DataCardValue33.Text,
                         Narration: DataCardValue35.Text,
                         Attachments: DataCardValue37.Attachments
