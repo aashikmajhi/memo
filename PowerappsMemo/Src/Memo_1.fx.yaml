@@ -187,10 +187,7 @@ Memo_1 As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: |-
-                =//ThisItem.Attachment
-                //Last(ThisItem.Attachment).Value
-                Last(ThisItem.Attachments).Value
+            Text: =Last(ThisItem.Attachments).Value
             Tooltip: =Last(ThisItem.Attachments).DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =239
