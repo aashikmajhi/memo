@@ -540,6 +540,7 @@ Memo As screen:
         OnSelect: |-
             =Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_3.Text));
             Clear(PurchaseReq);
+            Reset(TextInput7);
             Navigate(UserDashboard);
         Width: =45
         X: =10
