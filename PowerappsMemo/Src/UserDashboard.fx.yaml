@@ -145,8 +145,8 @@ UserDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            //Navigate(UserView);
-            If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
+            Navigate(UserView);
+            //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
         ShowScrollbar: =false
         TemplateSize: =95
         Width: =1282

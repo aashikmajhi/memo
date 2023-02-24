@@ -472,7 +472,7 @@ ApproverView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {'Recommended By':approver3_4.SelectedText.Value});
+            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {'Recommended By':approver3_4.SelectedText.Value,'First Approver':approver4_7.Selected.Value,'Second Approver':approver4_8.Selected.Value});
             Navigate(ApproverDashboard);
             //Navigate(MemoPDF)
         Size: =15

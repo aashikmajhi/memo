@@ -57,8 +57,9 @@ UserView As screen:
             Filter(MemoTableData,'Meme No'= refNo_8.Text)
         Layout: =Layout.Vertical
         OnSelect: |-
-            =ResetForm(Form1);
-            Navigate('User Edit Item_1');
+            =//ResetForm(Form1);
+            //Navigate('User Edit Item_1');
+            If(varLoggedInUser=approver1_10.Text,false,ResetForm(Form1);Navigate('User Edit Item_1'));
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
