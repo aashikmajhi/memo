@@ -1,6 +1,6 @@
 Memo As screen:
     Fill: =RGBA(153, 205, 255, 1)
-    OnVisible: |-
+    OnVisible: |
         =Reset(approver2_1);
         Reset(approver3_1);
         Reset(approver4_1);
@@ -526,10 +526,11 @@ Memo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(MemoPDF)
+        OnSelect: =Navigate(MemoPDF);
         Size: =15
-        Text: ="Save"
-        X: =623
+        Text: ="Submit"
+        Visible: =If(save=true,true,false)
+        X: =621
         Y: =701
         ZIndex: =23
 
@@ -561,7 +562,9 @@ Memo As screen:
         Size: =13
         Text: |-
             ="Verified By:"
-        Visible: =If(IsBlank(approver1_1),false,true)
+        Visible: |-
+            =//If(IsBlank(approver1_1),false,true)
+            If(save=true,true,false)
         Width: =144
         X: =334
         Y: =625
@@ -589,7 +592,9 @@ Memo As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(IsBlank(approver1_1),false,true)
+        Visible: |-
+            =//If(IsBlank(approver1_1),false,true)
+            If(save=true,true,false)
         Width: =250
         X: =284
         Y: =658
@@ -998,4 +1003,21 @@ Memo As screen:
         X: =10
         Y: =254
         ZIndex: =51
+
+    Button1_3 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Set(save,true);
+        Size: =15
+        Text: ="Save"
+        Visible: =If(save=false,true,false)
+        X: =624
+        Y: =701
+        ZIndex: =52
 

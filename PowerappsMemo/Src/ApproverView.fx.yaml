@@ -53,8 +53,7 @@ ApproverView As screen:
         Height: =263
         Items: |
             =//MemoTableData
-            //Filter(MemoTableData,refNo_7.Text in 'Meme No')
-            Filter(MemoTableData,'Meme No'= refNo_7.Text)
+            Filter(MemoTableData,refNo_7.Text in 'Meme No')
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Approver Edit Item')
         TemplatePadding: =0
