@@ -543,8 +543,8 @@ Memo As screen:
         Height: =45
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_3.Text));
-            Remove(MemoTableData,ProdGallery_2.Selected);
+            =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_3.Text));
+            Remove(MemoTableData,ProdGallery_2.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7);
             Navigate(UserDashboard);

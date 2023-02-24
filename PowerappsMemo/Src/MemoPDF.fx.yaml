@@ -414,7 +414,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Verified By:"
-        Visible: =If(IsBlank(approver1_2.Text),false,true)
+        Visible: =If(IsBlank(approver1_2),false,true)
         Width: =144
         X: =334
         Y: =688
@@ -429,7 +429,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =false
+        Visible: =If(IsBlank(approver1_6),false,true)
         Width: =175
         X: =583
         Y: =688
@@ -444,7 +444,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =false
+        Visible: =If(IsBlank(approver1_5),false,true)
         Width: =144
         X: =876
         Y: =688
@@ -520,7 +520,7 @@ MemoPDF As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =false
+        Visible: =If(IsBlank(approver1_4),false,true)
         Width: =144
         X: =1142
         Y: =688
@@ -647,7 +647,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =false
+        Visible: =If(IsBlank(approver1_4),false,true)
         Width: =250
         X: =1099
         Y: =720
@@ -669,7 +669,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =false
+        Visible: =If(IsBlank(approver1_5),false,true)
         Width: =250
         X: =824
         Y: =720
@@ -691,7 +691,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =false
+        Visible: =If(IsBlank(approver1_6),false,true)
         Width: =250
         X: =550
         Y: =720
@@ -713,7 +713,7 @@ MemoPDF As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: =If(IsBlank(approver1_2.Text),false,true)
+        Visible: =If(IsBlank(approver1_2),false,true)
         Width: =250
         X: =281
         Y: =720
