@@ -14,9 +14,9 @@ Memo As screen:
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =33
-        Width: =42
+        Width: =40
         X: =10
-        Y: =316
+        Y: =319
         ZIndex: =1
 
         Separator2_1 As rectangle:
@@ -44,7 +44,7 @@ Memo As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Value
-            Width: =42
+            Width: =48
             ZIndex: =4
 
     ProdGallery_2 As gallery.galleryVertical:
@@ -57,8 +57,8 @@ Memo As screen:
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
-        X: =52
-        Y: =316
+        X: =50
+        Y: =319
         ZIndex: =1
 
         Rectangle2_6 As rectangle:
@@ -539,7 +539,7 @@ Memo As screen:
         Height: =45
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
+            =Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_3.Text));
             Clear(PurchaseReq);
             Navigate(UserDashboard);
         Width: =45
