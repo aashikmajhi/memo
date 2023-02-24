@@ -145,11 +145,12 @@ UserDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(UserView);
+            //Navigate(UserView);
+            If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
         ShowScrollbar: =false
         TemplateSize: =95
         Width: =1282
-        X: =34
+        X: =42
         Y: =290
         ZIndex: =6
 
@@ -277,7 +278,7 @@ UserDashboard As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate(UserView)
+            OnSelect: =If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5

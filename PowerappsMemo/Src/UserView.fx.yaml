@@ -56,7 +56,9 @@ UserView As screen:
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
             Filter(MemoTableData,'Meme No'= refNo_8.Text)
         Layout: =Layout.Vertical
-        OnSelect: =If(varLoggedInUser.Email=approver1_10.Text,false,Navigate('User Edit Item_1');ResetForm(Form1););
+        OnSelect: |-
+            =ResetForm(Form1);
+            Navigate('User Edit Item_1');
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308

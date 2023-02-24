@@ -2,6 +2,7 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |-
         =Set(_requestTypeFilter,"All");
-        Set(varLoggedInUser, User());
+        //Set(varLoggedInUser, User());
+        Set(varLoggedInUser,Office365Users.MyProfileV2({'$select':""}).displayName);
     StartScreen: =SplashScreen
 
