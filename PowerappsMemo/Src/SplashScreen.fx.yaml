@@ -45,7 +45,9 @@ SplashScreen As screen:
         Fill: =RGBA(0, 51, 102, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnTimerEnd: =Navigate(UserDashboard)
+        OnTimerEnd: |-
+            =
+            If(varLoggedInUser=Gallery3_1.Selected.'Prepared By',Navigate(UserDashboard);,Navigate(ApproverDashboard));
         Visible: =false
         X: =567
         Y: =622
