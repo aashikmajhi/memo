@@ -27,7 +27,9 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Back()
+        OnSelect: |-
+            =ResetForm(Form1);
+            Navigate(UserView);
         X: =23
         Y: =24
         ZIndex: =28

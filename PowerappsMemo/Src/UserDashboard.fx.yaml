@@ -145,7 +145,7 @@ UserDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(UserView)
+            Navigate(UserView);
         ShowScrollbar: =false
         TemplateSize: =95
         Width: =1282

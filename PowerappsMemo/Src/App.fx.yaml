@@ -1,5 +1,7 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(_requestTypeFilter,"All")
+    OnStart: |-
+        =Set(_requestTypeFilter,"All");
+        Set(varLoggedInUser, User());
     StartScreen: =SplashScreen
 
