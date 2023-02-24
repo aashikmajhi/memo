@@ -12,7 +12,7 @@
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
             =//Navigate('User Edit Item');
-            Navigate('User Edit Item_1');
+            Navigate('User Edit Item');
         Size: =15
         Text: ="Edit"
         X: =591

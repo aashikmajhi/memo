@@ -1,7 +1,7 @@
-"'Modify Item_1' As screen":
+"'Approver Edit Item' As screen":
     Fill: =RGBA(153, 205, 255, 1)
 
-    Button3_6 As button:
+    Button3_5 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -11,7 +11,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =SubmitForm(Form1_2);
+            =SubmitForm(Form1_1);
             //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
             //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
             Navigate(UserView);
@@ -21,18 +21,18 @@
         Y: =703
         ZIndex: =8
 
-    Icon3_9 As icon.BackArrow:
+    Icon3_8 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Memo)
+        OnSelect: =Back()
         X: =23
         Y: =24
         ZIndex: =28
 
-    Label11_15 As label:
+    Label11_14 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(39, 113, 194, 1)
@@ -47,7 +47,7 @@
         Y: =24
         ZIndex: =29
 
-    Form1_2 As form:
+    Form1_1 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
         DefaultMode: =FormMode.New
@@ -59,7 +59,7 @@
         Y: =130
         ZIndex: =35
 
-        "'Meme No_DataCard1_2' As typedDataCard.textualEditCard":
+        "'Meme No_DataCard1_1' As typedDataCard.textualEditCard":
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -70,13 +70,13 @@
             Height: =52
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Title")
             Required: =false
-            Update: =DataCardValue1_2.Text
+            Update: =DataCardValue1_1.Text
             Width: =1356
             X: =0
             Y: =0
             ZIndex: =36
 
-            DataCardKey1_2 As label:
+            DataCardKey1_1 As label:
                 Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
@@ -89,11 +89,11 @@
                 Y: =7
                 ZIndex: =1
 
-            DataCardValue1_2 As text:
+            DataCardValue1_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =refNo_3.Text
+                Default: =refNo_8.Text
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -116,7 +116,7 @@
                 Y: =7
                 ZIndex: =2
 
-            ErrorMessage1_2 As label:
+            ErrorMessage1_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -131,23 +131,23 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue1_2.Y + DataCardValue1_2.Height
+                Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
                 ZIndex: =3
 
-            StarVisible1_2 As label:
+            StarVisible1_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey1_2.Height
+                Height: =DataCardKey1_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey1_2.Y
+                Y: =DataCardKey1_1.Y
                 ZIndex: =4
 
-        Source_DataCard1_2 As typedDataCard.textualEditCard:
+        Source_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Source"
@@ -158,13 +158,13 @@
             Height: =45
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Source")
             Required: =false
-            Update: =Dropdown4_2.Selected.Value1
+            Update: =Dropdown4_1.Selected.Value1
             Width: =678
             X: =-1
             Y: =1
             ZIndex: =36
 
-            DataCardKey2_2 As label:
+            DataCardKey2_1 As label:
                 Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
@@ -177,7 +177,7 @@
                 Y: =10
                 ZIndex: =1
 
-            ErrorMessage2_2 As label:
+            ErrorMessage2_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -195,27 +195,27 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible2_2 As label:
+            StarVisible2_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey2_2.Height
+                Height: =DataCardKey2_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey2_2.Y
+                Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-            Dropdown4_2 As dropdown:
+            Dropdown4_1 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.Source
+                Default: =ProdGallery_6.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -231,7 +231,7 @@
                 Y: =4
                 ZIndex: =5
 
-        Types_DataCard1_2 As typedDataCard.textualEditCard:
+        Types_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Types"
@@ -242,13 +242,13 @@
             Height: =53
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Types")
             Required: =false
-            Update: =Dropdown2_2.Selected.Value1
+            Update: =Dropdown2_1.Selected.Value1
             Width: =678
             X: =0
             Y: =1
             ZIndex: =36
 
-            DataCardKey8_2 As label:
+            DataCardKey8_1 As label:
                 Align: =Align.Center
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
@@ -259,7 +259,7 @@
                 X: =16
                 ZIndex: =1
 
-            ErrorMessage8_2 As label:
+            ErrorMessage8_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -277,27 +277,27 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible8_2 As label:
+            StarVisible8_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey8_2.Height
+                Height: =DataCardKey8_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey8_2.Y
+                Y: =DataCardKey8_1.Y
                 ZIndex: =4
 
-            Dropdown2_2 As dropdown:
+            Dropdown2_1 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.Type
+                Default: =ProdGallery_6.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -313,7 +313,7 @@
                 X: =138
                 ZIndex: =5
 
-        TypeNo_DataCard1_2 As typedDataCard.textualEditCard:
+        TypeNo_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNo"
@@ -324,13 +324,13 @@
             Height: =42
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNo")
             Required: =false
-            Update: =Dropdown3_2.Selected.Value1
+            Update: =Dropdown3_1.Selected.Value1
             Width: =678
             X: =0
             Y: =3
             ZIndex: =36
 
-            DataCardKey3_2 As label:
+            DataCardKey3_1 As label:
                 Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
@@ -343,7 +343,7 @@
                 X: =16
                 ZIndex: =1
 
-            ErrorMessage3_2 As label:
+            ErrorMessage3_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -361,27 +361,27 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible3_2 As label:
+            StarVisible3_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey3_2.Height
+                Height: =DataCardKey3_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3_2.Y
+                Y: =DataCardKey3_1.Y
                 ZIndex: =4
 
-            Dropdown3_2 As dropdown:
+            Dropdown3_1 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.'Type No'
+                Default: =ProdGallery_6.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -396,7 +396,7 @@
                 X: =132
                 ZIndex: =5
 
-        TypeNoName_DataCard1_2 As typedDataCard.textualEditCard:
+        TypeNoName_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNoName"
@@ -407,13 +407,13 @@
             Height: =47
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =false
-            Update: =Dropdown1_2.Selected.Value1
+            Update: =Dropdown1_1.Selected.Value1
             Width: =678
             X: =1
             Y: =3
             ZIndex: =36
 
-            DataCardKey4_2 As label:
+            DataCardKey4_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -424,7 +424,7 @@
                 X: =2
                 ZIndex: =1
 
-            ErrorMessage4_2 As label:
+            ErrorMessage4_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -442,27 +442,27 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible4_2 As label:
+            StarVisible4_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey4_2.Height
+                Height: =DataCardKey4_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey4_2.Y
+                Y: =DataCardKey4_1.Y
                 ZIndex: =4
 
-            Dropdown1_2 As dropdown:
+            Dropdown1_1 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_2.Selected.'Type Name'
+                Default: =ProdGallery_6.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -477,7 +477,7 @@
                 X: =138
                 ZIndex: =5
 
-        BillNo_DataCard1_2 As typedDataCard.textualEditCard:
+        BillNo_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="BillNo"
@@ -488,13 +488,13 @@
             Height: =35
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "BillNo")
             Required: =false
-            Update: =TextInput10_2.Text
+            Update: =TextInput10_1.Text
             Width: =678
             X: =2
             Y: =3
             ZIndex: =36
 
-            DataCardKey6_2 As label:
+            DataCardKey6_1 As label:
                 Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
@@ -508,7 +508,7 @@
                 Y: =10
                 ZIndex: =1
 
-            ErrorMessage6_2 As label:
+            ErrorMessage6_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -526,24 +526,24 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible6_2 As label:
+            StarVisible6_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey6_2.Height
+                Height: =DataCardKey6_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey6_2.Y
+                Y: =DataCardKey6_1.Y
                 ZIndex: =4
 
-            TextInput10_2 As text:
+            TextInput10_1 As text:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_2.Selected.'Bill No.'
+                Default: =ProdGallery_6.Selected.BillNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -556,7 +556,7 @@
                 X: =132
                 ZIndex: =5
 
-        Amount_DataCard1_2 As typedDataCard.textualEditCard:
+        Amount_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Amount"
@@ -567,13 +567,13 @@
             Height: =49
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Amount")
             Required: =false
-            Update: =TextInput8_2.Text
+            Update: =TextInput8_1.Text
             Width: =678
             X: =3
             Y: =3
             ZIndex: =36
 
-            DataCardKey5_2 As label:
+            DataCardKey5_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -584,7 +584,7 @@
                 Y: =6
                 ZIndex: =1
 
-            ErrorMessage5_2 As label:
+            ErrorMessage5_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -602,24 +602,24 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible5_2 As label:
+            StarVisible5_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey5_2.Height
+                Height: =DataCardKey5_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey5_2.Y
+                Y: =DataCardKey5_1.Y
                 ZIndex: =4
 
-            TextInput8_2 As text:
+            TextInput8_1 As text:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_2.Selected.Amount
+                Default: =ProdGallery_6.Selected.Amount
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -632,7 +632,7 @@
                 X: =138
                 ZIndex: =5
 
-        Attachments_DataCard1_2 As typedDataCard.attachmentsEditCard:
+        Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
@@ -642,13 +642,13 @@
             Fill: =RGBA(153, 205, 255, 1)
             Height: =237
             Required: =false
-            Update: =DataCardValue9_2.Attachments
+            Update: =DataCardValue9_1.Attachments
             Width: =683
             X: =0
             Y: =4
             ZIndex: =36
 
-            DataCardKey9_2 As label:
+            DataCardKey9_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -660,7 +660,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue9_2 As attachments:
+            DataCardValue9_1 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -676,7 +676,7 @@
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =ProdGallery_2.Selected.Attachments
+                Items: =ProdGallery_6.Selected.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -686,10 +686,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =634
                 X: =30
-                Y: =DataCardKey9_2.Y + DataCardKey9_2.Height + 5
+                Y: =DataCardKey9_1.Y + DataCardKey9_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage9_2 As label:
+            ErrorMessage9_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -704,23 +704,23 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue9_2.Y + DataCardValue9_2.Height
+                Y: =DataCardValue9_1.Y + DataCardValue9_1.Height
                 ZIndex: =3
 
-            StarVisible9_2 As label:
+            StarVisible9_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey9_2.Height
+                Height: =DataCardKey9_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey9_2.Y
+                Y: =DataCardKey9_1.Y
                 ZIndex: =4
 
-        Narration_DataCard1_2 As typedDataCard.textualEditCard:
+        Narration_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Narration"
@@ -731,13 +731,13 @@
             Height: =135
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Narration")
             Required: =false
-            Update: =TextInput11_2.Text
+            Update: =TextInput11_1.Text
             Width: =681
             X: =1
             Y: =4
             ZIndex: =36
 
-            DataCardKey7_2 As label:
+            DataCardKey7_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -750,7 +750,7 @@
                 X: =30
                 ZIndex: =1
 
-            ErrorMessage7_2 As label:
+            ErrorMessage7_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -768,24 +768,24 @@
                 Y: =
                 ZIndex: =3
 
-            StarVisible7_2 As label:
+            StarVisible7_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey7_2.Height
+                Height: =DataCardKey7_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey7_2.Y
+                Y: =DataCardKey7_1.Y
                 ZIndex: =4
 
-            TextInput11_2 As text:
+            TextInput11_1 As text:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_2.Selected.Narration
+                Default: =ProdGallery_6.Selected.Narration
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
