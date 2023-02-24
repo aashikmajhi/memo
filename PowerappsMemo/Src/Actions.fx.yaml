@@ -13,9 +13,8 @@ Actions As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =//Navigate(PurchaseRequisition)
-            Clear(PurchaseReq);
-            Navigate(Memo_1)
+            =Clear(PurchaseReq);
+            Navigate(Memo)
         Size: =15
         Text: ="Memo"
         Width: =262

@@ -538,7 +538,10 @@ Memo As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45
         Icon: =Icon.BackArrow
-        OnSelect: =Back()
+        OnSelect: |-
+            =Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
+            Clear(PurchaseReq);
+            Navigate(UserDashboard);
         Width: =45
         X: =10
         Y: =10
