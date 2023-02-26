@@ -111,7 +111,7 @@ UserDashboard_1 As screen:
                 If(
                     _requestTypeFilter = "All",
                     Sort(
-                        RequisitionDemoApprovalList,
+                        UnsubmittedRequisitionApprovalList,
                         Date,
                         Ascending
                     ),
@@ -120,7 +120,7 @@ UserDashboard_1 As screen:
                             _requestTypeFilter = "Pending",
                             Sort(
                                 Filter(
-                                    RequisitionDemoApprovalList,
+                                    UnsubmittedRequisitionApprovalList,
                                     Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Third Approval" || Status.Value = "Pending Fourth Approval"
                                 ),
                                 Date,
@@ -128,7 +128,7 @@ UserDashboard_1 As screen:
                             ),
                             Sort(
                                 Filter(
-                                    RequisitionDemoApprovalList,
+                                    UnsubmittedRequisitionApprovalList,
                                     Status.Value = _requestTypeFilter
                                 ),
                                 Date,
