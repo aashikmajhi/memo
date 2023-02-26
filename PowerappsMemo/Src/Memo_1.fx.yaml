@@ -522,7 +522,7 @@ Memo_1 As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(MemoPDF)
+        OnSelect: =Navigate(MemoPDF_1)
         Size: =15
         Text: |-
             ="Submit
