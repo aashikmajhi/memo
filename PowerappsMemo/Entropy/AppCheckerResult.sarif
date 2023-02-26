@@ -13264,6 +13264,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Approver Edit Item_1'.Form1_3.Attachments_DataCard2.DataCardValue18.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Approver Edit Item_1'.Form1_3.Attachments_DataCard2.DataCardValue18.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Approver Edit Item_1",
+                "type": "'Approver Edit Item_1'.Form1_3.Attachments_DataCard2.DataCardValue18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Approver Edit Item_1'.Form1_3.Types_DataCard2.DataCardValue17.Default"
                 }
               ],
