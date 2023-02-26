@@ -530,7 +530,7 @@ Memo As screen:
             =Set(save,false);
             Navigate(MemoPDF);
         Size: =15
-        Text: ="Save"
+        Text: ="Submit"
         Visible: =If(save=true,true,false)
         X: =621
         Y: =701
@@ -1017,7 +1017,7 @@ Memo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: =Set(save,true);
         Size: =15
-        Text: ="Submit"
+        Text: ="Save"
         Visible: =If(save=false,true,false)
         X: =624
         Y: =701
