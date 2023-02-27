@@ -590,7 +590,7 @@ MemoPDF_1 As screen:
             Reset(ComboBox1);
             Reset(ComboBox1_1);
             Reset(TextInput7);
-            Navigate(UserDashboard)
+            Navigate(UserDashboard_1)
         Visible: =false
         X: =589
         Y: =705
