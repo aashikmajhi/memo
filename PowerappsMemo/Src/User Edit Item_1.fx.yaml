@@ -92,7 +92,9 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =refNo_9.Text
+                Default: |-
+                    =//refNo_9.Text
+                    refNo_5.Text
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -212,7 +214,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_8.Selected.Source
+                Default: =ProdGallery_4.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -295,7 +297,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_8.Selected.Types
+                Default: =ProdGallery_4.Selected.Types
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -378,6 +380,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Default: =ProdGallery_4.Selected.TypeNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -460,7 +463,7 @@
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_8.Selected.TypeNoName
+                Default: =ProdGallery_4.Selected.TypeNoName
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -509,7 +512,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_8.Selected.Amount
+                Default: =ProdGallery_4.Selected.Amount
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -596,7 +599,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_8.Selected.BillNo
+                Default: =ProdGallery_4.Selected.BillNo
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -684,7 +687,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_8.Selected.Narration
+                Default: =ProdGallery_4.Selected.Narration
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -696,6 +699,7 @@
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -784,7 +788,7 @@
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =ProdGallery_8.Selected.Attachments
+                Items: =ProdGallery_4.Selected.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5

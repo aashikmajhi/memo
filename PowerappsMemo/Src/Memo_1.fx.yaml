@@ -49,7 +49,7 @@ Memo_1 As screen:
         BorderThickness: =2
         Height: =263
         Items: |-
-            =Filter(MemoTableData, 'Meme No'=refNo_5.Text)
+            =Filter(UnsubmittedMemoTableData, 'Meme No'=refNo_5.Text)
             
             //unPurchaseReq
         Layout: =Layout.Vertical
@@ -267,7 +267,7 @@ Memo_1 As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =ResetForm(Form4);
-            Navigate('Add New Item')
+            Navigate('Add New Item_1')
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
         RadiusTopLeft: =15
