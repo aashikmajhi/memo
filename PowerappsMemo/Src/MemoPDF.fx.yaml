@@ -49,7 +49,9 @@ MemoPDF As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Height: =350
-        Items: =PurchaseReq
+        Items: |-
+            =//PurchaseReq
+            ProdGallery_9.AllItems
         Layout: =Layout.Vertical
         OnSelect: =Navigate('Approver View Item')
         ShowScrollbar: =false
@@ -166,7 +168,7 @@ MemoPDF As screen:
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =Last(ThisItem.Attachments).Name
+            Text: =Last(ThisItem.Attachments).AbsoluteUri
             VerticalAlign: =VerticalAlign.Top
             Width: =239
             X: =1069
@@ -532,7 +534,7 @@ MemoPDF As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =approver1_1.Text
+        Default: =approver1_12.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

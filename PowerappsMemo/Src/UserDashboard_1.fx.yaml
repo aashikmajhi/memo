@@ -175,7 +175,7 @@ UserDashboard_1 As screen:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =12
             Text: =ThisItem.Title
             Width: =120
             ZIndex: =2
@@ -278,7 +278,7 @@ UserDashboard_1 As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =If(varLoggedInUser=ThisItem.'Prepared By',Navigate(UserView_1),false);
+            OnSelect: =Navigate(Memo_1)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
