@@ -1,4 +1,4 @@
-"'Approver View Item' As screen":
+RecommenderViewItem As screen:
     Fill: =RGBA(153, 205, 255, 1)
 
     Button3_1 As button:
@@ -10,7 +10,7 @@
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
-        OnSelect: =Navigate('Approver Edit Item');
+        OnSelect: =Navigate(RecommenderEditItem);
         Size: =15
         Text: ="Edit"
         X: =591

@@ -51,7 +51,7 @@ MemoPDF_1 As screen:
         Height: =350
         Items: =Filter(UnsubmittedMemoTableData, 'Meme No'=refNo_5.Text)
         Layout: =Layout.Vertical
-        OnSelect: =Navigate('Approver View Item')
+        OnSelect: =Navigate(RecommenderViewItem)
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =32

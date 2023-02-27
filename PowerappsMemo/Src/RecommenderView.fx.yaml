@@ -55,7 +55,7 @@ RecommenderView As screen:
             =//MemoTableData
             Filter(MemoTableData,refNo_7.Text in 'Meme No')
         Layout: =Layout.Vertical
-        OnSelect: =Navigate('Approver Edit Item')
+        OnSelect: =Navigate(RecommenderEditItem)
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
@@ -219,7 +219,7 @@ RecommenderView As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate('Approver Edit Item')
+            OnSelect: =Navigate(RecommenderEditItem)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
