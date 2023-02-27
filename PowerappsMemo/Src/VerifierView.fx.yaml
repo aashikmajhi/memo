@@ -59,7 +59,7 @@ VerifierView As screen:
         OnSelect: |-
             =//ResetForm(Form1);
             //Navigate('User Edit Item_1');
-            If(varLoggedInUser=approver1_10.Text,false,ResetForm(EditForm);Navigate('User Edit Item'));
+            If(varLoggedInUser=approver1_10.Text,false,ResetForm(EditForm);Navigate(VerifierEditItem));
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
