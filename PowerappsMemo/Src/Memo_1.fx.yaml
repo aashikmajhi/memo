@@ -266,7 +266,7 @@ Memo_1 As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =ResetForm(Form4);
+            =ResetForm(Form4_1);
             Navigate('Add New Item_1')
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
