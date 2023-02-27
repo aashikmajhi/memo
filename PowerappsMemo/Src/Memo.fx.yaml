@@ -245,7 +245,7 @@ Memo As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate('Modify Item')
+            OnSelect: =Navigate(ModifyItem)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -269,7 +269,7 @@ Memo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =ResetForm(Form4);
-            Navigate('Add New Item')
+            Navigate(AddNewItem)
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
         RadiusTopLeft: =15
