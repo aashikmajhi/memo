@@ -792,23 +792,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =If(
-                !IsBlank((DataCardValue19.Text || DataCardValue20.Selected.Value1 || DataCardValue21.Selected.Value1 || DataCardValue22.Selected.Value1 || DataCardValue23.Text || DataCardValue24.Text || DataCardValue25.Text || Last(DataCardValue27.Attachments).Name)),
-                Collect(
-                    unPurchaseReq,
-                    {
-                        Source: DataCardValue19.Text,
-                        Types: DataCardValue20.Selected.Value1,
-                        TypeNo: DataCardValue21.Selected.Value1,
-                        TypeNoName: DataCardValue22.Selected.Value1,
-                        BillNo: DataCardValue23.Text,
-                        Amount:DataCardValue24.Text,
-                        Narration:  DataCardValue25.Text,
-                        Attachments:DataCardValue27.Attachments
-                    }
-                ),
-                Notify("Empty fields can not be processed")
-            );
+            =//If(!IsBlank((DataCardValue19.Text||DataCardValue20.Selected.Value1||DataCardValue21.Selected.Value1||DataCardValue22.Selected.Value1||DataCardValue23.Text||DataCardValue24.Text||DataCardValue25.Text||Last(DataCardValue27.Attachments).Name)),Collect(unPurchaseReq,{Source:DataCardValue19.Text,Types:DataCardValue20.Selected.Value1,TypeNo:DataCardValue21.Selected.Value1,TypeNoName:DataCardValue22.Selected.Value1,BillNo:DataCardValue23.Text,Amount:DataCardValue24.Text,Narration:DataCardValue25.Text,Attachments:DataCardValue27.Attachments}),Notify("Empty fields can not be processed"));
             SubmitForm(Form4_1);
             Navigate(Memo_1);
         Size: =15

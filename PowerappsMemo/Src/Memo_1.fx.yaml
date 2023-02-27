@@ -48,10 +48,8 @@ Memo_1 As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Height: =263
-        Items: |-
+        Items: |
             =Filter(UnsubmittedMemoTableData, 'Meme No'=refNo_5.Text)
-            
-            //unPurchaseReq
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
@@ -493,7 +491,7 @@ Memo_1 As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |
             =//If(companyName_2.SelectedText.Value="F1 Soft","FS-"&CountRows(RequisitionDemoApprovalList)+1,If(companyName_2.SelectedText.Value="e-Sewa","ES-"&CountRows(RequisitionDemoApprovalList)+1))
-            approver1_7.Text & "-" & CountRows(RequisitionDemoApprovalList)+1
+            approver1_7.Text & "-" & CountRows(UnsubmittedRequisitionApprovalList)+1
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -535,7 +533,7 @@ Memo_1 As screen:
         OnSelect: |-
             =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
             Remove(UnsubmittedMemoTableData,ProdGallery_4.AllItems);
-            Clear(unPurchaseReq);
+            //Clear(unPurchaseReq);
             Reset(TextInput7_2);
             Navigate(UserDashboard_1);
         Width: =45
@@ -652,7 +650,7 @@ Memo_1 As screen:
         InputTextPlaceholder: =""
         IsSearchable: =false
         Items: =ComboBoxSample
-        OnChange: =Set(toValue,Self.SelectedItems)
+        OnChange: =
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         SearchItems: =[]
@@ -678,7 +676,7 @@ Memo_1 As screen:
         HoverFill: =RGBA(153, 205, 255, 1)
         InputTextPlaceholder: =""
         Items: =ComboBoxSample
-        OnChange: =Set(ccValue,Self.SelectedItems)
+        OnChange: =
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         SearchItems: =Search(ComboBoxSample,ComboBox1_3.SearchText,"Value1")
@@ -823,7 +821,7 @@ Memo_1 As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(Memo)
+        OnSelect: =Navigate(SubmitMemo)
         Size: =15
         Text: ="Submit"
         X: =709

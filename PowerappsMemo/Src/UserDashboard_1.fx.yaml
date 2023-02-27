@@ -278,15 +278,35 @@ UserDashboard_1 As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate(Memo_1)
+            OnSelect: |-
+                =//Navigate(Memo_1)
+                Navigate(UserView_1);
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
             Width: =28
             X: =1244
-            Y: =30
+            Y: =22
             ZIndex: =22
+
+        Icon1_16 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Icon: =Icon.Cancel
+            OnSelect: =Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1244
+            Y: =50
+            ZIndex: =23
 
     Label21_7 As label:
         Align: =Align.Center

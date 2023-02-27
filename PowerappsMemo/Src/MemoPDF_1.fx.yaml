@@ -582,7 +582,7 @@ MemoPDF_1 As screen:
             =Patch(UnsubmittedRequisitionApprovalList,Defaults(UnsubmittedRequisitionApprovalList),{Title:refNo_6.Text,From:from_13.Text,Department:department_6.Text,Date:from_9.Text,Organization:Label3_1.Text,To:from_14.Text,Cc:from_15.Text,Subject:TextInput7_3.Text,'Prepared By':approver1_8.Text});
             
             
-            Clear(unPurchaseReq);
+            //Clear(unPurchaseReq);
             Reset(approver2_1);
             Reset(approver3_1);
             Reset(approver4_1);
@@ -590,6 +590,7 @@ MemoPDF_1 As screen:
             Reset(ComboBox1);
             Reset(ComboBox1_1);
             Reset(TextInput7);
+            Reset(TextInput7_2);
             Navigate(UserDashboard_1)
         Visible: =false
         X: =589
