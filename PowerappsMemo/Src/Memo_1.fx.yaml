@@ -51,7 +51,7 @@ Memo_1 As screen:
         Items: |-
             =Filter(MemoTableData, 'Meme No'=refNo_5.Text)
             
-            //PurchaseReq
+            //unPurchaseReq
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
@@ -533,10 +533,11 @@ Memo_1 As screen:
         Height: =45
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
+            =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
+            Remove(MemoTableData,ProdGallery_4.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7_2);
-            Navigate(UserDashboard);
+            Navigate(UserDashboard_1);
         Width: =45
         X: =10
         Y: =10
