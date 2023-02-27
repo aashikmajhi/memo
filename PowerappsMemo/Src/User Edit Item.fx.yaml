@@ -744,7 +744,6 @@
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                Y: =10
                 ZIndex: =1
 
             DataCardValue9 As attachments:
@@ -773,7 +772,7 @@
                 Tooltip: =Parent.DisplayName
                 Width: =634
                 X: =30
-                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                Y: =43
                 ZIndex: =2
 
             ErrorMessage9 As label:

@@ -130,7 +130,7 @@ Memo_1 As screen:
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =//Remove(PurchaseReq,ThisItem);
-                Remove(MemoTableData,LookUp(MemoTableData,ThisItem.BillNo=Label24_16.Text));
+                Remove(UnsubmittedMemoTableData,LookUp(UnsubmittedMemoTableData,ThisItem.BillNo=Label24_16.Text));
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -243,7 +243,7 @@ Memo_1 As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate('Modify Item')
+            OnSelect: =Navigate('User Edit Item_1')
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -534,8 +534,8 @@ Memo_1 As screen:
         Icon: =Icon.BackArrow
         OnSelect: |-
             =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
-            Remove(MemoTableData,ProdGallery_4.AllItems);
-            Clear(PurchaseReq);
+            Remove(UnsubmittedMemoTableData,ProdGallery_4.AllItems);
+            Clear(unPurchaseReq);
             Reset(TextInput7_2);
             Navigate(UserDashboard_1);
         Width: =45

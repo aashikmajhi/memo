@@ -12,14 +12,12 @@
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
             =SubmitForm(Form1_3);
-            //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
-            //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
-            Navigate(UserView_1);
+            Navigate(Memo_1);
         Size: =15
         Text: ="Update"
         X: =603
         Y: =703
-        ZIndex: =8
+        ZIndex: =1
 
     Icon3_11 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -27,10 +25,10 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(ApproverView)
+        OnSelect: =Navigate(Memo_1)
         X: =23
         Y: =24
-        ZIndex: =28
+        ZIndex: =2
 
     Label11_17 As label:
         Align: =Align.Center
@@ -45,7 +43,7 @@
         Width: =777
         X: =283
         Y: =24
-        ZIndex: =29
+        ZIndex: =3
 
     Form1_3 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -57,7 +55,7 @@
         SnapToColumns: =false
         Width: =1366
         Y: =100
-        ZIndex: =35
+        ZIndex: =4
 
         "'Meme No_DataCard2' As typedDataCard.textualEditCard":
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -317,7 +315,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNo"
-            Default: =ProdGallery_8.Selected.TypeNo
+            Default: =ThisItem.TypeNo
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@UnsubmittedMemoTableData],DataSourceInfo.DisplayName,"TypeNo")
             Fill: =RGBA(0, 0, 0, 0)
