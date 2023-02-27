@@ -614,7 +614,7 @@ SubmitMemo As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(varLoggedInUser=verifiedby.Selected.Value,true,false)
+        Visible: =If(varLoggedInUser<>verifiedby.Selected.Value,true,false)
         Width: =175
         X: =583
         Y: =625
@@ -642,7 +642,7 @@ SubmitMemo As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser=verifiedby.Selected.Value,true,false)
+        Visible: =If(varLoggedInUser<>verifiedby.Selected.Value,true,false)
         Width: =250
         X: =556
         Y: =658
