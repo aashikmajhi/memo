@@ -535,7 +535,7 @@ Memo_1 As screen:
             Remove(UnsubmittedMemoTableData,ProdGallery_4.AllItems);
             //Clear(unPurchaseReq);
             Reset(TextInput7_2);
-            Navigate(UserDashboard_1);
+            Navigate(UserDashboard);
         Width: =45
         X: =10
         Y: =10
@@ -821,7 +821,7 @@ Memo_1 As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(SubmitMemo)
+        OnSelect: =Navigate(UserSubmitMemo)
         Size: =15
         Text: ="Submit"
         X: =709

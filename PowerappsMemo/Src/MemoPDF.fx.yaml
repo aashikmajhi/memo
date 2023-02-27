@@ -724,7 +724,7 @@ MemoPDF As screen:
     Timer2_2 As timer:
         AutoPause: =false
         AutoStart: =true
-        Duration: =10000
+        Duration: =5000
         Fill: =RGBA(0, 51, 102, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -745,7 +745,7 @@ MemoPDF As screen:
             Reset(ComboBox1);
             Reset(ComboBox1_1);
             Reset(TextInput7_7);
-            Navigate(UserDashboard)
+            Navigate(VerifierDashboard)
         Visible: =false
         X: =589
         Y: =705

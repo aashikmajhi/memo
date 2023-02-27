@@ -548,7 +548,7 @@ Memo As screen:
             Remove(MemoTableData,ProdGallery_2.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7);
-            Navigate(UserDashboard);
+            Navigate(VerifierDashboard);
         Width: =45
         X: =10
         Y: =10

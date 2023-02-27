@@ -1,4 +1,4 @@
-SubmitMemo As screen:
+UserSubmitMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |
         =Reset(verifiedby);
@@ -524,7 +524,7 @@ SubmitMemo As screen:
             Remove(MemoTableData,ProdGallery_9.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7_7);
-            Navigate(UserView_1);
+            Navigate(UserView);
         Width: =45
         X: =10
         Y: =10

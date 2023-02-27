@@ -1,8 +1,9 @@
-UserDashboard_1 As screen:
+RecommenderDashboard As screen:
     BackgroundImage: =
     Fill: =
+    OnVisible: =Set(_requestTypeFilter,"All")
 
-    Button7_8 As button:
+    Button7_6 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -19,7 +20,7 @@ UserDashboard_1 As screen:
         Y: =156
         ZIndex: =1
 
-    Gallery2_7 As gallery.galleryVertical:
+    Gallery2_5 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)
         BorderThickness: =1
         Height: =79
@@ -33,7 +34,7 @@ UserDashboard_1 As screen:
         Y: =165
         ZIndex: =2
 
-        Filter_7 As button:
+        Filter_5 As button:
             BorderColor: =RGBA(153, 189, 224, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -52,7 +53,7 @@ UserDashboard_1 As screen:
             Y: =13
             ZIndex: =1
 
-    Button6_7 As button:
+    Button6_5 As button:
         Align: =Align.Left
         Color: =RGBA(0, 80, 160, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -72,7 +73,7 @@ UserDashboard_1 As screen:
         Y: =14
         ZIndex: =3
 
-    Image2_7 As image:
+    Image2_5 As image:
         BorderColor: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -84,7 +85,7 @@ UserDashboard_1 As screen:
         Y: =23
         ZIndex: =4
 
-    Button2_16 As button:
+    Button2_14 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -95,15 +96,16 @@ UserDashboard_1 As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Clear(PurchaseReq);
-            Navigate(Memo_1)
+            Navigate(Actions)
         Size: =15
         Text: ="Create New"
+        Visible: =false
         Width: =246
         X: =1080
         Y: =54
         ZIndex: =5
 
-    Gallery3_2 As gallery.galleryVertical:
+    Gallery3_5 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =403
         Items: |-
@@ -111,7 +113,7 @@ UserDashboard_1 As screen:
                 If(
                     _requestTypeFilter = "All",
                     Sort(
-                        UnsubmittedRequisitionApprovalList,
+                        RequisitionDemoApprovalList,
                         Date,
                         Ascending
                     ),
@@ -120,7 +122,7 @@ UserDashboard_1 As screen:
                             _requestTypeFilter = "Pending",
                             Sort(
                                 Filter(
-                                    UnsubmittedRequisitionApprovalList,
+                                    RequisitionDemoApprovalList,
                                     Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Third Approval" || Status.Value = "Pending Fourth Approval"
                                 ),
                                 Date,
@@ -128,7 +130,7 @@ UserDashboard_1 As screen:
                             ),
                             Sort(
                                 Filter(
-                                    UnsubmittedRequisitionApprovalList,
+                                    RequisitionDemoApprovalList,
                                     Status.Value = _requestTypeFilter
                                 ),
                                 Date,
@@ -145,8 +147,7 @@ UserDashboard_1 As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(UserView_1);
-            //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
+            Navigate(ApproverView)
         ShowScrollbar: =false
         TemplateSize: =95
         Width: =1282
@@ -154,7 +155,7 @@ UserDashboard_1 As screen:
         Y: =290
         ZIndex: =6
 
-        rfDate_7 As label:
+        rfDate_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -167,7 +168,7 @@ UserDashboard_1 As screen:
             X: =273
             ZIndex: =1
 
-        rfNo_7 As label:
+        rfNo_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -175,12 +176,12 @@ UserDashboard_1 As screen:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
-            Size: =12
+            Size: =13
             Text: =ThisItem.Title
             Width: =120
             ZIndex: =2
 
-        rfFrom_7 As label:
+        rfFrom_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -194,7 +195,7 @@ UserDashboard_1 As screen:
             X: =426
             ZIndex: =3
 
-        Label33_7 As label:
+        Label33_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -208,7 +209,7 @@ UserDashboard_1 As screen:
             X: =685
             ZIndex: =10
 
-        Label2_7 As label:
+        Label2_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -221,7 +222,7 @@ UserDashboard_1 As screen:
             X: =123
             ZIndex: =12
 
-        subjectlbl_6 As label:
+        subjectlbl_4 As label:
             Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -234,7 +235,7 @@ UserDashboard_1 As screen:
             Y: =50
             ZIndex: =14
 
-        Label9_7 As label:
+        Label9_5 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -247,7 +248,7 @@ UserDashboard_1 As screen:
             Y: =50
             ZIndex: =15
 
-        commentlbl_7 As label:
+        commentlbl_5 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -261,16 +262,16 @@ UserDashboard_1 As screen:
             X: =924
             ZIndex: =17
 
-        Rectangle3_7 As rectangle:
+        Rectangle3_3 As rectangle:
             BorderColor: =RGBA(0, 80, 160, 1)
             Fill: =RGBA(0, 89, 178, 1)
             Height: =2
             OnSelect: =Select(Parent)
-            Width: =Gallery3_2.TemplateWidth
+            Width: =Gallery3_5.TemplateWidth
             Y: =93
             ZIndex: =20
 
-        Icon1_15 As icon.View:
+        Icon1_12 As icon.View:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 89, 178, 1)
@@ -278,37 +279,17 @@ UserDashboard_1 As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: |-
-                =//Navigate(Memo_1)
-                Navigate(UserView_1);
+            OnSelect: =Navigate(ApproverView)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
             Width: =28
             X: =1244
-            Y: =22
+            Y: =30
             ZIndex: =22
 
-        Icon1_16 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Icon: =Icon.Cancel
-            OnSelect: =Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Width: =28
-            X: =1244
-            Y: =50
-            ZIndex: =23
-
-    Label21_7 As label:
+    Label21_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -322,7 +303,7 @@ UserDashboard_1 As screen:
         Y: =249
         ZIndex: =7
 
-    Label27_7 As label:
+    Label27_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -336,7 +317,7 @@ UserDashboard_1 As screen:
         Y: =249
         ZIndex: =8
 
-    Label30_6 As label:
+    Label30_4 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -351,7 +332,7 @@ UserDashboard_1 As screen:
         Y: =250
         ZIndex: =9
 
-    Label32_7 As label:
+    Label32_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -366,7 +347,7 @@ UserDashboard_1 As screen:
         Y: =250
         ZIndex: =11
 
-    Label4_7 As label:
+    Label4_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -380,7 +361,7 @@ UserDashboard_1 As screen:
         Y: =249
         ZIndex: =12
 
-    cmtlbl_7 As label:
+    cmtlbl_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -395,12 +376,12 @@ UserDashboard_1 As screen:
         Y: =255
         ZIndex: =13
 
-    Rectangle3_8 As rectangle:
+    Rectangle3_4 As rectangle:
         BorderColor: =RGBA(0, 80, 160, 1)
         Fill: =RGBA(0, 89, 178, 1)
         Height: =2
         OnSelect: =
-        Width: =Gallery3_2.TemplateWidth
+        Width: =Gallery3_5.TemplateWidth
         X: =40
         Y: =293
         ZIndex: =14

@@ -1,9 +1,8 @@
-ApproverDashboard As screen:
+VerifierDashboard As screen:
     BackgroundImage: =
     Fill: =
-    OnVisible: =Set(_requestTypeFilter,"All")
 
-    Button7_6 As button:
+    Button7_7 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -20,7 +19,7 @@ ApproverDashboard As screen:
         Y: =156
         ZIndex: =1
 
-    Gallery2_5 As gallery.galleryVertical:
+    Gallery2_6 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)
         BorderThickness: =1
         Height: =79
@@ -34,7 +33,7 @@ ApproverDashboard As screen:
         Y: =165
         ZIndex: =2
 
-        Filter_5 As button:
+        Filter_6 As button:
             BorderColor: =RGBA(153, 189, 224, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -53,7 +52,7 @@ ApproverDashboard As screen:
             Y: =13
             ZIndex: =1
 
-    Button6_5 As button:
+    Button6_6 As button:
         Align: =Align.Left
         Color: =RGBA(0, 80, 160, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -73,7 +72,7 @@ ApproverDashboard As screen:
         Y: =14
         ZIndex: =3
 
-    Image2_5 As image:
+    Image2_6 As image:
         BorderColor: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -85,7 +84,7 @@ ApproverDashboard As screen:
         Y: =23
         ZIndex: =4
 
-    Button2_14 As button:
+    Button2_15 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -96,16 +95,15 @@ ApproverDashboard As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Clear(PurchaseReq);
-            Navigate(Actions)
+            Navigate(Memo)
         Size: =15
         Text: ="Create New"
-        Visible: =false
         Width: =246
         X: =1080
         Y: =54
         ZIndex: =5
 
-    Gallery3_5 As gallery.galleryVertical:
+    Gallery3_1 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =403
         Items: |-
@@ -147,7 +145,8 @@ ApproverDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(ApproverView)
+            Navigate(VerifierView);
+            //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
         ShowScrollbar: =false
         TemplateSize: =95
         Width: =1282
@@ -155,7 +154,7 @@ ApproverDashboard As screen:
         Y: =290
         ZIndex: =6
 
-        rfDate_5 As label:
+        rfDate_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -168,7 +167,7 @@ ApproverDashboard As screen:
             X: =273
             ZIndex: =1
 
-        rfNo_5 As label:
+        rfNo_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -181,7 +180,7 @@ ApproverDashboard As screen:
             Width: =120
             ZIndex: =2
 
-        rfFrom_5 As label:
+        rfFrom_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -195,7 +194,7 @@ ApproverDashboard As screen:
             X: =426
             ZIndex: =3
 
-        Label33_5 As label:
+        Label33_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -209,7 +208,7 @@ ApproverDashboard As screen:
             X: =685
             ZIndex: =10
 
-        Label2_5 As label:
+        Label2_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -222,7 +221,7 @@ ApproverDashboard As screen:
             X: =123
             ZIndex: =12
 
-        subjectlbl_4 As label:
+        subjectlbl_5 As label:
             Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
@@ -235,7 +234,7 @@ ApproverDashboard As screen:
             Y: =50
             ZIndex: =14
 
-        Label9_5 As label:
+        Label9_6 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -248,7 +247,7 @@ ApproverDashboard As screen:
             Y: =50
             ZIndex: =15
 
-        commentlbl_5 As label:
+        commentlbl_6 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -262,16 +261,16 @@ ApproverDashboard As screen:
             X: =924
             ZIndex: =17
 
-        Rectangle3_3 As rectangle:
+        Rectangle3_5 As rectangle:
             BorderColor: =RGBA(0, 80, 160, 1)
             Fill: =RGBA(0, 89, 178, 1)
             Height: =2
             OnSelect: =Select(Parent)
-            Width: =Gallery3_5.TemplateWidth
+            Width: =Gallery3_1.TemplateWidth
             Y: =93
             ZIndex: =20
 
-        Icon1_12 As icon.View:
+        Icon1_14 As icon.View:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 89, 178, 1)
@@ -279,7 +278,7 @@ ApproverDashboard As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate(ApproverView)
+            OnSelect: =If(varLoggedInUser<>ThisItem.'Created By'.Email,false,Navigate(VerifierView));
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -289,7 +288,7 @@ ApproverDashboard As screen:
             Y: =30
             ZIndex: =22
 
-    Label21_5 As label:
+    Label21_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -303,7 +302,7 @@ ApproverDashboard As screen:
         Y: =249
         ZIndex: =7
 
-    Label27_5 As label:
+    Label27_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -317,7 +316,7 @@ ApproverDashboard As screen:
         Y: =249
         ZIndex: =8
 
-    Label30_4 As label:
+    Label30_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -332,7 +331,7 @@ ApproverDashboard As screen:
         Y: =250
         ZIndex: =9
 
-    Label32_5 As label:
+    Label32_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -347,7 +346,7 @@ ApproverDashboard As screen:
         Y: =250
         ZIndex: =11
 
-    Label4_5 As label:
+    Label4_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -361,7 +360,7 @@ ApproverDashboard As screen:
         Y: =249
         ZIndex: =12
 
-    cmtlbl_5 As label:
+    cmtlbl_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -376,12 +375,12 @@ ApproverDashboard As screen:
         Y: =255
         ZIndex: =13
 
-    Rectangle3_4 As rectangle:
+    Rectangle3_6 As rectangle:
         BorderColor: =RGBA(0, 80, 160, 1)
         Fill: =RGBA(0, 89, 178, 1)
         Height: =2
         OnSelect: =
-        Width: =Gallery3_5.TemplateWidth
+        Width: =Gallery3_1.TemplateWidth
         X: =40
         Y: =293
         ZIndex: =14
