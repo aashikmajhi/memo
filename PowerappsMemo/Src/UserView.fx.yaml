@@ -218,7 +218,7 @@ UserView As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =33
             Icon: =Icon.View
-            OnSelect: =Navigate('User Edit Item_1')
+            OnSelect: =Navigate(EditMemoItemsToSubmit)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -469,7 +469,7 @@ UserView As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Memo_1)
+        OnSelect: =Navigate(CreateNewMemo)
         Width: =45
         X: =10
         Y: =10

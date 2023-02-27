@@ -95,7 +95,7 @@ UserDashboard As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Clear(PurchaseReq);
-            Navigate(Memo_1)
+            Navigate(CreateNewMemo)
         Size: =15
         Text: ="Create New"
         Width: =246

@@ -9,7 +9,6 @@ UserSubmitMemo As screen:
     "SNGallery_9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        DisplayMode: =DisplayMode.View
         Height: =263
         Items: =Sequence(CountRows(ProdGallery_9.AllItems))
         Layout: =Layout.Vertical
@@ -52,7 +51,6 @@ UserSubmitMemo As screen:
     ProdGallery_9 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        DisplayMode: =DisplayMode.View
         Height: =263
         Items: |-
             =//LookUp(MemoTableData,'Meme No'=refNo_3.Text)
@@ -505,7 +503,7 @@ UserSubmitMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =//If(varLoggedInUser=preparedby.Text,Navigate(MemoPDF),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(MemoPDF),false),false),false);
-            If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=preparedby.Text,Navigate(MemoPDF),false),false),false);
+            If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
         Size: =15
         Text: ="Submit"
         X: =621

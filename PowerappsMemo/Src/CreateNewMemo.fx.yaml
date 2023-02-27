@@ -1,23 +1,22 @@
-MemoPDF As screen:
+CreateNewMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
-    OnVisible: |-
-        =Set(myMemoPdf,PDF(MemoPDF ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
+    OnVisible: =
 
-    "SNGallery_3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+    "SNGallery_6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        Height: =350
-        Items: =Sequence(CountRows(ProdGallery_3.AllItems))
+        Height: =263
+        Items: =Sequence(CountRows(ProdGallery_4.AllItems))
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =32
-        Width: =42
+        TemplateSize: =33
+        Width: =40
         X: =10
-        Y: =316
+        Y: =319
         ZIndex: =1
 
-        Separator2_2 As rectangle:
+        Separator2_5 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =0.31
             Fill: =RGBA(0, 89, 178, 1)
@@ -25,10 +24,10 @@ MemoPDF As screen:
             OnSelect: =Select(Parent)
             TabIndex: =0
             Width: =Parent.TemplateWidth
-            Y: =31
+            Y: =32
             ZIndex: =3
 
-        Label15_2 As label:
+        Label15_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
@@ -42,37 +41,35 @@ MemoPDF As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Value
-            Width: =42
+            Width: =40
             ZIndex: =4
 
-    ProdGallery_3 As gallery.galleryVertical:
+    ProdGallery_4 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
-        Height: =350
-        Items: |-
-            =//PurchaseReq
-            ProdGallery_9.AllItems
+        Height: =263
+        Items: |
+            =Filter(UnsubmittedMemoTableData, 'Meme No'=refNo_5.Text)
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(RecommenderViewItem)
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =32
+        TemplateSize: =33
         Width: =1308
-        X: =52
-        Y: =316
+        X: =50
+        Y: =319
         ZIndex: =1
 
-        Rectangle2_7 As rectangle:
+        Rectangle2_10 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =0.31
             Fill: =RGBA(0, 51, 102, 1)
             Height: =1
             OnSelect: =Select(Parent)
-            Width: =ProdGallery_3.TemplateWidth
-            Y: =31
+            Width: =ProdGallery_4.TemplateWidth
+            Y: =32
             ZIndex: =4
 
-        Label24_8 As label:
+        Label24_3 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -87,7 +84,7 @@ MemoPDF As screen:
             Text: =ThisItem.Source
             ZIndex: =5
 
-        Label25_2 As label:
+        Label25_3 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -104,7 +101,7 @@ MemoPDF As screen:
             X: =261
             ZIndex: =6
 
-        Label26_2 As label:
+        Label26_3 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -121,7 +118,27 @@ MemoPDF As screen:
             X: =150
             ZIndex: =7
 
-        Label24_11 As label:
+        Icon2_3 As icon.CancelBadge:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =//Remove(PurchaseReq,ThisItem);
+                Remove(UnsubmittedMemoTableData,LookUp(UnsubmittedMemoTableData,ThisItem.BillNo=Label24_16.Text));
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1277.5
+            Y: =2.5
+            ZIndex: =9
+
+        Label24_14 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -134,11 +151,11 @@ MemoPDF As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.TypeNoName
-            Width: =265
+            Width: =234
             X: =311
             ZIndex: =10
 
-        Label24_12 As label:
+        Label24_15 As label:
             Align: =Align.Right
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
@@ -153,33 +170,39 @@ MemoPDF As screen:
             Size: =10
             Text: =ThisItem.Amount
             Width: =100
-            X: =577
+            X: =545
             ZIndex: =11
 
-        Label24_10 As label:
+        Label24_18 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =32
-            OnSelect: =Select(Parent)
+            Height: =33
+            OnSelect: =
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
             PaddingTop: =2
             Size: =10
-            Text: =Last(ThisItem.Attachments).AbsoluteUri
+            Text: |-
+                =//ThisItem.Attachment
+                //Last(ThisItem.Attachment).Value
+                Last(ThisItem.Attachments).Value
+            Tooltip: |-
+                =//ThisItem.Attachment
+                Last(ThisItem.Attachments).AbsoluteUri
             VerticalAlign: =VerticalAlign.Top
             Width: =239
-            X: =1069
+            X: =1006
             ZIndex: =12
 
-        Label24_9 As label:
+        Label24_17 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =31
+            Height: =33
             OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
@@ -187,12 +210,13 @@ MemoPDF As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Narration
+            Tooltip: =ThisItem.Narration
             VerticalAlign: =VerticalAlign.Top
-            Width: =272
-            X: =797
+            Width: =241
+            X: =765
             ZIndex: =13
 
-        Label24_13 As label:
+        Label24_16 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
@@ -206,28 +230,74 @@ MemoPDF As screen:
             Size: =10
             Text: =ThisItem.BillNo
             Width: =120
-            X: =677
+            X: =645
             ZIndex: =14
 
-    Label8_7 As label:
+        Icon1_2 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Icon: =Icon.View
+            OnSelect: =Navigate(EditMemoItemsToSubmit)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1247
+            Y: =2.5
+            ZIndex: =15
+
+    Button2_5 As button:
+        BorderThickness: =1
+        Color: =RGBA(0, 121, 187, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =ResetForm(Form4_1);
+            Navigate(AddingNewItemCreatingMemo)
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =12
+        Text: ="Add Item"
+        Width: =123
+        X: =642
+        Y: =586
+        ZIndex: =2
+
+    Label8_8 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =13
         Text: |-
             ="Prepared By:"
         Width: =126
         X: =58
-        Y: =688
+        Y: =625
         ZIndex: =5
 
-    Label13_5 As label:
+    Label13_6 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="S.N."
@@ -236,11 +306,12 @@ MemoPDF As screen:
         Y: =284
         ZIndex: =9
 
-    Label13_36 As label:
+    Label13_15 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Source"
@@ -248,11 +319,12 @@ MemoPDF As screen:
         Y: =284
         ZIndex: =10
 
-    Label13_37 As label:
+    Label13_16 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="Type"
@@ -261,11 +333,12 @@ MemoPDF As screen:
         Y: =284
         ZIndex: =11
 
-    Label13_38 As label:
+    Label13_17 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =32
         Size: =10
         Text: ="No"
@@ -274,11 +347,12 @@ MemoPDF As screen:
         Y: =284
         ZIndex: =12
 
-    Label19_2 As label:
+    Label19_3 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -288,11 +362,32 @@ MemoPDF As screen:
         Y: =73
         ZIndex: =13
 
-    Label20_8 As label:
+    date_4 As datepicker:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        CalendarHeaderFill: =RGBA(0, 51, 102, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FontWeight: =FontWeight.Semibold
+        Format: =DateTimeFormat.LongDate
+        Height: =28
+        HoverDateFill: =RGBA(153, 205, 255, 1)
+        IconBackground: =RGBA(0, 51, 102, 1)
+        SelectedDateFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =71
+        ZIndex: =14
+
+    Label20_6 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -302,32 +397,33 @@ MemoPDF As screen:
         Y: =104
         ZIndex: =15
 
-    from_4 As text:
+    from_8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =from_3.Text
+        Default: =Office365Users.MyProfile().Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =83
         Y: =104
         ZIndex: =16
 
-    Label20_9 As label:
+    Label20_7 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -337,32 +433,33 @@ MemoPDF As screen:
         Y: =126
         ZIndex: =18
 
-    department_4 As text:
+    department_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =department_3.Text
+        Default: =Office365Users.MyProfile().Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
         Size: =13
         Width: =325
         X: =1015
         Y: =126
         ZIndex: =19
 
-    Label22_2 As label:
+    Label22_3 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =28
         Size: =13
         Text: |-
@@ -372,11 +469,12 @@ MemoPDF As screen:
         Y: =198
         ZIndex: =20
 
-    Label23_2 As label:
+    Label23_3 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -386,78 +484,100 @@ MemoPDF As screen:
         Y: =90
         ZIndex: =21
 
-    refNo_4 As text:
+    refNo_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =refNo_3.Text
+        Default: |
+            =//If(companyName_2.SelectedText.Value="F1 Soft","FS-"&CountRows(RequisitionDemoApprovalList)+1,If(companyName_2.SelectedText.Value="e-Sewa","ES-"&CountRows(RequisitionDemoApprovalList)+1))
+            (approver1_7.Text & "-" & CountRows(UnsubmittedRequisitionApprovalList)+1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
         Size: =13
         Width: =232
         X: =1108
         Y: =90
         ZIndex: =22
 
-    Label8_20 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
+    Button1_2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =13
-        Text: |-
-            ="Verified By:"
-        Visible: =If(IsBlank(approver1_2),false,true)
-        Width: =144
-        X: =334
-        Y: =688
-        ZIndex: =26
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(SavingToUnsubmitted)
+        Size: =15
+        Text: ="Save"
+        X: =513
+        Y: =701
+        ZIndex: =23
 
-    Label8_21 As label:
-        Align: =Align.Center
+    Icon1_7 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =13
-        Text: |-
-            ="Recommended By:"
-        Visible: =If(IsBlank(approver1_6),false,true)
-        Width: =175
-        X: =583
-        Y: =688
-        ZIndex: =32
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_5.Text));
+            Remove(UnsubmittedMemoTableData,ProdGallery_4.AllItems);
+            //Clear(unPurchaseReq);
+            Reset(TextInput7_2);
+            Navigate(UserDashboard);
+        Width: =45
+        X: =10
+        Y: =10
+        ZIndex: =25
 
-    Label8_22 As label:
-        Align: =Align.Center
+    companyName_2 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        ChevronBackground: =RGBA(0, 89, 178, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =RGBA(0, 89, 178, 1)
+        ChevronHoverFill: =RGBA(153, 205, 255, 1)
+        Color: =RGBA(0, 51, 102, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =13
-        Text: |-
-            ="Approved By:"
-        Visible: =If(IsBlank(approver1_5),false,true)
-        Width: =144
-        X: =876
-        Y: =688
-        ZIndex: =34
+        DisabledFill: =RGBA(0, 89, 178, 1)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        HoverBorderColor: =Transparent
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(0, 134, 208, 1)
+        Items: =["F1 Soft", "e-Sewa"]
+        PressedColor: =RGBA(0, 89, 178, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        SelectionColor: =RGBA(0, 51, 102, 1)
+        SelectionFill: =RGBA(194, 225, 255, 1)
+        Size: =25
+        Width: =450
+        X: =479
+        Y: =12
+        ZIndex: =30
 
-    Label1_1 As label:
+    Label1_2 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
         Text: ="Internal Memo"
@@ -465,12 +585,12 @@ MemoPDF As screen:
         Y: =58
         ZIndex: =36
 
-    TextInput7_1 As text:
+    TextInput7_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =TextInput7_7.Text
+        Default: =""
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -479,17 +599,17 @@ MemoPDF As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
         Size: =13
         X: =581
         Y: =198
         ZIndex: =37
 
-    Label20_10 As label:
+    Label20_12 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -499,11 +619,12 @@ MemoPDF As screen:
         Y: =139
         ZIndex: =38
 
-    Label20_11 As label:
+    Label20_13 As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =13
         Text: |-
@@ -513,287 +634,148 @@ MemoPDF As screen:
         Y: =174
         ZIndex: =39
 
-    Label8_23 As label:
-        Align: =Align.Center
+    ComboBox1_2 As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =13
-        Text: |-
-            ="Approved By:"
-        Visible: =If(IsBlank(approver1_4),false,true)
-        Width: =144
-        X: =1142
-        Y: =688
-        ZIndex: =42
-
-    approver1_2 As text:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =preparedby.Text
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =32
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =11
-        Width: =250
-        X: =10
-        Y: =720
-        ZIndex: =44
-
-    Label13_39 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =10
-        Text: ="Name"
-        X: =419
-        Y: =284
-        ZIndex: =45
-
-    Label13_40 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =10
-        Text: ="Amount"
-        Width: =80
-        X: =637
-        Y: =282
-        ZIndex: =46
-
-    Label13_41 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =10
-        Text: ="Bill No."
-        Width: =70
-        X: =751
-        Y: =284
-        ZIndex: =47
-
-    Label13_42 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =10
-        Text: ="Narration"
-        X: =942
-        Y: =284
-        ZIndex: =48
-
-    Label13_43 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =32
-        Size: =10
-        Text: ="Attachment"
-        X: =1163
-        Y: =284
-        ZIndex: =49
-
-    from_5 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =Text(DateValue(date_3.SelectedDate),DateTimeFormat.LongDate)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Format: =LongDate
         Height: =28
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =73
-        ZIndex: =50
-
-    approver1_3 As text:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =approver2.SelectedText.Value
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =32
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =11
-        Visible: =If(IsBlank(approver1_4),false,true)
-        Width: =250
-        X: =1099
-        Y: =720
-        ZIndex: =51
-
-    approver1_4 As text:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =approver1.SelectedText.Value
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =32
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =11
-        Visible: =If(IsBlank(approver1_5),false,true)
-        Width: =250
-        X: =824
-        Y: =720
-        ZIndex: =52
-
-    approver1_5 As text:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =recommendedby.SelectedText.Value
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =32
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =11
-        Visible: =If(IsBlank(approver1_6),false,true)
-        Width: =250
-        X: =550
-        Y: =720
-        ZIndex: =53
-
-    approver1_6 As text:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =verifiedby.SelectedText.Value
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =32
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =11
-        Visible: =If(IsBlank(approver1_2),false,true)
-        Width: =250
-        X: =281
-        Y: =720
-        ZIndex: =54
-
-    Timer2_2 As timer:
-        AutoPause: =false
-        AutoStart: =true
-        Duration: =5000
-        Fill: =RGBA(0, 51, 102, 1)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnTimerEnd: |-
-            =//StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myMemoPdf,IncludeBinaryData),"""",""));
-            
-            //Office365Outlook.SendEmailV2(app1.Text,"Testing mail.","We are just testing the pdf generating feature and sending it as an email.",{Attachments:Table({Name:"PurchaseReq for the Ref No " & refNo_1.Text &".pdf",ContentBytes:myPdf})});
-            Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,'Recommended By':approver1_5.Text,'First Approver':approver1_4.Text,'Second Approver':approver1_3.Text});
-            
-            
-            //Office365Outlook.SendEmailV2(approver1_2.Text& approver1_6.Text & approver1_5.Text & approver1_4.Text & approver1_3.Text,TextInput7_1.Text,TextInput9_3.Text);
-            
-            Clear(PurchaseReq);
-            Reset(approver2_1);
-            Reset(approver3_1);
-            Reset(approver4_1);
-            Reset(approver4_2);
-            Reset(ComboBox1);
-            Reset(ComboBox1_1);
-            Reset(TextInput7_7);
-            Navigate(VerifierDashboard)
-        Visible: =false
-        X: =589
-        Y: =705
-        ZIndex: =55
-
-    from_6 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =Concat(ComboBox1.SelectedItems,ThisRecord.Value1,"; ")
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Height: =28
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: =""
+        IsSearchable: =false
+        Items: =ComboBoxSample
+        OnChange: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =13
         Width: =325
         X: =83
         Y: =139
-        ZIndex: =57
+        ZIndex: =40
 
-    from_7 As text:
+    ComboBox1_3 As combobox:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =Concat(ComboBox1_1.SelectedItems,ThisRecord.Value1, "; ")
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
         Height: =28
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =2
+        HoverFill: =RGBA(153, 205, 255, 1)
+        InputTextPlaceholder: =""
+        Items: =ComboBoxSample
+        OnChange: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,ComboBox1_3.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =13
         Width: =325
         X: =83
         Y: =174
-        ZIndex: =58
+        ZIndex: =41
 
-    TextInput9_2 As text:
+    approver1_7 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =Office365Users.MyProfile().DisplayName
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =10
+        Width: =250
+        X: =10
+        Y: =657
+        ZIndex: =44
+
+    Label13_18 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =10
+        Text: ="Name"
+        X: =403
+        Y: =284
+        ZIndex: =45
+
+    Label13_20 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =10
+        Text: ="Amount"
+        Width: =88
+        X: =602
+        Y: =284
+        ZIndex: =46
+
+    Label13_21 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =10
+        Text: ="Bill No."
+        Width: =70
+        X: =719
+        Y: =284
+        ZIndex: =47
+
+    Label13_22 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =10
+        Text: ="Narration"
+        X: =854
+        Y: =284
+        ZIndex: =48
+
+    Label13_23 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =10
+        Text: ="Attachment"
+        X: =1095
+        Y: =284
+        ZIndex: =49
+
+    TextInput9_4 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
@@ -810,9 +792,9 @@ MemoPDF As screen:
         Width: =170
         X: =10
         Y: =228
-        ZIndex: =59
+        ZIndex: =50
 
-    TextInput9_3 As text:
+    TextInput9_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
@@ -829,18 +811,20 @@ MemoPDF As screen:
         Width: =846
         X: =10
         Y: =254
-        ZIndex: =60
+        ZIndex: =51
 
-    Label3 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
+    Button1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.Georgia
-        Size: =30
-        Text: =companyName_1.SelectedText.Value
-        Width: =320
-        X: =515
-        Y: =16
-        ZIndex: =61
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(UserSubmitMemo)
+        Size: =15
+        Text: ="Submit"
+        X: =709
+        Y: =701
+        ZIndex: =52
 
