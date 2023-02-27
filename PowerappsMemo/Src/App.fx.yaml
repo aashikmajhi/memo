@@ -3,6 +3,6 @@ App As appinfo:
     OnStart: |-
         =Set(_requestTypeFilter,"All");
         //Set(varLoggedInUser, User());
-        Set(varLoggedInUser,Office365Users.MyProfileV2({'$select':""}).displayName & User().Image);
+        Set(varLoggedInUser,Office365Users.MyProfileV2({'$select':""}).displayName & User().Image) & User().Email;
     StartScreen: =SplashScreen
 

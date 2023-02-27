@@ -470,7 +470,7 @@ MemoPDF As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =TextInput7.Text
+        Default: =TextInput7_2.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -639,7 +639,7 @@ MemoPDF As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =approver4_2.SelectedText.Value
+        Default: =approver2.SelectedText.Value
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -661,7 +661,7 @@ MemoPDF As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =approver4_1.SelectedText.Value
+        Default: =approver1.SelectedText.Value
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -683,7 +683,7 @@ MemoPDF As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =approver3_1.SelectedText.Value
+        Default: =recommendedby.SelectedText.Value
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -705,7 +705,7 @@ MemoPDF As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =approver2_1.SelectedText.Value
+        Default: =verifiedby.SelectedText.Value
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -744,7 +744,7 @@ MemoPDF As screen:
             Reset(approver4_2);
             Reset(ComboBox1);
             Reset(ComboBox1_1);
-            Reset(TextInput7);
+            Reset(TextInput7_2);
             Navigate(UserDashboard)
         Visible: =false
         X: =589
