@@ -1017,3 +1017,16 @@ UserSubmitMemo As screen:
         Y: =658
         ZIndex: =52
 
+    Label2 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 0.7)
+        Height: =158
+        Size: =13
+        Text: =Concat(PurchaseReq, 'Meme No' & ", " & Source& ", " &Types& ", " &TypeNo& ", " &TypeNoName& ", " &Amount& ", " &BillNo& ", " &Narration)
+        Width: =1348
+        X: =10
+        Y: =424
+        ZIndex: =53
+

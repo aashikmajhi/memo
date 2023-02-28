@@ -497,7 +497,7 @@ VerifierView As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =false
+        Visible: =If(varLoggedInUser="verifier",true,false)
         Width: =175
         X: =583
         Y: =625
@@ -525,7 +525,7 @@ VerifierView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =false
+        Visible: =If(varLoggedInUser="verifier",true,false)
         Width: =250
         X: =556
         Y: =658
