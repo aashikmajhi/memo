@@ -519,8 +519,8 @@ UserSubmitMemo As screen:
                         TypeNoName:ThisRecord.TypeNoName,
                         Amount:ThisRecord.Amount,
                         BillNo:ThisRecord.BillNo,
-                        Narration:ThisRecord.Narration,
-                        Attachments:ThisRecord.Attachments
+                        Narration:ThisRecord.Narration
+                        //Attachments:ThisRecord.Attachments
                     }
                 )
             )
