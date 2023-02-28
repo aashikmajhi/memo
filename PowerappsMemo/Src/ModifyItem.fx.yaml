@@ -14,7 +14,7 @@ ModifyItem As screen:
             =SubmitForm(Form1_2);
             //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
             //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
-            Navigate(Memo);
+            Navigate(UserSubmitMemo);
         Size: =15
         Text: ="Update"
         X: =603
@@ -27,7 +27,7 @@ ModifyItem As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(CreateNewMemo)
+        OnSelect: =Navigate(UserSubmitMemo)
         X: =23
         Y: =24
         ZIndex: =2
@@ -215,7 +215,9 @@ ModifyItem As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =MemoGallery_2.Selected.Source
+                Default: |-
+                    =//MemoGallery_2.Selected.Source
+                    userSubmitGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -297,7 +299,9 @@ ModifyItem As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =MemoGallery_2.Selected.Types
+                Default: |-
+                    =//MemoGallery_2.Selected.Types
+                    userSubmitGallery.Selected.Types
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -462,7 +466,9 @@ ModifyItem As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =MemoGallery_2.Selected.TypeNoName
+                Default: |-
+                    =//MemoGallery_2.Selected.TypeNoName
+                    userSubmitGallery.Selected.TypeNoName
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -543,7 +549,9 @@ ModifyItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =MemoGallery_2.Selected.BillNo
+                Default: |-
+                    =//MemoGallery_2.Selected.BillNo
+                    userSubmitGallery.Selected.BillNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -619,7 +627,9 @@ ModifyItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =MemoGallery_2.Selected.Amount
+                Default: |-
+                    =//MemoGallery_2.Selected.Amount
+                    userSubmitGallery.Selected.Amount
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -676,7 +686,9 @@ ModifyItem As screen:
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =MemoGallery_2.Selected.Attachments
+                Items: |-
+                    =//MemoGallery_2.Selected.Attachments
+                    userSubmitGallery.Selected.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -785,7 +797,9 @@ ModifyItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =MemoGallery_2.Selected.Narration
+                Default: |-
+                    =//MemoGallery_2.Selected.Narration
+                    userSubmitGallery.Selected.Narration
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
