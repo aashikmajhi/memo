@@ -563,7 +563,7 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(varLoggedInUser="recommender",true,false)
+        Visible: =If(varLoggedInUser && role="recommender",true,false)
         Width: =144
         X: =867
         Y: =625
@@ -591,7 +591,7 @@ RecommenderView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser="recommender",true,false)
+        Visible: =If(varLoggedInUser && role="recommender",true,false)
         Width: =250
         X: =823
         Y: =658
@@ -670,7 +670,7 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(varLoggedInUser="recommender",true,false)
+        Visible: =If(varLoggedInUser && role="recommender",true,false)
         Width: =144
         X: =1133
         Y: =625
@@ -698,7 +698,7 @@ RecommenderView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser="recommender",true,false)
+        Visible: =If(varLoggedInUser && role="recommender",true,false)
         Width: =250
         X: =1098
         Y: =658

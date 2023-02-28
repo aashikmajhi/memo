@@ -481,7 +481,6 @@ VerifierView As screen:
         Size: =13
         Text: |-
             ="Verified By:"
-        Visible: =If(IsBlank(approver1_10),false,true)
         Width: =144
         X: =334
         Y: =625
@@ -497,7 +496,7 @@ VerifierView As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(varLoggedInUser="verifier",true,false)
+        Visible: =If(varLoggedInUser && role="verifier",true,false)
         Width: =175
         X: =583
         Y: =625
@@ -525,7 +524,7 @@ VerifierView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser="verifier",true,false)
+        Visible: =If(varLoggedInUser && role="verifier",true,false)
         Width: =250
         X: =556
         Y: =658
@@ -868,7 +867,6 @@ VerifierView As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =10
-        Visible: =If(approver1_10.Text="",false,true)
         Width: =250
         X: =278
         Y: =657
