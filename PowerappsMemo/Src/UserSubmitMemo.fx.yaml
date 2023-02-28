@@ -1,10 +1,11 @@
 UserSubmitMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
-    OnVisible: |
+    OnVisible: |+
         =Reset(verifiedby);
         Reset(recommendedby);
         Reset(approver1);
         Reset(approver2);
+        
 
     "SNGallery_9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -504,6 +505,25 @@ UserSubmitMemo As screen:
         OnSelect: |-
             =//If(varLoggedInUser=preparedby.Text,Navigate(MemoPDF),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(MemoPDF),false),false),false);
             If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
+            
+            ForAll(
+               PurchaseReq,
+                Patch(
+                    MemoTableData,
+                    Defaults(MemoTableData),
+                    {
+                        'Meme No':ThisRecord.'Meme No',
+                        Source:ThisRecord.Source,
+                        Types:ThisRecord.Types,
+                        TypeNo:ThisRecord.TypeNo,
+                        TypeNoName:ThisRecord.TypeNoName,
+                        Amount:ThisRecord.Amount,
+                        BillNo:ThisRecord.BillNo,
+                        Narration:ThisRecord.Narration,
+                        Attachments:ThisRecord.Attachments
+                    }
+                )
+            )
         Size: =15
         Text: ="Submit"
         X: =621
@@ -977,4 +997,23 @@ UserSubmitMemo As screen:
         X: =10
         Y: =254
         ZIndex: =51
+
+    Button3 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =83
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =ClearCollect(PurchaseReq,userSubmitGallery.AllItems)
+        Size: =15
+        Text: |-
+            ="collectgalleryitem
+            "
+        Width: =262
+        X: =890
+        Y: =658
+        ZIndex: =52
 
