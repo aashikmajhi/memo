@@ -21,7 +21,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.Narration
+        Default: =recomViewGallery.Selected.Narration
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -43,7 +43,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.BillNo
+        Default: =recomViewGallery.Selected.BillNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -64,7 +64,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.Amount
+        Default: =recomViewGallery.Selected.Amount
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -212,7 +212,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.TypeNoName
+        Default: =recomViewGallery.Selected.TypeNoName
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -232,7 +232,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.TypeNo
+        Default: =recomViewGallery.Selected.TypeNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -252,7 +252,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.Types
+        Default: =recomViewGallery.Selected.Types
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -272,7 +272,7 @@ RecommenderViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_6.Selected.Source
+        Default: =recomViewGallery.Selected.Source
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -306,7 +306,7 @@ RecommenderViewItem As screen:
         ItemFill: =White
         ItemHoverColor: =RGBA(0, 0, 0, 1)
         ItemHoverFill: =RGBA(153, 205, 255, 1)
-        Items: =ProdGallery_6.Selected.Attachments
+        Items: =recomViewGallery.Selected.Attachments
         ItemSpacing: =3
         MaxAttachments: =3
         NoAttachmentsText: =""

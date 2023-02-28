@@ -105,7 +105,7 @@ RecommenderDashboard As screen:
         Y: =54
         ZIndex: =5
 
-    Gallery3_5 As gallery.galleryVertical:
+    recommenderGalleryDashboard As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =403
         Items: |-
@@ -267,7 +267,7 @@ RecommenderDashboard As screen:
             Fill: =RGBA(0, 89, 178, 1)
             Height: =2
             OnSelect: =Select(Parent)
-            Width: =Gallery3_5.TemplateWidth
+            Width: =recommenderGalleryDashboard.TemplateWidth
             Y: =93
             ZIndex: =20
 
@@ -381,7 +381,7 @@ RecommenderDashboard As screen:
         Fill: =RGBA(0, 89, 178, 1)
         Height: =2
         OnSelect: =
-        Width: =Gallery3_5.TemplateWidth
+        Width: =recommenderGalleryDashboard.TemplateWidth
         X: =40
         Y: =293
         ZIndex: =14

@@ -23,7 +23,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.Narration
+        Default: =verifierViewGallery.Selected.Narration
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -45,7 +45,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.BillNo
+        Default: =verifierViewGallery.Selected.BillNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -66,7 +66,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.Amount
+        Default: =verifierViewGallery.Selected.Amount
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -214,7 +214,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.TypeNoName
+        Default: =verifierViewGallery.Selected.TypeNoName
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -234,7 +234,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.TypeNo
+        Default: =verifierViewGallery.Selected.TypeNo
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -254,7 +254,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.Types
+        Default: =verifierViewGallery.Selected.Types
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -274,7 +274,7 @@ VerifierViewItem As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =ProdGallery_7.Selected.Source
+        Default: =verifierViewGallery.Selected.Source
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -308,7 +308,7 @@ VerifierViewItem As screen:
         ItemFill: =White
         ItemHoverColor: =RGBA(0, 0, 0, 1)
         ItemHoverFill: =RGBA(153, 205, 255, 1)
-        Items: =ProdGallery_7.Selected.Attachments
+        Items: =verifierViewGallery.Selected.Attachments
         ItemSpacing: =3
         MaxAttachments: =3
         NoAttachmentsText: =""

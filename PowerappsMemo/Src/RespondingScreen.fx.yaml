@@ -73,7 +73,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_5.Selected.From
+        Default: =recommenderGalleryDashboard.Selected.From
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -107,7 +107,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_5.Selected.Department
+        Default: =recommenderGalleryDashboard.Selected.Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -141,7 +141,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_5.Selected.Title
+        Default: =recommenderGalleryDashboard.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -219,7 +219,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Text(DateValue(Gallery3_5.Selected.Date),DateTimeFormat.LongDate)
+        Default: =Text(DateValue(recommenderGalleryDashboard.Selected.Date),DateTimeFormat.LongDate)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -267,7 +267,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_5.Selected.Organization
+        Default: =recommenderGalleryDashboard.Selected.Organization
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -288,7 +288,7 @@ RespondingScreen As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Gallery3_5.Selected.Subject
+        Default: =recommenderGalleryDashboard.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -311,7 +311,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'First Approver'.Email
-            Gallery3_5.Selected.'Verified By'
+            recommenderGalleryDashboard.Selected.'Verified By'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -334,7 +334,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Second Approver'.Email
-            Gallery3_5.Selected.'Recommended By'
+            recommenderGalleryDashboard.Selected.'Recommended By'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -357,7 +357,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Third Approver'.Email
-            Gallery3_5.Selected.'First Approver'
+            recommenderGalleryDashboard.Selected.'First Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -380,7 +380,7 @@ RespondingScreen As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//Gallery3_1.Selected.'Fourth Approver'.Email
-            Gallery3_5.Selected.'Second Approver'
+            recommenderGalleryDashboard.Selected.'Second Approver'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

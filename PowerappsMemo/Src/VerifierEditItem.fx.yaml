@@ -54,7 +54,7 @@ VerifierEditItem As screen:
         DataSource: =MemoTableData
         Fill: =RGBA(153, 205, 255, 1)
         Height: =508
-        Item: =ProdGallery_7.Selected
+        Item: =verifierViewGallery.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
@@ -219,7 +219,7 @@ VerifierEditItem As screen:
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
                 Default: |-
                     =//ProdGallery_7.Selected.Source
-                    ProdGallery_4.Selected.Source
+                    newMemoGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -301,7 +301,7 @@ VerifierEditItem As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.Source
+                Default: =newMemoGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -384,7 +384,7 @@ VerifierEditItem As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.Source
+                Default: =newMemoGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -466,7 +466,7 @@ VerifierEditItem As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.Source
+                Default: =newMemoGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -545,7 +545,7 @@ VerifierEditItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_4.Selected.Amount
+                Default: =newMemoGallery.Selected.Amount
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -625,7 +625,7 @@ VerifierEditItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_4.Selected.BillNo
+                Default: =newMemoGallery.Selected.BillNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -704,7 +704,7 @@ VerifierEditItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_4.Selected.Narration
+                Default: =newMemoGallery.Selected.Narration
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -763,7 +763,7 @@ VerifierEditItem As screen:
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =ProdGallery_4.Selected.Attachments
+                Items: =newMemoGallery.Selected.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5

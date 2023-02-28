@@ -104,7 +104,7 @@ VerifierDashboard As screen:
         Y: =54
         ZIndex: =5
 
-    Gallery3_1 As gallery.galleryVertical:
+    verifierDashboardGallery As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =403
         Items: |-
@@ -267,7 +267,7 @@ VerifierDashboard As screen:
             Fill: =RGBA(0, 89, 178, 1)
             Height: =2
             OnSelect: =Select(Parent)
-            Width: =Gallery3_1.TemplateWidth
+            Width: =verifierDashboardGallery.TemplateWidth
             Y: =93
             ZIndex: =20
 
@@ -381,7 +381,7 @@ VerifierDashboard As screen:
         Fill: =RGBA(0, 89, 178, 1)
         Height: =2
         OnSelect: =
-        Width: =Gallery3_1.TemplateWidth
+        Width: =verifierDashboardGallery.TemplateWidth
         X: =40
         Y: =293
         ZIndex: =14

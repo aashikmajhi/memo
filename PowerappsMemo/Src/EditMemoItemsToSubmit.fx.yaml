@@ -12,7 +12,7 @@ EditMemoItemsToSubmit As screen:
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
             =SubmitForm(Form1_3);
-            Navigate(CreateNewMemo);
+            Navigate(UserView);
         Size: =15
         Text: ="Update"
         X: =603
@@ -25,7 +25,7 @@ EditMemoItemsToSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(CreateNewMemo)
+        OnSelect: =Navigate(UserView)
         X: =23
         Y: =24
         ZIndex: =2
@@ -50,7 +50,7 @@ EditMemoItemsToSubmit As screen:
         DataSource: =UnsubmittedMemoTableData
         Fill: =RGBA(153, 205, 255, 1)
         Height: =561
-        Item: =ProdGallery_4.Selected
+        Item: =newMemoGallery.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
@@ -212,7 +212,7 @@ EditMemoItemsToSubmit As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.Source
+                Default: =userViewGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -295,7 +295,7 @@ EditMemoItemsToSubmit As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.Types
+                Default: =userViewGallery.Selected.Types
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -378,7 +378,7 @@ EditMemoItemsToSubmit As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.TypeNo
+                Default: =userViewGallery.Selected.TypeNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -461,7 +461,7 @@ EditMemoItemsToSubmit As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =ProdGallery_4.Selected.TypeNoName
+                Default: =userViewGallery.Selected.TypeNoName
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -510,7 +510,7 @@ EditMemoItemsToSubmit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_4.Selected.Amount
+                Default: =userViewGallery.Selected.Amount
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -597,7 +597,7 @@ EditMemoItemsToSubmit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_4.Selected.BillNo
+                Default: =userViewGallery.Selected.BillNo
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -685,7 +685,7 @@ EditMemoItemsToSubmit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =ProdGallery_4.Selected.Narration
+                Default: =userViewGallery.Selected.Narration
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -786,7 +786,7 @@ EditMemoItemsToSubmit As screen:
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =ProdGallery_4.Selected.Attachments
+                Items: =userViewGallery.Selected.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
