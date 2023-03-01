@@ -528,7 +528,7 @@ UserSubmitMemo As screen:
             Remove(UnsubmittedMemoTableData,userSubmitGallery.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7_7);
-            Navigate(UserView);
+            Navigate(UserDashboard);
         Width: =45
         X: =10
         Y: =10
