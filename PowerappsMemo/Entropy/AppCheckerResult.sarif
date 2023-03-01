@@ -13114,6 +13114,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "RecommenderView.recommendedby1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "RecommenderView.recommendedby1.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "RecommenderView",
+                "type": "RecommenderView.recommendedby1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "RecommenderEditItem.Label11_14.Text"
                 }
               ],
