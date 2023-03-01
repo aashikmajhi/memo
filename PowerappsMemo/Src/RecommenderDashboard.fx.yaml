@@ -69,21 +69,9 @@ RecommenderDashboard As screen:
         Size: =23
         Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
         Width: =524
-        X: =156
+        X: =26
         Y: =14
         ZIndex: =3
-
-    Image2_5 As image:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        X: =24
-        Y: =23
-        ZIndex: =4
 
     Button2_14 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)

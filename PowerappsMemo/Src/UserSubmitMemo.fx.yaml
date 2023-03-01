@@ -58,7 +58,8 @@ UserSubmitMemo As screen:
             =//LookUp(MemoTableData,'Meme No'=refNo_3.Text)
             //PurchaseReq
             //Filter(MemoTableData, 'Meme No'=refNo_10.Text)
-            userViewGallery.AllItems
+            //userViewGallery.AllItems
+            Filter(UnsubmittedMemoTableData,'Meme No'=userDashboardGallery.Selected.Title)
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
