@@ -885,3 +885,24 @@ VerifierView As screen:
         Y: =12
         ZIndex: =56
 
+    Button1_8 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ), {'Recommended By':approver3_5.SelectedText.Value});
+            Navigate(RecommenderDashboard);
+            //Navigate(MemoPDF)
+        Size: =15
+        Text: |-
+            ="Save
+            "
+        X: =601
+        Y: =690
+        ZIndex: =57
+
