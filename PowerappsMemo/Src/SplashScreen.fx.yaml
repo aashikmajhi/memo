@@ -49,8 +49,8 @@ SplashScreen As screen:
             =//If(varLoggedInUser=Gallery3_1.Selected.'Prepared By',Navigate(UserDashboard);,Navigate(ApproverDashboard));
             //Navigate(VerifierDashboard);
             //If(User().Email<>preparedby.Text,Navigate(UserDashboard),If(User().Email<>verifiedby.Selected.Value,Navigate(VerifierDashboard),If(User().Email<>recommendedby.Selected.Value,Navigate(RecommenderDashboard),false),false),false);
-            //If(role="verifier",Navigate(VerifierDashboard),If(role="recommender",Navigate(RecommenderDashboard),If(role="creater",Navigate(UserDashboard),false),false),false);
-            Navigate(UserDashboard)
+            If(varLoggedInUser="sumit.manandhar@astral.com.np",Navigate(VerifierDashboard),If(varLoggedInUser="application@astral.com.np",Navigate(RecommenderDashboard),If(varLoggedInUser="naresh.dhami@astral.com.np",Navigate(UserDashboard),false),false),false);
+            //Navigate(UserDashboard)
         Visible: =false
         X: =567
         Y: =622

@@ -509,8 +509,7 @@ UserSubmitMemo As screen:
             
             //If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
             ClearCollect(PurchaseReq,userSubmitGallery.AllItems);
-            
-            Navigate(SavingToSP)
+            If(verifiedby.Selected.Value<>"",false,Navigate(SavingToSP))
         Size: =15
         Text: ="Submit"
         X: =621

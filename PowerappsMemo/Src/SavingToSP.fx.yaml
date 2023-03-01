@@ -431,9 +431,7 @@ SavingToSP As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: |-
-            =//If(IsBlank(approver1_6),false,true)
-            If(role="verifier",true,false)
+        Visible: =If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
         Width: =175
         X: =583
         Y: =688
@@ -695,9 +693,7 @@ SavingToSP As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =11
-        Visible: |-
-            =//If(IsBlank(approver1_6),false,true)
-            If(role="verifier",true,false)
+        Visible: =If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
         Width: =250
         X: =550
         Y: =720

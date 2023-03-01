@@ -496,7 +496,7 @@ VerifierView As screen:
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(varLoggedInUser && role="verifier",true,false)
+        Visible: =If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
         Width: =175
         X: =583
         Y: =625
@@ -524,7 +524,7 @@ VerifierView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser && role="verifier",true,false)
+        Visible: =If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
         Width: =250
         X: =556
         Y: =658
