@@ -937,7 +937,7 @@ VerifierView As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
             =Set(recomm,false);
-            Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:stat,'Recommended By':approver3_5.Selected.Value});
+            Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             Navigate(VerifierDashboard);
         Size: =15
         Text: |-
