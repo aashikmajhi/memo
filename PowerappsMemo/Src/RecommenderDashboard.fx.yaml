@@ -96,10 +96,9 @@ RecommenderDashboard As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Clear(PurchaseReq);
-            Navigate(Actions)
+            Navigate(CreateNewMemo)
         Size: =15
         Text: ="Create New"
-        Visible: =false
         Width: =246
         X: =1080
         Y: =54
