@@ -958,6 +958,7 @@ VerifierView As screen:
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: =approver3_5.Selected.Value
         Size: =10
+        Visible: =If(approver3_5.Selected.Value,true,false)
         Width: =250
         X: =553
         Y: =657
