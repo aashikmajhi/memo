@@ -471,7 +471,7 @@ RecommenderView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {'Recommended By':recommendedby1.SelectedText.Value,'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
+            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {'Recommended By':recommendedby1.Text,'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
             Navigate(RecommenderDashboard);
             //Navigate(MemoPDF)
         Size: =15
@@ -525,33 +525,6 @@ RecommenderView As screen:
         Y: =625
         ZIndex: =32
 
-    recommendedby1 As dropdown:
-        AllowEmptySelection: =true
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        Default: =Value(verifierDashboardGallery.Selected.'Recommended By')
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =32
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        Reset: =true
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =10
-        Width: =250
-        X: =556
-        Y: =658
-        ZIndex: =33
-
     Label8_31 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -562,7 +535,7 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(varLoggedInUser="application@astral.com.np",true,false)
+        Visible: =If(varLoggedInUser="application@astral.com.np" || varLoggedInUser="sumit.manandhar@thakralone.com",true,false)
         Width: =144
         X: =867
         Y: =625
@@ -590,7 +563,7 @@ RecommenderView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser="application@astral.com.np",true,false)
+        Visible: =If(varLoggedInUser="application@astral.com.np" || varLoggedInUser="sumit.manandhar@thakralone.com",true,false)
         Width: =250
         X: =823
         Y: =658
@@ -669,7 +642,7 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(varLoggedInUser="application@astral.com.np",true,false)
+        Visible: =If(varLoggedInUser="application@astral.com.np" || varLoggedInUser="sumit.manandhar@thakralone.com",true,false)
         Width: =144
         X: =1133
         Y: =625
@@ -697,7 +670,7 @@ RecommenderView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser="application@astral.com.np",true,false)
+        Visible: =If(varLoggedInUser="application@astral.com.np" || varLoggedInUser="sumit.manandhar@thakralone.com",true,false)
         Width: =250
         X: =1098
         Y: =658
@@ -906,4 +879,23 @@ RecommenderView As screen:
         X: =521
         Y: =12
         ZIndex: =56
+
+    recommendedby1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.'Recommended By'
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =250
+        X: =559
+        Y: =658
+        ZIndex: =57
 
