@@ -1,6 +1,6 @@
 CreateNewMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
-    OnVisible: =
+    OnVisible: =Set(container,false)
 
     "SNGallery_6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -128,7 +128,8 @@ CreateNewMemo As screen:
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =//Remove(PurchaseReq,ThisItem);
-                Remove(UnsubmittedMemoTableData,LookUp(UnsubmittedMemoTableData,ThisItem.BillNo=Label24_16.Text));
+                //Remove(UnsubmittedMemoTableData,LookUp(UnsubmittedMemoTableData,ThisItem.BillNo=Label24_16.Text));
+                Set(container,true)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -827,4 +828,76 @@ CreateNewMemo As screen:
         X: =709
         Y: =701
         ZIndex: =52
+
+    Container1_3 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 0, 0, 0.78)
+        Height: =552
+        Visible: =If(container=true,true,false)
+        Width: =1322
+        X: =24
+        Y: =156
+        ZIndex: =53
+
+        Label2_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =25
+            Text: ="Delete an Item. Are you sure?"
+            Width: =1240
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+        Yesbtn_3 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(29, 204, 72, 0.91)
+            FontWeight: =FontWeight.Semibold
+            Height: =112
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(29, 204, 72, 0.91)
+            OnSelect: |-
+                =//Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
+                Remove(UnsubmittedMemoTableData,LookUp(UnsubmittedMemoTableData,ThisRecord.BillNo=Label24_16.Text));
+                Set(container,false);
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Size: =25
+            Text: ="Yes"
+            Width: =316
+            X: =192
+            Y: =405
+            ZIndex: =2
+
+        Nobtn_3 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 121, 187, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =112
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0, 121, 187, 1)
+            OnSelect: =Set(container,false)
+            Size: =25
+            Text: ="No"
+            Width: =316
+            X: =800
+            Y: =405
+            ZIndex: =3
+
+        Icon2_9 As icon.Cancel:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 36, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(container,false)
+            X: =1251
+            Y: =6
+            ZIndex: =4
 
