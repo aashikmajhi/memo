@@ -471,7 +471,7 @@ RecommenderView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
+            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {Status:stat2,'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
             Navigate(RecommenderDashboard);
             //Navigate(MemoPDF)
         Size: =15
@@ -898,4 +898,22 @@ RecommenderView As screen:
         X: =559
         Y: =658
         ZIndex: =57
+
+    stat2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="Pending First Approval"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Visible: =false
+        X: =856
+        Y: =617
+        ZIndex: =58
 
