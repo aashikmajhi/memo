@@ -48,10 +48,10 @@ UploadQuotation As screen:
         ZIndex: =3
 
     AttachmentControl_1 As attachments:
-        AddAttachmentColor: =PaleTurquoise
+        AddAttachmentColor: =Color.PaleTurquoise
         AddAttachmentText: ="Add Quotation"
-        AddedItemColor: =Blue
-        AddedItemFill: =Red
+        AddedItemColor: =Color.Blue
+        AddedItemFill: =Color.Red
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -62,8 +62,8 @@ UploadQuotation As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
         IsInDataCard: =true
-        ItemColor: =PaleTurquoise
-        ItemFill: =PaleTurquoise
+        ItemColor: =Color.PaleTurquoise
+        ItemFill: =Color.PaleTurquoise
         ItemHoverColor: =RGBA(0, 0, 0, 1)
         ItemHoverFill: =RGBA(153, 205, 255, 1)
         Items: =
@@ -91,7 +91,7 @@ UploadQuotation As screen:
         BorderThickness: =3
         Fill: |-
             =//If(Items=0,Transparent,RGBA(1,100,11,0.3))
-            If(IsBlank(Items),Transparent,RGBA(1,100,11,0.3))
+            If(IsBlank(Icon.Items),Color.Transparent,RGBA(1,100,11,0.3))
         Height: =323
         Items: =AttachmentControl_1.Attachments
         Layout: =Layout.Vertical

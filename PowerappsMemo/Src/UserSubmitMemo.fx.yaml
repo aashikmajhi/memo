@@ -539,7 +539,7 @@ UserSubmitMemo As screen:
         Icon: =Icon.BackArrow
         OnSelect: |-
             =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_3.Text));
-            Remove(MemoTableData,userSubmitGallery.AllItems);
+            Remove(UnsubmittedMemoTableData,userSubmitGallery.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7_7);
             Navigate(UserView);
@@ -608,7 +608,7 @@ UserSubmitMemo As screen:
         Font: =Font.Georgia
         FontWeight: =FontWeight.Bold
         Height: =36
-        HoverBorderColor: =Transparent
+        HoverBorderColor: =Color.Transparent
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(0, 134, 208, 1)
         Items: =["F1 Soft", "e-Sewa"]

@@ -115,7 +115,7 @@ RecommenderDashboard As screen:
                     Sort(
                         RequisitionDemoApprovalList,
                         Date,
-                        Ascending
+                        SortOrder.Ascending
                     ),
                     (Sort(
                         If(
@@ -126,7 +126,7 @@ RecommenderDashboard As screen:
                                     Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Third Approval" || Status.Value = "Pending Fourth Approval"
                                 ),
                                 Date,
-                                Ascending
+                                SortOrder.Ascending
                             ),
                             Sort(
                                 Filter(
@@ -134,15 +134,15 @@ RecommenderDashboard As screen:
                                     Status.Value = _requestTypeFilter
                                 ),
                                 Date,
-                                Ascending
+                                SortOrder.Ascending
                             )
                         ),
                         Date,
-                        Ascending
+                        SortOrder.Ascending
                     ))
                 ),
                 Date,
-                Ascending
+                SortOrder.Ascending
             )
         Layout: =Layout.Vertical
         OnSelect: |-
