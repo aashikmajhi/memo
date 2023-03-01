@@ -279,7 +279,9 @@ VerifierDashboard As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =If(varLoggedInUser<>ThisItem.'Created By'.Email,false,Navigate(VerifierView));
+            OnSelect: |-
+                =If(varLoggedInUser<>ThisItem.'Created By'.Email,false,Navigate(VerifierView));
+                //Navigate(VerifierView)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5

@@ -1,8 +1,7 @@
 UserSubmitMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |+
-        =ClearCollect(PurchaseReq,userSubmitGallery.AllItems);
-        Reset(verifiedby);
+        =Reset(verifiedby);
         Reset(recommendedby);
         Reset(approver1);
         Reset(approver2);
@@ -507,26 +506,11 @@ UserSubmitMemo As screen:
             =//If(varLoggedInUser=preparedby.Text,Navigate(MemoPDF),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(MemoPDF),false),false),false);
             
             
-            ForAll(
-               PurchaseReq,
-                Patch(
-                    MemoTableData,
-                    Defaults(MemoTableData),
-                    {
-                        'Meme No':refNo_10.Text,
-                        Source:ThisRecord.Source,
-                        Types:ThisRecord.Types,
-                        TypeNo:ThisRecord.TypeNo,
-                        TypeNoName:ThisRecord.TypeNoName,
-                        Amount:ThisRecord.Amount,
-                        BillNo:ThisRecord.BillNo,
-                        Narration:ThisRecord.Narration
-                        //Attachments:ThisRecord.Attachments
-                    }
-                )
-            );
+            
             //If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
-            Navigate(VerifierDashboard)
+            ClearCollect(PurchaseReq,userSubmitGallery.AllItems);
+            
+            Navigate(SavingToSP)
         Size: =15
         Text: ="Submit"
         X: =621
@@ -732,7 +716,9 @@ UserSubmitMemo As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =TextInput7_2.Text
+        Default: |-
+            =//TextInput7_2.Text
+            userDashboardGallery.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1021,20 +1007,6 @@ UserSubmitMemo As screen:
         Y: =658
         ZIndex: =52
 
-    Label2 As label:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(250, 250, 250, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 0, 0, 0.7)
-        Height: =134
-        Size: =13
-        Text: =Concat(PurchaseReq, 'Meme No' & ", " & Source& ", " &Types& ", " &TypeNo& ", " &TypeNoName& ", " &Amount& ", " &BillNo& ", " &Narration)
-        Visible: =false
-        Width: =1348
-        X: =7
-        Y: =448
-        ZIndex: =53
-
     Button2_7 As button:
         BorderThickness: =1
         Color: =RGBA(0, 121, 187, 1)
@@ -1048,7 +1020,7 @@ UserSubmitMemo As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =ResetForm(Form4);
+            =ResetForm(Form4_2);
             Navigate(AddingNewItemUserSubmitMemo)
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
