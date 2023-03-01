@@ -544,7 +544,8 @@ VerifierView As screen:
         Size: =10
         Visible: |-
             =//If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
-            If(recomm=true,true,false)
+            //If(recomm=true,true,false)
+            true
         Width: =250
         X: =556
         Y: =658
