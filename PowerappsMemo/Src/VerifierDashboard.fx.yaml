@@ -66,7 +66,7 @@ VerifierDashboard As screen:
         PressedColor: =Self.Color
         PressedFill: =
         Size: =23
-        Text: ="Hey! " & Office365Users.MyProfile().GivenName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
+        Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
         Width: =524
         X: =156
         Y: =14
@@ -279,8 +279,8 @@ VerifierDashboard As screen:
             Height: =28
             Icon: =Icon.View
             OnSelect: |-
-                =If(varLoggedInUser<>ThisItem.'Created By'.Email,false,Navigate(VerifierView));
-                //Navigate(VerifierView)
+                =//If(varLoggedInUser<>ThisItem.'Created By'.Email,false,Navigate(VerifierView));
+                Navigate(VerifierView)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5

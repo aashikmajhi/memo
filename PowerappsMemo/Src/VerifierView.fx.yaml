@@ -12,6 +12,7 @@ VerifierView As screen:
         Height: =263
         Items: =Sequence(CountRows(verifierViewGallery.AllItems))
         Layout: =Layout.Vertical
+        OnSelect: =approver3_5.Selected.Value
         TemplatePadding: =0
         TemplateSize: =33
         Width: =42
@@ -56,10 +57,7 @@ VerifierView As screen:
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
             Filter(MemoTableData,'Meme No'= refNo_8.Text)
         Layout: =Layout.Vertical
-        OnSelect: |-
-            =//ResetForm(Form1);
-            //Navigate('User Edit Item_1');
-            If(varLoggedInUser=approver1_10.Text,false,ResetForm(EditForm);Navigate(VerifierEditItem));
+        OnSelect: =approver3_5.Selected.Value
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
@@ -238,6 +236,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Prepared By:"
@@ -253,6 +252,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="S.N."
         Width: =40
@@ -267,6 +267,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="Source"
         X: =55
@@ -280,6 +281,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="Type"
         Width: =75
@@ -294,6 +296,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="No"
         Width: =50
@@ -308,6 +311,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Date : "
@@ -323,6 +327,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="From : "
@@ -346,6 +351,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =325
         X: =83
@@ -359,6 +365,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Department : "
@@ -382,6 +389,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =325
         X: =1015
@@ -395,6 +403,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Subject : "
@@ -410,6 +419,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Ref No : "
@@ -433,6 +443,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =232
         X: =1108
@@ -448,7 +459,7 @@ VerifierView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(Memo)
+        OnSelect: =approver3_5.Selected.Value
         Size: =15
         Text: |-
             ="Submit
@@ -465,7 +476,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(VerifierDashboard)
+        OnSelect: =approver3_5.Selected.Value
         Width: =45
         X: =10
         Y: =10
@@ -478,6 +489,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Verified By:"
@@ -493,10 +505,13 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Recommended By:"
-        Visible: =If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
+        Visible: |-
+            =//If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
+            true
         Width: =175
         X: =583
         Y: =625
@@ -519,12 +534,15 @@ VerifierView As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        OnSelect: =approver3_5.Selected.Value
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
+        Visible: |-
+            =//If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
+            true
         Width: =250
         X: =556
         Y: =658
@@ -537,6 +555,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Approved By:"
@@ -563,6 +582,7 @@ VerifierView As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        OnSelect: =approver3_5.Selected.Value
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -582,6 +602,7 @@ VerifierView As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =15
         Text: ="Internal Memo"
         X: =599
@@ -602,6 +623,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         X: =581
         Y: =198
@@ -614,6 +636,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="To : "
@@ -629,6 +652,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =28
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Cc : "
@@ -644,6 +668,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Text: |-
             ="Approved By:"
@@ -670,6 +695,7 @@ VerifierView As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
+        OnSelect: =approver3_5.Selected.Value
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -696,6 +722,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Width: =250
         X: =10
@@ -709,6 +736,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="Name"
         X: =403
@@ -722,6 +750,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="Amount"
         Width: =88
@@ -736,6 +765,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="Bill No."
         Width: =70
@@ -750,6 +780,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =32
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Text: ="Narration"
         X: =854
@@ -769,6 +800,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =170
         X: =10
@@ -788,6 +820,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =846
         X: =10
@@ -807,6 +840,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =325
         X: =83
@@ -826,6 +860,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =325
         X: =83
@@ -845,6 +880,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =13
         Width: =325
         X: =83
@@ -866,6 +902,7 @@ VerifierView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
         Size: =10
         Width: =250
         X: =278
@@ -878,6 +915,7 @@ VerifierView As screen:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
+        OnSelect: =approver3_5.Selected.Value
         Size: =25
         Text: =verifierDashboardGallery.Selected.Organization
         Width: =320
@@ -894,15 +932,34 @@ VerifierView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
-            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ), {'Recommended By':approver3_5.SelectedText.Value});
-            Navigate(RecommenderDashboard);
-            //Navigate(MemoPDF)
+        OnSelect: =approver3_5.Selected.Value
         Size: =15
         Text: |-
             ="Save
             "
         X: =601
-        Y: =690
+        Y: =700
         ZIndex: =57
+
+    approver2_6 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.'Recommended By'
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =approver3_5.Selected.Value
+        Size: =10
+        Width: =250
+        X: =553
+        Y: =657
+        ZIndex: =58
 
