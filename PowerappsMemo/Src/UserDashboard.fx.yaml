@@ -94,7 +94,9 @@ UserDashboard As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Clear(PurchaseReq);
+            =Reset(ComboBox1_2);
+            Reset(ComboBox1_3);
+            Reset(TextInput7_2);
             Navigate(CreateNewMemo)
         Size: =15
         Text: ="Create New"
