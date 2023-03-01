@@ -509,7 +509,7 @@ UserSubmitMemo As screen:
             
             //If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
             ClearCollect(PurchaseReq,userSubmitGallery.AllItems);
-            If(verifiedby.Selected.Value<>"",false,Navigate(SavingToSP))
+            If(verifiedby.Selected.Value="sumit.manandhar@astral.com.np",Navigate(SavingToSP),false)
         Size: =15
         Text: ="Submit"
         X: =621
@@ -525,7 +525,7 @@ UserSubmitMemo As screen:
         Icon: =Icon.BackArrow
         OnSelect: |-
             =//Remove(MemoTableData,LookUp(MemoTableData,'Meme No'=refNo_3.Text));
-            Remove(UnsubmittedMemoTableData,userSubmitGallery.AllItems);
+            //Remove(UnsubmittedMemoTableData,userSubmitGallery.AllItems);
             Clear(PurchaseReq);
             Reset(TextInput7_7);
             Navigate(UserDashboard);
