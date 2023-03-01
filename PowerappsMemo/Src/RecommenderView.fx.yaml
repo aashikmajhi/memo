@@ -691,7 +691,9 @@ RecommenderView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.'Prepared By'
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Prepared By'
+            verifierDashboardGallery.Selected.PreparedBy
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -861,7 +863,9 @@ RecommenderView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.'Verified By'
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Verified By'
+            verifierDashboardGallery.Selected.VerifiedBy
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -893,7 +897,8 @@ RecommenderView As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.'Recommended By'
+        Default: |
+            =verifierDashboardGallery.Selected.'Recommended By'
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
