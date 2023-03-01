@@ -862,3 +862,25 @@ SavingToSP As screen:
         Y: =16
         ZIndex: =61
 
+    Container2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(250, 250, 250, 0.3)
+        Height: =694
+        Width: =1273
+        X: =50
+        Y: =40
+        ZIndex: =62
+
+        Label4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =82
+            Size: =25
+            Text: ="Please wait. Saving data."
+            Width: =640
+            X: =291
+            Y: =273
+            ZIndex: =1
+
