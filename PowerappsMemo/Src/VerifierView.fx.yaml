@@ -1,7 +1,8 @@
 VerifierView As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |-
-        =Reset(approver2_5);
+        =Set(recomm,true);
+        Reset(approver2_5);
         Reset(approver3_5);
         Reset(approver4_9);
         Reset(approver4_10);
@@ -526,7 +527,7 @@ VerifierView As screen:
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        Default: =""
+        Default: =
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -534,7 +535,8 @@ VerifierView As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
-        OnSelect: =approver3_5.Selected.Value
+        OnChange: =DisplayMode.Disabled;
+        OnSelect: =
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
@@ -542,7 +544,7 @@ VerifierView As screen:
         Size: =10
         Visible: |-
             =//If(varLoggedInUser="sumit.manandhar@astral.com.np",true,false)
-            true
+            If(recomm=true,true,false)
         Width: =250
         X: =556
         Y: =658
@@ -932,7 +934,9 @@ VerifierView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(VerifierDashboard);
+        OnSelect: |
+            =Set(recomm,false);
+            Navigate(VerifierDashboard);
         Size: =15
         Text: |-
             ="Save
@@ -958,7 +962,9 @@ VerifierView As screen:
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: =approver3_5.Selected.Value
         Size: =10
-        Visible: =If(approver3_5.Selected.Value,true,false)
+        Visible: |-
+            =If(approver3_5.Selected.Value,true,false)
+            //true
         Width: =250
         X: =553
         Y: =657
