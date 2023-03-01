@@ -504,7 +504,7 @@ UserSubmitMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =//If(varLoggedInUser=preparedby.Text,Navigate(MemoPDF),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(MemoPDF),false),false),false);
-            If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
+            
             
             ForAll(
                PurchaseReq,
@@ -523,7 +523,9 @@ UserSubmitMemo As screen:
                         //Attachments:ThisRecord.Attachments
                     }
                 )
-            )
+            );
+            //If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
+            Navigate(VerifierDashboard)
         Size: =15
         Text: ="Submit"
         X: =621
@@ -1026,7 +1028,7 @@ UserSubmitMemo As screen:
         Size: =13
         Text: =Concat(PurchaseReq, 'Meme No' & ", " & Source& ", " &Types& ", " &TypeNo& ", " &TypeNoName& ", " &Amount& ", " &BillNo& ", " &Narration)
         Width: =1348
-        X: =10
-        Y: =424
+        X: =18
+        Y: =448
         ZIndex: =53
 
