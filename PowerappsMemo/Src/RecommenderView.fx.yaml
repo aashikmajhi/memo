@@ -241,7 +241,7 @@ RecommenderView As screen:
         Height: =32
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(AddNewItem)
+        OnSelect: =Navigate(RecommenderAddItem)
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
         RadiusTopLeft: =15

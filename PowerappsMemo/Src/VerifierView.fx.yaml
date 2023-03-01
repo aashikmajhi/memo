@@ -476,7 +476,7 @@ VerifierView As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45
         Icon: =Icon.BackArrow
-        OnSelect: =VerifierDashboard
+        OnSelect: =Navigate(VerifierDashboard);
         Width: =45
         X: =10
         Y: =10
@@ -932,7 +932,7 @@ VerifierView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =approver3_5.Selected.Value
+        OnSelect: =Navigate(VerifierDashboard);
         Size: =15
         Text: |-
             ="Save
@@ -963,4 +963,28 @@ VerifierView As screen:
         X: =553
         Y: =657
         ZIndex: =58
+
+    Button2_9 As button:
+        BorderThickness: =1
+        Color: =RGBA(0, 121, 187, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(AddNewItem)
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =12
+        Text: ="Add Item"
+        Width: =123
+        X: =642
+        Y: =586
+        ZIndex: =59
 

@@ -1,7 +1,7 @@
-AddNewItem As screen:
+RecommenderAddItem As screen:
     Fill: =RGBA(153, 205, 255, 1)
 
-    Form4 As form:
+    Form4_3 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
         DefaultMode: =FormMode.New
@@ -12,7 +12,7 @@ AddNewItem As screen:
         Y: =86
         ZIndex: =1
 
-        "'Meme No_DataCard3' As typedDataCard.textualEditCard":
+        "'Meme No_DataCard3_1' As typedDataCard.textualEditCard":
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -23,13 +23,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Title")
             Required: =false
-            Update: =DataCardValue29.Text
+            Update: =DataCardValue29_1.Text
             Width: =1356
             X: =0
             Y: =0
             ZIndex: =2
 
-            DataCardKey29 As label:
+            DataCardKey29_1 As label:
                 Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
@@ -43,7 +43,7 @@ AddNewItem As screen:
                 Y: =24
                 ZIndex: =1
 
-            DataCardValue29 As text:
+            DataCardValue29_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -70,7 +70,7 @@ AddNewItem As screen:
                 Y: =21
                 ZIndex: =2
 
-            ErrorMessage29 As label:
+            ErrorMessage29_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -85,23 +85,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue29.Y + DataCardValue29.Height
+                Y: =DataCardValue29_1.Y + DataCardValue29_1.Height
                 ZIndex: =3
 
-            StarVisible29 As label:
+            StarVisible29_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey29.Height
+                Height: =DataCardKey29_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey29.Y
+                Y: =DataCardKey29_1.Y
                 ZIndex: =4
 
-        Source_DataCard4 As typedDataCard.textualEditCard:
+        Source_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Source"
@@ -112,13 +112,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Source")
             Required: =false
-            Update: =DataCardValue30.Text
+            Update: =DataCardValue30_1.Text
             Width: =674
             X: =0
             Y: =1
             ZIndex: =2
 
-            DataCardKey30 As label:
+            DataCardKey30_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -131,11 +131,11 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue30 As text:
+            DataCardValue30_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Dropdown6.Selected.Value1
+                Default: =Dropdown6_4.Selected.Value1
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -155,10 +155,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                Y: =DataCardKey30_1.Y + DataCardKey30_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage30 As label:
+            ErrorMessage30_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -173,23 +173,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue30.Y + DataCardValue30.Height
+                Y: =DataCardValue30_1.Y + DataCardValue30_1.Height
                 ZIndex: =3
 
-            StarVisible30 As label:
+            StarVisible30_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey30.Height
+                Height: =DataCardKey30_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey30.Y
+                Y: =DataCardKey30_1.Y
                 ZIndex: =4
 
-            Dropdown6 As dropdown:
+            Dropdown6_4 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -211,7 +211,7 @@ AddNewItem As screen:
                 Y: =48
                 ZIndex: =5
 
-        Types_DataCard4 As typedDataCard.textualEditCard:
+        Types_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Types"
@@ -222,13 +222,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Types")
             Required: =false
-            Update: =DataCardValue36.Text
+            Update: =DataCardValue36_1.Text
             Width: =675
             X: =1
             Y: =1
             ZIndex: =2
 
-            DataCardKey36 As label:
+            DataCardKey36_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -241,11 +241,11 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue36 As text:
+            DataCardValue36_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Dropdown6_2.Selected.Value1
+                Default: =Dropdown6_5.Selected.Value1
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -265,10 +265,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                Y: =DataCardKey36_1.Y + DataCardKey36_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage36 As label:
+            ErrorMessage36_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -283,23 +283,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue36.Y + DataCardValue36.Height
+                Y: =DataCardValue36_1.Y + DataCardValue36_1.Height
                 ZIndex: =3
 
-            StarVisible36 As label:
+            StarVisible36_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey36.Height
+                Height: =DataCardKey36_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey36.Y
+                Y: =DataCardKey36_1.Y
                 ZIndex: =4
 
-            Dropdown6_2 As dropdown:
+            Dropdown6_5 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -321,7 +321,7 @@ AddNewItem As screen:
                 Y: =48
                 ZIndex: =5
 
-        TypeNo_DataCard4 As typedDataCard.textualEditCard:
+        TypeNo_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNo"
@@ -332,13 +332,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNo")
             Required: =false
-            Update: =DataCardValue31.Text
+            Update: =DataCardValue31_1.Text
             Width: =678
             X: =-1
             Y: =3
             ZIndex: =2
 
-            DataCardKey31 As label:
+            DataCardKey31_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -351,11 +351,11 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue31 As text:
+            DataCardValue31_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Dropdown6_1.Selected.Value1
+                Default: =Dropdown6_6.Selected.Value1
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -375,10 +375,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =614
                 X: =30
-                Y: =DataCardKey31.Y + DataCardKey31.Height + 5
+                Y: =DataCardKey31_1.Y + DataCardKey31_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage31 As label:
+            ErrorMessage31_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -393,23 +393,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue31.Y + DataCardValue31.Height
+                Y: =DataCardValue31_1.Y + DataCardValue31_1.Height
                 ZIndex: =3
 
-            StarVisible31 As label:
+            StarVisible31_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey31.Height
+                Height: =DataCardKey31_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey31.Y
+                Y: =DataCardKey31_1.Y
                 ZIndex: =4
 
-            Dropdown6_1 As dropdown:
+            Dropdown6_6 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -431,7 +431,7 @@ AddNewItem As screen:
                 Y: =48
                 ZIndex: =5
 
-        TypeNoName_DataCard4 As typedDataCard.textualEditCard:
+        TypeNoName_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNoName"
@@ -442,13 +442,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =false
-            Update: =DataCardValue32.Text
+            Update: =DataCardValue32_1.Text
             Width: =678
             X: =0
             Y: =3
             ZIndex: =2
 
-            DataCardKey32 As label:
+            DataCardKey32_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -461,11 +461,11 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue32 As text:
+            DataCardValue32_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Dropdown6_3.Selected.Value1
+                Default: =Dropdown6_7.Selected.Value1
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -485,10 +485,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =614
                 X: =30
-                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
+                Y: =DataCardKey32_1.Y + DataCardKey32_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage32 As label:
+            ErrorMessage32_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -503,23 +503,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue32.Y + DataCardValue32.Height
+                Y: =DataCardValue32_1.Y + DataCardValue32_1.Height
                 ZIndex: =3
 
-            StarVisible32 As label:
+            StarVisible32_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey32.Height
+                Height: =DataCardKey32_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey32.Y
+                Y: =DataCardKey32_1.Y
                 ZIndex: =4
 
-            Dropdown6_3 As dropdown:
+            Dropdown6_7 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -541,7 +541,7 @@ AddNewItem As screen:
                 Y: =48
                 ZIndex: =5
 
-        Amount_DataCard4 As typedDataCard.textualEditCard:
+        Amount_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Amount"
@@ -552,13 +552,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Amount")
             Required: =false
-            Update: =DataCardValue33.Text
+            Update: =DataCardValue33_1.Text
             Width: =678
             X: =0
             Y: =4
             ZIndex: =2
 
-            DataCardKey33 As label:
+            DataCardKey33_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -571,7 +571,7 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue33 As text:
+            DataCardValue33_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -595,10 +595,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey33.Y + DataCardKey33.Height + 5
+                Y: =DataCardKey33_1.Y + DataCardKey33_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage33 As label:
+            ErrorMessage33_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -613,23 +613,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue33.Y + DataCardValue33.Height
+                Y: =DataCardValue33_1.Y + DataCardValue33_1.Height
                 ZIndex: =3
 
-            StarVisible33 As label:
+            StarVisible33_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey33.Height
+                Height: =DataCardKey33_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey33.Y
+                Y: =DataCardKey33_1.Y
                 ZIndex: =4
 
-        BillNo_DataCard4 As typedDataCard.textualEditCard:
+        BillNo_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="BillNo"
@@ -640,13 +640,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "BillNo")
             Required: =false
-            Update: =DataCardValue34.Text
+            Update: =DataCardValue34_1.Text
             Width: =678
             X: =1
             Y: =4
             ZIndex: =2
 
-            DataCardKey34 As label:
+            DataCardKey34_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -659,7 +659,7 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue34 As text:
+            DataCardValue34_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -683,10 +683,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey34.Y + DataCardKey34.Height + 5
+                Y: =DataCardKey34_1.Y + DataCardKey34_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage34 As label:
+            ErrorMessage34_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -701,23 +701,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue34.Y + DataCardValue34.Height
+                Y: =DataCardValue34_1.Y + DataCardValue34_1.Height
                 ZIndex: =3
 
-            StarVisible34 As label:
+            StarVisible34_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey34.Height
+                Height: =DataCardKey34_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey34.Y
+                Y: =DataCardKey34_1.Y
                 ZIndex: =4
 
-        Narration_DataCard4 As typedDataCard.textualEditCard:
+        Narration_DataCard4_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Narration"
@@ -728,13 +728,13 @@ AddNewItem As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Narration")
             Required: =false
-            Update: =DataCardValue35.Text
+            Update: =DataCardValue35_1.Text
             Width: =678
             X: =0
             Y: =6
             ZIndex: =2
 
-            DataCardKey35 As label:
+            DataCardKey35_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -747,7 +747,7 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue35 As text:
+            DataCardValue35_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -773,10 +773,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey35.Y + DataCardKey35.Height + 5
+                Y: =DataCardKey35_1.Y + DataCardKey35_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage35 As label:
+            ErrorMessage35_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -791,23 +791,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue35.Y + DataCardValue35.Height
+                Y: =DataCardValue35_1.Y + DataCardValue35_1.Height
                 ZIndex: =3
 
-            StarVisible35 As label:
+            StarVisible35_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey35.Height
+                Height: =DataCardKey35_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey35.Y
+                Y: =DataCardKey35_1.Y
                 ZIndex: =4
 
-        Attachments_DataCard4 As typedDataCard.attachmentsEditCard:
+        Attachments_DataCard4_1 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
@@ -817,13 +817,13 @@ AddNewItem As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =189
             Required: =false
-            Update: =DataCardValue37.Attachments
+            Update: =DataCardValue37_1.Attachments
             Width: =678
             X: =1
             Y: =6
             ZIndex: =2
 
-            DataCardKey37 As label:
+            DataCardKey37_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -836,7 +836,7 @@ AddNewItem As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue37 As attachments:
+            DataCardValue37_1 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -862,10 +862,10 @@ AddNewItem As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                Y: =DataCardKey37_1.Y + DataCardKey37_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage37 As label:
+            ErrorMessage37_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -880,23 +880,23 @@ AddNewItem As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue37.Y + DataCardValue37.Height
+                Y: =DataCardValue37_1.Y + DataCardValue37_1.Height
                 ZIndex: =3
 
-            StarVisible37 As label:
+            StarVisible37_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey37.Height
+                Height: =DataCardKey37_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey37.Y
+                Y: =DataCardKey37_1.Y
                 ZIndex: =4
 
-    Button2 As button:
+    Button2_3 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -906,45 +906,45 @@ AddNewItem As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =If(
-                !IsBlank((DataCardValue30.Text || DataCardValue36.Text || DataCardValue31.Text || DataCardValue32.Text || DataCardValue33.Text || DataCardValue34.Text || DataCardValue35.Text || Last(DataCardValue37.Attachments).Name)),
+                !IsBlank((DataCardValue30_1.Text || DataCardValue36_1.Text || DataCardValue31_1.Text || DataCardValue32_1.Text || DataCardValue33_1.Text || DataCardValue34_1.Text || DataCardValue35_1.Text || Last(DataCardValue37_1.Attachments).Name)),
                 Collect(
                     PurchaseReq,
                     {
-                        Source: DataCardValue30.Text,
-                        Types: DataCardValue36.Text,
-                        TypeNo: DataCardValue31.Text,
-                        TypeNoName: DataCardValue32.Text,
-                        BillNo: DataCardValue34.Text,
-                        Amount:DataCardValue33.Text,
-                        Narration: DataCardValue35.Text,
-                        Attachments: DataCardValue37.Attachments
+                        Source: DataCardValue30_1.Text,
+                        Types: DataCardValue36_1.Text,
+                        TypeNo: DataCardValue31_1.Text,
+                        TypeNoName: DataCardValue32_1.Text,
+                        BillNo: DataCardValue34_1.Text,
+                        Amount:DataCardValue33_1.Text,
+                        Narration: DataCardValue35_1.Text,
+                        Attachments: DataCardValue37_1.Attachments
                     }
                 ),
                 Notify("Empty fields can not be processed")
             );
-            SubmitForm(Form4);
-            Navigate(VerifierView);
+            SubmitForm(Form4_3);
+            Navigate(RecommenderView);
         Size: =15
         Text: ="Add"
         X: =603
         Y: =699
         ZIndex: =2
 
-    Icon3_3 As icon.BackArrow:
+    Icon3_10 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =ResetForm(Form4);
+            =ResetForm(Form4_3);
             //Navigate(Memo);
-            Navigate(VerifierView)
+            Navigate(RecommenderView)
         X: =12
         Y: =15
         ZIndex: =3
 
-    Label11_9 As label:
+    Label11_18 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(39, 113, 194, 1)
