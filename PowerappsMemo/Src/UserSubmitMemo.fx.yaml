@@ -135,7 +135,7 @@ UserSubmitMemo As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.CancelBadge
-            OnSelect: =Remove(MemoTableData,LookUp(MemoTableData,ThisItem.BillNo=Label24_43.Text));
+            OnSelect: =Remove(UnsubmittedMemoTableData,LookUp(UnsubmittedMemoTableData,ThisItem.BillNo=Label24_43.Text));
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -513,7 +513,7 @@ UserSubmitMemo As screen:
                     MemoTableData,
                     Defaults(MemoTableData),
                     {
-                        'Meme No':ThisRecord.'Meme No',
+                        'Meme No':refNo_10.Text,
                         Source:ThisRecord.Source,
                         Types:ThisRecord.Types,
                         TypeNo:ThisRecord.TypeNo,

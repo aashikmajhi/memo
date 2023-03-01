@@ -43,7 +43,7 @@ AddingNewItemUserSubmitMemo As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =refNo_5.Text
+                Default: =userDashboardGallery.Selected.Title
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -794,7 +794,7 @@ AddingNewItemUserSubmitMemo As screen:
         OnSelect: |-
             =//If(!IsBlank((DataCardValue19.Text||DataCardValue20.Selected.Value1||DataCardValue21.Selected.Value1||DataCardValue22.Selected.Value1||DataCardValue23.Text||DataCardValue24.Text||DataCardValue25.Text||Last(DataCardValue27.Attachments).Name)),Collect(unPurchaseReq,{Source:DataCardValue19.Text,Types:DataCardValue20.Selected.Value1,TypeNo:DataCardValue21.Selected.Value1,TypeNoName:DataCardValue22.Selected.Value1,BillNo:DataCardValue23.Text,Amount:DataCardValue24.Text,Narration:DataCardValue25.Text,Attachments:DataCardValue27.Attachments}),Notify("Empty fields can not be processed"));
             SubmitForm(Form4_2);
-            Navigate(CreateNewMemo);
+            Navigate(UserSubmitMemo);
         Size: =15
         Text: ="Add"
         X: =603
