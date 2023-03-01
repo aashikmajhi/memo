@@ -965,7 +965,8 @@ VerifierView As screen:
         OnSelect: =approver3_5.Selected.Value
         Size: =10
         Visible: |
-            =If(approver3_5.Selected.Value="",false,true)
+            =//If(approver3_5.Selected.Value="",false,true)
+            false
         Width: =250
         X: =556
         Y: =658
