@@ -1,7 +1,8 @@
 UserSubmitMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |+
-        =Reset(verifiedby);
+        =ClearCollect(PurchaseReq,userSubmitGallery.AllItems);
+        Reset(verifiedby);
         Reset(recommendedby);
         Reset(approver1);
         Reset(approver2);
@@ -1009,11 +1010,12 @@ UserSubmitMemo As screen:
         Height: =83
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =ClearCollect(PurchaseReq,userSubmitGallery.AllItems)
+        OnSelect: =//ClearCollect(PurchaseReq,userSubmitGallery.AllItems)
         Size: =15
         Text: |-
             ="collectgalleryitem
             "
+        Visible: =false
         Width: =262
         X: =890
         Y: =658
@@ -1024,11 +1026,38 @@ UserSubmitMemo As screen:
         Color: =RGBA(250, 250, 250, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(0, 0, 0, 0.7)
-        Height: =158
+        Height: =134
         Size: =13
         Text: =Concat(PurchaseReq, 'Meme No' & ", " & Source& ", " &Types& ", " &TypeNo& ", " &TypeNoName& ", " &Amount& ", " &BillNo& ", " &Narration)
+        Visible: =false
         Width: =1348
-        X: =18
+        X: =7
         Y: =448
         ZIndex: =53
+
+    Button2_7 As button:
+        BorderThickness: =1
+        Color: =RGBA(0, 121, 187, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =ResetForm(Form4);
+            Navigate(AddingNewItemUserSubmitMemo)
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =12
+        Text: ="Add Item"
+        Width: =123
+        X: =648
+        Y: =593
+        ZIndex: =54
 
