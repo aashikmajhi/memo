@@ -26,7 +26,8 @@ UserDashboard As screen:
         Height: =79
         Items: |-
             =
-            If(loginUser.Email=recommendedby1.Text,Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
+            //If(loginUser.Email=recommendedby1.Text,Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
+            If(role.Role.Value="Recommender",Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
         Layout: =Layout.Vertical
         TemplateSize: =67
         Width: =1280
@@ -90,7 +91,10 @@ UserDashboard As screen:
             Navigate(CreateNewMemo)
         Size: =15
         Text: ="Create New"
-        Visible: =If(loginUser.Email=recommendedby1.Text,false,true)
+        Visible: |+
+            =//If(loginUser.Email=recommendedby1.Text,false,true);
+            If(role.Role.Value="Recommender",false,true)
+            
         Width: =246
         X: =1080
         Y: =54
