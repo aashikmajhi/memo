@@ -225,7 +225,8 @@ RecommenderView As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: =Navigate(RecommenderEditItem)
+            OnSelect: |
+                =Navigate(RecommenderEditItem)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5

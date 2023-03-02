@@ -952,9 +952,7 @@ VerifierView As screen:
             Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             Navigate(UserDashboard);
         Size: =15
-        Text: |-
-            ="Save
-            "
+        Text: ="Submit"
         Visible: |-
             =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
             //If(IsBlank(approver2_5.Text),true,false)

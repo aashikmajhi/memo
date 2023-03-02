@@ -17,6 +17,7 @@ RecommenderEditItem As screen:
             Navigate(RecommenderView);
         Size: =15
         Text: ="Update"
+        Visible: =If(loginUser.Email=recommendedby1.Text,true,false)
         X: =603
         Y: =703
         ZIndex: =8
