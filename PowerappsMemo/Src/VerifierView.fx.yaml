@@ -516,7 +516,8 @@ VerifierView As screen:
             ="Recommended By:"
         Visible: |-
             =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
-            If(IsBlank(approver2_5.Text),true,false)
+            //If(IsBlank(approver2_5.Text),true,false)
+            If(loginUser.Email=approver2_5.Text,true,false)
         Width: =175
         X: =583
         Y: =625
@@ -951,7 +952,8 @@ VerifierView As screen:
             "
         Visible: |-
             =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
-            If(IsBlank(approver2_5.Text),true,false)
+            //If(IsBlank(approver2_5.Text),true,false)
+            If(loginUser.Email=approver2_5.Text,true,false)
         X: =601
         Y: =700
         ZIndex: =57
@@ -975,7 +977,8 @@ VerifierView As screen:
         Size: =10
         Visible: |-
             =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
-            If(IsBlank(approver2_5.Text),true,false)
+            //If(IsBlank(approver2_5.Text),true,false)
+            If(loginUser.Email=approver2_5.Text,true,false)
         Width: =250
         X: =556
         Y: =658
@@ -1002,7 +1005,8 @@ VerifierView As screen:
         Text: ="Add Item"
         Visible: |-
             =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
-            If(IsBlank(approver2_5.Text),true,false)
+            //If(IsBlank(approver2_5.Text),true,false)
+            If(loginUser.Email=approver2_5.Text,true,false)
         Width: =123
         X: =642
         Y: =586
