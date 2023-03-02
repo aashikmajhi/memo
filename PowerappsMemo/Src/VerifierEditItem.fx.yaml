@@ -17,6 +17,7 @@ VerifierEditItem As screen:
             Navigate(VerifierView);
         Size: =15
         Text: ="Update"
+        Visible: =If(loginUser.Email=approver2_5.Text,true,false)
         X: =603
         Y: =703
         ZIndex: =8

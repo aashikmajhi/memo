@@ -18234,6 +18234,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "VerifierEditItem.Button3_4.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "VerifierEditItem.Button3_4.Visible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "VerifierEditItem",
+                "type": "VerifierEditItem.Button3_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "AddingNewItemCreatingMemo.Label11_12.Text"
                 }
               ],
