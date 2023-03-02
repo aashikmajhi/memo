@@ -50,8 +50,8 @@ SplashScreen As screen:
             //Navigate(VerifierDashboard);
             //If(User().Email<>preparedby.Text,Navigate(UserDashboard),If(User().Email<>verifiedby.Selected.Value,Navigate(VerifierDashboard),If(User().Email<>recommendedby.Selected.Value,Navigate(RecommenderDashboard),false),false),false);
             //If(loginUser.Email="sumit.manandhar@astral.com.np" || loginUser.Email="application@astral.com.np",Navigate(VerifierDashboard),If(loginUser.Email="sumit.manandhar@thakralone.com",Navigate(RecommenderDashboard),If(loginUser.Email="naresh.dhami@astral.com.np",Navigate(UserDashboard),false),false),false);
-            If(role.Role.Value="Recommender",Navigate(RecommenderDashboard),Navigate(UserDashboard));
-            //Navigate(UserDashboard)
+            //If(role.Role.Value="Recommender",Navigate(RecommenderDashboard),Navigate(UserDashboard));
+            Navigate(UserDashboard)
         Visible: =false
         X: =567
         Y: =622
