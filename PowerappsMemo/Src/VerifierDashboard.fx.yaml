@@ -147,7 +147,7 @@ VerifierDashboard As screen:
             Height: =35
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.PreparedBy
+            Text: =ThisItem.'Prepared By'
             Width: =234
             X: =426
             ZIndex: =3
@@ -213,7 +213,7 @@ VerifierDashboard As screen:
             Height: =92
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.ApprovalComments
+            Text: =ThisItem.'Approval Comments'
             VerticalAlign: =VerticalAlign.Top
             Width: =320
             X: =924
