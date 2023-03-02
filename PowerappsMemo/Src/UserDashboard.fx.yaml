@@ -337,8 +337,9 @@ UserDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(UserView);
+            //Navigate(UserView);
             //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
+            false
         ShowScrollbar: =false
         TemplateSize: =95
         Visible: =If(Label33_8.Text="Pending Verification",false,true)

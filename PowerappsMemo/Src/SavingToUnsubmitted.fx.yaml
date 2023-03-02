@@ -51,7 +51,9 @@ SavingToUnsubmitted As screen:
         Height: =350
         Items: =Filter(UnsubmittedMemoTableData, 'Meme No'=refNo_5.Text)
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(RecommenderViewItem)
+        OnSelect: |-
+            =//Navigate(RecommenderViewItem)
+            false
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =32

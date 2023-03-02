@@ -352,8 +352,9 @@ VerifierDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(VerifierView);
+            //Navigate(VerifierView);
             //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
+            false
         ShowScrollbar: =false
         TemplateSize: =95
         Visible: =If(Label33_9.Text="Pending Recommendation",true,false)

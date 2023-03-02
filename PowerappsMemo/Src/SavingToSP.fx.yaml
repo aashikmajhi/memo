@@ -53,7 +53,9 @@ SavingToSP As screen:
             =//PurchaseReq
             userSubmitGallery.AllItems
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(RecommenderViewItem)
+        OnSelect: |-
+            =//Navigate(RecommenderViewItem)
+            false
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =32

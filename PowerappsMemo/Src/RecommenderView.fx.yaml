@@ -56,7 +56,9 @@ RecommenderView As screen:
             =//MemoTableData
             Filter(MemoTableData,refNo_7.Text in 'Meme No')
         Layout: =Layout.Vertical
-        OnSelect: =Navigate(RecommenderEditItem)
+        OnSelect: |-
+            =//Navigate(RecommenderEditItem)
+            false
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308

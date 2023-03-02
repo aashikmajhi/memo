@@ -135,7 +135,8 @@ RecommenderDashboard As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
-            Navigate(RecommenderView)
+            //Navigate(RecommenderView)
+            false
         ShowScrollbar: =false
         TemplateSize: =95
         Width: =1282

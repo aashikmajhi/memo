@@ -55,7 +55,8 @@ UserView As screen:
         OnSelect: |-
             =//ResetForm(Form1);
             //Navigate('User Edit Item_1');
-            If(varLoggedInUser=approver1_11.Text,false,ResetForm(EditForm);Navigate(VerifierEditItem));
+            //If(varLoggedInUser=approver1_11.Text,false,ResetForm(EditForm);Navigate(VerifierEditItem));
+            false
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308

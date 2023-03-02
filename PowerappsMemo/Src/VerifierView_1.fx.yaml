@@ -58,7 +58,6 @@ VerifierView_1 As screen:
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
             Filter(MemoTableData,'Meme No'= refNo_11.Text)
         Layout: =Layout.Vertical
-        OnSelect: =approver3_6.Selected.Value
         TemplatePadding: =0
         TemplateSize: =33
         Width: =1308
