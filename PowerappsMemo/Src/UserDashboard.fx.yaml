@@ -478,7 +478,7 @@ UserDashboard As screen:
             OnSelect: |-
                 =//Navigate(Memo_1)
                 //Navigate(UserSubmitMemo);
-                If(Label33_7.Text="Pending Verifier",Navigate(VerifierView),If(Label33_7.Text="New",Navigate(UserSubmitMemo),false),false);
+                If(Label33_7.Text="Pending Verifier",Navigate(VerifierView),If(Label33_7.Text="New",Navigate(UserSubmitMemo),Label33_7.Text="Pending Recommender",Navigate(RecommenderView),false), false,false);
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
