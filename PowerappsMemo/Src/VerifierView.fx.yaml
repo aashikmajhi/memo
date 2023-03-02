@@ -983,7 +983,8 @@ VerifierView As screen:
             =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
             //If(IsBlank(approver2_5.Text),true,false)
             //If(loginUser.Email=approver2_5.Text,true,false)
-            If(IsBlank(approver2_6.Text),false,true)
+            //If(IsBlank(approver2_6.Text),false,true)
+            false
         Width: =250
         X: =556
         Y: =658
