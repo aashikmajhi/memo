@@ -513,7 +513,8 @@ VerifierSubmitMemo As screen:
             
             //If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
             ClearCollect(PurchaseReq,userSubmitGallery_1.AllItems);
-            If(verifiedby_1.Selected.Value="sumit.manandhar@astral.com.np",Navigate(SavingToSP),false)
+            //If(verifiedby_1.Selected.Value="sumit.manandhar@astral.com.np",Navigate(SavingToSP),false)
+            Navigate(SavingToSP)
         Size: =15
         Text: ="Submit"
         X: =621
