@@ -547,7 +547,9 @@ VerifierView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(userDashboardGallery.Selected.Status.Value="New",true,false)
+        Visible: |-
+            =//If(userDashboardGallery.Selected.Status.Value="New",true,false)
+            If(loginUser.Email=approver2_5.Text,true,false)
         Width: =250
         X: =556
         Y: =658
