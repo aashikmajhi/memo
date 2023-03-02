@@ -43,6 +43,9 @@
           "RequisitionPDF": {
             "tableName": "c9ef34cf-91bc-4972-8788-591bbf73fa76"
           },
+          "RoleController": {
+            "tableName": "ef416c9e-34df-432b-bb2e-b5ebe91940b2"
+          },
           "UnsubmittedMemoTableData": {
             "tableName": "5d562267-e194-4f68-a229-e0e89c7ebf2d"
           },
@@ -57,7 +60,8 @@
       "RequisitionDemoApprovalList",
       "MemoTableData",
       "UnsubmittedMemoTableData",
-      "UnsubmittedRequisitionApprovalList"
+      "UnsubmittedRequisitionApprovalList",
+      "RoleController"
     ],
     "dependencies": {},
     "dependents": [
