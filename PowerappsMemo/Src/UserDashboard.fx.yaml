@@ -27,7 +27,7 @@ UserDashboard As screen:
         Items: |-
             =
             //If(loginUser.Email=recommendedby1.Text,Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
-            If(role.Role.Value="Recommender",Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
+            If(role="Recommender",Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
         Layout: =Layout.Vertical
         TemplateSize: =67
         Width: =1280
@@ -69,7 +69,7 @@ UserDashboard As screen:
         PressedColor: =Self.Color
         PressedFill: =
         Size: =23
-        Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back " & loginUser.Email & ", " & role.Role.Value
+        Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back "
         Width: =628
         X: =26
         Y: =14
@@ -94,7 +94,7 @@ UserDashboard As screen:
         Visible: |-
             =//If(loginUser.Email=recommendedby1.Text,false,true);
             //If(role.Role.Value="Recommender",false,true)
-            If(loginUser.Email="sumit.manandhar@thakral.com",false,true)
+            If(loginUser.Email="sumit.manandhar@thakralone.com",false,true)
         Width: =246
         X: =1080
         Y: =54

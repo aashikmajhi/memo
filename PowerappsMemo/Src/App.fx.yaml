@@ -10,6 +10,10 @@ App As appinfo:
         
         //["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
         
-        Set(role, LookUp(RoleController,Role.Value=""));
+        //Set(role, LookUp(RoleController,Role.Value=""));
+        With(
+            {wUserRecord: LookUp(RoleController, Email=loginUser.Email)},
+            Set(role, wUserRecord.Role.Value)
+        );
     StartScreen: =SplashScreen
 

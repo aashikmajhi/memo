@@ -86,7 +86,7 @@ VerifierDashboard As screen:
             Navigate(CreateNewMemo)
         Size: =15
         Text: ="Create New"
-        Visible: =If(role.Role.Value="Creater",true,false)
+        Visible: =If(role="Creater",true,false)
         Width: =246
         X: =1080
         Y: =54
