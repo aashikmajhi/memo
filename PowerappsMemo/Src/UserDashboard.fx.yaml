@@ -3,6 +3,7 @@ UserDashboard As screen:
     Fill: =
 
     Button7_8 As button:
+        Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -91,184 +92,7 @@ UserDashboard As screen:
         Width: =246
         X: =1080
         Y: =54
-        ZIndex: =5
-
-    userDashboardGallery As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =403
-        Items: |-
-            =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending))),Date,SortOrder.Ascending)
-            
-            Sort(If(_requestTypeFilter="My Memo",Sort(UnsubmittedRequisitionApprovalList,Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
-        Layout: =Layout.Vertical
-        OnSelect: |-
-            =//Navigate(RespondingScreen)
-            Navigate(UserView);
-            //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
-        ShowScrollbar: =false
-        TemplateSize: =95
-        Visible: =If(Label33_8.Text="Pending Verification",false,true)
-        Width: =1282
-        X: =42
-        Y: =290
-        ZIndex: =6
-
-        rfDate_7 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =35
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.ShortDate)
-            X: =273
-            ZIndex: =1
-
-        rfNo_7 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =35
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.Title
-            Width: =120
-            ZIndex: =2
-
-        rfFrom_7 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =35
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.PreparedBy
-            Width: =234
-            X: =426
-            ZIndex: =3
-
-        Label33_7 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =35
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Status.Value
-            Width: =220
-            X: =685
-            ZIndex: =10
-
-        Label2_7 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =35
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Organization
-            X: =123
-            ZIndex: =12
-
-        subjectlbl_6 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
-            Size: =15
-            Text: ="Subject"
-            Width: =90
-            Y: =50
-            ZIndex: =14
-
-        Label9_7 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Subject
-            Width: =830
-            X: =90
-            Y: =50
-            ZIndex: =15
-
-        commentlbl_7 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =92
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.ApprovalComments
-            VerticalAlign: =VerticalAlign.Top
-            Width: =320
-            X: =924
-            ZIndex: =17
-
-        Rectangle3_7 As rectangle:
-            BorderColor: =RGBA(0, 80, 160, 1)
-            Fill: =RGBA(0, 89, 178, 1)
-            Height: =2
-            OnSelect: =Select(Parent)
-            Width: =userDashboardGallery.TemplateWidth
-            Y: =93
-            ZIndex: =20
-
-        Icon1_15 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Icon: =Icon.View
-            OnSelect: |-
-                =//Navigate(Memo_1)
-                Navigate(UserSubmitMemo);
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Width: =28
-            X: =1244
-            Y: =22
-            ZIndex: =22
-
-        Icon1_16 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =//Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
-                Set(container,true);
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Visible: =false
-            Width: =28
-            X: =1244
-            Y: =50
-            ZIndex: =23
+        ZIndex: =4
 
     Label21_7 As label:
         Align: =Align.Center
@@ -282,7 +106,7 @@ UserDashboard As screen:
         Width: =120
         X: =34
         Y: =249
-        ZIndex: =7
+        ZIndex: =5
 
     Label27_7 As label:
         Align: =Align.Center
@@ -296,7 +120,7 @@ UserDashboard As screen:
         Text: ="Date"
         X: =307
         Y: =249
-        ZIndex: =8
+        ZIndex: =6
 
     Label30_6 As label:
         Align: =Align.Center
@@ -311,7 +135,7 @@ UserDashboard As screen:
         Width: =234
         X: =460
         Y: =250
-        ZIndex: =9
+        ZIndex: =7
 
     Label32_7 As label:
         Align: =Align.Center
@@ -326,7 +150,7 @@ UserDashboard As screen:
         Width: =220
         X: =699
         Y: =250
-        ZIndex: =11
+        ZIndex: =8
 
     Label4_7 As label:
         Align: =Align.Center
@@ -340,32 +164,7 @@ UserDashboard As screen:
         Text: ="Organization"
         X: =157
         Y: =249
-        ZIndex: =12
-
-    cmtlbl_7 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Semibold
-        OnSelect: |
-            =
-        Size: =15
-        Text: ="Comment"
-        Width: =178
-        X: =1002
-        Y: =255
-        ZIndex: =13
-
-    Rectangle3_8 As rectangle:
-        BorderColor: =RGBA(0, 80, 160, 1)
-        Fill: =RGBA(0, 89, 178, 1)
-        Height: =2
-        OnSelect: =
-        Width: =userDashboardGallery.TemplateWidth
-        X: =40
-        Y: =293
-        ZIndex: =14
+        ZIndex: =9
 
     userDashboardGallery_1 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -380,11 +179,12 @@ UserDashboard As screen:
             //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
         ShowScrollbar: =false
         TemplateSize: =95
-        Visible: =If(Label33_8.Text="Pending Verification",true,false)
+        Visible: |
+            =If(Label33_8.Text="New",true,false)
         Width: =1282
         X: =42
         Y: =290
-        ZIndex: =15
+        ZIndex: =10
 
         rfDate_8 As label:
             Align: =Align.Center
@@ -502,6 +302,31 @@ UserDashboard As screen:
             Y: =93
             ZIndex: =20
 
+    cmtlbl_7 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        OnSelect: |
+            =
+        Size: =15
+        Text: ="Comment"
+        Width: =178
+        X: =1002
+        Y: =255
+        ZIndex: =11
+
+    Rectangle3_8 As rectangle:
+        BorderColor: =RGBA(0, 80, 160, 1)
+        Fill: =RGBA(0, 89, 178, 1)
+        Height: =2
+        OnSelect: =
+        Width: =userDashboardGallery.TemplateWidth
+        X: =40
+        Y: =293
+        ZIndex: =12
+
     Container1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 0, 0, 0.78)
         Height: =552
@@ -509,7 +334,7 @@ UserDashboard As screen:
         Width: =1322
         X: =24
         Y: =156
-        ZIndex: =16
+        ZIndex: =13
 
         Label2 As label:
             Align: =Align.Center
@@ -572,4 +397,182 @@ UserDashboard As screen:
             X: =1251
             Y: =6
             ZIndex: =4
+
+    userDashboardGallery As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Height: =403
+        Items: |-
+            =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending))),Date,SortOrder.Ascending)
+            
+            Sort(If(_requestTypeFilter="My Memo",Sort(UnsubmittedRequisitionApprovalList,Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
+        Layout: =Layout.Vertical
+        OnSelect: |-
+            =//Navigate(RespondingScreen)
+            Navigate(UserView);
+            //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
+        ShowScrollbar: =false
+        TemplateSize: =95
+        Visible: =If(Label33_8.Text="Pending Verification",false,true)
+        Width: =1282
+        X: =42
+        Y: =290
+        ZIndex: =14
+
+        rfDate_7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.ShortDate)
+            X: =273
+            ZIndex: =1
+
+        rfNo_7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Title
+            Width: =120
+            ZIndex: =2
+
+        rfFrom_7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.PreparedBy
+            Width: =234
+            X: =426
+            ZIndex: =3
+
+        Label33_7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Status.Value
+            Width: =220
+            X: =685
+            ZIndex: =4
+
+        Label2_7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Organization
+            X: =123
+            ZIndex: =5
+
+        subjectlbl_6 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Subject"
+            Width: =90
+            Y: =50
+            ZIndex: =6
+
+        Label9_7 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Subject
+            Width: =830
+            X: =90
+            Y: =50
+            ZIndex: =7
+
+        commentlbl_7 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =92
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.ApprovalComments
+            VerticalAlign: =VerticalAlign.Top
+            Width: =320
+            X: =924
+            ZIndex: =8
+
+        Rectangle3_7 As rectangle:
+            BorderColor: =RGBA(0, 80, 160, 1)
+            Fill: =RGBA(0, 89, 178, 1)
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =userDashboardGallery.TemplateWidth
+            Y: =93
+            ZIndex: =9
+
+        Icon1_15 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =28
+            Icon: =Icon.View
+            OnSelect: |-
+                =//Navigate(Memo_1)
+                Navigate(UserSubmitMemo);
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1244
+            Y: =22
+            ZIndex: =10
+
+        Icon1_16 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =28
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =//Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
+                Set(container,true);
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1244
+            Y: =50
+            ZIndex: =11
 
