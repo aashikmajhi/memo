@@ -477,7 +477,8 @@ UserDashboard As screen:
             Icon: =Icon.View
             OnSelect: |-
                 =//Navigate(Memo_1)
-                Navigate(UserSubmitMemo);
+                //Navigate(UserSubmitMemo);
+                If(Label33_7.Text="Pending Verifier",Navigate(VerifierView),If(Label33_7.Text="New",Navigate(UserSubmitMemo),false),false);
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
