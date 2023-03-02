@@ -2,7 +2,8 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |-
         =Set(_requestTypeFilter,"All");
-        Set(loginUser, LookUp(RoleController,Role.Value="Creater"));
+        Set(role, LookUp(RoleController,Role.Value="Creater"));
+        Set(loginUser,User());
         Set(varLoggedInUser,Office365Users.MyProfileV2({'$select':""}).displayName & User().Image & User().Email);
         
         //If(User().Email="application@astral.com.np",Set(role,"recommender"),If(User().Email="sumit.manandhar@aastral.com.np",Set(role,"verifier"),If(User().Email="naresh.singh.dhami@astral.com.np",Set(role,"creater"),false),false),false);
