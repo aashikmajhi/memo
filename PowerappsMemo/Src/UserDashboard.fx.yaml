@@ -498,6 +498,7 @@ UserDashboard As screen:
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
+            Visible: =If(Label33_7.Text="New",true,false)
             Width: =28
             X: =1244
             Y: =50
