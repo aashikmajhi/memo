@@ -479,7 +479,9 @@ VerifierView As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(VerifierDashboard);
+        OnSelect: |-
+            =//Navigate(VerifierDashboard);
+            Navigate(UserDashboard);
         Width: =45
         X: =10
         Y: =10
@@ -993,6 +995,7 @@ VerifierView As screen:
         RadiusTopRight: =15
         Size: =12
         Text: ="Add Item"
+        Visible: =If(userDashboardGallery.Selected.Status.Value="Pending Verifier",true,false)
         Width: =123
         X: =642
         Y: =586
