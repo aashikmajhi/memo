@@ -67,7 +67,7 @@ UserDashboard As screen:
         PressedColor: =Self.Color
         PressedFill: =
         Size: =23
-        Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back"
+        Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back " & loginUser.Email
         Width: =524
         X: =26
         Y: =14
