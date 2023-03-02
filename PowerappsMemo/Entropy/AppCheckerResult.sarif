@@ -20064,36 +20064,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VerifierView.approver2_5.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VerifierView.approver2_5.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "VerifierView",
-                "type": "VerifierView.approver2_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VerifierView.approver3_5.Visible"
                 }
               ],
