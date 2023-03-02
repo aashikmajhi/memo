@@ -1,4 +1,4 @@
-RecommenderAddItem As screen:
+VerifierAddItem As screen:
     Fill: =RGBA(153, 205, 255, 1)
 
     Form4_3 As form:
@@ -923,7 +923,7 @@ RecommenderAddItem As screen:
                 Notify("Empty fields can not be processed")
             );
             SubmitForm(Form4_3);
-            Navigate(RecommenderView);
+            Navigate(VerifierView);
         Size: =15
         Text: ="Add"
         X: =603
@@ -939,7 +939,7 @@ RecommenderAddItem As screen:
         OnSelect: |-
             =ResetForm(Form4_3);
             //Navigate(Memo);
-            Navigate(RecommenderView)
+            Navigate(VerifierView)
         X: =12
         Y: =15
         ZIndex: =3
