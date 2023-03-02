@@ -204,7 +204,9 @@ VerifierView As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =32
             Icon: =Icon.CancelBadge
-            OnSelect: =Remove(MemoTableData,ThisItem)
+            OnSelect: |-
+                =//Remove(MemoTableData,ThisItem)
+                Set(container,true)
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
