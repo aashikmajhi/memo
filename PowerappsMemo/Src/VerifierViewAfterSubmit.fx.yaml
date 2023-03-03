@@ -1,0 +1,901 @@
+VerifierViewAfterSubmit As screen:
+    Fill: =RGBA(153, 205, 255, 1)
+    OnVisible: =
+
+    "SNGallery_13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Height: =263
+        Items: =Sequence(CountRows(verifierViewGallery_2.AllItems))
+        Layout: =Layout.Vertical
+        OnSelect: =
+        TemplatePadding: =0
+        TemplateSize: =33
+        Width: =42
+        X: =10
+        Y: =316
+        ZIndex: =1
+
+        Separator2_12 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =0.31
+            Fill: =RGBA(0, 89, 178, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            TabIndex: =0
+            Width: =Parent.TemplateWidth
+            Y: =32
+            ZIndex: =3
+
+        Label15_12 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Value
+            Width: =42
+            ZIndex: =4
+
+    verifierViewGallery_2 As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Height: =263
+        Items: |
+            =//MemoTableData
+            //Filter(MemoTableData,refNo_7.Text in 'Meme No')
+            Filter(MemoTableData,'Meme No'= refNo_3.Text)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =33
+        Width: =1308
+        X: =52
+        Y: =316
+        ZIndex: =1
+
+        Rectangle2_17 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =0.31
+            Fill: =RGBA(0, 51, 102, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =verifierViewGallery_2.TemplateWidth
+            Y: =32
+            ZIndex: =4
+
+        Label24_62 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Source
+            ZIndex: =5
+
+        Label25_12 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.TypeNo
+            Width: =50
+            X: =261
+            ZIndex: =6
+
+        Label26_12 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Types
+            Width: =111
+            X: =150
+            ZIndex: =7
+
+        Label24_63 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.TypeNoName
+            Width: =234
+            X: =311
+            ZIndex: =10
+
+        Label24_64 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Amount
+            Width: =100
+            X: =545
+            ZIndex: =11
+
+        Label24_66 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Narration
+            Tooltip: =ThisItem.Narration
+            VerticalAlign: =VerticalAlign.Top
+            Width: =481
+            X: =765
+            ZIndex: =13
+
+        Label24_65 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.BillNo
+            Width: =120
+            X: =645
+            ZIndex: =14
+
+        Icon2_17 As icon.CancelBadge:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =32
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =//Remove(MemoTableData,ThisItem)
+                Set(container,true)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =If(loginUser.Email=approver2_9.Text,true,false)
+            Width: =30
+            X: =1278
+            ZIndex: =15
+
+        Icon1_24 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =33
+            Icon: =Icon.View
+            OnSelect: =Navigate(VerifierEditItem)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =32
+            X: =1246
+            ZIndex: =16
+
+    Label8_45 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Prepared By:"
+        Visible: =If(IsBlank(approver1_14.Text),false,true)
+        Width: =126
+        X: =67
+        Y: =625
+        ZIndex: =5
+
+    Label13_129 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="S.N."
+        Width: =40
+        X: =10
+        Y: =284
+        ZIndex: =9
+
+    Label13_130 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="Source"
+        X: =55
+        Y: =284
+        ZIndex: =10
+
+    Label13_131 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="Type"
+        Width: =75
+        X: =221
+        Y: =284
+        ZIndex: =11
+
+    Label13_132 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="No"
+        Width: =50
+        X: =314
+        Y: =284
+        ZIndex: =12
+
+    Label19_13 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Date : "
+        Width: =65
+        X: =14
+        Y: =73
+        ZIndex: =13
+
+    Label20_46 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="From : "
+        Width: =65
+        X: =14
+        Y: =104
+        ZIndex: =15
+
+    from_18 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.From
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =104
+        ZIndex: =16
+
+    Label20_47 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Department : "
+        Width: =126
+        X: =890
+        Y: =126
+        ZIndex: =18
+
+    department_14 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.Department
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =325
+        X: =1015
+        Y: =126
+        ZIndex: =19
+
+    Label22_12 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Subject : "
+        Width: =85
+        X: =495
+        Y: =198
+        ZIndex: =20
+
+    Label23_12 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Ref No : "
+        Width: =93
+        X: =1015
+        Y: =90
+        ZIndex: =21
+
+    refNo_14 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//verifierDashboardGallery.Selected.Title
+            userDashboardGallery.Selected.Title
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =232
+        X: =1108
+        Y: =90
+        ZIndex: =22
+
+    Icon1_23 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =//Navigate(VerifierDashboard);
+            Navigate(UserDashboard);
+        Width: =45
+        X: =10
+        Y: =10
+        ZIndex: =25
+
+    Label8_46 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Verified By:"
+        Visible: =If(IsBlank(approver2_9.Text),false,true)
+        Width: =144
+        X: =334
+        Y: =625
+        ZIndex: =26
+
+    Label1_11 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =15
+        Text: ="Internal Memo"
+        X: =599
+        Y: =58
+        ZIndex: =36
+
+    TextInput7_11 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.Subject
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        X: =581
+        Y: =198
+        ZIndex: =37
+
+    Label20_48 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="To : "
+        Width: =65
+        X: =14
+        Y: =139
+        ZIndex: =38
+
+    Label20_49 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Cc : "
+        Width: =65
+        X: =14
+        Y: =174
+        ZIndex: =39
+
+    approver1_14 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Prepared By'
+            userDashboardGallery.Selected.PreparedBy
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =10
+        Visible: =If(IsBlank(approver1_14.Text),false,true)
+        Width: =250
+        X: =10
+        Y: =657
+        ZIndex: =44
+
+    Label13_133 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="Name"
+        X: =403
+        Y: =284
+        ZIndex: =45
+
+    Label13_134 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="Amount"
+        Width: =88
+        X: =602
+        Y: =284
+        ZIndex: =46
+
+    Label13_135 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="Bill No."
+        Width: =70
+        X: =719
+        Y: =284
+        ZIndex: =47
+
+    Label13_136 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =10
+        Text: ="Narration"
+        X: =854
+        Y: =284
+        ZIndex: =48
+
+    TextInput9_22 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="Dear Sir/Madame"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =170
+        X: =10
+        Y: =228
+        ZIndex: =50
+
+    TextInput9_23 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="This is to request for approval for payment of below parties for below references from below sources."
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =846
+        X: =10
+        Y: =254
+        ZIndex: =51
+
+    date_12 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.Date
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =70
+        ZIndex: =52
+
+    ComboBox1_18 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.To
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =139
+        ZIndex: =53
+
+    ComboBox1_19 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =verifierDashboardGallery.Selected.Cc
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =179
+        ZIndex: =54
+
+    approver2_9 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Verified By'
+            //userDashboardGallery.Selected.VerifiedBy
+            LookUp(RequisitionDemoApprovalList,Title=refNo_14.Text, 'Verified By')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =10
+        Visible: =If(IsBlank(approver2_9.Text),false,true)
+        Width: =250
+        X: =278
+        Y: =657
+        ZIndex: =55
+
+    companyName_10 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        OnSelect: =
+        Size: =25
+        Text: =verifierDashboardGallery.Selected.Organization
+        Width: =320
+        X: =521
+        Y: =12
+        ZIndex: =56
+
+    approver2_10 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Recommended By'
+            LookUp(RequisitionDemoApprovalList,Title=refNo_14.Text, 'Recommended By')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =10
+        Visible: =If(IsBlank(approver2_10.Text),false,true)
+        Width: =250
+        X: =546
+        Y: =658
+        ZIndex: =58
+
+    approver2_12 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Recommended By'
+            LookUp(RequisitionDemoApprovalList,Title=refNo_14.Text, 'First Approver')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =10
+        Visible: =If(IsBlank(approver2_12.Text),false,true)
+        Width: =250
+        X: =822
+        Y: =658
+        ZIndex: =59
+
+    approver2_13 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//verifierDashboardGallery.Selected.'Recommended By'
+            LookUp(RequisitionDemoApprovalList,Title=refNo_14.Text, 'Second Approver')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =32
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        Size: =10
+        Visible: =If(IsBlank(approver2_13.Text),false,true)
+        Width: =250
+        X: =1100
+        Y: =657
+        ZIndex: =60
+
+    Label8_47 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Recommended By:"
+        Visible: =If(IsBlank(approver2_10.Text),false,true)
+        Width: =175
+        X: =588
+        Y: =626
+        ZIndex: =61
+
+    Label8_48 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="First Approver:"
+        Visible: =If(IsBlank(approver2_12.Text),false,true)
+        Width: =144
+        X: =875
+        Y: =626
+        ZIndex: =62
+
+    Label8_49 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        OnSelect: =
+        Size: =13
+        Text: |-
+            ="Second Approver:"
+        Visible: =If(IsBlank(approver2_13.Text),false,true)
+        Width: =165
+        X: =1143
+        Y: =625
+        ZIndex: =63
+
