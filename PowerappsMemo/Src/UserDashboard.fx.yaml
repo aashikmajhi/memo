@@ -48,7 +48,7 @@ UserDashboard As screen:
             OnSelect: =Set(_requestTypeFilter, ThisItem.fil);
             PressedBorderColor: =
             PressedColor: =Self.Color
-            PressedFill: =RGBA(25, 111, 224, 0.91)
+            PressedFill: =RGBA(0, 89, 178, 1)
             Size: =15
             Text: =ThisItem.fil
             X: =50
@@ -341,9 +341,9 @@ UserDashboard As screen:
             =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending))),Date,SortOrder.Ascending)
             
             //Sort(If(_requestTypeFilter="My Memo",Sort(UnsubmittedRequisitionApprovalList,Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
-            //Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
+            Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
             
-            Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(Filter(RequisitionDemoApprovalList,'Recommended By'=User().Email),Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
+            //Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(Filter(RequisitionDemoApprovalList,'Recommended By'=User().Email),Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
         Layout: =Layout.Vertical
         OnSelect: |-
             =//Navigate(RespondingScreen)
@@ -352,7 +352,9 @@ UserDashboard As screen:
             false
         ShowScrollbar: =false
         TemplateSize: =95
-        Visible: =If(Label33_8.Text="Pending Verification",false,true)
+        Visible: |-
+            =//If(Label33_8.Text="Pending Verification",false,true)
+            If(galData,false,true)
         Width: =1282
         X: =42
         Y: =290
@@ -588,4 +590,139 @@ UserDashboard As screen:
             X: =1251
             Y: =6
             ZIndex: =4
+
+    userDashboardGallery_2 As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Height: =403
+        Items: =Sort(If(_requestTypeFilter="My Memo",Sort(UnsubmittedRequisitionApprovalList,Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
+        Layout: =Layout.Vertical
+        OnSelect: |-
+            =//Navigate(RespondingScreen)
+            Navigate(UserView);
+            //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
+        ShowScrollbar: =false
+        TemplateSize: =95
+        Visible: |
+            =//If(Label33_8.Text="New",true,false)
+            If(galData,true,false)
+        Width: =1282
+        X: =42
+        Y: =290
+        ZIndex: =15
+
+        rfDate_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.ShortDate)
+            X: =273
+            ZIndex: =1
+
+        rfNo_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Title
+            Width: =120
+            ZIndex: =2
+
+        rfFrom_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.PreparedBy
+            Width: =234
+            X: =426
+            ZIndex: =3
+
+        Label33_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Status.Value
+            Width: =220
+            X: =685
+            ZIndex: =10
+
+        Label2_13 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Organization
+            X: =123
+            ZIndex: =12
+
+        subjectlbl_9 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: ="Subject"
+            Width: =90
+            Y: =50
+            ZIndex: =14
+
+        Label9_10 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Subject
+            Width: =830
+            X: =90
+            Y: =50
+            ZIndex: =15
+
+        commentlbl_10 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =92
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.ApprovalComments
+            VerticalAlign: =VerticalAlign.Top
+            Width: =320
+            X: =924
+            ZIndex: =17
+
+        Rectangle3_11 As rectangle:
+            BorderColor: =RGBA(0, 80, 160, 1)
+            Fill: =RGBA(0, 89, 178, 1)
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =userDashboardGallery_2.TemplateWidth
+            Y: =93
+            ZIndex: =20
 

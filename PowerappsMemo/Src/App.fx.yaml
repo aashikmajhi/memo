@@ -6,14 +6,11 @@ App As appinfo:
         Set(loginUser,User());
         Set(varLoggedInUser,Office365Users.MyProfileV2({'$select':""}).displayName & User().Image & User().Email);
         
-        //If(User().Email="application@astral.com.np",Set(role,"recommender"),If(User().Email="sumit.manandhar@aastral.com.np",Set(role,"verifier"),If(User().Email="naresh.singh.dhami@astral.com.np",Set(role,"creater"),false),false),false);
-        
-        //["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np"]
-        
-        //Set(role, LookUp(RoleController,Role.Value=""));
         With(
             {wUserRecord: LookUp(RoleController, Email=loginUser.Email)},
             Set(role, wUserRecord.Role.Value)
         );
+        
+        If(role="Recommender",Set(galData,true));
     StartScreen: =SplashScreen
 
