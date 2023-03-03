@@ -59,7 +59,8 @@ VerifierSubmitMemo As screen:
             //PurchaseReq
             //Filter(MemoTableData, 'Meme No'=refNo_10.Text)
             //userViewGallery.AllItems
-            Filter(UnsubmittedMemoTableData,'Meme No'=userDashboardGallery.Selected.Title)
+            //Filter(UnsubmittedMemoTableData,'Meme No'=userDashboardGallery.Selected.Title)
+            Filter(UnsubmittedMemoTableData,'Meme No'=refNo_12.Text)
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
