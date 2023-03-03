@@ -175,7 +175,7 @@ VerifierView As screen:
             Text: =ThisItem.Narration
             Tooltip: =ThisItem.Narration
             VerticalAlign: =VerticalAlign.Top
-            Width: =481
+            Width: =471
             X: =765
             ZIndex: =13
 
@@ -230,7 +230,7 @@ VerifierView As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =32
-            X: =1246
+            X: =1236
             ZIndex: =16
 
     Label8_11 As label:
