@@ -484,12 +484,18 @@ UserDashboard As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: |-
+            OnSelect: |+
                 =//Navigate(Memo_1)
                 //Navigate(UserSubmitMemo);
                 //If(Label33_7.Text="Pending Verifier",Navigate(VerifierView),If(Label33_7.Text="New",Navigate(UserSubmitMemo),If(Label33_7.Text="Pending Recommender",Navigate(RecommenderView),false), false),false)
                 
-                Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo))
+                Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo));
+                
+                If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
+                If(Label33_7.Text="Pending Verifier",Navigate(VerifierView));
+                If(Label33_7.Text="New",Navigate(UserSubmitMemo));
+                If( role = "Creater" && Label33_7.Text="Pending Verifier",Navigate(UserViewAfterSubmit));
+                
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
