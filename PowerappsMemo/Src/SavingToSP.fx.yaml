@@ -765,6 +765,7 @@ SavingToSP As screen:
             Reset(ComboBox1);
             Reset(ComboBox1_1);
             Reset(TextInput7_7);
+            Remove(UnsubmittedMemoTableData,userSubmitGallery.AllItems);
             Navigate(UserDashboard)
         Visible: =false
         X: =589
