@@ -735,7 +735,7 @@ SavingToSP As screen:
             
             //Office365Outlook.SendEmailV2(app1.Text,"Testing mail.","We are just testing the pdf generating feature and sending it as an email.",{Attachments:Table({Name:"PurchaseReq for the Ref No " & refNo_1.Text &".pdf",ContentBytes:myPdf})});
             Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,Status:{Value:"Pending Verifier"}});
-            
+            Patch(UnsubmittedRequisitionApprovalList,Defaults(UnsubmittedRequisitionApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,Status:{Value:"Pending Verifier"}});
             ForAll(
                PurchaseReq,
                 Patch(
@@ -765,7 +765,6 @@ SavingToSP As screen:
             Reset(ComboBox1);
             Reset(ComboBox1_1);
             Reset(TextInput7_7);
-            Remove(UnsubmittedMemoTableData,userSubmitGallery.AllItems);
             Navigate(UserDashboard)
         Visible: =false
         X: =589
