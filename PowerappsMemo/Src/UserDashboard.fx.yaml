@@ -110,7 +110,7 @@ UserDashboard As screen:
         Size: =15
         Text: ="Ref No"
         Width: =120
-        X: =34
+        X: =44
         Y: =249
         ZIndex: =5
 
@@ -124,7 +124,7 @@ UserDashboard As screen:
             =
         Size: =15
         Text: ="Date"
-        X: =307
+        X: =337
         Y: =249
         ZIndex: =6
 
@@ -139,7 +139,7 @@ UserDashboard As screen:
         Size: =15
         Text: ="Prepared By"
         Width: =234
-        X: =460
+        X: =480
         Y: =250
         ZIndex: =7
 
@@ -154,7 +154,7 @@ UserDashboard As screen:
         Size: =15
         Text: ="Status"
         Width: =220
-        X: =699
+        X: =739
         Y: =250
         ZIndex: =8
 
@@ -168,7 +168,7 @@ UserDashboard As screen:
             =
         Size: =15
         Text: ="Organization"
-        X: =157
+        X: =187
         Y: =249
         ZIndex: =9
 
@@ -366,7 +366,7 @@ UserDashboard As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.ShortDate)
-            X: =273
+            X: =283
             ZIndex: =1
 
         rfNo_7 As label:
@@ -379,7 +379,7 @@ UserDashboard As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Title
-            Width: =120
+            Width: =133
             ZIndex: =2
 
         rfFrom_7 As label:
@@ -393,7 +393,7 @@ UserDashboard As screen:
             Size: =13
             Text: =ThisItem.PreparedBy
             Width: =234
-            X: =426
+            X: =436
             ZIndex: =3
 
         Label33_7 As label:
@@ -420,7 +420,7 @@ UserDashboard As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Organization
-            X: =123
+            X: =133
             ZIndex: =5
 
         subjectlbl_6 As label:
