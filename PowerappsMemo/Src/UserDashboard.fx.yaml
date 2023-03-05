@@ -720,8 +720,8 @@ UserDashboard As screen:
             Icon: =Icon.View
             OnSelect: |+
                 =
-                If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
-                If(role = "Recommender" && (Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
+                If(ThisItem.Status.Value="Pending Recommendation",Navigate(RecommenderView));
+                If(role = "Recommender" && (ThisItem.Status.Value="Pending First Approval" || ThisItem.Status.Value="Pending Second Approval" || ThisItem.Status.Value="Approved" || ThisItem.Status.Value="Declined"),Navigate(RecommenderViewAfterSubmit));
                 
                 
             PaddingBottom: =5
