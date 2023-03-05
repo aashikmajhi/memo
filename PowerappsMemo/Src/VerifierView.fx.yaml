@@ -926,7 +926,7 @@ VerifierView As screen:
             Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             //Navigate(UserDashboard);
-            If(approver3_5.Selected.Value="",false,Navigate(UserDashboard));
+            If(IsBlank(approver3_5.Selected.Value),Notify("Select Recommender"),Navigate(UserDashboard));
         Size: =15
         Text: ="Submit"
         Visible: |
