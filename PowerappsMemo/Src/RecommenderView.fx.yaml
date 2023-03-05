@@ -82,7 +82,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
@@ -97,7 +96,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
@@ -114,7 +112,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
@@ -152,7 +149,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
@@ -170,7 +166,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
@@ -187,7 +182,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =33
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
@@ -206,7 +200,6 @@ RecommenderView As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =32
-            OnSelect: =Select(Parent)
             PaddingBottom: =2
             PaddingLeft: =2
             PaddingRight: =2
