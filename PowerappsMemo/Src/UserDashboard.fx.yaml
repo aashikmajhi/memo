@@ -476,7 +476,7 @@ UserDashboard As screen:
                 //Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo));
                 
                 If(Label33_7.Text="Pending Verifier",Navigate(VerifierView));
-                If(( Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined") && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit));
+                If( Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit));
                 
                 If(Label33_7.Text="New" ,Navigate(UserSubmitMemo));
                 If(loginUser.Email = ThisItem.PreparedBy && (Label33_7.Text="Pending Verifier" || Label33_7.Text="Pending Recommendation" ||Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(UserViewAfterSubmit));
