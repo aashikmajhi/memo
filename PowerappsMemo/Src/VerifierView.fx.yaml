@@ -943,6 +943,7 @@ VerifierView As screen:
         OnSelect: |
             =Set(recomm,false);
             Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
+            Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             Navigate(UserDashboard);
         Size: =15
         Text: ="Submit"
