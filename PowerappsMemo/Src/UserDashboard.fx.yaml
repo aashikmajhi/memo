@@ -200,7 +200,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.ShortDate)
             X: =273
@@ -213,7 +212,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Title
             Width: =120
@@ -226,7 +224,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.PreparedBy
             Width: =234
@@ -240,7 +237,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Status.Value
             Width: =220
@@ -254,7 +250,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Organization
             X: =123
@@ -266,7 +261,6 @@ UserDashboard As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
             Size: =15
             Text: ="Subject"
             Width: =90
@@ -278,7 +272,6 @@ UserDashboard As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Subject
             Width: =830
@@ -292,7 +285,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =92
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.ApprovalComments
             VerticalAlign: =VerticalAlign.Top
@@ -428,7 +420,6 @@ UserDashboard As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
             Size: =15
             Text: ="Subject"
             Width: =90
@@ -464,7 +455,6 @@ UserDashboard As screen:
             BorderColor: =RGBA(0, 80, 160, 1)
             Fill: =RGBA(0, 89, 178, 1)
             Height: =2
-            OnSelect: =Select(Parent)
             Width: =userDashboardGallery.TemplateWidth
             Y: =93
             ZIndex: =9
@@ -618,7 +608,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =Text(DateValue(ThisItem.Date),DateTimeFormat.ShortDate)
             X: =273
@@ -631,7 +620,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Title
             Width: =120
@@ -644,7 +632,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.PreparedBy
             Width: =234
@@ -658,7 +645,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Status.Value
             Width: =220
@@ -672,7 +658,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =35
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Organization
             X: =123
@@ -684,7 +669,6 @@ UserDashboard As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
             Size: =15
             Text: ="Subject"
             Width: =90
@@ -696,7 +680,6 @@ UserDashboard As screen:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.Subject
             Width: =830
@@ -710,7 +693,6 @@ UserDashboard As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =92
-            OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.ApprovalComments
             VerticalAlign: =VerticalAlign.Top
