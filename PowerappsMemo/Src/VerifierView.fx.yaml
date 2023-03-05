@@ -940,11 +940,12 @@ VerifierView As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |
+        OnSelect: |-
             =Set(recomm,false);
             Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
-            Navigate(UserDashboard);
+            //Navigate(UserDashboard);
+            If(IsEmpty(approver3_5.Selected.Value) ||approver3_5.Selected.Value="",false,Navigate(UserDashboard));
         Size: =15
         Text: ="Submit"
         Visible: |-

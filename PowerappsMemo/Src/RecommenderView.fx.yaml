@@ -476,8 +476,8 @@ RecommenderView As screen:
         OnSelect: |-
             =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
             Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_7.Text)),{Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
-            Navigate(RecommenderDashboard);
-            //Navigate(MemoPDF)
+            //Navigate(RecommenderDashboard);
+            If(IsEmpty(approver_1.Selected.Value && approver_2.Selected.Value) || (approver_1.Selected.Value="" && approver_2.Selected.Value=""),false,Navigate(RecommenderDashboard));
         Size: =15
         Text: ="Submit"
         Visible: =If(IsBlank(recommendedby1.Text),false,true)
