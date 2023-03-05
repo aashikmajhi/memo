@@ -248,7 +248,9 @@ RecommenderView As screen:
         RadiusTopRight: =15
         Size: =12
         Text: ="Add Item"
-        Visible: =false
+        Visible: |-
+            =//If(IsBlank(recommendedby1.Text),false,true)
+            false
         Width: =123
         X: =642
         Y: =586
@@ -479,7 +481,7 @@ RecommenderView As screen:
         Text: |-
             ="Save
             "
-        Visible: =If(loginUser.Email=recommendedby1.Text,true,false)
+        Visible: =If(IsBlank(recommendedby1.Text),false,true)
         X: =536
         Y: =715
         ZIndex: =23
