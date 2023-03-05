@@ -13954,66 +13954,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.verifierViewGallery_2.Icon2_17.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.verifierViewGallery_2.Icon2_17.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "VerifierViewAfterSubmit",
-                "type": "VerifierViewAfterSubmit.verifierViewGallery_2.Icon2_17"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.verifierViewGallery_2.Icon2_17.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.verifierViewGallery_2.Icon2_17.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "VerifierViewAfterSubmit",
-                "type": "VerifierViewAfterSubmit.verifierViewGallery_2.Icon2_17"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VerifierViewAfterSubmit.approver1_14.AccessibleLabel"
                 }
               ],

@@ -686,7 +686,7 @@ RecommenderViewAfterSubmit As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -705,7 +705,7 @@ RecommenderViewAfterSubmit As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -724,7 +724,7 @@ RecommenderViewAfterSubmit As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -784,7 +784,7 @@ RecommenderViewAfterSubmit As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =13
+        Size: =10
         Visible: =If(IsBlank(recommendedby1_1.Text),false,true)
         Width: =250
         X: =559
@@ -807,7 +807,7 @@ RecommenderViewAfterSubmit As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =13
+        Size: =10
         Visible: =If(IsBlank(recommendedby1_2.Text),false,true)
         Width: =250
         X: =826
@@ -830,7 +830,7 @@ RecommenderViewAfterSubmit As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =13
+        Size: =10
         Visible: =If(IsBlank(recommendedby1_3.Text),false,true)
         Width: =250
         X: =1098

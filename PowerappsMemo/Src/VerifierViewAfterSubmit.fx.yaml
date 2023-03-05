@@ -183,26 +183,6 @@ VerifierViewAfterSubmit As screen:
             X: =645
             ZIndex: =14
 
-        Icon2_17 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =32
-            Icon: =Icon.CancelBadge
-            OnSelect: |-
-                =//Remove(MemoTableData,ThisItem)
-                Set(container,true)
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Visible: =If(loginUser.Email=approver2_9.Text,true,false)
-            Width: =30
-            X: =1278
-            ZIndex: =15
-
         Icon1_24 As icon.View:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =1
@@ -217,7 +197,7 @@ VerifierViewAfterSubmit As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =32
-            X: =1246
+            X: =1276
             ZIndex: =16
 
     Label8_45 As label:
