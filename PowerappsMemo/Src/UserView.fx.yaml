@@ -817,3 +817,15 @@ UserView As screen:
             Y: =6
             ZIndex: =4
 
+    Label10 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =25
+        Size: =13
+        Text: ="UserView"
+        Width: =284
+        X: =94
+        Y: =33
+        ZIndex: =59
+
