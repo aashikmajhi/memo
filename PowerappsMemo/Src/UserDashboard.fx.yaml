@@ -610,7 +610,7 @@ UserDashboard As screen:
             //If(varLoggedInUser=ThisItem.'Prepared By',false,Navigate(UserView));
         ShowScrollbar: =false
         TemplateSize: =95
-        Visible: |
+        Visible: |-
             =//If(Label33_8.Text="New",true,false)
             If(galData,true,false)
         Width: =1282
