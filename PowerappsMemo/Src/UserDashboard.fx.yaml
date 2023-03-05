@@ -187,7 +187,7 @@ UserDashboard As screen:
         TemplateSize: =95
         Visible: |
             =//If(Label33_8.Text="New",true,false)
-            false
+            true
         Width: =1282
         X: =42
         Y: =290
