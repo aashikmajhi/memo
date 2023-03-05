@@ -57,7 +57,7 @@ VerifierView As screen:
         Items: |
             =//MemoTableData
             //Filter(MemoTableData,refNo_7.Text in 'Meme No')
-            Filter(MemoTableData,'Meme No'= refNo_3.Text)
+            Filter(MemoTableData,'Meme No'= refNo_8.Text)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =33
