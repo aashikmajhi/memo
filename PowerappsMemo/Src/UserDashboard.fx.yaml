@@ -475,8 +475,8 @@ UserDashboard As screen:
                 
                 //Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo));
                 
-                If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
-                If(role = "Recommender" && (Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
+                //If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
+                //If(role = "Recommender" && (Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
                 If(Label33_7.Text="Pending Verifier" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierView));
                 If(loginUser.Email = ThisItem.VerifiedBy && ( Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(VerifierViewAfterSubmit));
                 If(Label33_7.Text="New" && loginUser.Email = ThisItem.PreparedBy,Navigate(UserSubmitMemo));
@@ -721,8 +721,8 @@ UserDashboard As screen:
             Icon: =Icon.View
             OnSelect: |+
                 =
-                //If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
-                //If(role = "Recommender" && (Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
+                If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
+                If(role = "Recommender" && (Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
                 
                 
             PaddingBottom: =5
