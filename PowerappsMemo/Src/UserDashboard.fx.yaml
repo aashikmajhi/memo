@@ -488,7 +488,7 @@ UserDashboard As screen:
             PaddingTop: =5
             Width: =28
             X: =1244
-            Y: =20
+            Y: =30
             ZIndex: =10
 
         Icon1_16 As icon.View:
@@ -597,7 +597,8 @@ UserDashboard As screen:
         TemplateSize: =95
         Visible: |-
             =//If(Label33_8.Text="New",true,false)
-            If(galData,true,false)
+            //If(galData,true,false)
+            true
         Width: =1282
         X: =42
         Y: =290
@@ -710,4 +711,56 @@ UserDashboard As screen:
             Width: =userDashboardGallery_2.TemplateWidth
             Y: =93
             ZIndex: =20
+
+        Icon1_26 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Icon: =Icon.View
+            OnSelect: |+
+                =//Navigate(Memo_1)
+                //Navigate(UserSubmitMemo);
+                //If(Label33_7.Text="Pending Verifier",Navigate(VerifierView),If(Label33_7.Text="New",Navigate(UserSubmitMemo),If(Label33_7.Text="Pending Recommender",Navigate(RecommenderView),false), false),false)
+                
+                //Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo));
+                
+                If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
+                If(role = "Recommender" && (Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approvved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
+                If(Label33_7.Text="Pending Verifier",Navigate(VerifierView));
+                If(role = "Creater" && loginUser.Email = ThisItem.VerifiedBy && (Label33_7.Text="Pending Verifier" || Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approvved" || Label33_7.Text="Declined"),Navigate(VerifierViewAfterSubmit));
+                If(Label33_7.Text="New",Navigate(UserSubmitMemo));
+                If( role = "Creater" && loginUser.Email = ThisItem.PreparedBy && (Label33_7.Text="Pending Verifier" || Label33_7.Text="Pending Recommendation" ||Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approvved" || Label33_7.Text="Declined"),Navigate(UserViewAfterSubmit));
+                
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1244
+            Y: =10
+            ZIndex: =21
+
+        Icon1_27 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =//Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
+                Set(container,true);
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =If(Label33_7.Text="New",true,false)
+            Width: =28
+            X: =1244
+            Y: =37
+            ZIndex: =22
 
