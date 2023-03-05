@@ -475,6 +475,7 @@ RecommenderView As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
+            Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_7.Text)),{Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
             Navigate(RecommenderDashboard);
             //Navigate(MemoPDF)
         Size: =15
