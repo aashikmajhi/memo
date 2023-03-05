@@ -478,7 +478,7 @@ UserDashboard As screen:
                 //If(Label33_7.Text="Pending Recommendation",Navigate(RecommenderView));
                 //If(role = "Recommender" && (Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(RecommenderViewAfterSubmit));
                 If(Label33_7.Text="Pending Verifier",Navigate(VerifierView));
-                If(role="Recommender" && loginUser.Email = ThisItem.VerifiedBy && ( Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(VerifierViewAfterSubmit));
+                If(role="Creater" && loginUser.Email = ThisItem.VerifiedBy && ( Label33_7.Text="Pending Recommendation" || Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(VerifierViewAfterSubmit));
                 If(Label33_7.Text="New" ,Navigate(UserSubmitMemo));
                 If( role="Creater" && loginUser.Email = ThisItem.PreparedBy && (Label33_7.Text="Pending Verifier" || Label33_7.Text="Pending Recommendation" ||Label33_7.Text="Pending First Approval" || Label33_7.Text="Pending Second Approval" || Label33_7.Text="Approved" || Label33_7.Text="Declined"),Navigate(UserViewAfterSubmit));
                 
