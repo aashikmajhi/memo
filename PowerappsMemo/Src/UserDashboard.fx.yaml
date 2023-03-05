@@ -487,7 +487,7 @@ UserDashboard As screen:
             PaddingTop: =5
             Width: =28
             X: =1244
-            Y: =30
+            Y: =20
             ZIndex: =10
 
         Icon1_16 As icon.View:
@@ -730,7 +730,7 @@ UserDashboard As screen:
             PaddingTop: =5
             Width: =28
             X: =1244
-            Y: =10
+            Y: =20
             ZIndex: =21
 
         Icon1_27 As icon.View:
@@ -751,6 +751,6 @@ UserDashboard As screen:
             Visible: =If(Label33_7.Text="New",true,false)
             Width: =28
             X: =1244
-            Y: =37
+            Y: =47
             ZIndex: =22
 
