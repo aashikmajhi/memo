@@ -74,7 +74,7 @@ RecommenderView As screen:
             OnSelect: =Select(Parent)
             Width: =recomViewGallery.TemplateWidth
             Y: =32
-            ZIndex: =4
+            ZIndex: =1
 
         Label24_19 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -88,7 +88,7 @@ RecommenderView As screen:
             PaddingTop: =2
             Size: =10
             Text: =ThisItem.Source
-            ZIndex: =5
+            ZIndex: =2
 
         Label25_5 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -104,7 +104,7 @@ RecommenderView As screen:
             Text: =ThisItem.TypeNo
             Width: =50
             X: =261
-            ZIndex: =6
+            ZIndex: =3
 
         Label26_5 As label:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -120,7 +120,93 @@ RecommenderView As screen:
             Text: =ThisItem.Types
             Width: =111
             X: =150
+            ZIndex: =4
+
+        Label24_20 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.TypeNoName
+            Width: =234
+            X: =311
+            ZIndex: =5
+
+        Label24_25 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Amount
+            Width: =100
+            X: =545
+            ZIndex: =6
+
+        Label24_27 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =33
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Narration
+            Tooltip: =ThisItem.Narration
+            VerticalAlign: =VerticalAlign.Top
+            Width: =482
+            X: =765
             ZIndex: =7
+
+        Label24_26 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.BillNo
+            Width: =120
+            X: =645
+            ZIndex: =8
+
+        Icon1_1 As icon.View:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Icon: =Icon.View
+            OnSelect: |
+                =Navigate(RecommenderEditItem)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =28
+            X: =1247
+            Y: =2.5
+            ZIndex: =9
 
         Icon2_6 As icon.CancelBadge:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -141,93 +227,7 @@ RecommenderView As screen:
             Width: =28
             X: =1277.5
             Y: =2.5
-            ZIndex: =9
-
-        Label24_20 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =32
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =ThisItem.TypeNoName
-            Width: =234
-            X: =311
             ZIndex: =10
-
-        Label24_25 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =32
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =ThisItem.Amount
-            Width: =100
-            X: =545
-            ZIndex: =11
-
-        Label24_27 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =33
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =ThisItem.Narration
-            Tooltip: =ThisItem.Narration
-            VerticalAlign: =VerticalAlign.Top
-            Width: =482
-            X: =765
-            ZIndex: =13
-
-        Label24_26 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =32
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =ThisItem.BillNo
-            Width: =120
-            X: =645
-            ZIndex: =14
-
-        Icon1_1 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Icon: =Icon.View
-            OnSelect: |
-                =Navigate(RecommenderEditItem)
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Width: =28
-            X: =1247
-            Y: =2.5
-            ZIndex: =15
 
     Button2_8 As button:
         BorderThickness: =1
@@ -539,7 +539,9 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(IsBlank(recommendedby1.Text),false,true)
+        Visible: |-
+            =//If(IsBlank(recommendedby1.Text),false,true)
+            If(!IsBlank(recommendedby1.Text) && loginUser.Email=recommendedby1.Text,true,false)
         Width: =144
         X: =867
         Y: =625
@@ -567,7 +569,9 @@ RecommenderView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(IsBlank(recommendedby1.Text),false,true)
+        Visible: |-
+            =//If(IsBlank(recommendedby1.Text),false,true)
+            If(!IsBlank(recommendedby1.Text) && loginUser.Email=recommendedby1.Text,true,false)
         Width: =250
         X: =823
         Y: =658
@@ -646,7 +650,9 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             ="Approved By:"
-        Visible: =If(IsBlank(recommendedby1.Text),false,true)
+        Visible: |-
+            =//If(IsBlank(recommendedby1.Text),false,true)
+            If(!IsBlank(recommendedby1.Text) && loginUser.Email=recommendedby1.Text,true,false)
         Width: =144
         X: =1133
         Y: =625
@@ -674,7 +680,9 @@ RecommenderView As screen:
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
-        Visible: =If(IsBlank(recommendedby1.Text),false,true)
+        Visible: |-
+            =//If(IsBlank(recommendedby1.Text),false,true)
+            If(!IsBlank(recommendedby1.Text) && loginUser.Email=recommendedby1.Text,true,false)
         Width: =250
         X: =1098
         Y: =658
