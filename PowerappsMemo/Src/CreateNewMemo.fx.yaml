@@ -509,7 +509,9 @@ CreateNewMemo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(SavingToUnsubmitted)
+        OnSelect: |-
+            =//Navigate(SavingToUnsubmitted)
+            If(IsEmpty(newMemoGallery.AllItems),false,Navigate(SavingToUnsubmitted));
         Size: =15
         Text: ="Save"
         X: =513
@@ -814,7 +816,9 @@ CreateNewMemo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(UserSubmitMemo)
+        OnSelect: |-
+            =//Navigate(UserSubmitMemo)
+            If(IsEmpty(newMemoGallery.AllItems),false,Navigate(UserSubmitMemo));
         Size: =15
         Text: ="Submit"
         X: =709
