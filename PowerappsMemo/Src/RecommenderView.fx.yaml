@@ -778,6 +778,7 @@ RecommenderView As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -797,6 +798,7 @@ RecommenderView As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -899,7 +901,7 @@ RecommenderView As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =25
-        Text: =verifierDashboardGallery.Selected.Organization
+        Text: =recommenderGallery.Selected.Organization
         Width: =320
         X: =521
         Y: =12

@@ -2,47 +2,49 @@ CreateNewMemo As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: =Set(container,false)
 
-    "SNGallery_6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+    ComboBox1_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Height: =263
-        Items: =Sequence(CountRows(newMemoGallery.AllItems))
-        Layout: =Layout.Vertical
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =33
-        Width: =40
-        X: =10
-        Y: =319
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_5.Text,'First Approver' & 'Second Approver')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =137
         ZIndex: =1
 
-        Separator2_5 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            TabIndex: =0
-            Width: =Parent.TemplateWidth
-            Y: =32
-            ZIndex: =3
-
-        Label15_5 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =32
-            OnSelect: =Select(Parent)
-            PaddingBottom: =2
-            PaddingLeft: =2
-            PaddingRight: =2
-            PaddingTop: =2
-            Size: =10
-            Text: =ThisItem.Value
-            Width: =40
-            ZIndex: =4
+    ComboBox1_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_5.Text,'Verified By' & 'Prepared By' & 'Recommended By')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =170
+        ZIndex: =2
 
     newMemoGallery As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -57,7 +59,7 @@ CreateNewMemo As screen:
         Width: =1308
         X: =50
         Y: =319
-        ZIndex: =1
+        ZIndex: =3
 
         Rectangle2_10 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -244,6 +246,48 @@ CreateNewMemo As screen:
             Y: =2.5
             ZIndex: =15
 
+    "SNGallery_6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Height: =263
+        Items: =Sequence(CountRows(newMemoGallery.AllItems))
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =33
+        Width: =40
+        X: =10
+        Y: =319
+        ZIndex: =4
+
+        Separator2_5 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =0.31
+            Fill: =RGBA(0, 89, 178, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            TabIndex: =0
+            Width: =Parent.TemplateWidth
+            Y: =32
+            ZIndex: =3
+
+        Label15_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =ThisItem.Value
+            Width: =40
+            ZIndex: =4
+
     Button2_5 As button:
         BorderThickness: =1
         Color: =RGBA(0, 121, 187, 1)
@@ -268,7 +312,7 @@ CreateNewMemo As screen:
         Width: =123
         X: =642
         Y: =586
-        ZIndex: =2
+        ZIndex: =5
 
     Label8_8 As label:
         Align: =Align.Center
@@ -283,7 +327,7 @@ CreateNewMemo As screen:
         Width: =126
         X: =58
         Y: =625
-        ZIndex: =5
+        ZIndex: =6
 
     Label13_6 As label:
         Align: =Align.Right
@@ -297,7 +341,7 @@ CreateNewMemo As screen:
         Width: =40
         X: =10
         Y: =284
-        ZIndex: =9
+        ZIndex: =7
 
     Label13_15 As label:
         Align: =Align.Center
@@ -310,7 +354,7 @@ CreateNewMemo As screen:
         Text: ="Source"
         X: =55
         Y: =284
-        ZIndex: =10
+        ZIndex: =8
 
     Label13_16 As label:
         Align: =Align.Center
@@ -324,7 +368,7 @@ CreateNewMemo As screen:
         Width: =75
         X: =221
         Y: =284
-        ZIndex: =11
+        ZIndex: =9
 
     Label13_17 As label:
         Align: =Align.Center
@@ -338,7 +382,7 @@ CreateNewMemo As screen:
         Width: =50
         X: =314
         Y: =284
-        ZIndex: =12
+        ZIndex: =10
 
     Label19_3 As label:
         Align: =Align.Right
@@ -353,7 +397,7 @@ CreateNewMemo As screen:
         Width: =65
         X: =14
         Y: =73
-        ZIndex: =13
+        ZIndex: =11
 
     date_4 As datepicker:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -373,7 +417,7 @@ CreateNewMemo As screen:
         Width: =325
         X: =83
         Y: =71
-        ZIndex: =14
+        ZIndex: =12
 
     Label20_6 As label:
         Align: =Align.Right
@@ -388,7 +432,7 @@ CreateNewMemo As screen:
         Width: =65
         X: =14
         Y: =104
-        ZIndex: =15
+        ZIndex: =13
 
     from_8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -399,6 +443,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -409,7 +454,7 @@ CreateNewMemo As screen:
         Width: =325
         X: =83
         Y: =104
-        ZIndex: =16
+        ZIndex: =14
 
     Label20_7 As label:
         Align: =Align.Right
@@ -424,7 +469,7 @@ CreateNewMemo As screen:
         Width: =126
         X: =890
         Y: =126
-        ZIndex: =18
+        ZIndex: =15
 
     department_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -435,6 +480,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -445,7 +491,7 @@ CreateNewMemo As screen:
         Width: =325
         X: =1015
         Y: =126
-        ZIndex: =19
+        ZIndex: =16
 
     Label22_3 As label:
         Align: =Align.Right
@@ -460,7 +506,7 @@ CreateNewMemo As screen:
         Width: =85
         X: =495
         Y: =198
-        ZIndex: =20
+        ZIndex: =17
 
     Label23_3 As label:
         Align: =Align.Right
@@ -475,7 +521,7 @@ CreateNewMemo As screen:
         Width: =93
         X: =1015
         Y: =90
-        ZIndex: =21
+        ZIndex: =18
 
     refNo_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -488,6 +534,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -498,7 +545,7 @@ CreateNewMemo As screen:
         Width: =232
         X: =1108
         Y: =90
-        ZIndex: =22
+        ZIndex: =19
 
     Button1_2 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -517,7 +564,7 @@ CreateNewMemo As screen:
         Text: ="Save"
         X: =513
         Y: =701
-        ZIndex: =23
+        ZIndex: =20
 
     Icon1_7 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -535,7 +582,7 @@ CreateNewMemo As screen:
         Width: =45
         X: =10
         Y: =10
-        ZIndex: =25
+        ZIndex: =21
 
     companyName_2 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -565,21 +612,7 @@ CreateNewMemo As screen:
         Width: =450
         X: =479
         Y: =12
-        ZIndex: =30
-
-    Label1_2 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =28
-        Size: =15
-        Text: ="Internal Memo"
-        X: =599
-        Y: =58
-        ZIndex: =36
+        ZIndex: =22
 
     TextInput7_2 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -598,7 +631,7 @@ CreateNewMemo As screen:
         Size: =13
         X: =581
         Y: =198
-        ZIndex: =37
+        ZIndex: =23
 
     Label20_12 As label:
         Align: =Align.Right
@@ -613,7 +646,7 @@ CreateNewMemo As screen:
         Width: =65
         X: =14
         Y: =139
-        ZIndex: =38
+        ZIndex: =24
 
     Label20_13 As label:
         Align: =Align.Right
@@ -628,7 +661,7 @@ CreateNewMemo As screen:
         Width: =65
         X: =14
         Y: =174
-        ZIndex: =39
+        ZIndex: =25
 
     approver1_7 As text:
         Align: =Align.Center
@@ -649,7 +682,7 @@ CreateNewMemo As screen:
         Width: =250
         X: =10
         Y: =657
-        ZIndex: =44
+        ZIndex: =26
 
     Label13_18 As label:
         Align: =Align.Center
@@ -662,7 +695,7 @@ CreateNewMemo As screen:
         Text: ="Name"
         X: =403
         Y: =284
-        ZIndex: =45
+        ZIndex: =27
 
     Label13_20 As label:
         Align: =Align.Center
@@ -676,7 +709,7 @@ CreateNewMemo As screen:
         Width: =88
         X: =602
         Y: =284
-        ZIndex: =46
+        ZIndex: =28
 
     Label13_21 As label:
         Align: =Align.Center
@@ -690,7 +723,7 @@ CreateNewMemo As screen:
         Width: =70
         X: =719
         Y: =284
-        ZIndex: =47
+        ZIndex: =29
 
     Label13_22 As label:
         Align: =Align.Center
@@ -703,7 +736,7 @@ CreateNewMemo As screen:
         Text: ="Narration"
         X: =854
         Y: =284
-        ZIndex: =48
+        ZIndex: =30
 
     Label13_23 As label:
         Align: =Align.Center
@@ -716,7 +749,7 @@ CreateNewMemo As screen:
         Text: ="Attachment"
         X: =1095
         Y: =284
-        ZIndex: =49
+        ZIndex: =31
 
     TextInput9_4 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -726,6 +759,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -735,7 +769,7 @@ CreateNewMemo As screen:
         Width: =170
         X: =10
         Y: =228
-        ZIndex: =50
+        ZIndex: =32
 
     TextInput9_5 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -745,6 +779,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -754,7 +789,7 @@ CreateNewMemo As screen:
         Width: =846
         X: =10
         Y: =254
-        ZIndex: =51
+        ZIndex: =33
 
     Button1 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -771,7 +806,7 @@ CreateNewMemo As screen:
         Text: ="Submit"
         X: =709
         Y: =701
-        ZIndex: =52
+        ZIndex: =34
 
     Container1_3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 0, 0, 0.78)
@@ -780,7 +815,7 @@ CreateNewMemo As screen:
         Width: =1322
         X: =24
         Y: =156
-        ZIndex: =53
+        ZIndex: =35
 
         Label2_3 As label:
             Align: =Align.Center
@@ -845,47 +880,24 @@ CreateNewMemo As screen:
             Y: =6
             ZIndex: =4
 
-    ComboBox1_2 As text:
+    Label1_2 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_5.Text,'First Approver' & 'Second Approver')
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.Disabled
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Semibold
-        Height: =28
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =13
-        Width: =325
-        X: =83
-        Y: =137
-        ZIndex: =54
-
-    ComboBox1_3 As text:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_5.Text,'Verified By' & 'Prepared By' & 'Recommended By')
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.Disabled
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Semibold
-        Height: =28
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =170
-        ZIndex: =55
+        X: =522
+        Y: =61
+        ZIndex: =36
 

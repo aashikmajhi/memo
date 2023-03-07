@@ -777,7 +777,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Size: =25
-        Text: =verifierDashboardGallery.Selected.Organization
+        Text: =recommenderGallery.Selected.Organization
         Width: =320
         X: =521
         Y: =12

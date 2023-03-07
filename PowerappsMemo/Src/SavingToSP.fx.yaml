@@ -305,6 +305,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -340,6 +341,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -389,6 +391,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -452,11 +455,13 @@ SavingToSP As screen:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
-        Text: ="Internal Memo"
-        X: =599
-        Y: =58
+        Text: =Label1_2.Selected.Value1
+        Width: =400
+        X: =475
+        Y: =62
         ZIndex: =36
 
     TextInput7_1 As text:
@@ -470,6 +475,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -534,6 +540,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -618,6 +625,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Format: =DateTimeFormat.LongDate
         Height: =28
@@ -641,6 +649,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -663,6 +672,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -685,6 +695,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -707,6 +718,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -781,6 +793,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -804,6 +817,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -824,6 +838,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -843,6 +858,7 @@ SavingToSP As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)

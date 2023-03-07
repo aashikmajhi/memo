@@ -433,7 +433,9 @@ VerifierView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =//verifierDashboardGallery.Selected.Title
+        Default: |-
+            =//verifierDashboardGallery.Selected.Title
+            userDashboardGallery.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -786,6 +788,7 @@ VerifierView As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -806,6 +809,7 @@ VerifierView As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
