@@ -71,8 +71,8 @@ UserDashboard As screen:
         PressedFill: =
         Size: =23
         Text: |-
-            ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back " & loginUser.Email & Char(13) &
-            " Role: " & LookUp(RoleController,Email=loginUser.Email,Role.Value)
+            ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back " & loginUser.Email & Char(13) 
+            //&" Role: " & LookUp(RoleController,Email=loginUser.Email,Role.Value)
         Width: =628
         X: =26
         Y: =14
