@@ -27754,66 +27754,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "RecommenderViewAfterSubmit.ComboBox1_20.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "RecommenderViewAfterSubmit.ComboBox1_20.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "RecommenderViewAfterSubmit",
-                "type": "RecommenderViewAfterSubmit.ComboBox1_20"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "RecommenderViewAfterSubmit.ComboBox1_21.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "RecommenderViewAfterSubmit.ComboBox1_21.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "RecommenderViewAfterSubmit",
-                "type": "RecommenderViewAfterSubmit.ComboBox1_21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "RecommenderViewAfterSubmit.TextInput7_12.Default"
                 }
               ],
