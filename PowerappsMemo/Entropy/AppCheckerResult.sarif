@@ -25954,36 +25954,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.galData"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.galData",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "galData",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.recomm"
                 }
               ],

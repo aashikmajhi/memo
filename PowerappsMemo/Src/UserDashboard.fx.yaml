@@ -345,10 +345,9 @@ UserDashboard As screen:
             false
         ShowScrollbar: =false
         TemplateSize: =95
-        Visible: |-
+        Visible: |
             =//If(Label33_8.Text="Pending Verification",false,true)
-            //If(galData,false,true)
-            false
+            If(galData,false,true)
         Width: =1282
         X: =42
         Y: =290
@@ -595,10 +594,9 @@ UserDashboard As screen:
             false
         ShowScrollbar: =false
         TemplateSize: =95
-        Visible: |-
+        Visible: |
             =//If(Label33_8.Text="New",true,false)
-            //If(galData,true,false)
-            true
+            If(galData,true,false)
         Width: =1282
         X: =42
         Y: =290
