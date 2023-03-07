@@ -511,7 +511,7 @@ CreateNewMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =//Navigate(SavingToUnsubmitted)
-            If(IsEmpty(newMemoGallery.AllItems),If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo")),Notify("Insert Data before Saving"),Navigate(SavingToUnsubmitted));
+            If(IsEmpty(newMemoGallery.AllItems),If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"),Notify("Insert Data before Saving")),Navigate(SavingToUnsubmitted));
             //If(TextInput7_2.Text="",Notify("Input the subject for the memo"),Navigate(SavingToUnsubmitted));
         Size: =15
         Text: ="Save"
