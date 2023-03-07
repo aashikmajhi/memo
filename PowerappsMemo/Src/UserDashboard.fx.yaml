@@ -65,12 +65,14 @@ UserDashboard As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Font: =Font.Georgia
         FontWeight: =FontWeight.Semibold
-        Height: =118
+        Height: =142
         HoverFill: =Self.Fill
         PressedColor: =Self.Color
         PressedFill: =
         Size: =23
-        Text: ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back " & loginUser.Email
+        Text: |-
+            ="Hey! " & Office365Users.MyProfile().DisplayName & Char(13) & If(Hour(Now())<12, "Good morning, ", Hour(Now())<17, "Good afternoon, ", "Good evening, ") & " Welcome Back " & loginUser.Email & Char(13) &
+            " Role: " & LookUp(RoleController,Email=loginUser.Email,Role.Value)
         Width: =628
         X: =26
         Y: =14
@@ -753,14 +755,4 @@ UserDashboard As screen:
             X: =1244
             Y: =47
             ZIndex: =22
-
-    Label12 As label:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Size: =13
-        Text: =LookUp(RoleController,Email=loginUser.Email,Role.Value)
-        X: =589
-        Y: =58
-        ZIndex: =16
 
