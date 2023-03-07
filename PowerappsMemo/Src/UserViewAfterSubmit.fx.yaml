@@ -292,7 +292,9 @@ UserViewAfterSubmit As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =userDashboardGallery.Selected.From
+        Default: |-
+            =userDashboardGallery.Selected.From
+            //LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,From)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -617,7 +619,7 @@ UserViewAfterSubmit As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -636,7 +638,7 @@ UserViewAfterSubmit As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83
@@ -655,7 +657,7 @@ UserViewAfterSubmit As screen:
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
         Width: =325
         X: =83

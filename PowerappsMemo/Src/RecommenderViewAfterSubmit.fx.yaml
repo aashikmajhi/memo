@@ -315,7 +315,7 @@ RecommenderViewAfterSubmit As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.From
+        Default: =recommenderGallery.Selected.From
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -351,7 +351,7 @@ RecommenderViewAfterSubmit As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.Department
+        Default: =recommenderGallery.Selected.Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -678,7 +678,7 @@ RecommenderViewAfterSubmit As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.Date
+        Default: =recommenderGallery.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -697,7 +697,7 @@ RecommenderViewAfterSubmit As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.To
+        Default: =recommenderGallery.Selected.To
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -716,7 +716,7 @@ RecommenderViewAfterSubmit As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =verifierDashboardGallery.Selected.Cc
+        Default: =recommenderGallery.Selected.Cc
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

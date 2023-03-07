@@ -464,7 +464,9 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =TextInput7_7.Text
+        Default: |-
+            =//TextInput7_7.Text
+            userDashboardGallery.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -610,7 +612,9 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Text(DateValue(date_3.SelectedDate),DateTimeFormat.LongDate)
+        Default: |-
+            =//Text(DateValue(date_3.SelectedDate),DateTimeFormat.LongDate)
+            userDashboardGallery.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -771,7 +775,9 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Concat(ComboBox1.SelectedItems,ThisRecord.Value1,"; ")
+        Default: |-
+            =//Concat(ComboBox1.SelectedItems,ThisRecord.Value1,"; ")
+            userDashboardGallery.Selected.To
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -792,7 +798,9 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Concat(ComboBox1_1.SelectedItems,ThisRecord.Value1, "; ")
+        Default: |-
+            =//Concat(ComboBox1_1.SelectedItems,ThisRecord.Value1, "; ")
+            userDashboardGallery.Selected.Cc
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -862,6 +870,7 @@ SavingToSP As screen:
     Container2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(250, 250, 250, 0.3)
         Height: =694
+        Visible: =false
         Width: =1273
         X: =50
         Y: =40
