@@ -870,7 +870,6 @@ SavingToSP As screen:
     Container2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(250, 250, 250, 0.3)
         Height: =694
-        Visible: =false
         Width: =1273
         X: =50
         Y: =40

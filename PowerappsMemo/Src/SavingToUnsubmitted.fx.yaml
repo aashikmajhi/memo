@@ -600,7 +600,7 @@ SavingToUnsubmitted As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Concat(ComboBox1_2.SelectedItems,ThisRecord.Value1,"; ")
+        Default: =ComboBox1_2.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -621,7 +621,7 @@ SavingToUnsubmitted As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Concat(ComboBox1_3.SelectedItems,ThisRecord.Value1, "; ")
+        Default: =ComboBox1_3.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

@@ -511,7 +511,8 @@ CreateNewMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =//Navigate(SavingToUnsubmitted)
-            If(IsEmpty(newMemoGallery.AllItems),false,Navigate(SavingToUnsubmitted));
+            If(IsEmpty(newMemoGallery.AllItems),If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo")),Notify("Insert Data before Saving"),Navigate(SavingToUnsubmitted));
+            //If(TextInput7_2.Text="",Notify("Input the subject for the memo"),Navigate(SavingToUnsubmitted));
         Size: =15
         Text: ="Save"
         X: =513
@@ -628,59 +629,6 @@ CreateNewMemo As screen:
         X: =14
         Y: =174
         ZIndex: =39
-
-    ComboBox1_2 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =28
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: =""
-        IsSearchable: =false
-        Items: =ComboBoxSample
-        OnChange: =
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =[]
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =139
-        ZIndex: =40
-
-    ComboBox1_3 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =28
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        InputTextPlaceholder: =""
-        Items: =ComboBoxSample
-        OnChange: =
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,ComboBox1_3.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =325
-        X: =83
-        Y: =174
-        ZIndex: =41
 
     approver1_7 As text:
         Align: =Align.Center
@@ -896,4 +844,46 @@ CreateNewMemo As screen:
             X: =1251
             Y: =6
             ZIndex: =4
+
+    ComboBox1_2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_5.Text,'First Approver' & 'Second Approver')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =137
+        ZIndex: =54
+
+    ComboBox1_3 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_5.Text,'Verified By' & 'Prepared By' & 'Recommended By')
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =13
+        Width: =325
+        X: =83
+        Y: =170
+        ZIndex: =55
 

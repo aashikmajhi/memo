@@ -2,6 +2,7 @@ VerifierView As screen:
     Fill: =RGBA(153, 205, 255, 1)
     OnVisible: |-
         =Set(recomm,true);
+        Set(saving,false);
         Reset(approver2_5);
         Reset(approver3_5);
         Reset(approver4_9);
@@ -430,9 +431,7 @@ VerifierView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: |-
-            =//verifierDashboardGallery.Selected.Title
-            userDashboardGallery.Selected.Title
+        Default: =//verifierDashboardGallery.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -839,7 +838,9 @@ VerifierView As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =userDashboardGallery.Selected.To
+        Default: |-
+            =//userDashboardGallery.Selected.To
+            LookUp(RequisitionDemoApprovalList,Title=refNo_8.Text,'First Approver' & 'Second Approver')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -859,7 +860,9 @@ VerifierView As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
-        Default: =userDashboardGallery.Selected.Cc
+        Default: |-
+            =//userDashboardGallery.Selected.Cc
+            LookUp(RequisitionDemoApprovalList,Title=refNo_8.Text,'Prepared By' & 'Verified By' & 'Recommended By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -925,6 +928,7 @@ VerifierView As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Set(recomm,false);
+            Set(saving,true);
             Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_8.Text ) ),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             //Navigate(UserDashboard);
@@ -1080,4 +1084,27 @@ VerifierView As screen:
         X: =83
         Y: =30
         ZIndex: =62
+
+    Container2_2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(250, 250, 250, 0.3)
+        Height: =694
+        Visible: =If(saving=true,true,false)
+        Width: =1273
+        X: =50
+        Y: =40
+        ZIndex: =63
+
+        Label4_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =82
+            Size: =25
+            Text: ="Please wait. Submitting data."
+            Width: =640
+            X: =291
+            Y: =273
+            ZIndex: =1
 

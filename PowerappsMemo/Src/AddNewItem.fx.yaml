@@ -922,8 +922,8 @@ AddNewItem As screen:
                 ),
                 Notify("Empty fields can not be processed")
             );
-            SubmitForm(Form4);
-            Navigate(VerifierView);
+            
+            If(IsBlank(DataCardValue33.Text || DataCardValue34.Text),Notify("Please enter amount and Bill number to proceed."),SubmitForm(Form4) & Navigate(VerifierView));
         Size: =15
         Text: ="Add"
         X: =603
