@@ -27904,36 +27904,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "UserSubmitMemo.from_24.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UserSubmitMemo.from_24.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "UserSubmitMemo",
-                "type": "UserSubmitMemo.from_24"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VerifierView_1.companyName_7.Text"
                 }
               ],

@@ -1011,7 +1011,7 @@ UserSubmitMemo As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =userDashboardGallery.Selected.Date
+        Default: =//userDashboardGallery.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1023,6 +1023,7 @@ UserSubmitMemo As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =13
+        Visible: =false
         Width: =325
         X: =83
         Y: =71
