@@ -922,8 +922,8 @@ VerifierAddItem As screen:
                 ),
                 Notify("Empty fields can not be processed")
             );
-            SubmitForm(Form4_3);
-            Navigate(VerifierView);
+            
+            If(IsBlank(DataCardValue33_1.Text),Notify("Enter Amount"),If(IsBlank(DataCardValue34_1.Text),Notify("Enter Bill No"),If(IsBlank(DataCardValue35_1.Text),Notify("Enter Narration"))),SubmitForm(Form4_3)&Navigate(VerifierView));
         Size: =15
         Text: ="Add"
         X: =603
