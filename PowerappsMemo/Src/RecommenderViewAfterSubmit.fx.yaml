@@ -5,6 +5,7 @@ RecommenderViewAfterSubmit As screen:
     "SNGallery_14 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
+        DisplayMode: =DisplayMode.Disabled
         Height: =263
         Items: =Sequence(CountRows(recomViewGallery_1.AllItems))
         Layout: =Layout.Vertical
@@ -46,6 +47,7 @@ RecommenderViewAfterSubmit As screen:
     recomViewGallery_1 As gallery.galleryVertical:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2
+        DisplayMode: =DisplayMode.Disabled
         Height: =263
         Items: |
             =//MemoTableData
@@ -319,6 +321,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -355,6 +358,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -406,6 +410,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -502,6 +507,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -570,6 +576,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -682,6 +689,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -703,6 +711,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -724,6 +733,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =28
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -747,6 +757,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -782,7 +793,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -805,7 +816,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
@@ -828,7 +839,7 @@ RecommenderViewAfterSubmit As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
