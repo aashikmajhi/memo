@@ -382,7 +382,7 @@ VerifierSubmitMemo As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =Office365Users.MyProfile().Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -419,7 +419,7 @@ VerifierSubmitMemo As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =Office365Users.MyProfile().Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -479,7 +479,7 @@ VerifierSubmitMemo As screen:
                 )
             )
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -817,7 +817,7 @@ VerifierSubmitMemo As screen:
             =//Office365Users.MyProfile().GivenName
             User().Email
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -904,7 +904,7 @@ VerifierSubmitMemo As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: ="Dear Sir/Madame"
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =28
@@ -923,7 +923,7 @@ VerifierSubmitMemo As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: ="This is to request for approval for payment of below parties for below references from below sources."
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =28
@@ -1083,7 +1083,7 @@ VerifierSubmitMemo As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Cc
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -1105,7 +1105,7 @@ VerifierSubmitMemo As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
