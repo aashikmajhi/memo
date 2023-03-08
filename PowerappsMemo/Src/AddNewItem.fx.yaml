@@ -519,7 +519,7 @@ AddNewItem As screen:
                 Y: =DataCardKey32.Y
                 ZIndex: =4
 
-            Dropdown6_3 As dropdown:
+            Dropdown6_3 As combobox:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -531,12 +531,14 @@ AddNewItem As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
+                InputTextPlaceholder: ="Select Type Name"
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
+                SearchItems: =Search(ComboBoxSample,Dropdown6_3.SearchText,"Value1")
                 SelectionFill: =RGBA(0, 51, 102, 1)
                 Size: =13
-                Width: =614
+                Width: =623
                 X: =30
                 Y: =48
                 ZIndex: =5
