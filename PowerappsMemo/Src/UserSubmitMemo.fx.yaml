@@ -697,20 +697,6 @@ UserSubmitMemo As screen:
         Y: =658
         ZIndex: =25
 
-    Label1_7 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =28
-        Size: =15
-        Text: ="Internal Memo"
-        X: =599
-        Y: =58
-        ZIndex: =26
-
     TextInput7_7 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
@@ -1122,4 +1108,27 @@ UserSubmitMemo As screen:
             X: =1251
             Y: =6
             ZIndex: =4
+
+    Label1_7 As combobox:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DefaultSelectedItems: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =ComboBoxSample
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SearchItems: =Search(ComboBoxSample,Label1_7.SearchText,"Value1")
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        X: =517
+        Y: =55
+        ZIndex: =46
 

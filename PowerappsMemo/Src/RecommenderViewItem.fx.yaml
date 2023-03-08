@@ -202,7 +202,7 @@ RecommenderViewItem As screen:
         FontWeight: =FontWeight.Bold
         Height: =55
         Size: =35
-        Text: =companyName_1.SelectedText.Value
+        Text: =companyName_4.Text
         Width: =777
         X: =283
         Y: =24

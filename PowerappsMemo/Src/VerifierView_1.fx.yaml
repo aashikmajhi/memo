@@ -597,7 +597,7 @@ VerifierView_1 As screen:
         Height: =28
         OnSelect: =approver3_6.Selected.Value
         Size: =15
-        Text: ="Internal Memo"
+        Text: =userDashboardGallery.Selected.MemoType
         X: =599
         Y: =58
         ZIndex: =36

@@ -469,7 +469,7 @@ VerifierViewAfterSubmit As screen:
         Height: =28
         OnSelect: =
         Size: =15
-        Text: ="Internal Memo"
+        Text: =userDashboardGallery.Selected.MemoType
         X: =599
         Y: =58
         ZIndex: =36

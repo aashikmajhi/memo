@@ -417,15 +417,7 @@ UserView As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: |-
-            =If(
-                companyName_1.SelectedText.Value = "F1 Soft",
-                "FS-" & CountRows(RequisitionDemoApprovalList) + 1,
-                If(
-                    companyName_1.SelectedText.Value = "e-Sewa",
-                    "ES-" & CountRows(RequisitionDemoApprovalList) + 1
-                )
-            )
+        Default: =userDashboardGallery.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -441,25 +433,6 @@ UserView As screen:
         X: =1108
         Y: =90
         ZIndex: =22
-
-    Button1_6 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Semibold
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(Memo)
-        Size: =15
-        Text: |-
-            ="Submit
-            "
-        Visible: =false
-        X: =626
-        Y: =715
-        ZIndex: =23
 
     Icon1_11 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -485,7 +458,7 @@ UserView As screen:
         FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
-        Text: ="Internal Memo"
+        Text: =userDashboardGallery.Selected.MemoType
         X: =599
         Y: =58
         ZIndex: =36

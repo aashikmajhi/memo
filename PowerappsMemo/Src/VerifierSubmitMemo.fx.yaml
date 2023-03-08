@@ -707,7 +707,7 @@ VerifierSubmitMemo As screen:
         FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
-        Text: ="Internal Memo"
+        Text: =userDashboardGallery.Selected.MemoType
         X: =599
         Y: =58
         ZIndex: =36

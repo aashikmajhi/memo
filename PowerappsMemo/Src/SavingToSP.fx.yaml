@@ -301,7 +301,7 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =from_3.Text
+        Default: =from_16.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -337,7 +337,7 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =department_3.Text
+        Default: =department_10.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -387,7 +387,7 @@ SavingToSP As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =refNo_3.Text
+        Default: =refNo_10.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -768,12 +768,6 @@ SavingToSP As screen:
             //Office365Outlook.SendEmailV2(approver1_2.Text& approver1_6.Text & approver1_5.Text & approver1_4.Text & approver1_3.Text,TextInput7_1.Text,TextInput9_3.Text);
             
             Clear(PurchaseReq);
-            Reset(approver2_1);
-            Reset(approver3_1);
-            Reset(approver4_1);
-            Reset(approver4_2);
-            Reset(ComboBox1);
-            Reset(ComboBox1_1);
             Reset(TextInput7_7);
             Navigate(UserDashboard)
         Visible: =false
@@ -876,7 +870,7 @@ SavingToSP As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.Georgia
         Size: =30
-        Text: =companyName_1.SelectedText.Value
+        Text: =companyName_3.SelectedText.Value
         Width: =320
         X: =515
         Y: =16

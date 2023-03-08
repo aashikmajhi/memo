@@ -412,7 +412,7 @@ SavingToUnsubmitted As screen:
         Font: =Font.'Segoe UI'
         Height: =28
         Size: =15
-        Text: ="Internal Memo"
+        Text: =Label1_2.SelectedText.Value
         X: =599
         Y: =58
         ZIndex: =36
@@ -472,7 +472,7 @@ SavingToUnsubmitted As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =approver1_1.Text
+        Default: =approver1_7.Text
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -583,17 +583,10 @@ SavingToUnsubmitted As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
-            =Patch(UnsubmittedRequisitionApprovalList,Defaults(UnsubmittedRequisitionApprovalList),{Title:refNo_6.Text,From:from_13.Text,Department:department_6.Text,Date:datetxt.Text,Organization:Label3_1.Text,To:totxt.Text,Cc:cctxt.Text,Subject:subtxt.Text,'Prepared By':preparer.Text});
+            =Patch(UnsubmittedRequisitionApprovalList,Defaults(UnsubmittedRequisitionApprovalList),{Title:refNo_6.Text,From:from_13.Text,Department:department_6.Text,Date:datetxt.Text,Organization:Label3_1.Text,'Memo Type':Label1_3.Text,To:totxt.Text,Cc:cctxt.Text,Subject:subtxt.Text,'Prepared By':preparer.Text});
             
             
             //Clear(unPurchaseReq);
-            Reset(approver2_1);
-            Reset(approver3_1);
-            Reset(approver4_1);
-            Reset(approver4_2);
-            Reset(ComboBox1);
-            Reset(ComboBox1_1);
-            Reset(TextInput7);
             Reset(TextInput7_2);
             Navigate(UserDashboard)
         Visible: =false
@@ -692,7 +685,7 @@ SavingToUnsubmitted As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.Georgia
         Size: =30
-        Text: =companyName_1.SelectedText.Value
+        Text: =companyName_2.SelectedText.Value
         Width: =320
         X: =515
         Y: =16
