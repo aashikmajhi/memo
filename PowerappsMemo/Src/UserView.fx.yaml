@@ -49,7 +49,7 @@ UserView As screen:
         Height: =263
         Items: |
             =//MemoTableData
-            //Filter(MemoTableData,refNo_7.Text in 'Meme No')
+            //Filter(MemoTableData,refNo_9.Text in 'Meme No')
             Filter(UnsubmittedMemoTableData,'Meme No'=userDashboardGallery.Selected.Title)
         Layout: =Layout.Vertical
         OnSelect: |-
