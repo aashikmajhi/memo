@@ -26844,36 +26844,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "UserSubmitMemo.refNo_10.DelayOutput"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UserSubmitMemo.refNo_10.DelayOutput",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DelayOutput",
-                "module": "UserSubmitMemo",
-                "type": "UserSubmitMemo.refNo_10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-TextInputIsNotDelayOutput",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "UserSubmitMemo.from_20.Default"
                 }
               ],
@@ -26947,6 +26917,36 @@
                 "member": "Default",
                 "module": "UserSubmitMemo",
                 "type": "UserSubmitMemo.TextInput7_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "UserSubmitMemo.userSubmitGallery.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "UserSubmitMemo.userSubmitGallery.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "UserSubmitMemo",
+                "type": "UserSubmitMemo.userSubmitGallery"
               }
             }
           ],
