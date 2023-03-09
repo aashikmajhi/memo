@@ -48,9 +48,9 @@ AddingNewItemCreatingMemo As screen:
                     refNo_5.Text
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =Parent.DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -797,10 +797,11 @@ AddingNewItemCreatingMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =//If(!IsBlank((DataCardValue19.Text||DataCardValue20.Selected.Value1||DataCardValue21.Selected.Value1||DataCardValue22.Selected.Value1||DataCardValue23.Text||DataCardValue24.Text||DataCardValue25.Text||Last(DataCardValue27.Attachments).Name)),Collect(unPurchaseReq,{Source:DataCardValue19.Text,Types:DataCardValue20.Selected.Value1,TypeNo:DataCardValue21.Selected.Value1,TypeNoName:DataCardValue22.Selected.Value1,BillNo:DataCardValue23.Text,Amount:DataCardValue24.Text,Narration:DataCardValue25.Text,Attachments:DataCardValue27.Attachments}),Notify("Empty fields can not be processed"));
+            //If(IsEmpty(DataCardValue20.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25.Text),Notify("Enter Narration"),(If(IsBlank(DataCardValue27.Attachments),Notify("Select Attachments"))))))))))))))),SubmitForm(Form4_1) & Navigate(CreateNewMemo));
             
-            //If(IsBlank(DataCardValue23.Text),Notify("Enter Amount"),If(IsBlank(DataCardValue24.Text),Notify("Enter Bill No"),If(IsBlank(DataCardValue25.Text),Notify("Enter Narration."))),SubmitForm(Form4_1) & Navigate(CreateNewMemo));
-            SubmitForm(Form4_1);
-            Navigate(CreateNewMemo);
+            If(IsEmpty(DataCardValue20.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25.Text),Notify("Enter Narration"))))))))))))),SubmitForm(Form4_1) & Navigate(CreateNewMemo));
+            
+            //If(IsBlank(DataCardValue23.Text),Notify("Enter Amount"),(If(IsBlank(DataCardValue24.Text),Notify("Enter Bill No"),(If(IsBlank(DataCardValue25.Text),Notify("Enter Narration."))))),SubmitForm(Form4_1) & Navigate(CreateNewMemo));
         Size: =15
         Text: ="Add"
         X: =603

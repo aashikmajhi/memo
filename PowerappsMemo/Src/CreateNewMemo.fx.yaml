@@ -796,10 +796,10 @@ CreateNewMemo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
+        OnSelect: |
             =//Navigate(UserSubmitMemo)
             //If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),Navigate(UserSubmitMemo));
-            If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"),If(TextInput7_2.Text="",Notify("Input the subject for the memo"))),Navigate(UserSubmitMemo));
+            If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))),Navigate(UserSubmitMemo));
         Size: =15
         Text: ="Submit"
         X: =709
