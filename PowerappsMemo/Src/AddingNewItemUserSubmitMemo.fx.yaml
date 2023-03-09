@@ -106,7 +106,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Source")
-            Required: =false
+            Required: =true
             Update: =DataCardValue20_1.Selected.Value1
             Width: =683
             X: =1
@@ -189,7 +189,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Types")
-            Required: =false
+            Required: =true
             Update: =DataCardValue26_1.Selected.Value1
             Width: =683
             X: =2
@@ -272,7 +272,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "TypeNo")
-            Required: =false
+            Required: =true
             Update: =DataCardValue21_1.Selected.Value1
             Width: =683
             X: =1
@@ -355,7 +355,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
-            Required: =false
+            Required: =true
             Update: =DataCardValue22_1.Selected.Value1
             Width: =683
             X: =2
@@ -442,7 +442,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Amount")
-            Required: =false
+            Required: =true
             Update: =DataCardValue23_1.Text
             Width: =683
             X: =1
@@ -530,7 +530,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "BillNo")
-            Required: =false
+            Required: =true
             Update: =DataCardValue24_1.Text
             Width: =683
             X: =2
@@ -618,7 +618,7 @@ AddingNewItemUserSubmitMemo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Narration")
-            Required: =false
+            Required: =true
             Update: =DataCardValue25_1.Text
             Width: =683
             X: =1
