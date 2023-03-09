@@ -28434,6 +28434,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CreateNewMemo.companyName_2.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CreateNewMemo.companyName_2.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "CreateNewMemo",
+                "type": "CreateNewMemo.companyName_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "RespondingScreen.PdfViewer1.Document"
                 }
               ],
