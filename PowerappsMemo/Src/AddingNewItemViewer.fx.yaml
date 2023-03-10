@@ -406,7 +406,7 @@ AddingNewItemViewer As screen:
                 Y: =DataCardKey22_2.Y
                 ZIndex: =4
 
-            DataCardValue22_2 As dropdown:
+            DataCardValue22_2 As combobox:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -418,14 +418,16 @@ AddingNewItemViewer As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
+                InputTextPlaceholder: ="Select Type Name"
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
+                SearchItems: =Search(ComboBoxSample,DataCardValue22_2.SearchText,"Value1")
                 SelectionFill: =RGBA(0, 51, 102, 1)
                 Size: =13
                 Width: =623
                 X: =30
-                Y: =48
+                Y: =40
                 ZIndex: =5
 
         Amount_DataCard3_2 As typedDataCard.textualEditCard:
