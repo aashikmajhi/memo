@@ -415,7 +415,7 @@ UserDashboard As screen:
                 //If(Label33_7.Text="Pending Verifier",Navigate(VerifierView),If(Label33_7.Text="New",Navigate(UserSubmitMemo),If(Label33_7.Text="Pending Recommender",Navigate(RecommenderView),false), false),false)
                 
                 //Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo));
-                If(loginUser.Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView),If(ThisItem.Status.Value="New"&&loginUser.Email=ThisItem.PreparedBy,Navigate(UserSubmitMemo)));If(loginUser.Email=ThisItem.VerifiedBy && (ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(VerifierViewAfterSubmit));
+                If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By') && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView),If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,'Prepared By') &&ThisItem.Status.Value="New",Navigate(UserSubmitMemo)));If(loginUser.Email=ThisItem.VerifiedBy && (ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(VerifierViewAfterSubmit));
                 //If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
                 If(loginUser.Email=ThisItem.PreparedBy && (ThisItem.Status.Value="Pending Verification"||ThisItem.Status.Value="Pending Recommendation"||Label33_7.Text="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
             PaddingBottom: =5
@@ -447,6 +447,17 @@ UserDashboard As screen:
             X: =1244
             Y: =50
             ZIndex: =11
+
+        Label1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By')
+            X: =286
+            Y: =44
+            ZIndex: =12
 
     Container1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 0, 0, 0.78)
