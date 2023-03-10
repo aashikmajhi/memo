@@ -163,7 +163,7 @@ VerifierViewAfterSubmit As screen:
             Text: =ThisItem.Narration
             Tooltip: =ThisItem.Narration
             VerticalAlign: =VerticalAlign.Top
-            Width: =481
+            Width: =543
             X: =765
             ZIndex: =13
 
@@ -196,6 +196,7 @@ VerifierViewAfterSubmit As screen:
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
+            Visible: =false
             Width: =32
             X: =1276
             ZIndex: =16

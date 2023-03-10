@@ -14,7 +14,7 @@ VerifierEditItem As screen:
             =SubmitForm(EditForm);
             //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
             //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
-            Navigate(VerifierView);
+            //Navigate(VerifierViewAfter);
         Size: =15
         Text: ="Update"
         Visible: =If(loginUser.Email=approver2_5.Text,true,false)
@@ -30,7 +30,7 @@ VerifierEditItem As screen:
         Icon: =Icon.BackArrow
         OnSelect: |-
             =ResetForm(EditForm);
-            Navigate(VerifierView);
+            Navigate(VerifierViewAfterSubmit);
         X: =23
         Y: =24
         ZIndex: =28
