@@ -417,7 +417,7 @@ UserDashboard As screen:
                 If(ThisItem.Status.Value="Pending Verification" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierView));
                 If(ThisItem.Status.Value="Pending Recommendation" ||ThisItem.Status.Value="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit));
                 
-                If(Label33_7.Text="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
+                If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
                 If(loginUser.Email = ThisItem.PreparedBy && (Label33_7.Text="Pending Verification" ||ThisItem.Status.Value="Pending Recommendation" ||Label33_7.Text="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
                 
             PaddingBottom: =5
@@ -718,7 +718,7 @@ UserDashboard As screen:
             Color: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =30
+            Height: =28
             Icon: =Icon.View
             OnSelect: |+
                 =
@@ -730,7 +730,7 @@ UserDashboard As screen:
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
-            Width: =34
+            Width: =28
             X: =1244
             Y: =20
             ZIndex: =21
@@ -741,7 +741,7 @@ UserDashboard As screen:
             Color: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =30
+            Height: =28
             Icon: =Icon.Cancel
             OnSelect: |-
                 =//Remove(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=rfNo_7.Text));
@@ -753,7 +753,7 @@ UserDashboard As screen:
             Visible: =If(Label33_7.Text="New",true,false)
             Width: =28
             X: =1250
-            Y: =53
+            Y: =50
             ZIndex: =22
 
     Gallery2_8 As gallery.galleryVertical:
