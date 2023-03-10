@@ -29334,6 +29334,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "AddingNewItemViewer.Form4_4.'Meme No_DataCard5'.DataCardValue30.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "AddingNewItemViewer.Form4_4.'Meme No_DataCard5'.DataCardValue30.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "AddingNewItemViewer",
+                "type": "AddingNewItemViewer.Form4_4.'Meme No_DataCard5'.DataCardValue30"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "UserViewAfterSubmit.companyName_9.Text"
                 }
               ],
