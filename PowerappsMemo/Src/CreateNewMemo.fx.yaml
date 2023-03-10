@@ -407,6 +407,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Semibold
         Format: =DateTimeFormat.LongDate
         Height: =28
@@ -690,6 +691,7 @@ CreateNewMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)

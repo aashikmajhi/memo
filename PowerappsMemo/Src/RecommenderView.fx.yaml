@@ -478,8 +478,7 @@ RecommenderView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
-            =Set(saving,true);
-            Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
+            =Patch( RequisitionDemoApprovalList, First( Filter( RequisitionDemoApprovalList, Title = refNo_7.Text ) ), {Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
             Patch(UnsubmittedRequisitionApprovalList, First(Filter(UnsubmittedRequisitionApprovalList,Title = refNo_7.Text)),{Status:{Value:"Pending First Approval"},'First Approver':approver_1.Selected.Value,'Second Approver':approver_2.Selected.Value});
             //Navigate(RecommenderDashboard);
             //If(IsEmpty(recomViewGallery.AllItems),Notify("Blank data cannot be submitted"),If(IsBlank((approver_1.Selected.Value) && (approver_2.Selected.Value)),Notify("Select Approvers")),Navigate(RecommenderDashboard));
@@ -490,7 +489,7 @@ RecommenderView As screen:
                 If(
                     And(IsBlank(approver_1.Selected.Value), IsBlank(approver_2.Selected.Value)),
                     Notify("Please select at least one approver."),
-                    Navigate(RecommenderDashboard)
+                    Set(saving,true)&Navigate(RecommenderDashboard)
                 )
             )
         Size: =15
@@ -933,7 +932,7 @@ RecommenderView As screen:
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Size: =13
+        Size: =10
         Width: =250
         X: =559
         Y: =658
