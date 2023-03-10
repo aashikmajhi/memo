@@ -80,6 +80,7 @@ AddingNewItemViewer As screen:
     Form4_4 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
+        DefaultMode: =FormMode.New
         Height: =577
         NumberOfColumns: =2
         SnapToColumns: =false
