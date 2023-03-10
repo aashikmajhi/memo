@@ -801,25 +801,25 @@ AddingNewItemUserSubmitMemo As screen:
             //If(IsEmpty(DataCardValue20_1.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26_1.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21_1.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22_1.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23_1.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24_1.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25_1.Text),Notify("Enter Narration"))))))))))))),SubmitForm(Form4_2) & Navigate(UserSubmitMemo));
             
             If(
-                IsEmpty(DataCardValue20_1.Selected.Value1),
+                IsBlank(DataCardValue20_1.Selected.Value1),
                 Notify("Please select a source."),
                 If(
-                    IsEmpty(DataCardValue26_1.Selected.Value1),
+                    IsBlank(DataCardValue26_1.Selected.Value1),
                     Notify("Please select a type."),
                     If(
-                        IsEmpty(DataCardValue21_1.Selected.Value1),
+                        IsBlank(DataCardValue21_1.Selected.Value1),
                         Notify("Please select a type no."),
                         If(
-                            IsEmpty(DataCardValue22_1.Selected.Value1),
+                            IsBlank(DataCardValue22_1.Selected.Value1),
                             Notify("Please select a type no name."),
                             If(
-                                IsEmpty(DataCardValue23_1.Text),
+                                IsBlank(DataCardValue23_1.Text),
                                 Notify("Please enter the amount."),
                                 If(
-                                    IsEmpty(DataCardValue24_1.Text),
+                                    IsBlank(DataCardValue24_1.Text),
                                     Notify("Please enter the bill no."),
                                     If(
-                                        IsEmpty(DataCardValue25_1.Text),
+                                        IsBlank(DataCardValue25_1.Text),
                                         Notify("Please enter the narration."),
                                         SubmitForm(Form4_2) & Navigate(UserSubmitMemo)
                                     )
