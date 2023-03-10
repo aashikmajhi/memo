@@ -556,9 +556,27 @@ CreateNewMemo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
+        OnSelect: |
             =//If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))),Navigate(SavingToUnsubmitted));
-            If(IsEmpty(companyName_2.Selected.Value),Notify("Select Organization"),(If(IsEmpty(Label1_2.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))))))),Navigate(SavingToUnsubmitted));
+            //If(IsEmpty(companyName_2.Selected.Value),Notify("Select Organization"),(If(IsEmpty(Label1_2.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))))))),Navigate(SavingToUnsubmitted));
+            
+            If(
+                IsBlank(companyName_2.Selected.Value),
+                Notify("Please select an organization."),
+                If(
+                    IsBlank(Label1_2.Selected.Value1),
+                    Notify("Please select a memo type."),
+                    If(
+                        IsEmpty(newMemoGallery.AllItems),
+                        Notify("Please enter memo items."),
+                        If(
+                            IsBlank(TextInput7_2.Text),
+                            Notify("Please input the subject for the memo."),
+                            Navigate(SavingToUnsubmitted)
+                        )
+                    )
+                )
+            )
         Size: =15
         Text: ="Save"
         X: =513
@@ -798,12 +816,32 @@ CreateNewMemo As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
+        OnSelect: |+
             =//Navigate(UserSubmitMemo)
             //If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),Navigate(UserSubmitMemo));
             //If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))),Navigate(UserSubmitMemo));
             
-            If(IsEmpty(companyName_2.Selected.Value),Notify("Select Organization"),(If(IsEmpty(Label1_2.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))))))),Navigate(UserSubmitMemo));
+            //If(IsEmpty(companyName_2.Selected.Value),Notify("Select Organization"),(If(IsEmpty(Label1_2.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))))))),Navigate(UserSubmitMemo));
+            
+            If(
+                IsBlank(companyName_2.Selected.Value),
+                Notify("Please select an organization."),
+                If(
+                    IsBlank(Label1_2.Selected.Value1),
+                    Notify("Please select a memo type."),
+                    If(
+                        IsEmpty(newMemoGallery.AllItems),
+                        Notify("Please enter memo items."),
+                        If(
+                            IsBlank(TextInput7_2.Text),
+                            Notify("Please input the subject for the memo."),
+                            Navigate(UserSubmitMemo)
+                        )
+                    )
+                )
+            )
+            
+            
         Size: =15
         Text: ="Submit"
         X: =709

@@ -791,10 +791,40 @@ AddingNewItemViewer As screen:
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
+        OnSelect: |
             =//If(IsEmpty(DataCardValue20_2.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26_2.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21_2.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22_2.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23_2.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24_2.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25_2.Text),Notify("Enter Narration"),(If(IsBlank(DataCardValue27_2.Attachments),Notify("Select Attachments"))))))))))))))),SubmitForm(Form4_4) & Navigate(VerifierView));
             
-            If(IsEmpty(DataCardValue20_2.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26_2.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21_2.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22_2.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23_2.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24_2.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25_2.Text),Notify("Enter Narration"))))))))))))),SubmitForm(Form4_4) & Navigate(VerifierView));
+            //If(IsEmpty(DataCardValue20_2.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26_2.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21_2.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22_2.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23_2.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24_2.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25_2.Text),Notify("Enter Narration"))))))))))))),SubmitForm(Form4_4) & Navigate(VerifierView));
+            
+            If(
+                IsEmpty(DataCardValue20_2.Selected.Value1),
+                Notify("Please select a source."),
+                If(
+                    IsEmpty(DataCardValue26_2.Selected.Value1),
+                    Notify("Please select a type."),
+                    If(
+                        IsEmpty(DataCardValue21_2.Selected.Value1),
+                        Notify("Please select a type no."),
+                        If(
+                            IsEmpty(DataCardValue22_2.Selected.Value1),
+                            Notify("Please select a type no name."),
+                            If(
+                                IsEmpty(DataCardValue23_2.Text),
+                                Notify("Please enter the amount."),
+                                If(
+                                    IsEmpty(DataCardValue24_2.Text),
+                                    Notify("Please enter the bill no."),
+                                    If(
+                                        IsEmpty(DataCardValue25_2.Text),
+                                        Notify("Please enter the narration."),
+                                        SubmitForm(Form4_4) & Navigate(VerifierView)
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
         Size: =15
         Text: ="Add"
         X: =603
