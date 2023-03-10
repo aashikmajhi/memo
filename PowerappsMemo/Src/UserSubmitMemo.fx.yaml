@@ -347,7 +347,7 @@ UserSubmitMemo As screen:
         DefaultDate: =userDashboardGallery.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Semibold
         Format: =DateTimeFormat.LongDate
