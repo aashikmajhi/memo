@@ -741,9 +741,9 @@ SavingToSP As screen:
             =//StoreInSP.Run("PurchaseReq for the Ref No " & refNo_4.Text &".pdf",Substitute(JSON(myMemoPdf,IncludeBinaryData),"""",""));
             
             //Office365Outlook.SendEmailV2(app1.Text,"Testing mail.","We are just testing the pdf generating feature and sending it as an email.",{Attachments:Table({Name:"PurchaseReq for the Ref No " & refNo_1.Text &".pdf",ContentBytes:myPdf})});
-            Patch(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=userDashboardGallery.Selected.Title),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,'Memo Type':Label1_1.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,Status:{Value:"Pending Verifier"}});
+            Patch(UnsubmittedRequisitionApprovalList,LookUp(UnsubmittedRequisitionApprovalList,Title=userDashboardGallery.Selected.Title),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,'Memo Type':Label1_1.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,Status:{Value:"Pending Verification"}});
             
-            Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,Status:{Value:"Pending Verifier"}});
+            Patch(RequisitionDemoApprovalList,Defaults(RequisitionDemoApprovalList),{Title:refNo_4.Text,From:from_4.Text,Department:department_4.Text,Date:from_5.Text,Organization:Label3.Text,To:from_6.Text,Cc:from_7.Text,Subject:TextInput7_1.Text,'Prepared By':approver1_2.Text,'Verified By':approver1_6.Text,Status:{Value:"Pending Verification"}});
             
             
             ForAll(
