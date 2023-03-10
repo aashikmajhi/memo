@@ -418,7 +418,7 @@ UserDashboard As screen:
                 If(ThisItem.Status.Value="Pending Recommendation" ||ThisItem.Status.Value="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit));
                 
                 If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
-                If(loginUser.Email = ThisItem.PreparedBy && (Label33_7.Text="Pending Verification" ||ThisItem.Status.Value="Pending Recommendation" ||Label33_7.Text="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
+                If(loginUser.Email = ThisItem.PreparedBy && (ThisItem.Status.Value="Pending Recommendation" ||Label33_7.Text="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
                 
             PaddingBottom: =5
             PaddingLeft: =5
