@@ -939,9 +939,11 @@ VerifierView As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Set(recomm, false );Set(saving, true );Patch(RequisitionDemoApprovalList,First(Filter(RequisitionDemoApprovalList,Title=refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});Patch(UnsubmittedRequisitionApprovalList,First(Filter(UnsubmittedRequisitionApprovalList,Title=refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
+            =Set(recomm, false );
+            //Set(saving, true );
+            Patch(RequisitionDemoApprovalList,First(Filter(RequisitionDemoApprovalList,Title=refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});Patch(UnsubmittedRequisitionApprovalList,First(Filter(UnsubmittedRequisitionApprovalList,Title=refNo_8.Text)),{Status:{Value:"Pending Recommendation"},'Recommended By':approver3_5.Selected.Value});
             //Navigate(UserDashboard);
-            If(IsEmpty(verifierViewGallery.AllItems),Notify("Enter Memo Data"),(If(IsBlank(approver3_5.Selected.Value),Notify("Select Recommender"),Navigate(UserDashboard))));
+            If(IsEmpty(verifierViewGallery.AllItems),Notify("Enter Memo Data"),(If(IsBlank(approver3_5.Selected.Value),Notify("Select Recommender"),Set(saving, true ) & Navigate(UserDashboard))));
             //If(IsEmpty(verifierViewGallery.AllItems),Notify("Please enter memo data."),If(IsEmpty(approver3_5.Selected.Value),Notify("Please select a recommender."),Navigate(UserDashboard)))
         Size: =15
         Text: ="Submit"
