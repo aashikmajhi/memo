@@ -687,7 +687,7 @@ CreateNewMemo As screen:
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         Color: =RGBA(0, 0, 0, 1)
-        Default: =Office365Users.MyProfile().DisplayName
+        Default: =Office365Users.MyProfile().UserPrincipalName
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
