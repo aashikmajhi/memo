@@ -446,29 +446,6 @@ UserDashboard As screen:
             Y: =50
             ZIndex: =11
 
-        Label1 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By')
-            X: =286
-            Y: =44
-            ZIndex: =12
-
-        Label12 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =50
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.PreparedBy
-            X: =284
-            Y: =45
-            ZIndex: =13
-
     Container1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 0, 0, 0.78)
         Height: =552
