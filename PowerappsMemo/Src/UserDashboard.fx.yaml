@@ -208,8 +208,73 @@ UserDashboard As screen:
             =//Sort(If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending))),Date,SortOrder.Ascending)
             
             //Sort(If(_requestTypeFilter="My Memo",Sort(UnsubmittedRequisitionApprovalList,Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Third Approval"||Status.Value="Pending Fourth Approval"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
-            Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
             
+            //Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
+            
+            Sort(
+                If(
+                    _requestTypeFilter = "My Memo",
+                    Sort(
+                        Filter(
+                            UnsubmittedRequisitionApprovalList,
+                            'Created By'.Email = User().Email
+                        ),
+                        Date,
+                        SortOrder.Ascending
+                    ),
+                    If(
+                        _requestTypeFilter = "All",
+                        Sort(
+                            RequisitionDemoApprovalList,
+                            Date,
+                            SortOrder.Ascending
+                        ),
+                        If(
+                            _requestTypeFilter = "Pending",
+                            Sort(
+                                Filter(
+                                    RequisitionDemoApprovalList,
+                                    Status.Value = "Pending First Approval" ||
+                                    Status.Value = "Pending Second Approval" ||
+                                    Status.Value = "Pending Verification" ||
+                                    Status.Value = "Pending Recommendation"
+                                ),
+                                Date,
+                                SortOrder.Ascending
+                            ),
+                            If(
+                                _requestTypeFilter = "Approved",
+                                Sort(
+                                    Filter(
+                                        RequisitionDemoApprovalList,
+                                        Status.Value = "Approved"
+                                    ),
+                                    Date,
+                                    SortOrder.Ascending
+                                ),
+                                If(
+                                    _requestTypeFilter = "Declined",
+                                    Sort(
+                                        Filter(
+                                            RequisitionDemoApprovalList,
+                                            Status.Value = "Declined"
+                                        ),
+                                        Date,
+                                        SortOrder.Ascending
+                                    ),
+                                    // Default filter if none of the above conditions match
+                                    RequisitionDemoApprovalList
+                                )
+                            )
+                        )
+                    )
+                ),
+                Date,
+                SortOrder.Ascending
+            )
+            
+            
+            //Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(RequisitionDemoApprovalList,Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending))),Date,SortOrder.Ascending)
             //Sort(If(_requestTypeFilter="My Memo",Sort(Filter(UnsubmittedRequisitionApprovalList,'Created By'.Email=User().Email),Date,SortOrder.Ascending),If(_requestTypeFilter="All",Sort(Filter(RequisitionDemoApprovalList,'Recommended By'=User().Email),Date,SortOrder.Ascending),(Sort(If(_requestTypeFilter="Pending",Sort(Filter(RequisitionDemoApprovalList,Status.Value="Pending First Approval"||Status.Value="Pending Second Approval"||Status.Value="Pending Verification"||Status.Value="Pending Recommendation"),Date,SortOrder.Ascending),Sort(Filter(RequisitionDemoApprovalList,Status.Value=_requestTypeFilter),Date,SortOrder.Ascending)),Date,SortOrder.Ascending)))),Date,SortOrder.Ascending)
         Layout: =Layout.Vertical
         OnSelect: |-
