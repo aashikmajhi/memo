@@ -296,7 +296,7 @@ UserViewAfterSubmit As screen:
             =userDashboardGallery.Selected.From
             //LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,From)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -333,7 +333,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Department
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -385,7 +385,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Title
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -436,7 +436,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Subject
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -487,7 +487,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,'Prepared By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -561,7 +561,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: ="Dear Sir/Madame"
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -581,7 +581,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: ="This is to request for approval for payment of below parties for below references from below sources."
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -601,7 +601,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Date
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -621,7 +621,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.To
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -641,7 +641,7 @@ UserViewAfterSubmit As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: =userDashboardGallery.Selected.Cc
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -694,7 +694,7 @@ UserViewAfterSubmit As screen:
             =
             LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,'Verified By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -735,7 +735,7 @@ UserViewAfterSubmit As screen:
             =
             LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,'Recommended By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -776,7 +776,7 @@ UserViewAfterSubmit As screen:
             =
             LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,'First Approver')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
@@ -817,7 +817,7 @@ UserViewAfterSubmit As screen:
             =
             LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,'Second Approver')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
