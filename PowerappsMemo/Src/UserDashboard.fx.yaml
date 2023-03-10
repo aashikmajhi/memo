@@ -408,7 +408,8 @@ UserDashboard As screen:
             Height: =28
             Icon: =Icon.View
             OnSelect: |-
-                =If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
+                =//If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
+                If(loginUser.Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
                 If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) && (ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(VerifierViewAfterSubmit));
                 
                 //If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,true) && ThisItem.Status.Value="New",Navigate(UserSubmitMemo),Navigate(UserDashboard));
