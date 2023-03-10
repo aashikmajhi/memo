@@ -414,10 +414,10 @@ UserDashboard As screen:
                 
                 //Switch(Label33_7.Text,"Pending Recommendation",Navigate(RecommenderView),"Pending Verifier",Navigate(VerifierView),"New",Navigate(UserSubmitMemo));
                 
-                If(ThisItem.Status.Value="Pending Verification" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierView));
+                If(ThisItem.Status.Value="Pending Verification" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierView),If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo)));
                 If(ThisItem.Status.Value="Pending Recommendation" ||ThisItem.Status.Value="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined" && loginUser.Email = ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit));
                 
-                If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
+                //If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
                 If(loginUser.Email = ThisItem.PreparedBy && (ThisItem.Status.Value="Pending Recommendation" ||Label33_7.Text="Pending First Approval" ||ThisItem.Status.Value="Pending Second Approval" ||ThisItem.Status.Value="Approved" ||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
                 
             PaddingBottom: =5
