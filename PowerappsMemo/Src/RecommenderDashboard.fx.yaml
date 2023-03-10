@@ -111,7 +111,7 @@ RecommenderDashboard As screen:
                             Sort(
                                 Filter(
                                     RequisitionDemoApprovalList,
-                                    Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Third Approval" || Status.Value = "Pending Fourth Approval"
+                                    Status.Value = "Pending First Approval" || Status.Value = "Pending Second Approval" || Status.Value = "Pending Verification" || Status.Value = "Pending Recommendation"
                                 ),
                                 Date,
                                 SortOrder.Ascending
