@@ -505,29 +505,31 @@ UserSubmitMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
             =//If(varLoggedInUser=preparedby.Text,Navigate(MemoPDF),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(MemoPDF),If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(MemoPDF),false),false),false);
-            
             //If(varLoggedInUser=recommendedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=verifiedby.SelectedText.Value,Navigate(SavingToSP),If(varLoggedInUser=preparedby.Text,Navigate(SavingToSP),false),false),false);
-            ClearCollect(PurchaseReq,userSubmitGallery.AllItems);
+            ClearCollect(
+                PurchaseReq,
+                userSubmitGallery.AllItems
+            );
             //Navigate(SavingToSP);
             //If(IsEmpty(companyName_3.Selected.Value),Notify("Select Organization Name"),If(IsEmpty(Label1_7.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(userSubmitGallery.AllItems),Notify("Enter Memo Items"),If(IsBlank( verifiedby.Selected.Value),Notify("Select Verifier"))))),Navigate(SavingToSP));
-            
+            //If(IsEmpty(companyName_3.Selected.Value),Notify("Please select an organization name."),If(IsEmpty(Label1_7.Selected.Value1),Notify("Please select a memo type."),If(IsEmpty(userSubmitGallery.AllItems),Notify("Please enter memo items."),If(IsBlank(verifiedby.Selected.Value),Notify("Please select a verifier."),Navigate(SavingToSP)))))
             If(
-                IsEmpty(companyName_3.Selected.Value),
-                Notify("Please select an organization name."),
+                IsBlank(companyName_3.Selected.Value),
+                Notify("Select Organization Name"),
                 If(
-                    IsEmpty(Label1_7.Selected.Value1),
-                    Notify("Please select a memo type."),
-                    If(
+                    IsBlank(Label1_7.Selected.Value1),
+                    Notify("Select Memo Type"),
+                    (If(
                         IsEmpty(userSubmitGallery.AllItems),
-                        Notify("Please enter memo items."),
+                        Notify("Enter Memo Items"),
                         If(
                             IsBlank(verifiedby.Selected.Value),
-                            Notify("Please select a verifier."),
+                            Notify("Select Verifier"),
                             Navigate(SavingToSP)
                         )
-                    )
+                    ))
                 )
-            )
+            );
         Size: =15
         Text: ="Submit"
         X: =621
