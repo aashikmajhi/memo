@@ -470,7 +470,7 @@ VerifierViewAfterSubmit As screen:
         Height: =28
         OnSelect: =
         Size: =15
-        Text: =userDashboardGallery.Selected.MemoType
+        Text: =LookUp(RequisitionDemoApprovalList,Title=refNo_14.Text,'Memo Type')
         X: =599
         Y: =58
         ZIndex: =36

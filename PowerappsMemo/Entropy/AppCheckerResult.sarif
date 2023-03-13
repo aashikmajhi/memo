@@ -27924,36 +27924,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.Label1_11.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.Label1_11.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "VerifierViewAfterSubmit",
-                "type": "VerifierViewAfterSubmit.Label1_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VerifierViewAfterSubmit.date_12.Default"
                 }
               ],
@@ -28734,36 +28704,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VerifierView.Label1_5.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VerifierView.Label1_5.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "VerifierView",
-                "type": "VerifierView.Label1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VerifierView.date_7.Default"
                 }
               ],
@@ -29017,36 +28957,6 @@
                 "member": "Text",
                 "module": "RecommenderView",
                 "type": "RecommenderView.companyName_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "RecommenderView.Label1_4.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "RecommenderView.Label1_4.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "RecommenderView",
-                "type": "RecommenderView.Label1_4"
               }
             }
           ],

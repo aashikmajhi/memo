@@ -630,7 +630,10 @@ RecommenderView As screen:
         FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
-        Text: =recommenderGallery.Selected.MemoType
+        Text: |-
+            =//recommenderGallery.Selected.MemoType
+            
+            LookUp(RequisitionDemoApprovalList,Title=refNo_7.Text,'Memo Type')
         X: =599
         Y: =58
         ZIndex: =36
@@ -1076,4 +1079,18 @@ RecommenderView As screen:
             X: =291
             Y: =273
             ZIndex: =1
+
+    Label5_1 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =47
+        Size: =13
+        Text: |-
+            =
+            LookUp(RequisitionDemoApprovalList,Title=refNo_7.Text,MemoType)
+        Width: =213
+        X: =499
+        Y: =92
+        ZIndex: =62
 
