@@ -732,9 +732,8 @@ UserDashboard As screen:
             Height: =28
             Icon: =Icon.View
             OnSelect: |+
-                =
-                If(ThisItem.Status.Value="Pending Recommendation",Navigate(RecommenderView));
-                If(role = "Recommender" && (ThisItem.Status.Value="Pending First Approval" || ThisItem.Status.Value="Pending Second Approval" || ThisItem.Status.Value="Approved" || ThisItem.Status.Value="Declined"),Navigate(RecommenderViewAfterSubmit));
+                =If(ThisItem.Status.Value="Pending Recommendation",Navigate(RecommenderView));
+                If(ThisItem.Status.Value="Pending First Approval" || ThisItem.Status.Value="Pending Second Approval" || ThisItem.Status.Value="Approved" || ThisItem.Status.Value="Declined",Navigate(RecommenderViewAfterSubmit));
                 
                 
             PaddingBottom: =5
