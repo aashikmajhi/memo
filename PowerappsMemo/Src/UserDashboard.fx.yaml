@@ -407,48 +407,62 @@ UserDashboard As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
             Icon: =Icon.View
-            OnSelect: |-
+            OnSelect: |
                 =//If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By') && (ThisItem.Status.Value="Pending Verification"),Navigate(VerifierView),Navigate(UserDashboard));
+                
                 //If(loginUser.Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
+                
                 //If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) && (ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(VerifierViewAfterSubmit));
+                
                 //If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,ThisItem.PreparedBy) && ThisItem.Status.Value="New",Navigate(UserSubmitMemo),Navigate(UserDashboard));
+                
                 //If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
+                
                 //If(ThisItem.Status.Value="Pending Verification" && LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) ,Navigate(VerifierView));
+                
                 //If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,true) && (ThisItem.Status.Value="Pending Verification"||ThisItem.Status.Value="Pending Recommendation"||Label33_7.Text="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
+                
                 //Switch(ThisItem.Status.Value="New",If(LookUp(UnsubmittedRequisitionApprovalList,ThisItem.PreparedBy=loginUser.Email, true ),Navigate(UserSubmitMemo),Navigate(UserDashboard)),ThisItem.Status.Value="Pending Verification",If(LookUp(RequisitionDemoApprovalList,ThisItem.VerifiedBy=loginUser.Email, true ),Navigate(VerifierView),Navigate(UserDashboard)),ThisItem.Status.Value="Pending Verification"||ThisItem.Status.Value="Pending Recommendation"||Label33_7.Text="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined",Navigate(UserViewAfterSubmit),If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email, true ),Navigate(UserSubmitMemo),Navigate(UserDashboard)),ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined",If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email, true ),Navigate(VerifierViewAfterSubmit),Navigate(UserDashboard)));
+                
                 //Switch(ThisItem.Status.Value,"New",If(loginUser.Email=ThisItem.PreparedBy,Navigate(UserSubmitMemo),Navigate(UserDashboard)),"Pending Verification",If(loginUser.Email=ThisItem.PreparedBy,Navigate(UserViewAfterSubmit),If(loginUser.Email=ThisItem.VerifiedBy,Navigate(VerifierView),Navigate(UserDashboard))),"Pending Verification","Pending Recommendation","Pending First Approval","Pending Second Approval","Approved","Declined",If(loginUser.Email=ThisItem.PreparedBy,Navigate(UserViewAfterSubmit),If(loginUser.Email=ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit),Navigate(UserDashboard))));
+                //Switch(ThisItem.Status.Value,"New",If(loginUser.Email=ThisItem.PreparedBy,Navigate(UserSubmitMemo),Navigate(UserDashboard)),"Pending Verification",If(loginUser.Email=ThisItem.PreparedBy,Navigate(UserViewAfterSubmit),If(loginUser.Email=ThisItem.VerifiedBy,Navigate(VerifierView),Navigate(UserDashboard))),"Pending Recommendation"||"Pending First Approval"||"Pending Second Approval"||"Approved"||"Declined"||If(loginUser.Email=ThisItem.PreparedBy,Navigate(UserViewAfterSubmit),If(loginUser.Email=ThisItem.VerifiedBy,Navigate(VerifierViewAfterSubmit),Navigate(UserDashboard))))
+                
+                
                 Switch(
-                    ThisItem.Status.Value,
-                    "New",
                     If(
                         loginUser.Email = ThisItem.PreparedBy,
-                        Navigate(UserSubmitMemo),
+                        "PreparedBy",
+                        If(
+                            loginUser.Email = ThisItem.VerifiedBy,
+                            "VerifiedBy",
+                            "OtherUser"
+                        )
+                    ),
+                    "PreparedBy",
+                    Switch(
+                        ThisItem.Status.Value,
+                        "New", Navigate(UserSubmitMemo),
+                        "Pending Verification", Navigate(UserViewAfterSubmit),
+                        "Pending Recommendation", Navigate(UserViewAfterSubmit),
+                        "Pending First Approval", Navigate(UserViewAfterSubmit),
+                        "Pending Second Approval", Navigate(UserViewAfterSubmit),
+                        "Approved", Navigate(UserViewAfterSubmit),
+                        "Declined", Navigate(UserViewAfterSubmit),
                         Navigate(UserDashboard)
                     ),
-                    "Pending Verification",
-                    If(
-                        loginUser.Email = ThisItem.PreparedBy,
-                        Navigate(UserViewAfterSubmit),
-                        If(
-                            loginUser.Email = ThisItem.VerifiedBy,
-                            Navigate(VerifierView),
-                            Navigate(UserDashboard)
-                        )
+                    "VerifiedBy",
+                    Switch(
+                        ThisItem.Status.Value,
+                        "New", Navigate(VerifierView),
+                        "Pending Verification", Navigate(VerifierView),
+                        "Pending Recommendation", Navigate(VerifierViewAfterSubmit),
+                        "Pending First Approval", Navigate(VerifierViewAfterSubmit),
+                        "Pending Second Approval", Navigate(VerifierViewAfterSubmit),
+                        "Approved", Navigate(VerifierViewAfterSubmit),
+                        "Declined", Navigate(VerifierViewAfterSubmit),
+                        Navigate(UserDashboard)
                     ),
-                    "Pending Recommendation" ||
-                    "Pending First Approval"||
-                    "Pending Second Approval"||
-                    "Approved"||
-                    "Declined"||
-                    If(
-                        loginUser.Email = ThisItem.PreparedBy,
-                        Navigate(UserViewAfterSubmit),
-                        If(
-                            loginUser.Email = ThisItem.VerifiedBy,
-                            Navigate(VerifierViewAfterSubmit),
-                            Navigate(UserDashboard)
-                        )
-                    )
+                    Navigate(UserDashboard)
                 )
             PaddingBottom: =5
             PaddingLeft: =5
