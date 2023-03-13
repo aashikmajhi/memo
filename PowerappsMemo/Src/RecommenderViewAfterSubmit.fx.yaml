@@ -778,7 +778,7 @@ RecommenderViewAfterSubmit As screen:
         Visible: =If(IsBlank(recommendedby1_1.Text),false,true)
         Width: =250
         X: =559
-        Y: =658
+        Y: =657
         ZIndex: =57
 
     recommendedby1_2 As text:
@@ -824,7 +824,7 @@ RecommenderViewAfterSubmit As screen:
         Visible: =If(IsBlank(recommendedby1_3.Text),false,true)
         Width: =250
         X: =1098
-        Y: =658
+        Y: =657
         ZIndex: =61
 
     Label9 As label:
