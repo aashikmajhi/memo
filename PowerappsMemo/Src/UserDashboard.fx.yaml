@@ -410,7 +410,7 @@ UserDashboard As screen:
             OnSelect: |-
                 =If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By') && (ThisItem.Status.Value="Pending Verification"),Navigate(VerifierView),Navigate(UserDashboard));
                 
-                If(loginUser.Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
+                //If(loginUser.Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
                 
                 //If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) && (ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(VerifierViewAfterSubmit));
                 
