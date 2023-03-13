@@ -409,7 +409,7 @@ UserDashboard As screen:
             Icon: =Icon.View
             OnSelect: |-
                 =//If((ThisItem.Status.Value="Pending Verification") && LookUp(RequisitionDemoApprovalList,'VerifiedBy'=User().Email,true),Navigate(VerifierView),Navigate(UserDashboard));
-                If((ThisItem.Status.Value="Pending Verification") && ThisItem.VerifiedBy=User().Email,Navigate(VerifierView),Navigate(UserDashboard));
+                //If((ThisItem.Status.Value="Pending Verification") && ThisItem.VerifiedBy=User().Email,Navigate(VerifierView),Navigate(UserDashboard));
                 
                 
                 //If(User().Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
