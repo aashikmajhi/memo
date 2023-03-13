@@ -453,7 +453,7 @@ UserDashboard As screen:
                     ThisItem.VerifiedBy,
                     Switch(
                         ThisItem.Status.Value,
-                        "New", Navigate(VerifierView),
+                        //"New", Navigate(VerifierView),
                         "Pending Verification", Navigate(VerifierView),
                         "Pending Recommendation", Navigate(VerifierViewAfterSubmit),
                         "Pending First Approval", Navigate(VerifierViewAfterSubmit),
