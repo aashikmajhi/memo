@@ -1088,7 +1088,7 @@ RecommenderView As screen:
         Size: =13
         Text: |-
             =
-            LookUp(RequisitionDemoApprovalList,Title=refNo_7.Text,MemoType)
+            LookUp(RequisitionDemoApprovalList,Title=refNo_7.Text,'Memo Type')
         Width: =213
         X: =499
         Y: =92
