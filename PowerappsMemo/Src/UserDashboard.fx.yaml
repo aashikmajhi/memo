@@ -419,8 +419,8 @@ UserDashboard As screen:
                     ThisItem.Status.Value = "New",
                     If(
                         LookUp(
-                            RequisitionDemoApprovalList,
-                            'Prepared By' = loginUser.Email,
+                            UnsubmittedRequisitionApprovalList,
+                            ThisItem.PreparedBy = loginUser.Email,
                             true
                         ),
                         Navigate(UserSubmitMemo),
@@ -430,7 +430,7 @@ UserDashboard As screen:
                     If(
                         LookUp(
                             RequisitionDemoApprovalList,
-                            'Verified By' = loginUser.Email,
+                            ThisItem.VerifiedBy = loginUser.Email,
                             true
                         ),
                         Navigate(VerifierView),
@@ -441,7 +441,7 @@ UserDashboard As screen:
                     If(
                         LookUp(
                             RequisitionDemoApprovalList,
-                            'Prepared By' = loginUser.Email,
+                            ThisItem.PreparedBy = loginUser.Email,
                             true
                         ),
                         Navigate(UserSubmitMemo),
@@ -451,7 +451,7 @@ UserDashboard As screen:
                     If(
                         LookUp(
                             RequisitionDemoApprovalList,
-                            'Verified By' = loginUser.Email,
+                            ThisItem.VerifiedBy = loginUser.Email,
                             true
                         ),
                         Navigate(VerifierViewAfterSubmit),
