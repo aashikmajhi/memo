@@ -431,14 +431,14 @@ UserDashboard As screen:
                 Switch(
                     If(
                         loginUser.Email = ThisItem.PreparedBy,
-                        "PreparedBy",
+                        ThisItem.PreparedBy,
                         If(
                             loginUser.Email = ThisItem.VerifiedBy,
                             "VerifiedBy",
                             "OtherUser"
                         )
                     ),
-                    "PreparedBy",
+                    ThisItem.PreparedBy,
                     Switch(
                         ThisItem.Status.Value,
                         "New", Navigate(UserSubmitMemo),
@@ -450,7 +450,7 @@ UserDashboard As screen:
                         "Declined", Navigate(UserViewAfterSubmit),
                         Navigate(UserDashboard)
                     ),
-                    "VerifiedBy",
+                    ThisItem.VerifiedBy,
                     Switch(
                         ThisItem.Status.Value,
                         "New", Navigate(VerifierView),
