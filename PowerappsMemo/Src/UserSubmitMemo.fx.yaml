@@ -1136,8 +1136,10 @@ UserSubmitMemo As screen:
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        Default: |-
+            =LookUp(UnsubmittedRequisitionApprovalList,Title=userDashboardGallery.Selected.Title,{Vlue:'Memo Type'})
         DefaultSelectedItems: |-
-            ={Value:(userDashboardGallery.Selected.MemoType)}
+            =LookUp(UnsubmittedRequisitionApprovalList,Title=userDashboardGallery.Selected.Title,{Vlue:'Memo Type'})
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
