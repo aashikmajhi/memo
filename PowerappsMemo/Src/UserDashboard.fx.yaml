@@ -442,7 +442,43 @@ UserDashboard As screen:
                             Navigate(UserDashboard)
                         )
                     ),
-                    "Pending Recommendation", "Pending First Approval", "Pending Second Approval", "Approved", "Declined",
+                    "Pending Verification", "Pending Recommendation", "Pending First Approval", "Pending Second Approval", "Approved", "Declined",
+                    If(
+                        loginUser.Email = ThisItem.PreparedBy,
+                        Navigate(UserViewAfterSubmit),
+                        If(
+                            loginUser.Email = ThisItem.VerifiedBy,
+                            Navigate(VerifierViewAfterSubmit),
+                            Navigate(UserDashboard)
+                        )
+                    )
+                )
+                
+                
+                
+                Switch(
+                    ThisItem.Status.Value,
+                    "New",
+                    If(
+                        loginUser.Email = ThisItem.PreparedBy,
+                        Navigate(UserSubmitMemo),
+                        Navigate(UserDashboard)
+                    ),
+                    "Pending Verification",
+                    If(
+                        loginUser.Email = ThisItem.PreparedBy,
+                        Navigate(UserViewAfterSubmit),
+                        If(
+                            loginUser.Email = ThisItem.VerifiedBy,
+                            Navigate(VerifierView),
+                            Navigate(UserDashboard)
+                        )
+                    ),
+                    "Pending Recommendation",
+                    "Pending First Approval",
+                    "Pending Second Approval",
+                    "Approved",
+                    "Declined",
                     If(
                         loginUser.Email = ThisItem.PreparedBy,
                         Navigate(UserViewAfterSubmit),
