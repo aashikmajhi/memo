@@ -408,16 +408,19 @@ UserDashboard As screen:
             Height: =28
             Icon: =Icon.View
             OnSelect: |-
-                =If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By') && (ThisItem.Status.Value="Pending Verification"),Navigate(VerifierView),Navigate(UserDashboard));
+                =//If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,'Verified By') && (ThisItem.Status.Value="Pending Verification"),Navigate(VerifierView),Navigate(UserDashboard));
                 //If(loginUser.Email=ThisItem.VerifiedBy && ThisItem.Status.Value="Pending Verification",Navigate(VerifierView));
                 If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) && (ThisItem.Status.Value="Pending Recommendation"||ThisItem.Status.Value="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(VerifierViewAfterSubmit));
                 
-                If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,ThisItem.PreparedBy) && ThisItem.Status.Value="New",Navigate(UserSubmitMemo),Navigate(UserDashboard));
+                //If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,ThisItem.PreparedBy) && ThisItem.Status.Value="New",Navigate(UserSubmitMemo),Navigate(UserDashboard));
                 
                 //If(ThisItem.Status.Value="New" && loginUser.Email = ThisItem.PreparedBy ,Navigate(UserSubmitMemo));
                 //If(ThisItem.Status.Value="Pending Verification" && LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true) ,Navigate(VerifierView));
                 
                 If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,true) && (ThisItem.Status.Value="Pending Verification"||ThisItem.Status.Value="Pending Recommendation"||Label33_7.Text="Pending First Approval"||ThisItem.Status.Value="Pending Second Approval"||ThisItem.Status.Value="Approved"||ThisItem.Status.Value="Declined"),Navigate(UserViewAfterSubmit));
+                
+                Switch(ThisItem.Status.Value= "New",If(LookUp(RequisitionDemoApprovalList,'Prepared By'=loginUser.Email,true),Navigate(UserSubmitMemo),Navigate(UserDashboard)),
+                ThisItem.Status.Value="Pending Verification",If(LookUp(RequisitionDemoApprovalList,'Verified By'=loginUser.Email,true),Navigate(VerifierView),Navigate(UserDashboard)));
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
