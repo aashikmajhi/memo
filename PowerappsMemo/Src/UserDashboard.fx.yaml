@@ -441,7 +441,7 @@ UserDashboard As screen:
                     If(
                         LookUp(
                             RequisitionDemoApprovalList,
-                            ThisItem.PreparedBy = loginUser.Email,
+                            'Prepared By' = loginUser.Email,
                             true
                         ),
                         Navigate(UserSubmitMemo),
@@ -451,7 +451,7 @@ UserDashboard As screen:
                     If(
                         LookUp(
                             RequisitionDemoApprovalList,
-                            ThisItem.VerifiedBy = loginUser.Email,
+                            'Verified By' = loginUser.Email,
                             true
                         ),
                         Navigate(VerifierViewAfterSubmit),
