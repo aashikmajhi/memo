@@ -26184,36 +26184,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "UserSubmitMemo.Label1_7.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UserSubmitMemo.Label1_7.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "UserSubmitMemo",
-                "type": "UserSubmitMemo.Label1_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "UserSubmitMemo.Label1_7.DefaultSelectedItems"
                 }
               ],
