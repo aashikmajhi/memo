@@ -550,7 +550,7 @@ RecommenderViewAfterSubmit As screen:
             LookUp(RequisitionDemoApprovalList,Title=refNo_15.Text,'Prepared By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
@@ -731,7 +731,7 @@ RecommenderViewAfterSubmit As screen:
             LookUp(RequisitionDemoApprovalList,Title=refNo_15.Text,'Verified By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
@@ -767,7 +767,7 @@ RecommenderViewAfterSubmit As screen:
             LookUp(RequisitionDemoApprovalList,Title=refNo_15.Text,'Recommended By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
@@ -789,8 +789,8 @@ RecommenderViewAfterSubmit As screen:
             =//verifierDashboardGallery.Selected.'Recommended By'
             LookUp(RequisitionDemoApprovalList,Title=refNo_15.Text,'First Approver')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
@@ -812,8 +812,8 @@ RecommenderViewAfterSubmit As screen:
             =//verifierDashboardGallery.Selected.'Recommended By'
             LookUp(RequisitionDemoApprovalList,Title=refNo_15.Text,'Second Approver')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
         Height: =32
