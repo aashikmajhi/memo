@@ -849,7 +849,7 @@ VerifierView As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//userDashboardGallery.Selected.To
-            LookUp(RequisitionDemoApprovalList,Title=refNo_8.Text,'First Approver' & 'Second Approver')
+            LookUp(RequisitionDemoApprovalList,Title=refNo_8.Text,'First Approver' &"; " & 'Second Approver')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -872,7 +872,7 @@ VerifierView As screen:
         Color: =RGBA(0, 0, 0, 1)
         Default: |-
             =//userDashboardGallery.Selected.Cc
-            LookUp(RequisitionDemoApprovalList,Title=refNo_8.Text,'Prepared By' & 'Verified By' & 'Recommended By')
+            LookUp(RequisitionDemoApprovalList,Title=refNo_8.Text,'Prepared By' &"; " & 'Verified By' &"; " & 'Recommended By')
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
