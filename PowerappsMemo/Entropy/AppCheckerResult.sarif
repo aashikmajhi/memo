@@ -26004,36 +26004,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "UserViewAfterSubmit.Label1_10.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UserViewAfterSubmit.Label1_10.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "UserViewAfterSubmit",
-                "type": "UserViewAfterSubmit.Label1_10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "UserViewAfterSubmit.date_11.Default"
                 }
               ],

@@ -424,7 +424,7 @@ UserViewAfterSubmit As screen:
         FontWeight: =FontWeight.Bold
         Height: =28
         Size: =15
-        Text: =userDashboardGallery.Selected.MemoType
+        Text: =LookUp(RequisitionDemoApprovalList,Title=refNo_13.Text,'Memo Type')
         X: =599
         Y: =58
         ZIndex: =36
