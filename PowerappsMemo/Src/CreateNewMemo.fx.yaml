@@ -558,10 +558,7 @@ CreateNewMemo As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
-            =//If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))),Navigate(SavingToUnsubmitted));
-            //If(IsEmpty(companyName_2.Selected.Value),Notify("Select Organization"),(If(IsEmpty(Label1_2.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))))))),Navigate(SavingToUnsubmitted));
-            
-            If(
+            =If(
                 IsBlank(companyName_2.Selected.Value),
                 Notify("Please select an organization."),
                 If(
@@ -580,8 +577,8 @@ CreateNewMemo As screen:
             )
         Size: =15
         Text: ="Save"
-        X: =513
-        Y: =701
+        X: =622
+        Y: =689
         ZIndex: =20
 
     Icon1_7 As icon.BackArrow:
@@ -819,11 +816,7 @@ CreateNewMemo As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =//Navigate(UserSubmitMemo)
-            //If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),Navigate(UserSubmitMemo));
-            //If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))),Navigate(UserSubmitMemo));
-            //If(IsEmpty(companyName_2.Selected.Value),Notify("Select Organization"),(If(IsEmpty(Label1_2.Selected.Value1),Notify("Select Memo Type"),(If(IsEmpty(newMemoGallery.AllItems),Notify("Enter Memo Items"),(If(IsBlank(TextInput7_2.Text),Notify("Input the subject for the memo"))))))),Navigate(UserSubmitMemo));
-            If(
+            =If(
                 IsBlank(companyName_2.Selected.Value),
                 Notify("Please select an organization."),
                 If(
@@ -861,7 +854,8 @@ CreateNewMemo As screen:
             )
         Size: =15
         Text: ="Submit"
-        X: =709
+        Visible: =false
+        X: =890
         Y: =701
         ZIndex: =34
 
