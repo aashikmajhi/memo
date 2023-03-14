@@ -492,7 +492,7 @@ RecommenderView As screen:
                     Patch(
                         UnsubmittedRequisitionApprovalList,
                         First(
-                            Filter(                    
+                            Filter(
                                 UnsubmittedRequisitionApprovalList,
                                 Title = refNo_7.Text
                             )
@@ -520,6 +520,11 @@ RecommenderView As screen:
                     Set(
                         saving,
                         true
+                    ) & Office365Outlook.SendEmailV2(
+                        approver_2.Selected.Value & ";" & approver_2.Selected.Value,
+                        "Testing mail.",
+                        "We are just testing the pdf generating feature and sending it as an email.",
+                        {Cc: approver1_9.Text & ", " & approver2_4.Text & "; " & recommendedby1.Text}
                     ) & Navigate(RecommenderDashboard)
                 )
             )
