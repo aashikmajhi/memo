@@ -490,10 +490,10 @@ RecommenderView As screen:
                     ),
                     Notify("Please select approvers."),
                     Patch(
-                        RequisitionDemoApprovalList,
+                        UnsubmittedRequisitionApprovalList,
                         First(
-                            Filter(
-                                RequisitionDemoApprovalList,
+                            Filter(                    
+                                UnsubmittedRequisitionApprovalList,
                                 Title = refNo_7.Text
                             )
                         ),
@@ -504,10 +504,10 @@ RecommenderView As screen:
                         }
                     );
                     Patch(
-                        UnsubmittedRequisitionApprovalList,
+                        RequisitionDemoApprovalList,
                         First(
                             Filter(
-                                UnsubmittedRequisitionApprovalList,
+                                RequisitionDemoApprovalList,
                                 Title = refNo_7.Text
                             )
                         ),
