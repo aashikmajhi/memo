@@ -33,7 +33,7 @@ AddingNewItemCreatingMemo As screen:
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
-                Text: =Parent.DisplayName
+                Text: ="Memo No"
                 Width: =140
                 Wrap: =false
                 X: =582
@@ -358,7 +358,7 @@ AddingNewItemCreatingMemo As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =true
-            Update: =DataCardValue22.Selected.Value1
+            Update: =DataCardValue22.Selected.Value
             Width: =683
             X: =2
             Y: =1
@@ -418,13 +418,15 @@ AddingNewItemCreatingMemo As screen:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 InputTextPlaceholder: ="Select Type Name"
-                Items: =ComboBoxSample
+                Items: =["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."]
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SearchItems: =Search(ComboBoxSample,DataCardValue22.SearchText,"Value1")
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."],DataCardValue22.SearchText,"Value")
                 SelectionFill: =RGBA(0, 51, 102, 1)
                 Size: =13
                 Width: =623
@@ -797,7 +799,7 @@ AddingNewItemCreatingMemo As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =
-            If(DataCardValue20.Selected.Value1=Blank(),Notify("Please select a source."),If(DataCardValue26.Selected.Value1=Blank(),Notify("Please select a type."),If(DataCardValue21.Selected.Value1=Blank(),Notify("Please select a type no."),If(DataCardValue22.Selected.Value1=Blank(),Notify("Please select a type no name."),If(DataCardValue23.Text=Blank(),Notify("Please enter the amount."),If(DataCardValue24.Text=Blank(),Notify("Please enter the bill no."),If(DataCardValue25.Text=Blank(),Notify("Please enter the narration."),SubmitForm(Form4_1)&Navigate(CreateNewMemo))))))))
+            If(DataCardValue20.Selected.Value1=Blank(),Notify("Please select a source."),If(DataCardValue26.Selected.Value1=Blank(),Notify("Please select a type."),If(DataCardValue21.Selected.Value1=Blank(),Notify("Please select a type no."),If(DataCardValue22.Selected.Value=Blank(),Notify("Please select a type no name."),If(DataCardValue23.Text=Blank(),Notify("Please enter the amount."),If(DataCardValue24.Text=Blank(),Notify("Please enter the bill no."),If(DataCardValue25.Text=Blank(),Notify("Please enter the narration."),SubmitForm(Form4_1)&Navigate(CreateNewMemo))))))))
         Size: =15
         Text: ="Add"
         X: =603

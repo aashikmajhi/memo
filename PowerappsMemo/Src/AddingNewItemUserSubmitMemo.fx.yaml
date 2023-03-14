@@ -33,7 +33,7 @@ AddingNewItemUserSubmitMemo As screen:
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
-                Text: =Parent.DisplayName
+                Text: ="Memo No"
                 Width: =140
                 Wrap: =false
                 X: =582
@@ -356,7 +356,7 @@ AddingNewItemUserSubmitMemo As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =true
-            Update: =DataCardValue22_1.Selected.Value1
+            Update: =DataCardValue22_1.Selected.Value
             Width: =683
             X: =2
             Y: =1
@@ -416,14 +416,16 @@ AddingNewItemUserSubmitMemo As screen:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 InputTextPlaceholder: ="Select Type Name"
-                Items: =ComboBoxSample
+                Items: =["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."]
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
                 Reset: =true
-                SearchItems: =Search(ComboBoxSample,DataCardValue22_1.SearchText,"Value1")
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."],DataCardValue22_1.SearchText,"Value")
                 SelectionFill: =RGBA(0, 51, 102, 1)
                 SelectMultiple: =false
                 Size: =13
@@ -796,11 +798,7 @@ AddingNewItemUserSubmitMemo As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
-            =//If(IsEmpty(DataCardValue20_1.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26_1.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21_1.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22_1.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23_1.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24_1.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25_1.Text),Notify("Enter Narration"),(If(IsBlank(DataCardValue27_1.Attachments),Notify("Select Attachments"))))))))))))))),SubmitForm(Form4_2) & Navigate(UserSubmitMemo));
-            
-            //If(IsEmpty(DataCardValue20_1.Selected.Value1),Notify("Select Source"),(If(IsEmpty(DataCardValue26_1.Selected.Value1),Notify("Select Type"),(If(IsEmpty(DataCardValue21_1.Selected.Value1),Notify("Select Type No"),(If(IsEmpty(DataCardValue22_1.Selected.Value1),Notify("Select Type No Name"),(If(IsEmpty(DataCardValue23_1.Text),Notify("Enter Amount"),(If(IsEmpty(DataCardValue24_1.Text),Notify("Enter Bill No"),(If(IsEmpty(DataCardValue25_1.Text),Notify("Enter Narration"))))))))))))),SubmitForm(Form4_2) & Navigate(UserSubmitMemo));
-            
-            If(
+            =If(
                 IsBlank(DataCardValue20_1.Selected.Value1),
                 Notify("Please select a source."),
                 If(
@@ -810,7 +808,7 @@ AddingNewItemUserSubmitMemo As screen:
                         IsBlank(DataCardValue21_1.Selected.Value1),
                         Notify("Please select a type no."),
                         If(
-                            IsBlank(DataCardValue22_1.Selected.Value1),
+                            IsBlank(DataCardValue22_1.Selected.Value),
                             Notify("Please select a type no name."),
                             If(
                                 IsBlank(DataCardValue23_1.Text),

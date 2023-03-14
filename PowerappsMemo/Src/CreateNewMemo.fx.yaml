@@ -562,7 +562,7 @@ CreateNewMemo As screen:
                 IsBlank(companyName_2.Selected.Value),
                 Notify("Please select an organization."),
                 If(
-                    IsBlank(Label1_2.Selected.Value1),
+                    IsBlank(Label1_2.Selected.Value),
                     Notify("Please select a memo type."),
                     If(
                         IsEmpty(newMemoGallery.AllItems),
@@ -820,7 +820,7 @@ CreateNewMemo As screen:
                 IsBlank(companyName_2.Selected.Value),
                 Notify("Please select an organization."),
                 If(
-                    IsBlank(Label1_2.Selected.Value1),
+                    IsBlank(Label1_2.Selected.Value),
                     Notify("Please select a memo type."),
                     If(
                         IsEmpty(newMemoGallery.AllItems),
@@ -943,7 +943,7 @@ CreateNewMemo As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =ComboBoxSample
+        Items: =["Payment","Intercompany Fund Transfer","Expenses Approval"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         SelectionFill: =RGBA(0, 51, 102, 1)

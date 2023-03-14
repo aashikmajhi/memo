@@ -24,7 +24,7 @@ AddingNewItemViewer As screen:
                         IsBlank(DataCardValue21_2.Selected.Value1),
                         Notify("Please select a type no."),
                         If(
-                            IsBlank(DataCardValue22_2.Selected.Value1),
+                            IsBlank(DataCardValue22_2.Selected.Value),
                             Notify("Please select a type no name."),
                             If(
                                 IsBlank(DataCardValue23_2.Text),
@@ -110,7 +110,7 @@ AddingNewItemViewer As screen:
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
-                Text: =Parent.DisplayName
+                Text: ="Memo No"
                 Width: =100
                 Wrap: =false
                 X: =600
@@ -432,7 +432,7 @@ AddingNewItemViewer As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =false
-            Update: =DataCardValue22_2.Selected.Value1
+            Update: =DataCardValue22_2.Selected.Value
             Width: =672
             X: =1
             Y: =1
@@ -491,12 +491,14 @@ AddingNewItemViewer As screen:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
-                Items: =ComboBoxSample
+                Items: =["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."]
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SearchItems: =Search(ComboBoxSample,DataCardValue22_2.SearchText,"Value1")
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."],DataCardValue22_2.SearchText,"Value")
                 SelectionFill: =RGBA(0, 51, 102, 1)
                 Size: =13
                 Width: =623

@@ -82,7 +82,7 @@ ModifyItem_1 As screen:
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
-                Text: =Parent.DisplayName
+                Text: ="Memo No"
                 Width: =200
                 Wrap: =false
                 X: =597
