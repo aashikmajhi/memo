@@ -785,7 +785,8 @@ UserViewAfterSubmit As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Size: =10
-        Visible: =If(IsBlank(approver1_18.Text),false,true)
+        Visible: |
+            =If(IsBlank(approver1_18.Text),false,true)
         Width: =250
         X: =828
         Y: =657
