@@ -28884,36 +28884,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.ComboBox1_18.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VerifierViewAfterSubmit.ComboBox1_18.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "VerifierViewAfterSubmit",
-                "type": "VerifierViewAfterSubmit.ComboBox1_18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VerifierViewAfterSubmit.ComboBox1_19.Default"
                 }
               ],
