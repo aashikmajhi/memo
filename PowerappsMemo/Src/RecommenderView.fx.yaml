@@ -523,7 +523,7 @@ RecommenderView As screen:
                     ) & Office365Outlook.SendEmailV2(
                         approver_2.Selected.Value & ";" & approver_2.Selected.Value,
                         "Testing mail.",
-                        "We are just testing the pdf generating feature and sending it as an email.",
+                        "Testing the mail sending feature in the application.",
                         {Cc: approver1_9.Text & ", " & approver2_4.Text & "; " & recommendedby1.Text}
                     ) & Navigate(RecommenderDashboard)
                 )
