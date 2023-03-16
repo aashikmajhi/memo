@@ -515,7 +515,7 @@ UserSubmitMemo As screen:
                 IsBlank(companyName_3.Selected.Value),
                 Notify("Select Organization Name"),
                 If(
-                    IsBlank(Label1_7.Selected.Value1),
+                    IsBlank(Label1_7.Selected.Value),
                     Notify("Select Memo Type"),
                     (If(
                         IsEmpty(userSubmitGallery.AllItems),
@@ -1139,12 +1139,14 @@ UserSubmitMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =ComboBoxSample
+        Items: =["Payment","Intercompany Fund Transfer","Expenses Approval"]
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
-        SearchItems: =Search(ComboBoxSample,Label1_7.SearchText,"Value1")
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Payment","Intercompany Fund Transfer","Expenses Approval"],Label1_7.SearchText,"Value")
         SelectionFill: =RGBA(255, 87, 51, 1)
         SelectMultiple: =false
         Size: =13
