@@ -212,7 +212,7 @@ VerifierEditItem As screen:
 
             Dropdown4 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -229,7 +229,7 @@ VerifierEditItem As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =133
@@ -297,7 +297,7 @@ VerifierEditItem As screen:
 
             Dropdown2 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -313,7 +313,7 @@ VerifierEditItem As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =138
@@ -382,7 +382,7 @@ VerifierEditItem As screen:
 
             Dropdown3 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -398,7 +398,7 @@ VerifierEditItem As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =132
@@ -466,7 +466,7 @@ VerifierEditItem As screen:
 
             Dropdown1 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -482,7 +482,7 @@ VerifierEditItem As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =138

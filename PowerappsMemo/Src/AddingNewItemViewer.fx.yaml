@@ -237,7 +237,7 @@ AddingNewItemViewer As screen:
 
             DataCardValue20_2 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -250,7 +250,7 @@ AddingNewItemViewer As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =623
                 X: =30
@@ -319,7 +319,7 @@ AddingNewItemViewer As screen:
 
             DataCardValue26_2 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -332,7 +332,7 @@ AddingNewItemViewer As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =623
                 X: =30
@@ -401,7 +401,7 @@ AddingNewItemViewer As screen:
 
             DataCardValue21_2 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -414,7 +414,7 @@ AddingNewItemViewer As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =623
                 X: =30
@@ -483,7 +483,7 @@ AddingNewItemViewer As screen:
 
             DataCardValue22_2 As combobox:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -499,7 +499,7 @@ AddingNewItemViewer As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Search(["Thakral One Pvt. Ltd.","Astral Pvt. Ltd.","Fonepay Payment Services","Feat International Pvt. Ltd.","AMC Expenses","Campaign & Marketing Cost.","NIC Asia Bank Ltd.","Siddhartha Bank Ltd.","Steve Vai","Saul Hudson."],DataCardValue22_2.SearchText,"Value")
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =623
                 X: =30

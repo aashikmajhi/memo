@@ -209,7 +209,7 @@ ModifyItem_1 As screen:
 
             Dropdown4_3 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -225,7 +225,7 @@ ModifyItem_1 As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =133
@@ -293,7 +293,7 @@ ModifyItem_1 As screen:
 
             Dropdown2_3 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -310,7 +310,7 @@ ModifyItem_1 As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =138
@@ -379,7 +379,7 @@ ModifyItem_1 As screen:
 
             Dropdown3_3 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -393,7 +393,7 @@ ModifyItem_1 As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =132
@@ -460,7 +460,7 @@ ModifyItem_1 As screen:
 
             Dropdown1_3 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -476,7 +476,7 @@ ModifyItem_1 As screen:
                 Items: =ComboBoxSample
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
+                SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
                 Width: =531
                 X: =138
