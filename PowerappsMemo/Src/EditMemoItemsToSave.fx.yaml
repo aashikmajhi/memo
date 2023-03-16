@@ -1,7 +1,7 @@
-EditMemoItemsToSubmit As screen:
+EditMemoItemsToSave As screen:
     Fill: =RGBA(214, 154, 154, 1)
 
-    Button3_9 As button:
+    Button3_8 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -11,26 +11,26 @@ EditMemoItemsToSubmit As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =SubmitForm(Form1_5);
-            Navigate(UserSubmitMemo);
+            =SubmitForm(Form1_3);
+            Navigate(CreateNewMemo);
         Size: =15
         Text: ="Update"
         X: =603
         Y: =703
         ZIndex: =1
 
-    Icon3_14 As icon.BackArrow:
+    Icon3_11 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(144, 12, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(UserSubmitMemo)
+        OnSelect: =Navigate(CreateNewMemo)
         X: =23
         Y: =24
         ZIndex: =2
 
-    Label11_18 As label:
+    Label11_17 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(39, 113, 194, 1)
@@ -45,7 +45,7 @@ EditMemoItemsToSubmit As screen:
         Y: =24
         ZIndex: =3
 
-    Form1_5 As form:
+    Form1_3 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =UnsubmittedMemoTableData
         Height: =561
@@ -56,7 +56,7 @@ EditMemoItemsToSubmit As screen:
         Y: =100
         ZIndex: =4
 
-        "'Meme No_DataCard2_1' As typedDataCard.textualEditCard":
+        "'Meme No_DataCard2' As typedDataCard.textualEditCard":
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
@@ -67,13 +67,13 @@ EditMemoItemsToSubmit As screen:
             Height: =13
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Title")
             Required: =false
-            Update: =DataCardValue10_1.Text
+            Update: =DataCardValue10.Text
             Width: =1356
             X: =0
             Y: =0
             ZIndex: =36
 
-            DataCardKey10_1 As label:
+            DataCardKey10 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -85,13 +85,13 @@ EditMemoItemsToSubmit As screen:
                 X: =708
                 ZIndex: =1
 
-            DataCardValue10_1 As text:
+            DataCardValue10 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
                 Default: |-
                     =//refNo_9.Text
-                    refNo_10.Text
+                    refNo_5.Text
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -113,7 +113,7 @@ EditMemoItemsToSubmit As screen:
                 X: =803
                 ZIndex: =2
 
-            ErrorMessage10_1 As label:
+            ErrorMessage10 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -128,23 +128,23 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue10_1.Y + DataCardValue10_1.Height
+                Y: =DataCardValue10.Y + DataCardValue10.Height
                 ZIndex: =3
 
-            StarVisible10_1 As label:
+            StarVisible10 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey10_1.Height
+                Height: =DataCardKey10.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey10_1.Y
+                Y: =DataCardKey10.Y
                 ZIndex: =4
 
-        Source_DataCard2_1 As typedDataCard.textualEditCard:
+        Source_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Source"
@@ -155,13 +155,13 @@ EditMemoItemsToSubmit As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Source")
             Required: =false
-            Update: =DataCardValue11_1.Selected.Value1
+            Update: =DataCardValue11.Selected.Value1
             Width: =678
             X: =1
             Y: =0
             ZIndex: =36
 
-            DataCardKey11_1 As label:
+            DataCardKey11 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -173,7 +173,7 @@ EditMemoItemsToSubmit As screen:
                 X: =30
                 ZIndex: =1
 
-            ErrorMessage11_1 As label:
+            ErrorMessage11 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -188,30 +188,30 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue11_1.Y + DataCardValue11_1.Height
+                Y: =DataCardValue11.Y + DataCardValue11.Height
                 ZIndex: =3
 
-            StarVisible11_1 As label:
+            StarVisible11 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey11_1.Height
+                Height: =DataCardKey11.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey11_1.Y
+                Y: =DataCardKey11.Y
                 ZIndex: =4
 
-            DataCardValue11_1 As dropdown:
+            DataCardValue11 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =userSubmitGallery.Selected.Source
+                Default: =newMemoGallery.Selected.Source
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -227,7 +227,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =33
                 ZIndex: =5
 
-        Types_DataCard2_1 As typedDataCard.textualEditCard:
+        Types_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Types"
@@ -238,13 +238,13 @@ EditMemoItemsToSubmit As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Types")
             Required: =false
-            Update: =DataCardValue17_1.Selected.Value1
+            Update: =DataCardValue17.Selected.Value1
             Width: =678
             X: =2
             Y: =0
             ZIndex: =36
 
-            DataCardKey17_1 As label:
+            DataCardKey17 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -256,7 +256,7 @@ EditMemoItemsToSubmit As screen:
                 X: =30
                 ZIndex: =1
 
-            ErrorMessage17_1 As label:
+            ErrorMessage17 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -271,30 +271,30 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue17_1.Y + DataCardValue17_1.Height
+                Y: =DataCardValue17.Y + DataCardValue17.Height
                 ZIndex: =3
 
-            StarVisible17_1 As label:
+            StarVisible17 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey17_1.Height
+                Height: =DataCardKey17.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey17_1.Y
+                Y: =DataCardKey17.Y
                 ZIndex: =4
 
-            DataCardValue17_1 As dropdown:
+            DataCardValue17 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =userSubmitGallery.Selected.Types
+                Default: =newMemoGallery.Selected.Types
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -310,7 +310,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =33
                 ZIndex: =5
 
-        TypeNo_DataCard2_1 As typedDataCard.textualEditCard:
+        TypeNo_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNo"
@@ -321,13 +321,13 @@ EditMemoItemsToSubmit As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "TypeNo")
             Required: =false
-            Update: =DataCardValue12_1.Selected.Value1
+            Update: =DataCardValue12.Selected.Value1
             Width: =678
             X: =2
             Y: =1
             ZIndex: =36
 
-            DataCardKey12_1 As label:
+            DataCardKey12 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -339,7 +339,7 @@ EditMemoItemsToSubmit As screen:
                 X: =30
                 ZIndex: =1
 
-            ErrorMessage12_1 As label:
+            ErrorMessage12 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -354,30 +354,30 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue12_1.Y + DataCardValue12_1.Height
+                Y: =DataCardValue12.Y + DataCardValue12.Height
                 ZIndex: =3
 
-            StarVisible12_1 As label:
+            StarVisible12 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey12_1.Height
+                Height: =DataCardKey12.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey12_1.Y
+                Y: =DataCardKey12.Y
                 ZIndex: =4
 
-            DataCardValue12_1 As dropdown:
+            DataCardValue12 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =userSubmitGallery.Selected.TypeNo
+                Default: =newMemoGallery.Selected.TypeNo
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -393,7 +393,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =33
                 ZIndex: =5
 
-        TypeNoName_DataCard2_1 As typedDataCard.textualEditCard:
+        TypeNoName_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TypeNoName"
@@ -404,13 +404,13 @@ EditMemoItemsToSubmit As screen:
             Height: =74
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =false
-            Update: =DataCardValue13_1.Selected.Value1
+            Update: =DataCardValue13.Selected.Value1
             Width: =678
             X: =3
             Y: =1
             ZIndex: =36
 
-            DataCardKey13_1 As label:
+            DataCardKey13 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -422,7 +422,7 @@ EditMemoItemsToSubmit As screen:
                 X: =30
                 ZIndex: =1
 
-            ErrorMessage13_1 As label:
+            ErrorMessage13 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -437,30 +437,30 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue13_1.Y + DataCardValue13_1.Height
+                Y: =DataCardValue13.Y + DataCardValue13.Height
                 ZIndex: =3
 
-            StarVisible13_1 As label:
+            StarVisible13 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey13_1.Height
+                Height: =DataCardKey13.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey13_1.Y
+                Y: =DataCardKey13.Y
                 ZIndex: =4
 
-            DataCardValue13_1 As dropdown:
+            DataCardValue13 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(255, 87, 51, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                Default: =userSubmitGallery.Selected.TypeNoName
+                Default: =newMemoGallery.Selected.TypeNoName
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -476,7 +476,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =33
                 ZIndex: =5
 
-        Amount_DataCard2_1 As typedDataCard.textualEditCard:
+        Amount_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Amount"
@@ -487,13 +487,13 @@ EditMemoItemsToSubmit As screen:
             Height: =69
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Amount")
             Required: =false
-            Update: =DataCardValue14_1.Text
+            Update: =DataCardValue14.Text
             Width: =678
             X: =0
             Y: =2
             ZIndex: =36
 
-            DataCardKey14_1 As label:
+            DataCardKey14 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -505,11 +505,11 @@ EditMemoItemsToSubmit As screen:
                 X: =30
                 ZIndex: =1
 
-            DataCardValue14_1 As text:
+            DataCardValue14 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =userSubmitGallery.Selected.Amount
+                Default: =newMemoGallery.Selected.Amount
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -532,7 +532,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =33
                 ZIndex: =2
 
-            ErrorMessage14_1 As label:
+            ErrorMessage14 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -547,23 +547,23 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                Y: =DataCardValue14.Y + DataCardValue14.Height
                 ZIndex: =3
 
-            StarVisible14_1 As label:
+            StarVisible14 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey14_1.Height
+                Height: =DataCardKey14.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey14_1.Y
+                Y: =DataCardKey14.Y
                 ZIndex: =4
 
-        BillNo_DataCard2_1 As typedDataCard.textualEditCard:
+        BillNo_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="BillNo"
@@ -574,13 +574,13 @@ EditMemoItemsToSubmit As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "BillNo")
             Required: =false
-            Update: =DataCardValue15_1.Text
+            Update: =DataCardValue15.Text
             Width: =683
             X: =1
             Y: =2
             ZIndex: =36
 
-            DataCardKey15_1 As label:
+            DataCardKey15 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -592,11 +592,11 @@ EditMemoItemsToSubmit As screen:
                 X: =30
                 ZIndex: =1
 
-            DataCardValue15_1 As text:
+            DataCardValue15 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =userSubmitGallery.Selected.BillNo
+                Default: =newMemoGallery.Selected.BillNo
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -619,7 +619,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =33
                 ZIndex: =2
 
-            ErrorMessage15_1 As label:
+            ErrorMessage15 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -634,23 +634,23 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue15_1.Y + DataCardValue15_1.Height
+                Y: =DataCardValue15.Y + DataCardValue15.Height
                 ZIndex: =3
 
-            StarVisible15_1 As label:
+            StarVisible15 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey15_1.Height
+                Height: =DataCardKey15.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey15_1.Y
+                Y: =DataCardKey15.Y
                 ZIndex: =4
 
-        Narration_DataCard2_1 As typedDataCard.textualEditCard:
+        Narration_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Narration"
@@ -661,13 +661,13 @@ EditMemoItemsToSubmit As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@UnsubmittedMemoTableData], DataSourceInfo.MaxLength, "Narration")
             Required: =false
-            Update: =DataCardValue16_1.Text
+            Update: =DataCardValue16.Text
             Width: =683
             X: =0
             Y: =3
             ZIndex: =36
 
-            DataCardKey16_1 As label:
+            DataCardKey16 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -680,11 +680,11 @@ EditMemoItemsToSubmit As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue16_1 As text:
+            DataCardValue16 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =userSubmitGallery.Selected.Narration
+                Default: =newMemoGallery.Selected.Narration
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -706,10 +706,10 @@ EditMemoItemsToSubmit As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey16_1.Y + DataCardKey16_1.Height + 5
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
                 ZIndex: =2
 
-            ErrorMessage16_1 As label:
+            ErrorMessage16 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -724,23 +724,23 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue16_1.Y + DataCardValue16_1.Height
+                Y: =DataCardValue16.Y + DataCardValue16.Height
                 ZIndex: =3
 
-            StarVisible16_1 As label:
+            StarVisible16 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey16_1.Height
+                Height: =DataCardKey16.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey16_1.Y
+                Y: =DataCardKey16.Y
                 ZIndex: =4
 
-        Attachments_DataCard2_1 As typedDataCard.attachmentsEditCard:
+        Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
@@ -750,13 +750,13 @@ EditMemoItemsToSubmit As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue18_1.Attachments
+            Update: =DataCardValue18.Attachments
             Width: =683
             X: =1
             Y: =3
             ZIndex: =36
 
-            DataCardKey18_1 As label:
+            DataCardKey18 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -769,7 +769,7 @@ EditMemoItemsToSubmit As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue18_1 As attachments:
+            DataCardValue18 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -785,7 +785,7 @@ EditMemoItemsToSubmit As screen:
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =userSubmitGallery.Selected.Attachments
+                Items: =newMemoGallery.Selected.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -795,10 +795,10 @@ EditMemoItemsToSubmit As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey18_1.Y + DataCardKey18_1.Height + 5
+                Y: =DataCardKey18.Y + DataCardKey18.Height + 5
                 ZIndex: =2
 
-            ErrorMessage18_1 As label:
+            ErrorMessage18 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -813,19 +813,19 @@ EditMemoItemsToSubmit As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue18_1.Y + DataCardValue18_1.Height
+                Y: =DataCardValue18.Y + DataCardValue18.Height
                 ZIndex: =3
 
-            StarVisible18_1 As label:
+            StarVisible18 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey18_1.Height
+                Height: =DataCardKey18.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey18_1.Y
+                Y: =DataCardKey18.Y
                 ZIndex: =4
 
