@@ -6,6 +6,7 @@ AddingNewItemUserSubmitMemo As screen:
         DataSource: =UnsubmittedMemoTableData
         DefaultMode: =FormMode.New
         Height: =591
+        Item: =userSubmitGallery.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366

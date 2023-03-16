@@ -82,7 +82,7 @@ EditMemoItemsToSave As screen:
                 Text: =Parent.DisplayName
                 Width: =618
                 Wrap: =false
-                X: =708
+                X: =618
                 ZIndex: =1
 
             DataCardValue10 As text:
@@ -109,8 +109,8 @@ EditMemoItemsToSave As screen:
                 RadiusTopRight: =0
                 Size: =13
                 Tooltip: =Parent.DisplayName
-                Width: =523
-                X: =803
+                Width: =618
+                X: =708
                 ZIndex: =2
 
             ErrorMessage10 As label:

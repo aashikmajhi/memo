@@ -12,9 +12,7 @@ VerifierEditItem As screen:
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
             =SubmitForm(EditForm);
-            //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
-            //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
-            //Navigate(VerifierViewAfter);
+            Navigate(VerifierView);
         Size: =15
         Text: ="Update"
         Visible: =If(loginUser.Email=approver2_5.Text,true,false)
@@ -53,12 +51,12 @@ VerifierEditItem As screen:
     EditForm As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
-        Height: =508
+        Height: =584
         Item: =verifierViewGallery.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
-        Y: =130
+        Y: =54
         ZIndex: =35
 
         "'Meme No_DataCard1' As typedDataCard.textualEditCard":
@@ -87,8 +85,8 @@ VerifierEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =200
                 Wrap: =false
-                X: =597
-                Y: =7
+                X: =500
+                Y: =10
                 ZIndex: =1
 
             DataCardValue1 As text:
@@ -113,8 +111,8 @@ VerifierEditItem As screen:
                 RadiusTopRight: =0
                 Size: =13
                 Tooltip: =Parent.DisplayName
-                Width: =531
-                X: =816
+                Width: =623
+                X: =725
                 Y: =7
                 ZIndex: =2
 
@@ -157,7 +155,7 @@ VerifierEditItem As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Source")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =26
+            Height: =84
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Source")
             Required: =false
             Update: =Dropdown4.Selected.Value1
@@ -176,7 +174,6 @@ VerifierEditItem As screen:
                 Width: =95
                 Wrap: =false
                 X: =16
-                Y: =10
                 ZIndex: =1
 
             ErrorMessage2 As label:
@@ -231,9 +228,9 @@ VerifierEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =133
-                Y: =4
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         Types_DataCard1 As typedDataCard.textualEditCard:
@@ -254,14 +251,13 @@ VerifierEditItem As screen:
             ZIndex: =36
 
             DataCardKey8 As label:
-                Align: =Align.Center
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =16
+                X: =36
                 ZIndex: =1
 
             ErrorMessage8 As label:
@@ -315,8 +311,9 @@ VerifierEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =138
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         TypeNo_DataCard1 As typedDataCard.textualEditCard:
@@ -327,7 +324,7 @@ VerifierEditItem As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"TypeNo")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =84
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNo")
             Required: =false
             Update: =Dropdown3.Selected.Value1
@@ -400,9 +397,9 @@ VerifierEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =132
-                Y: =10
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         TypeNoName_DataCard1 As typedDataCard.textualEditCard:
@@ -430,7 +427,7 @@ VerifierEditItem As screen:
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =2
+                X: =42
                 ZIndex: =1
 
             ErrorMessage4 As label:
@@ -484,9 +481,9 @@ VerifierEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =138
-                Y: =5
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         Amount_DataCard1 As typedDataCard.textualEditCard:
@@ -497,7 +494,7 @@ VerifierEditItem As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Amount")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =49
+            Height: =84
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Amount")
             Required: =false
             Update: =TextInput8.Text
@@ -513,8 +510,7 @@ VerifierEditItem As screen:
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =48
-                Y: =6
+                X: =38
                 ZIndex: =1
 
             ErrorMessage5 As label:
@@ -563,9 +559,9 @@ VerifierEditItem As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Size: =13
-                Width: =531
-                X: =133
-                Y: =5
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         BillNo_DataCard1 As typedDataCard.textualEditCard:
@@ -586,7 +582,6 @@ VerifierEditItem As screen:
             ZIndex: =36
 
             DataCardKey6 As label:
-                Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -595,8 +590,7 @@ VerifierEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =95
                 Wrap: =false
-                X: =16
-                Y: =10
+                X: =36
                 ZIndex: =1
 
             ErrorMessage6 As label:
@@ -645,9 +639,9 @@ VerifierEditItem As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Size: =13
-                Width: =531
-                X: =132
-                Y: =5
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         Narration_DataCard1 As typedDataCard.textualEditCard:
@@ -677,7 +671,7 @@ VerifierEditItem As screen:
                 Width: |
                     =200
                 Wrap: =false
-                X: =30
+                X: =40
                 ZIndex: =1
 
             ErrorMessage7 As label:
@@ -722,15 +716,15 @@ VerifierEditItem As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
-                Height: =218
+                Height: =220
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Mode: =TextMode.MultiLine
                 Size: =13
-                Width: =642
-                X: =30
-                Y: =44
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
@@ -758,6 +752,7 @@ VerifierEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
+                X: =20
                 ZIndex: =1
 
             DataCardValue9 As attachments:
@@ -786,9 +781,9 @@ VerifierEditItem As screen:
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
                 Tooltip: =Parent.DisplayName
-                Width: =634
-                X: =30
-                Y: =43
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =2
 
             ErrorMessage9 As label:

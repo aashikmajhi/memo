@@ -49,7 +49,7 @@ EditMemoItemsToSubmit As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =UnsubmittedMemoTableData
         Height: =561
-        Item: =newMemoGallery.Selected
+        Item: =userSubmitGallery.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
@@ -82,7 +82,7 @@ EditMemoItemsToSubmit As screen:
                 Text: =Parent.DisplayName
                 Width: =618
                 Wrap: =false
-                X: =708
+                X: =608
                 ZIndex: =1
 
             DataCardValue10_1 As text:
@@ -109,8 +109,8 @@ EditMemoItemsToSubmit As screen:
                 RadiusTopRight: =0
                 Size: =13
                 Tooltip: =Parent.DisplayName
-                Width: =523
-                X: =803
+                Width: =618
+                X: =708
                 ZIndex: =2
 
             ErrorMessage10_1 As label:
