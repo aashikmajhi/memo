@@ -47,7 +47,7 @@ CreateNewMemo As screen:
         ZIndex: =2
 
     newMemoGallery As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: |
@@ -72,7 +72,7 @@ CreateNewMemo As screen:
             ZIndex: =4
 
         Label24_3 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -86,7 +86,7 @@ CreateNewMemo As screen:
             ZIndex: =5
 
         Label25_3 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -102,7 +102,7 @@ CreateNewMemo As screen:
             ZIndex: =6
 
         Label26_3 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -118,9 +118,9 @@ CreateNewMemo As screen:
             ZIndex: =7
 
         Icon2_3 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -139,7 +139,7 @@ CreateNewMemo As screen:
             ZIndex: =9
 
         Label24_14 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -156,7 +156,7 @@ CreateNewMemo As screen:
 
         Label24_15 As label:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -172,7 +172,7 @@ CreateNewMemo As screen:
             ZIndex: =11
 
         Label24_18 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -195,7 +195,7 @@ CreateNewMemo As screen:
             ZIndex: =12
 
         Label24_17 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -213,7 +213,7 @@ CreateNewMemo As screen:
             ZIndex: =13
 
         Label24_16 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -229,9 +229,9 @@ CreateNewMemo As screen:
             ZIndex: =14
 
         Icon1_2 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -247,7 +247,7 @@ CreateNewMemo As screen:
             ZIndex: =15
 
     "SNGallery_6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: =Sequence(CountRows(newMemoGallery.AllItems))
@@ -263,7 +263,7 @@ CreateNewMemo As screen:
         Separator2_5 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             TabIndex: =0
@@ -273,7 +273,7 @@ CreateNewMemo As screen:
 
         Label15_5 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)

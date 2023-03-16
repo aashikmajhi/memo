@@ -9,7 +9,7 @@ RecommenderView As screen:
         Set(container,false)
 
     "SNGallery_4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: =Sequence(CountRows(recomViewGallery.AllItems))
@@ -22,9 +22,9 @@ RecommenderView As screen:
         ZIndex: =1
 
         Separator2_3 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             TabIndex: =0
@@ -34,7 +34,7 @@ RecommenderView As screen:
 
         Label15_3 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -50,7 +50,7 @@ RecommenderView As screen:
             ZIndex: =4
 
     recomViewGallery As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: |
@@ -78,7 +78,7 @@ RecommenderView As screen:
             ZIndex: =1
 
         Label24_19 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -92,7 +92,7 @@ RecommenderView As screen:
             ZIndex: =2
 
         Label25_5 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -108,7 +108,7 @@ RecommenderView As screen:
             ZIndex: =3
 
         Label26_5 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -124,7 +124,7 @@ RecommenderView As screen:
             ZIndex: =4
 
         Label24_20 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -141,7 +141,7 @@ RecommenderView As screen:
 
         Label24_25 As label:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -157,7 +157,7 @@ RecommenderView As screen:
             ZIndex: =6
 
         Label24_27 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -170,12 +170,12 @@ RecommenderView As screen:
             Text: =ThisItem.Narration
             Tooltip: =ThisItem.Narration
             VerticalAlign: =VerticalAlign.Top
-            Width: =482
+            Width: =515
             X: =765
             ZIndex: =7
 
         Label24_26 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -191,9 +191,9 @@ RecommenderView As screen:
             ZIndex: =8
 
         Icon1_1 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -205,30 +205,9 @@ RecommenderView As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =28
-            X: =1247
+            X: =1280
             Y: =2.5
             ZIndex: =9
-
-        Icon2_6 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Icon: =Icon.CancelBadge
-            OnSelect: |-
-                =//Remove(MemoTableData,ThisItem)
-                Set(container,true)
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Visible: =If(loginUser.Email=recommendedby1.Text,true,false)
-            Width: =28
-            X: =1277.5
-            Y: =2.5
-            ZIndex: =10
 
     Button2_8 As button:
         BorderThickness: =1

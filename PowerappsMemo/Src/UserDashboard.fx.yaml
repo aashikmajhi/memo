@@ -70,7 +70,7 @@ UserDashboard As screen:
 
     Button6_7 As button:
         Align: =Align.Left
-        Color: =RGBA(0, 80, 160, 1)
+        Color: =RGBA(168, 0, 0, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -94,7 +94,7 @@ UserDashboard As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(23, 150, 230, 1)
+        Fill: =RGBA(11, 129, 118, 1)
         FontWeight: =FontWeight.Semibold
         Height: =48
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -204,7 +204,7 @@ UserDashboard As screen:
 
     Rectangle3_8 As rectangle:
         BorderColor: =RGBA(0, 80, 160, 1)
-        Fill: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(194, 225, 255, 1)
         Height: =2
         OnSelect: =
         Width: =userDashboardGallery.TemplateWidth
@@ -395,16 +395,16 @@ UserDashboard As screen:
 
         Rectangle3_7 As rectangle:
             BorderColor: =RGBA(0, 80, 160, 1)
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(204, 231, 246, 1)
             Height: =2
             Width: =userDashboardGallery.TemplateWidth
             Y: =93
             ZIndex: =9
 
         Icon1_15 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(250, 250, 250, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(246, 246, 246, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -702,8 +702,9 @@ UserDashboard As screen:
             ZIndex: =17
 
         Rectangle3_11 As rectangle:
-            BorderColor: =RGBA(0, 80, 160, 1)
-            Fill: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(232, 232, 232, 1)
+            BorderThickness: =1
+            Fill: =RGBA(232, 232, 232, 1)
             Height: =2
             OnSelect: =Select(Parent)
             Width: =recommenderGallery.TemplateWidth
@@ -711,9 +712,9 @@ UserDashboard As screen:
             ZIndex: =20
 
         Icon1_26 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(232, 232, 232, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -728,14 +729,14 @@ UserDashboard As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =28
-            X: =1244
+            X: =1250
             Y: =20
             ZIndex: =21
 
         Icon1_27 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(232, 232, 232, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
