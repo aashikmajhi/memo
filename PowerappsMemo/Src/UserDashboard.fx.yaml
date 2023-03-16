@@ -49,7 +49,7 @@ UserDashboard As screen:
             Fill: |
                 =//RGBA(65, 145, 224, 0.86)
                 
-                Switch(ThisItem.fil=pressedButton,ThisItem.fil="My Memo",Color.LightBlue,ThisItem.fil="All",Color.Maroon,ThisItem.fil="Pending",Color.OrangeRed,ThisItem.fil="Approved",Color.LimeGreen,ThisItem.fil="Declined",Color.DodgerBlue)
+                Switch(ThisItem.fil=pressedButton,pressedButton="My Memo",Color.Crimson,pressedButton="All",Color.Maroon,pressedButton="Pending",Color.OrangeRed,pressedButton="Approved",Color.LimeGreen,pressedButton="Declined",Color.DodgerBlue)
             FontWeight: =FontWeight.Semibold
             HoverColor: |
                 =RGBA(255, 255, 255, 1)
