@@ -10,7 +10,7 @@ VerifierView As screen:
         Set(container,false)
 
     "SNGallery_5 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: =Sequence(CountRows(verifierViewGallery.AllItems))
@@ -24,9 +24,9 @@ VerifierView As screen:
         ZIndex: =1
 
         Separator2_4 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             TabIndex: =0
@@ -36,7 +36,7 @@ VerifierView As screen:
 
         Label15_4 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -52,7 +52,7 @@ VerifierView As screen:
             ZIndex: =4
 
     verifierViewGallery As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: |
@@ -68,9 +68,9 @@ VerifierView As screen:
         ZIndex: =1
 
         Rectangle2_9 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =verifierViewGallery.TemplateWidth
@@ -78,7 +78,7 @@ VerifierView As screen:
             ZIndex: =4
 
         Label24_29 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -92,7 +92,7 @@ VerifierView As screen:
             ZIndex: =5
 
         Label25_6 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -108,7 +108,7 @@ VerifierView As screen:
             ZIndex: =6
 
         Label26_6 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -124,7 +124,7 @@ VerifierView As screen:
             ZIndex: =7
 
         Label24_30 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -141,7 +141,7 @@ VerifierView As screen:
 
         Label24_31 As label:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -157,7 +157,7 @@ VerifierView As screen:
             ZIndex: =11
 
         Label24_33 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -175,7 +175,7 @@ VerifierView As screen:
             ZIndex: =13
 
         Label24_32 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -191,9 +191,9 @@ VerifierView As screen:
             ZIndex: =14
 
         Icon2_8 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =32
@@ -211,9 +211,9 @@ VerifierView As screen:
             ZIndex: =15
 
         Icon1_13 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =33

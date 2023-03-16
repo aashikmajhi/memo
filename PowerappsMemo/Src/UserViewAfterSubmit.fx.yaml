@@ -3,7 +3,7 @@ UserViewAfterSubmit As screen:
     OnVisible: =
 
     "SNGallery_12 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: =Sequence(CountRows(userViewGallery_1.AllItems))
@@ -16,9 +16,9 @@ UserViewAfterSubmit As screen:
         ZIndex: =1
 
         Separator2_11 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             TabIndex: =0
@@ -28,7 +28,7 @@ UserViewAfterSubmit As screen:
 
         Label15_11 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -44,7 +44,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =4
 
     userViewGallery_1 As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: |
@@ -65,9 +65,9 @@ UserViewAfterSubmit As screen:
         ZIndex: =1
 
         Rectangle2_16 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =userViewGallery_1.TemplateWidth
@@ -75,7 +75,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =4
 
         Label24_57 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -89,7 +89,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =5
 
         Label25_11 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -105,7 +105,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =6
 
         Label26_11 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -121,7 +121,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =7
 
         Label24_58 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -138,7 +138,7 @@ UserViewAfterSubmit As screen:
 
         Label24_59 As label:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -154,7 +154,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =11
 
         Label24_61 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -172,7 +172,7 @@ UserViewAfterSubmit As screen:
             ZIndex: =13
 
         Label24_60 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)

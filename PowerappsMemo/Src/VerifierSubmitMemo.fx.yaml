@@ -71,9 +71,9 @@ VerifierSubmitMemo As screen:
         ZIndex: =1
 
         Rectangle2_15 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =userSubmitGallery_1.TemplateWidth
@@ -822,6 +822,7 @@ VerifierSubmitMemo As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.Disabled
         FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
         Height: =32
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
