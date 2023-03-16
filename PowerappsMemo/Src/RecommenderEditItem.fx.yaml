@@ -1,5 +1,5 @@
 RecommenderEditItem As screen:
-    Fill: =RGBA(153, 205, 255, 1)
+    Fill: =RGBA(188, 82, 53, 1)
 
     Button3_5 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -24,7 +24,7 @@ RecommenderEditItem As screen:
 
     Icon3_8 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(144, 12, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
@@ -51,7 +51,6 @@ RecommenderEditItem As screen:
     Form1_1 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
-        Fill: =RGBA(153, 205, 255, 1)
         Height: =508
         Item: =recomViewGallery.Selected
         NumberOfColumns: =2
@@ -67,7 +66,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.'Meme No'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Title")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =52
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Title")
             Required: =false
@@ -155,7 +154,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.Source
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Source")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =45
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Source")
             Required: =false
@@ -239,7 +238,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.Types
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Types")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =53
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Types")
             Required: =false
@@ -321,7 +320,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.TypeNo
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"TypeNo")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =42
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNo")
             Required: =false
@@ -404,7 +403,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.TypeNoName
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"TypeNoName")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =47
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "TypeNoName")
             Required: =false
@@ -485,7 +484,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.BillNo
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"BillNo")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =35
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "BillNo")
             Required: =false
@@ -564,7 +563,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.Amount
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Amount")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =49
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Amount")
             Required: =false
@@ -640,7 +639,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"{Attachments}")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =237
             Required: =false
             Update: =DataCardValue9_1.Attachments
@@ -728,7 +727,7 @@ RecommenderEditItem As screen:
             Default: =ThisItem.Narration
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"Narration")
-            Fill: =RGBA(153, 205, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =135
             MaxLength: =DataSourceInfo([@MemoTableData], DataSourceInfo.MaxLength, "Narration")
             Required: =false

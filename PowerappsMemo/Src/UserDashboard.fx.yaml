@@ -7,7 +7,7 @@ UserDashboard As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(153, 205, 255, 1)
+        Fill: =RGBA(188, 82, 53, 1)
         FontWeight: =FontWeight.Semibold
         Height: =552
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -23,6 +23,8 @@ UserDashboard As screen:
     Gallery2_7 As gallery.galleryVertical:
         BorderColor: =RGBA(235, 245, 255, 1)
         BorderThickness: =1
+        Fill: |
+            =RGBA(0, 0, 0, 0)
         Height: =79
         Items: |-
             =
@@ -30,6 +32,9 @@ UserDashboard As screen:
             //If(role="Recommender",Table({fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}),Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"}))
             Table({fil: "My Memo"},{fil: "All"}, {fil: "Pending"}, {fil: "Approved"}, {fil: "Declined"})
         Layout: =Layout.Vertical
+        TemplateFill: |-
+            =//RGBA(0, 0, 0, 0)
+            //If(ThisItem.IsSelected, Red, Transparent)
         TemplateSize: =67
         Visible: =If(galData,false,true)
         Width: =1280
@@ -43,11 +48,17 @@ UserDashboard As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(65, 145, 224, 0.86)
+            Fill: |-
+                =RGBA(65, 145, 224, 0.86)
+                //If(ThisItem.fil=pressedButton,Red,Transparent)
+                //If(pressedButton=true, RGBA	(120,5,34,1), RGBA(255, 87, 51,1))
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(56, 107, 194, 0.83)
-            OnSelect: =Set(_requestTypeFilter, ThisItem.fil);
+            OnSelect: |-
+                =Set(_requestTypeFilter, ThisItem.fil);
+                //UpdateContext({pressedButton:ThisItem.fil})
+                //UpdateContext({pressedButton:!pressedButton})
             PressedBorderColor: =
             PressedColor: =Self.Color
             PressedFill: =RGBA(0, 89, 178, 1)

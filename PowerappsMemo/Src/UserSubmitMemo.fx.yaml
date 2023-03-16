@@ -1,5 +1,5 @@
 UserSubmitMemo As screen:
-    Fill: =RGBA(153, 205, 255, 1)
+    Fill: =RGBA(188, 82, 53, 1)
     OnVisible: |+
         =Set(container,false);
         Reset(verifiedby);
@@ -9,7 +9,7 @@ UserSubmitMemo As screen:
         
 
     userSubmitGallery As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: |-
@@ -29,7 +29,7 @@ UserSubmitMemo As screen:
         ZIndex: =1
 
         Rectangle2_13 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
             Fill: =RGBA(0, 51, 102, 1)
             Height: =1
@@ -39,7 +39,7 @@ UserSubmitMemo As screen:
             ZIndex: =4
 
         Label24_40 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -53,7 +53,7 @@ UserSubmitMemo As screen:
             ZIndex: =5
 
         Label25_8 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -69,7 +69,7 @@ UserSubmitMemo As screen:
             ZIndex: =6
 
         Label26_8 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -85,9 +85,9 @@ UserSubmitMemo As screen:
             ZIndex: =7
 
         Icon2_4 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(147, 21, 72, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -105,7 +105,7 @@ UserSubmitMemo As screen:
             ZIndex: =9
 
         Label24_41 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -122,7 +122,7 @@ UserSubmitMemo As screen:
 
         Label24_42 As label:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -138,7 +138,7 @@ UserSubmitMemo As screen:
             ZIndex: =11
 
         Label24_45 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -161,7 +161,7 @@ UserSubmitMemo As screen:
             ZIndex: =12
 
         Label24_44 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -179,7 +179,7 @@ UserSubmitMemo As screen:
             ZIndex: =13
 
         Label24_43 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -195,9 +195,9 @@ UserSubmitMemo As screen:
             ZIndex: =14
 
         Icon1_5 As icon.View:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(147, 21, 72, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -213,7 +213,7 @@ UserSubmitMemo As screen:
             ZIndex: =15
 
     "SNGallery_9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =263
         Items: =Sequence(CountRows(userSubmitGallery.AllItems))
@@ -227,9 +227,9 @@ UserSubmitMemo As screen:
         ZIndex: =2
 
         Separator2_8 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             TabIndex: =0
@@ -239,7 +239,7 @@ UserSubmitMemo As screen:
 
         Label15_8 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -499,7 +499,7 @@ UserSubmitMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
+        Fill: =RGBA(255, 87, 51, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -536,7 +536,7 @@ UserSubmitMemo As screen:
 
     Icon1_8 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(144, 12, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45
@@ -570,9 +570,9 @@ UserSubmitMemo As screen:
 
     verifiedby As dropdown:
         AllowEmptySelection: =true
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(255, 87, 51, 1)
         BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -588,7 +588,7 @@ UserSubmitMemo As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         Reset: =true
-        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectionFill: =RGBA(255, 87, 51, 1)
         Size: =10
         Visible: =If(User().Email<>preparedby.Text,false,true)
         Width: =250
@@ -597,14 +597,13 @@ UserSubmitMemo As screen:
         ZIndex: =20
 
     companyName_3 As dropdown:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(255, 87, 51, 1)
         BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =RGBA(0, 89, 178, 1)
         ChevronHoverFill: =RGBA(153, 205, 255, 1)
-        Color: =RGBA(0, 51, 102, 1)
         Default: =userDashboardGallery.Selected.Organization
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -618,7 +617,7 @@ UserSubmitMemo As screen:
         Items: =["F1 Soft", "e-Sewa"]
         PressedColor: =RGBA(0, 89, 178, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
-        SelectionColor: =RGBA(0, 51, 102, 1)
+        SelectionColor: =RGBA(255, 87, 51, 1)
         SelectionFill: =RGBA(194, 225, 255, 1)
         Size: =25
         Width: =450
@@ -1127,8 +1126,8 @@ UserSubmitMemo As screen:
             ZIndex: =4
 
     Label1_7 As combobox:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
+        BorderColor: =RGBA(255, 87, 51, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -1146,7 +1145,7 @@ UserSubmitMemo As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         SearchItems: =Search(ComboBoxSample,Label1_7.SearchText,"Value1")
-        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectionFill: =RGBA(255, 87, 51, 1)
         SelectMultiple: =false
         Size: =13
         X: =517

@@ -3,7 +3,14 @@
     "Actions": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "Height",
         "Width",
@@ -601,7 +608,14 @@
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",

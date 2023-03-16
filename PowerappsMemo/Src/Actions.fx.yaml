@@ -1,12 +1,12 @@
 Actions As screen:
-    BackgroundImage: ='Background Image'
-    Fill: =RGBA(232, 232, 232, 1)
+    BackgroundImage: =
+    Fill: =RGBA(188, 82, 53, 1)
 
     btnPurchaseRequisition As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 121, 187, 1)
+        Fill: =RGBA(255, 99, 71, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         Height: =112
@@ -26,7 +26,7 @@ Actions As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 121, 187, 1)
+        Fill: =RGBA(255, 99, 71, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         Height: =112
@@ -44,7 +44,7 @@ Actions As screen:
 
     Icon5 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(144, 12, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow

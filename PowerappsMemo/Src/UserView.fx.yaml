@@ -1,5 +1,5 @@
 UserView As screen:
-    Fill: =RGBA(153, 205, 255, 1)
+    Fill: =RGBA(188, 82, 53, 1)
     OnVisible: =Set(container,false)
 
     "SNGallery_7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
@@ -436,7 +436,7 @@ UserView As screen:
 
     Icon1_11 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(144, 12, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =45

@@ -1,10 +1,10 @@
 SavingToUnsubmitted As screen:
-    Fill: =RGBA(153, 205, 255, 1)
+    Fill: =RGBA(188, 82, 53, 1)
     OnVisible: |-
         =Set(myMemoPdf,PDF(SavingToUnsubmitted ,{DPI: 72, Margin: "15mm", Orientation: "Portrait",Size:PaperSize.A4,ExpandContainers:true}))
 
     "SNGallery_8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =350
         Items: =Sequence(CountRows(unsubmitSPGallery.AllItems))
@@ -20,7 +20,7 @@ SavingToUnsubmitted As screen:
         Separator2_7 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =0.31
-            Fill: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(147, 21, 72, 1)
             Height: =1
             OnSelect: =Select(Parent)
             TabIndex: =0
@@ -30,7 +30,7 @@ SavingToUnsubmitted As screen:
 
         Label15_7 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -46,7 +46,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =4
 
     unsubmitSPGallery As gallery.galleryVertical:
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(147, 21, 72, 1)
         BorderThickness: =2
         Height: =350
         Items: =Filter(UnsubmittedMemoTableData, 'Meme No'=refNo_5.Text)
@@ -63,7 +63,7 @@ SavingToUnsubmitted As screen:
         ZIndex: =1
 
         Rectangle2_12 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =0.31
             Fill: =RGBA(0, 51, 102, 1)
             Height: =1
@@ -73,7 +73,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =4
 
         Label24_21 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -87,7 +87,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =5
 
         Label25_4 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -103,7 +103,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =6
 
         Label26_4 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -119,7 +119,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =7
 
         Label24_22 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -136,7 +136,7 @@ SavingToUnsubmitted As screen:
 
         Label24_23 As label:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -152,7 +152,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =11
 
         Label24_39 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -169,7 +169,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =12
 
         Label24_28 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -186,7 +186,7 @@ SavingToUnsubmitted As screen:
             ZIndex: =13
 
         Label24_24 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderColor: =RGBA(147, 21, 72, 1)
             BorderThickness: =1
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)

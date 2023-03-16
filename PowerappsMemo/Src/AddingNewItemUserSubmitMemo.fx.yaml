@@ -1,5 +1,5 @@
 AddingNewItemUserSubmitMemo As screen:
-    Fill: =RGBA(153, 205, 255, 1)
+    Fill: =RGBA(188, 82, 53, 1)
 
     Form4_2 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -793,7 +793,7 @@ AddingNewItemUserSubmitMemo As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
+        Fill: =RGBA(255, 87, 51, 1)
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -835,7 +835,7 @@ AddingNewItemUserSubmitMemo As screen:
 
     Icon3_6 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(144, 12, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.BackArrow
