@@ -404,7 +404,7 @@ UserDashboard As screen:
         Icon1_15 As icon.View:
             BorderColor: =RGBA(250, 250, 250, 1)
             BorderThickness: =1
-            Color: =RGBA(246, 246, 246, 1)
+            Color: =RGBA(232, 232, 232, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =28
@@ -729,7 +729,7 @@ UserDashboard As screen:
             PaddingRight: =5
             PaddingTop: =5
             Width: =28
-            X: =1250
+            X: =1244
             Y: =20
             ZIndex: =21
 
@@ -750,7 +750,7 @@ UserDashboard As screen:
             PaddingTop: =5
             Visible: =If(Label33_7.Text="New",true,false)
             Width: =28
-            X: =1250
+            X: =1244
             Y: =50
             ZIndex: =22
 
