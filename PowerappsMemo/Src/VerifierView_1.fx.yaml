@@ -1,5 +1,5 @@
 VerifierView_1 As screen:
-    Fill: =RGBA(188, 82, 53, 1)
+    Fill: =RGBA(214, 154, 154, 1)
     OnVisible: |-
         =Set(recomm,true);
         Reset(approver2_7);

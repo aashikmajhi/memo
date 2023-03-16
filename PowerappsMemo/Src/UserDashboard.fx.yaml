@@ -7,7 +7,7 @@ UserDashboard As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(188, 82, 53, 1)
+        Fill: =RGBA(214, 154, 154, 1)
         FontWeight: =FontWeight.Semibold
         Height: =552
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -70,7 +70,7 @@ UserDashboard As screen:
 
     Button6_7 As button:
         Align: =Align.Left
-        Color: =RGBA(168, 0, 0, 1)
+        Color: =RGBA(184, 0, 0, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)

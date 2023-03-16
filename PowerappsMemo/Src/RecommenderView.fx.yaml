@@ -1,5 +1,5 @@
 RecommenderView As screen:
-    Fill: =RGBA(188, 82, 53, 1)
+    Fill: =RGBA(214, 154, 154, 1)
     OnVisible: |-
         =Reset(approver2_4);
         Reset(recommendedby1);

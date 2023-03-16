@@ -1,25 +1,6 @@
 RespondingScreen As screen:
     BackgroundImage: =
-    Fill: =
-
-    Button7_2 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(188, 82, 53, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =768
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =Self.Fill
-        PressedFill: =Self.Fill
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: =""
-        Width: =1366
-        ZIndex: =1
+    Fill: =RGBA(214, 154, 154, 1)
 
     greetingUser As button:
         Align: =Align.Left
