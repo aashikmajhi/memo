@@ -5,11 +5,11 @@ VerifierEditItem As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 87, 51, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(54, 176, 75, 1)
+        HoverFill: =RGBA(255, 87, 51, 1)
         OnSelect: |
             =SubmitForm(EditForm);
             Navigate(VerifierView);
@@ -28,25 +28,10 @@ VerifierEditItem As screen:
         Icon: =Icon.BackArrow
         OnSelect: |-
             =ResetForm(EditForm);
-            Navigate(VerifierViewAfterSubmit);
+            Navigate(VerifierView);
         X: =23
         Y: =24
         ZIndex: =28
-
-    Label11_13 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(39, 113, 194, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =55
-        Size: =35
-        Text: =verifierDashboardGallery.Selected.Organization
-        Width: =777
-        X: =283
-        Y: =24
-        ZIndex: =29
 
     EditForm As form:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -56,7 +41,7 @@ VerifierEditItem As screen:
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
-        Y: =54
+        Y: =100
         ZIndex: =35
 
         "'Meme No_DataCard1' As typedDataCard.textualEditCard":
@@ -85,7 +70,7 @@ VerifierEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =200
                 Wrap: =false
-                X: =500
+                X: =497
                 Y: =10
                 ZIndex: =1
 
@@ -165,7 +150,6 @@ VerifierEditItem As screen:
             ZIndex: =36
 
             DataCardKey2 As label:
-                Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -173,7 +157,7 @@ VerifierEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =95
                 Wrap: =false
-                X: =16
+                X: =40
                 ZIndex: =1
 
             ErrorMessage2 As label:
@@ -257,7 +241,7 @@ VerifierEditItem As screen:
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =36
+                X: =40
                 ZIndex: =1
 
             ErrorMessage8 As label:
@@ -427,7 +411,7 @@ VerifierEditItem As screen:
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =42
+                X: =40
                 ZIndex: =1
 
             ErrorMessage4 As label:
@@ -752,7 +736,7 @@ VerifierEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =20
+                X: =40
                 ZIndex: =1
 
             DataCardValue9 As attachments:

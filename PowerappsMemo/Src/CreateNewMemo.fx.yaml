@@ -602,7 +602,7 @@ CreateNewMemo As screen:
     companyName_2 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =RGBA(0, 89, 178, 1)
@@ -934,7 +934,7 @@ CreateNewMemo As screen:
 
     Label1_2 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)

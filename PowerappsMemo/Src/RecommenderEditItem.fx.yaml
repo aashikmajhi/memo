@@ -12,8 +12,6 @@ RecommenderEditItem As screen:
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
             =SubmitForm(Form1_1);
-            //UpdateIf(MemoTableData,BillNo = DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text});
-            //Patch(MemoTableData,LookUp(MemoTableData,ThisRecord.BillNo=DataCardValue1.Text,{'Meme No':DataCardValue1.Text,Source: Dropdown4.SelectedText.Value,Types:Dropdown2.SelectedText.Value,TypeNo: Dropdown3.SelectedText.Value,TypeNoName: Dropdown1.SelectedText.Value,Amount:TextInput8.Text, BillNo: TextInput10.Text,Narration: TextInput11.Text}));
             Navigate(RecommenderView);
         Size: =15
         Text: ="Update"
@@ -33,30 +31,15 @@ RecommenderEditItem As screen:
         Y: =24
         ZIndex: =28
 
-    Label11_14 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(39, 113, 194, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =55
-        Size: =35
-        Text: =companyName_4.Text
-        Width: =777
-        X: =283
-        Y: =24
-        ZIndex: =29
-
     Form1_1 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
-        Height: =508
+        Height: =561
         Item: =recomViewGallery.Selected
         NumberOfColumns: =2
         SnapToColumns: =false
         Width: =1366
-        Y: =130
+        Y: =100
         ZIndex: =35
 
         "'Meme No_DataCard1_1' As typedDataCard.textualEditCard":
@@ -82,10 +65,10 @@ RecommenderEditItem As screen:
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
-                Text: =Parent.DisplayName
+                Text: ="Memo No"
                 Width: =200
                 Wrap: =false
-                X: =597
+                X: =497
                 Y: =7
                 ZIndex: =1
 
@@ -111,8 +94,8 @@ RecommenderEditItem As screen:
                 RadiusTopRight: =0
                 Size: =13
                 Tooltip: =Parent.DisplayName
-                Width: =531
-                X: =816
+                Width: =623
+                X: =713
                 Y: =7
                 ZIndex: =2
 
@@ -165,7 +148,6 @@ RecommenderEditItem As screen:
             ZIndex: =36
 
             DataCardKey2_1 As label:
-                Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -173,8 +155,7 @@ RecommenderEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =95
                 Wrap: =false
-                X: =16
-                Y: =10
+                X: =36
                 ZIndex: =1
 
             ErrorMessage2_1 As label:
@@ -226,9 +207,9 @@ RecommenderEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =133
-                Y: =4
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         Types_DataCard1_1 As typedDataCard.textualEditCard:
@@ -249,14 +230,13 @@ RecommenderEditItem As screen:
             ZIndex: =36
 
             DataCardKey8_1 As label:
-                Align: =Align.Center
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =16
+                X: =40
                 ZIndex: =1
 
             ErrorMessage8_1 As label:
@@ -301,7 +281,6 @@ RecommenderEditItem As screen:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =34
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 Items: =ComboBoxSample
@@ -309,8 +288,9 @@ RecommenderEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =138
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         TypeNo_DataCard1_1 As typedDataCard.textualEditCard:
@@ -392,8 +372,9 @@ RecommenderEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =132
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         TypeNoName_DataCard1_1 As typedDataCard.textualEditCard:
@@ -421,7 +402,7 @@ RecommenderEditItem As screen:
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =2
+                X: =42
                 ZIndex: =1
 
             ErrorMessage4_1 As label:
@@ -473,8 +454,9 @@ RecommenderEditItem As screen:
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(255, 87, 51, 1)
                 Size: =13
-                Width: =531
-                X: =138
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         BillNo_DataCard1_1 As typedDataCard.textualEditCard:
@@ -495,7 +477,6 @@ RecommenderEditItem As screen:
             ZIndex: =36
 
             DataCardKey6_1 As label:
-                Align: =Align.Right
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -504,8 +485,8 @@ RecommenderEditItem As screen:
                 Text: =Parent.DisplayName
                 Width: =95
                 Wrap: =false
-                X: =16
-                Y: =10
+                X: =40
+                Y: =3
                 ZIndex: =1
 
             ErrorMessage6_1 As label:
@@ -552,8 +533,9 @@ RecommenderEditItem As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Size: =13
-                Width: =531
-                X: =132
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
 
         Amount_DataCard1_1 As typedDataCard.textualEditCard:
@@ -580,8 +562,8 @@ RecommenderEditItem As screen:
                 Size: =13
                 Text: =Parent.DisplayName
                 Wrap: =false
-                X: =48
-                Y: =6
+                X: =40
+                Y: =3
                 ZIndex: =1
 
             ErrorMessage5_1 As label:
@@ -628,97 +610,10 @@ RecommenderEditItem As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Size: =13
-                Width: =531
-                X: =138
+                Width: =623
+                X: =40
+                Y: =34
                 ZIndex: =5
-
-        Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="{Attachments}"
-            Default: =ThisItem.Attachments
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"{Attachments}")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =237
-            Required: =false
-            Update: =DataCardValue9_1.Attachments
-            Width: =683
-            X: =0
-            Y: =4
-            ZIndex: =36
-
-            DataCardKey9_1 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue9_1 As attachments:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Height: =220
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                IsInDataCard: =true
-                ItemColor: =RGBA(255, 255, 255, 1)
-                ItemFill: =RGBA(0, 51, 102, 1)
-                ItemHoverColor: =RGBA(0, 0, 0, 1)
-                ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =recomViewGallery.Selected.Attachments
-                PaddingBottom: =5
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =5
-                PaddingTop: =5
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 89, 178, 1)
-                Tooltip: =Parent.DisplayName
-                Width: =634
-                X: =30
-                Y: =DataCardKey9_1.Y + DataCardKey9_1.Height + 5
-                ZIndex: =2
-
-            ErrorMessage9_1 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue9_1.Y + DataCardValue9_1.Height
-                ZIndex: =3
-
-            StarVisible9_1 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey9_1.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey9_1.Y
-                ZIndex: =4
 
         Narration_DataCard1_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -733,7 +628,7 @@ RecommenderEditItem As screen:
             Required: =false
             Update: =TextInput11_1.Text
             Width: =681
-            X: =1
+            X: =0
             Y: =4
             ZIndex: =36
 
@@ -785,19 +680,109 @@ RecommenderEditItem As screen:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =recomViewGallery.Selected.Narration
+                Default: =//recomViewGallery.Selected.Narration
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
-                Height: =229
+                Height: =220
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Mode: =TextMode.MultiLine
                 Size: =13
-                Width: =642
-                X: =30
+                Width: =623
+                X: =40
                 Y: =34
                 ZIndex: =5
+
+        Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MemoTableData],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =237
+            Required: =false
+            Update: =DataCardValue9_1.Attachments
+            Width: =683
+            X: =1
+            Y: =4
+            ZIndex: =36
+
+            DataCardKey9_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =33
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =279
+                Wrap: =false
+                X: =40
+                Y: =3
+                ZIndex: =1
+
+            DataCardValue9_1 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Height: =220
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(0, 51, 102, 1)
+                ItemHoverColor: =RGBA(0, 0, 0, 1)
+                ItemHoverFill: =RGBA(153, 205, 255, 1)
+                Items: =recomViewGallery.Selected.Attachments
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =623
+                X: =40
+                Y: |
+                    =34
+                ZIndex: =2
+
+            ErrorMessage9_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9_1.Y + DataCardValue9_1.Height
+                ZIndex: =3
+
+            StarVisible9_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey9_1.Height
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9_1.Y
+                ZIndex: =4
 

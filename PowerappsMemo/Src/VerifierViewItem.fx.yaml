@@ -195,21 +195,6 @@ VerifierViewItem As screen:
         Y: =24
         ZIndex: =28
 
-    Label11_10 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(39, 113, 194, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =55
-        Size: =35
-        Text: =companyName_5.Text
-        Width: =777
-        X: =283
-        Y: =24
-        ZIndex: =29
-
     qtytxt_8 As text:
         BorderColor: =RGBA(0, 89, 178, 1)
         BorderThickness: =2

@@ -62,21 +62,6 @@ AddingNewItemViewer As screen:
         Y: =15
         ZIndex: =3
 
-    Label11_19 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(39, 113, 194, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =55
-        Size: =35
-        Text: =companyName_2.SelectedText.Value
-        Width: =777
-        X: =283
-        Y: =24
-        ZIndex: =4
-
     Form4_4 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =MemoTableData
