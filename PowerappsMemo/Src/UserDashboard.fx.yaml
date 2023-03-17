@@ -46,20 +46,22 @@ UserDashboard As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: |
+            Fill: |+
                 =//RGBA(65, 145, 224, 0.86)
                 
-                Switch(ThisItem.fil=pressedButton,pressedButton="My Memo",RGBA(65, 145, 224, 0.86),pressedButton="All",Color.Maroon,pressedButton="Pending",Color.OrangeRed,pressedButton="Approved",Color.LimeGreen,pressedButton="Declined",Color.DodgerBlue)
+                //Switch(ThisItem.fil=pressedButton,pressedButton="My Memo",RGBA(65, 145, 224, 0.86),pressedButton="All",Color.DarkSalmon,pressedButton="Pending",Color.OrangeRed,pressedButton="Approved",Color.LimeGreen,pressedButton="Declined",Color.Red,Color.LightPink)
+                If(ThisItem.fil = pressedButton, Color.LimeGreen, Switch(ThisItem.fil, "All", Color.IndianRed, "Pending", Color.OrangeRed, "Approved", Color.Green, "Declined", Color.Red, "My Memo",Color.Chocolate))
+                
             FontWeight: =FontWeight.Semibold
             HoverColor: |
                 =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(56, 107, 194, 0.83)
+            HoverFill: =RGBA(246, 88, 16, 0.25)
             OnSelect: |
                 =Set(_requestTypeFilter, ThisItem.fil);
                 UpdateContext({pressedButton:ThisItem.fil});
             PressedBorderColor: =
             PressedColor: =Self.Color
-            PressedFill: =RGBA(0, 89, 178, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
             Size: =15
             Text: =ThisItem.fil
             X: =50
@@ -775,26 +777,16 @@ UserDashboard As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: |-
                 =//RGBA(65, 145, 224, 0.86)
-                Switch(
-                    ThisItem.fil = pressedButton,
-                    ThisItem.fil = "All",
-                    Color.Maroon,
-                    ThisItem.fil = "Pending",
-                    Color.OrangeRed,
-                    ThisItem.fil = "Approved",
-                    Color.LimeGreen,
-                    ThisItem.fil = "Declined",
-                    Color.DodgerBlue
-                )
+                If(ThisItem.fil = pressedButton, Color.LimeGreen, Switch(ThisItem.fil, "All", Color.IndianRed, "Pending", Color.OrangeRed, "Approved", Color.Green, "Declined", Color.Red))
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(56, 107, 194, 0.83)
+            HoverFill: =RGBA(246, 88, 16, 1)
             OnSelect: |-
                 =Set(_requestTypeFilter, ThisItem.fil);
                 UpdateContext({pressedButton:ThisItem.fil});
             PressedBorderColor: =
             PressedColor: =Self.Color
-            PressedFill: =RGBA(0, 89, 178, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
             Size: =15
             Text: =ThisItem.fil
             X: =50
