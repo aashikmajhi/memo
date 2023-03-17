@@ -506,12 +506,12 @@ VerifierView As screen:
 
     approver3_5 As dropdown:
         AllowEmptySelection: =true
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(255, 87, 51, 1)
         BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverBackground: =RGBA(255, 87, 51, 1)
         ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Default: =
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -524,7 +524,7 @@ VerifierView As screen:
         OnChange: =DisplayMode.Disabled;
         OnSelect: =
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
+        PressedFill: =RGBA(255, 87, 51, 1)
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
@@ -555,12 +555,12 @@ VerifierView As screen:
 
     approver4_9 As dropdown:
         AllowEmptySelection: =true
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(255, 87, 51, 1)
         BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverBackground: =RGBA(255, 87, 51, 1)
         ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Default: =""
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -572,7 +572,7 @@ VerifierView As screen:
         Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np","akshyat.sharma@esewaremit.com","application@astral.com.np"]
         OnSelect: =approver3_5.Selected.Value
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
+        PressedFill: =RGBA(255, 87, 51, 1)
         Reset: =true
         SelectionFill: =RGBA(0, 51, 102, 1)
         Size: =10
@@ -670,12 +670,12 @@ VerifierView As screen:
 
     approver4_10 As dropdown:
         AllowEmptySelection: =true
-        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderColor: =RGBA(255, 87, 51, 1)
         BorderStyle: =BorderStyle.None
-        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronBackground: =RGBA(255, 87, 51, 1)
         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverBackground: =RGBA(255, 87, 51, 1)
         ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Default: =""
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -687,9 +687,9 @@ VerifierView As screen:
         Items: =["naresh.dhami@astral.com.np","sumit.manandhar@astral.com.np","sumit.manandhar@thakralone.com","dikshant.koirala@astral.com.np"," sudip.rijal@astral.com.np","anjit.maharjan@astral.com.np","akshyat.sharma@esewaremit.com","application@astral.com.np"]
         OnSelect: =approver3_5.Selected.Value
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
+        PressedFill: =RGBA(255, 87, 51, 1)
         Reset: =true
-        SelectionFill: =RGBA(0, 51, 102, 1)
+        SelectionFill: =RGBA(255, 87, 51, 1)
         Size: =10
         Visible: =false
         Width: =250
@@ -1009,7 +1009,7 @@ VerifierView As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =32
-        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverBorderColor: =RGBA(255, 255, 255, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: =approver3_5.Selected.Value
